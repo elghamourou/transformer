@@ -1,0 +1,20 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="note" type="noteType"/>
+  <xs:complexType name="responsibleType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name" maxOccurs="unbounded"/>
+      <xs:element type="xs:string" name="grade"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="myresp" type="responsibleType"/>
+  <xs:complexType name="noteType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="to" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="xs:string" name="from"/>
+      <xs:element type="xs:string" name="heading" minOccurs="0"/>
+      <xs:element type="xs:string" name="body"/>
+      <xs:element type="responsibleType" name="responsible" minOccurs="0"/>
+      <xs:element type="xs:byte" name="body2" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

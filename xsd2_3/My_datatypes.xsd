@@ -1,0 +1,109 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!--
+    v2.xml Message Definitions Version v2.3  - data types
+    HL7® Version 2.3, © Health Level Seven, Inc.  All rights reserved.  HL7 and Health Level Seven are registered trademarks of Health Level Seven, Inc.
+-->
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:hl7-org:v2xml"
+    xmlns:hl7="urn:com.sun:encoder-hl7-1.0"
+    targetNamespace="urn:hl7-org:v2xml" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+
+    <xsd:annotation>
+        <xsd:appinfo source="urn:com.sun:encoder">
+            <encoding xmlns="urn:com.sun:encoder" name="HL7 v2 Encoding" namespace="urn:com.sun:encoder-hl7-1.0" style="hl7encoder-1.0"/>
+        </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:simpleType name="ID">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:complexType name="escapeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="V" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+     <xsd:simpleType name="ST">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+      <xsd:simpleType name="IS">
+            <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+     <xsd:complexType name="HD">
+            <xsd:sequence>
+                <xsd:element ref="HD.1" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="HD.2" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="HD.3" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+    </xsd:complexType>
+    
+    <!--
+            COMPONENT HD.1
+        -->
+        <xsd:attributeGroup name="HD.1.ATTRIBUTES">
+            <xsd:attribute name="Type" type="xsd:string" fixed="IS"/>
+            <xsd:attribute name="LongName" type="xsd:string" fixed="namespace ID"/>
+        </xsd:attributeGroup>
+        <xsd:complexType name="HD.1.CONTENT">
+            <xsd:annotation>
+                <xsd:documentation xml:lang="en">namespace ID</xsd:documentation>
+                <xsd:appinfo source="urn:com.sun:encoder">
+                    <hl7:Type>IS</hl7:Type>
+                    <hl7:LongName>namespace ID</hl7:LongName>
+                </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleContent>
+                <xsd:extension base="IS">
+                    <xsd:attributeGroup ref="HD.1.ATTRIBUTES"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+        <xsd:element name="HD.1" type="HD.1.CONTENT"/>
+        <!--
+            COMPONENT HD.2
+        -->
+        <xsd:attributeGroup name="HD.2.ATTRIBUTES">
+            <xsd:attribute name="Type" type="xsd:string" fixed="ST"/>
+            <xsd:attribute name="LongName" type="xsd:string" fixed="universal ID"/>
+        </xsd:attributeGroup>
+        <xsd:complexType name="HD.2.CONTENT">
+            <xsd:annotation>
+                <xsd:documentation xml:lang="en">universal ID</xsd:documentation>
+                <xsd:appinfo source="urn:com.sun:encoder">
+                    <hl7:Type>ST</hl7:Type>
+                    <hl7:LongName>universal ID</hl7:LongName>
+                </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleContent>
+                <xsd:extension base="ST">
+                    <xsd:attributeGroup ref="HD.2.ATTRIBUTES"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+        <xsd:element name="HD.2" type="HD.2.CONTENT"/>
+        <!--
+            COMPONENT HD.3
+        -->
+        <xsd:attributeGroup name="HD.3.ATTRIBUTES">
+            <xsd:attribute name="Type" type="xsd:string" fixed="ID"/>
+            <xsd:attribute name="LongName" type="xsd:string" fixed="universal ID type"/>
+        </xsd:attributeGroup>
+        <xsd:complexType name="HD.3.CONTENT">
+            <xsd:annotation>
+                <xsd:documentation xml:lang="en">universal ID type</xsd:documentation>
+                <xsd:appinfo source="urn:com.sun:encoder">
+                    <hl7:Type>ID</hl7:Type>
+                    <hl7:LongName>universal ID type</hl7:LongName>
+                </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleContent>
+                <xsd:extension base="ID">
+                    <xsd:attributeGroup ref="HD.3.ATTRIBUTES"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    <xsd:element name="HD.3" type="HD.3.CONTENT"/>
+    
+</xsd:schema>

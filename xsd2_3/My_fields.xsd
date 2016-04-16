@@ -1,0 +1,117 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!--
+    v2.xml Message Definitions Version v2.3  - fields
+    HL7® Version 2.3, © Health Level Seven, Inc.  All rights reserved.  HL7 and Health Level Seven are registered trademarks of Health Level Seven, Inc.
+-->
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:hl7-org:v2xml"
+    xmlns:hl7="urn:com.sun:encoder-hl7-1.0"
+    targetNamespace="urn:hl7-org:v2xml" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+
+    <!-- include datatypes definitions for version v2.3 -->
+    <xsd:include schemaLocation="My_datatypes.xsd"/>
+
+    <xsd:annotation>
+        <xsd:appinfo source="urn:com.sun:encoder">
+            <encoding xmlns="urn:com.sun:encoder" name="HL7 v2 Encoding" namespace="urn:com.sun:encoder-hl7-1.0" style="hl7encoder-1.0"/>
+        </xsd:appinfo>
+    </xsd:annotation>
+<!--
+        FIELD MSH.1
+    -->
+    <xsd:attributeGroup name="MSH.1.ATTRIBUTES">
+        <xsd:attribute name="Item" type="xsd:string" fixed="1"/>
+        <xsd:attribute name="Type" type="xsd:string" fixed="ST"/>
+        <xsd:attribute name="LongName" type="xsd:string" fixed="Field Separator"/>
+    </xsd:attributeGroup>
+    <xsd:complexType name="MSH.1.CONTENT">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Field Separator</xsd:documentation>
+            <xsd:appinfo source="urn:com.sun:encoder">
+                <hl7:Item>1</hl7:Item>
+                <hl7:Type>ST</hl7:Type>
+                <hl7:LongName>Field Separator</hl7:LongName>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="ST">
+                <xsd:attributeGroup ref="MSH.1.ATTRIBUTES"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:element name="MSH.1" type="MSH.1.CONTENT"/>
+    <!--
+        FIELD MSH.2
+    -->
+    <xsd:attributeGroup name="MSH.2.ATTRIBUTES">
+        <xsd:attribute name="Item" type="xsd:string" fixed="2"/>
+        <xsd:attribute name="Type" type="xsd:string" fixed="ST"/>
+        <xsd:attribute name="LongName" type="xsd:string" fixed="Encoding Characters"/>
+    </xsd:attributeGroup>
+    <xsd:complexType name="MSH.2.CONTENT">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Encoding Characters</xsd:documentation>
+            <xsd:appinfo source="urn:com.sun:encoder">
+                <hl7:Item>2</hl7:Item>
+                <hl7:Type>ST</hl7:Type>
+                <hl7:LongName>Encoding Characters</hl7:LongName>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="ST">
+                <xsd:attributeGroup ref="MSH.2.ATTRIBUTES"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:element name="MSH.2" type="MSH.2.CONTENT"/>
+    <!--
+        FIELD MSH.3
+    -->
+    <xsd:attributeGroup name="MSH.3.ATTRIBUTES">
+        <xsd:attribute name="Item" type="xsd:string" fixed="3"/>
+        <xsd:attribute name="Type" type="xsd:string" fixed="HD"/>
+        <xsd:attribute name="LongName" type="xsd:string" fixed="Sending Application"/>
+    </xsd:attributeGroup>
+    <xsd:complexType name="MSH.3.CONTENT">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Sending Application</xsd:documentation>
+            <xsd:appinfo source="urn:com.sun:encoder">
+                <hl7:Item>3</hl7:Item>
+                <hl7:Type>HD</hl7:Type>
+                <hl7:LongName>Sending Application</hl7:LongName>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="HD">
+                <xsd:attributeGroup ref="MSH.3.ATTRIBUTES"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="MSH.3" type="MSH.3.CONTENT"/>
+    <!--
+        FIELD MSH.4
+    -->
+    <xsd:attributeGroup name="MSH.4.ATTRIBUTES">
+        <xsd:attribute name="Item" type="xsd:string" fixed="4"/>
+        <xsd:attribute name="Type" type="xsd:string" fixed="HD"/>
+        <xsd:attribute name="LongName" type="xsd:string" fixed="Sending Facility"/>
+    </xsd:attributeGroup>
+    <xsd:complexType name="MSH.4.CONTENT">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Sending Facility</xsd:documentation>
+            <xsd:appinfo source="urn:com.sun:encoder">
+                <hl7:Item>4</hl7:Item>
+                <hl7:Type>HD</hl7:Type>
+                <hl7:LongName>Sending Facility</hl7:LongName>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="HD">
+                <xsd:attributeGroup ref="MSH.4.ATTRIBUTES"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="MSH.4" type="MSH.4.CONTENT"/>
+   
+</xsd:schema>
