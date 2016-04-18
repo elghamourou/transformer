@@ -36,9 +36,9 @@ public class XSDGenerator {
 			 	XSDGenerator xmlBeans = new XSDGenerator();
 			 	
 			 	List<File> inputFiles = new ArrayList<File>();
-			 	inputFiles.add(new File("note.xml"));
-			 	inputFiles.add(new File("note1.xml"));
-			 	inputFiles.add(new File("note2.xml"));
+			 	inputFiles.add(new File("dst.xml"));
+			 	//inputFiles.add(new File("note1.xml"));
+			 	//inputFiles.add(new File("note2.xml"));
 			 	
 			 	
 	            SchemaDocument schemaDocument = xmlBeans.generateSchema(inputFiles);

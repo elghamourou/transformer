@@ -87,6 +87,7 @@ public class MapperTree {
 			newModel.load(uri);
 			this.setModel(newModel);
 			this.treeRoot = (MapperTreeNode)this.getModel().getRoot();
+			treeRoot.setTree(this);
 		}
 	}
 	private void setModel(MapperTreeModel newModel) {
@@ -106,29 +107,97 @@ public class MapperTree {
     }
 	public MapperTreeNode getNodeByXPath(String path) {
 		//MapperTreeNode tmp = _treeRoot;
-				MapperTreeNode tmp = (MapperTreeNode)this.getModel().getRoot();
+				MapperTreeNode tmp = (MapperTreeNode)this.getModel().getRoot();//.getRootNode();
 
 				// Scroll through the XPath
 				PathList pl = new PathList(path);
 				Iterator iter = pl.iterator();
+				int tmpNamelevel = 0;
+				int tmplevel = 0;
 				while ( iter.hasNext() ) {
 					String tmpName = (String)iter.next();
-					//tmpName = tmpName.replaceAll("[1]", "");
-					//tmpName = tmpName.replaceAll("\x5b1\x5d", "");
-					//tmpName = tmpName.replaceAll("/[1/]", "");
 					if(tmpName.length()>0) {
 						//String s = tmp.getXPathName();
-						if(!tmpName.equals(tmp.getXPathName())) {
-							MapperTreeNode child = tmp.getChildByName(tmpName);
-							if(null != child)
-								tmp = child;
-							else
-							{
+						
+						
+						
+						
+						
+						if(tmplevel==tmpNamelevel){
+							if(!tmpName.equals(tmp.getXPathName())){
+								tmp = null;
+								break;
+							}else {
+								tmpNamelevel++;
+								continue;
+							}
+							
+						}else{
+							MapperTreeNode child =  tmp.getChildByName(tmpName);
+							if(null != child){
+								if(tmpName.equals(child.getXPathName())){
+								
+									tmp = child;
+									tmplevel++;
+									tmpNamelevel++;
+									continue;
+							}else
+								{
+									tmp = null;
+									break;
+								}
+							}else{
 								tmp = null;
 								break;
 							}
 						}
+						
+						
+						
+						
+						
+						
+						
+						
+						
+//						if(tmpName.equals(tmp.getXPathName()) && tmplevel==tmpNamelevel){
+//							tmpNamelevel++;
+//							continue;
+//						}else if(tmpName.equals(tmp.getXPathName()) && tmplevel!=tmpNamelevel){
+//							child = tmp.getChildByName(tmpName);
+//							tmplevel++;
+//							if(null != child){
+//								tmp = child;
+//								tmplevel++;
+//								continue;
+//							}
+//							else
+//							{
+//								tmp = null;
+//								break;
+//							}
+//						}else if(!tmpName.equals(tmp.getXPathName()) && tmplevel==tmpNamelevel){
+//							tmp = null;
+//							break;
+//						}
+						
+//						if(!tmpName.equals(tmp.getXPathName()) && tmplevel!=tmpNamelevel) {
+//							child = tmp.getChildByName(tmpName);
+//							tmplevel++;
+//							if(null != child)
+//								tmp = child;
+//							else
+//							{
+//								tmp = null;
+//								break;
+//							}
+//						}else
+//						{
+//							tmp = null;
+//							break;
+//						}
 					}
+					tmpNamelevel++;
 				}
 
 				return tmp;

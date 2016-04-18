@@ -15,10 +15,10 @@ public class XSLTTransformer {
 	
 	public static void main(String[] args) throws TransformerException {
 		TransformerFactory factory = TransformerFactory.newInstance();
-        Source xslt = new StreamSource(new File("srctodst.xslt"));
+        Source xslt = new StreamSource(new File("srctodst2.xslt"));
         Transformer transformer = factory.newTransformer(xslt);
 
         Source text = new StreamSource(new File("src.xml"));
-        transformer.transform(text, new StreamResult(new File("output2.xml")));
+        transformer.transform(text, new StreamResult(new File("output3.xml")));
 	}
 }
