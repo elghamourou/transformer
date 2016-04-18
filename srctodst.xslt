@@ -4,8 +4,9 @@
 <xsl:template match="/src">
 <dst>
 <dataDst>
+<dstname>
 <xsl:value-of select="dataSrc/name"/>
-<dstname/>
+</dstname>
 </dataDst>
 </dst>
 </xsl:template>

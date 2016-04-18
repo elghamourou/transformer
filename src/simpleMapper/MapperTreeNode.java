@@ -435,23 +435,27 @@ public class MapperTreeNode extends DefaultMapObject implements ILinkable {
 			if(src instanceof MapperTreeNode) {
 				MapperTreeNode node = (MapperTreeNode)src;
 				if(!node.isLeaf())
-					result = node.render(context, parent);
+					//here why not newElement unstead of parent
+					result = node.render(context, newElement);
 			}
 		}
 
-		if(null != result)
-			result.appendChild(newElement);
-		else
+//		if(null != result)
+//			//result.appendChild(newElement);
+//			System.out.println("mmmmmmmmm");
+//		else
+//			result = newElement;
+		if(null == result)
 			result = newElement;
 		
 		if(parent != result)
 			parent.appendChild(result);
-
-		renderOutputContents(context, newElement);
+		//why not using result instead of newElement?
+		renderOutputContents(context, result);
 
 		for (Enumeration e=children();e.hasMoreElements();) {
 			MapperTreeNode child = (MapperTreeNode)e.nextElement();
-			child.render(context, newElement);
+			child.render(context, result);
 		}
 	
 		context.set(prevContext);

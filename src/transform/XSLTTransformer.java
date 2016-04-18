@@ -19,6 +19,6 @@ public class XSLTTransformer {
         Transformer transformer = factory.newTransformer(xslt);
 
         Source text = new StreamSource(new File("src.xml"));
-        transformer.transform(text, new StreamResult(new File("output.xml")));
+        transformer.transform(text, new StreamResult(new File("output2.xml")));
 	}
 }
