@@ -11,10 +11,12 @@ import java.io.IOException;
 
 
 
+
 import org.xml.sax.InputSource;
 //import org.w3c.dom.Document;
 //import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
+
 
 
 
@@ -43,6 +45,8 @@ public class XSOMTreeModel extends MapperTreeModel
 	private InputSource			inputSource = null;
 	private MapperTree	tree		= null;
 	private int			level		= 0;
+	MapperTreeNode parent = null;
+	private boolean bStart = true;
 
 	/**
 	 * Constructor
@@ -50,7 +54,8 @@ public class XSOMTreeModel extends MapperTreeModel
     public XSOMTreeModel(MapperTreeNode newRoot)
     {
 		super(newRoot);
-		tree = newRoot.getTree();
+		this.parent = newRoot;
+		this.tree = newRoot.getTree();
 	}
 
 	/**
@@ -72,42 +77,20 @@ public class XSOMTreeModel extends MapperTreeModel
 	{
 		boolean bResult = false;
 		
-		MapperTreeNode rootNode = null;
-		
-//		MapperTreeNode rootNode = new MapperTreeNode(uri, this.tree);
-//		((MapperTreeNode)getRoot()).add(rootNode);
-		
 		try
 		{
 			XSOMParser reader = new XSOMParser();
-	        // set an error handler so that you can receive error messages
-	        //reader.setErrorHandler(new ErrorReporter(System.out));
 			reader.parse(new File(uri));
 			XSSchemaSet xss = reader.getResult();
 			
-			//iterate each XSSchema object. XSSchema is a per-namespace schema.
-			/*Iterator itr = xss.iterateSchema();
-			while( itr.hasNext() )
-			{
-			  XSSchema s = (XSSchema)itr.next();
-			  //XSSchema s = (XSSchema)xss.getSchema(1);
-			  
-			  String ns = s.getTargetNamespace();
-			  //if(ns != "http://www.w3.org/2001/XMLSchema")
-			  {
-				  MapperTreeNode nsNode = new MapperTreeNode(ns, this.tree);
-				  rootNode.add(nsNode);
-			  
-				  loadSchema(s, nsNode);
-			  }
-			}*/
+			
 			XSSchema s = (XSSchema)xss.getSchema(1);
 			if(null != s)
 			{
-				String name = uri.substring(uri.lastIndexOf('\\')+1);
-				rootNode = new MapperTreeNode(name, this.tree);
-				((MapperTreeNode)getRoot()).add(rootNode);
-				loadSchema(s, rootNode);
+				//String name = uri.substring(uri.lastIndexOf('\\')+1);
+				//rootNode = new MapperTreeNode(name, this.tree);
+				//((MapperTreeNode)getRoot()).add(rootNode);
+				loadSchema(s, this.parent);
 				bResult = true;
 			}
         } catch( IOException e ) {
@@ -330,8 +313,28 @@ public class XSOMTreeModel extends MapperTreeModel
 	{
 		MapperTreeNode newNode = new MapperTreeNode(name, this.tree);
 		newNode.setAllowsChildren(true);
-		parent.add(newNode);
+		
+		
+		if (bStart) {
+			setRoot(newNode);
+			bStart = false;
+//			return newNode;
+		} else{
+			parent.add(newNode);
+//			return parent;
+		}
+			
+		
 		return newNode;
+//		if(parent==null){
+//			parent = newNode;
+//			
+//	}
+//		else{
+//			parent.add(newNode);
+//			
+//		}
+		
 	}
 
 	private MapperTreeNode addAttribute(String name, MapperTreeNode parent)

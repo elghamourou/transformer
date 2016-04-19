@@ -93,7 +93,7 @@ public class MapperTree {
 	private void setModel(MapperTreeModel newModel) {
 
         treeModel = newModel;
-       System.out.println(treeModel);
+       //System.out.println(treeModel);
 		
 	}
 	
@@ -222,5 +222,6 @@ public class MapperTree {
 			tm.setRoot(node);
 	     	node.setParent(null);
 		}
+		
 		
 }
