@@ -16,317 +16,304 @@ import map.ILinkable;
 import map.IMapObject;
 import object.DefaultLinkable;
 import object.DefaultMapObject;
-import object.IfBox;
 import object.LinkLine;
 import utils.XMLUtils;
 
-
-
-
-
-
-
-
 public class MapperTreeNode extends DefaultMapObject implements ILinkable {
 
-	private DefaultLinkable	linkable	= new DefaultLinkable();
+	private DefaultLinkable linkable = new DefaultLinkable();
 	MapperTree tree = null;
 	private String name = "Root";
-	private ArrayList		properties	= new ArrayList();
-	private MapperTreeNode	textNode	= null;
-	private String			value		= "";
-	private boolean			bTextNode	= false;
+	private ArrayList properties = new ArrayList();
+	private MapperTreeNode textNode = null;
+	private String value = "";
+	private boolean bTextNode = false;
 	private boolean bAttribute = false;
 	private MapperTreeNode parent;
 	protected Vector children;
-	static public final Enumeration<TreeNode> EMPTY_ENUMERATION
-    = Collections.emptyEnumeration();
-	
-	
-	
-	public void setTree(MapperTree tree)
-	{
+	static public final Enumeration<TreeNode> EMPTY_ENUMERATION = Collections.emptyEnumeration();
+
+	public void setTree(MapperTree tree) {
 		this.tree = tree;
-		// traverse children
-		for (Enumeration e = children() ; e.hasMoreElements() ;) {
-			MapperTreeNode child = (MapperTreeNode)e.nextElement();
+		for (Enumeration e = children(); e.hasMoreElements();) {
+			MapperTreeNode child = (MapperTreeNode) e.nextElement();
 			child.setTree(tree);
 		}
 
 	}
-	
-	public Collection	getLinks()			{ return linkable.getLinks(); }
-	
-	public boolean 	isOutput()
-	{
-		if(tree != null)
-			return ((MapperTree)tree).isSinkTree();
+
+	public Collection getLinks() {
+		return linkable.getLinks();
+	}
+
+	public boolean isOutput() {
+		if (tree != null)
+			return ((MapperTree) tree).isSinkTree();
 		else
 			return false;
 	}
 
-	public String getFullPath()
-	{
+	public String getFullPath() {
 		String path = "";
-		MapperTreeNode parent = (MapperTreeNode)this.getParent();
-		
-		//while(parent != null && !parent.isRoot()) {
-		while(parent != null) {
-			//path = parent.toString() + "/" + path ;
-			path = parent.getXPathName() + "/" + path ;
-			parent = (MapperTreeNode)parent.getParent();
+		MapperTreeNode parent = (MapperTreeNode) this.getParent();
+
+		while (parent != null) {
+			path = parent.getXPathName() + "/" + path;
+			parent = (MapperTreeNode) parent.getParent();
 		}
-		
-		//if(_bAttribute && !_name.equals("text()"))
-		//	path += "@";
-		//path += this.toString();
-		
+
 		path += this.getXPathName();
 		return "/" + path;
 	}
-	
-	public boolean		isLinked()			{ return linkable.isLinked(); }
-	public String		getXPath()			{ return getFullPath(); }
 
-	public ILinkable 	getSource()	{ return linkable.getSource(); }
+	public boolean isLinked() {
+		return linkable.isLinked();
+	}
 
-	public boolean willAccept(ILinkable src)
-	{
-		if((src != null) && (src instanceof MapperTreeNode)) {
-			MapperTreeNode node = (MapperTreeNode)src;
-			if(node.getTree().equals(tree))
+	public String getXPath() {
+		return getFullPath();
+	}
+
+	public ILinkable getSource() {
+		return linkable.getSource();
+	}
+
+	public boolean willAccept(ILinkable src) {
+		if ((src != null) && (src instanceof MapperTreeNode)) {
+			MapperTreeNode node = (MapperTreeNode) src;
+			if (node.getTree().equals(tree))
 				return false;
 		}
 		return (!(isLinked()));
 	}
-	public MapperTreeNode getChildByName(String name)
-	{
+
+	public MapperTreeNode getChildByName(String name) {
 		Enumeration e = this.children();
-		while ( e.hasMoreElements() ) {
-			MapperTreeNode child = (MapperTreeNode)e.nextElement();
-			//String s = child.getXPathName();
-			if(child.getXPathName().equals(name))
+		while (e.hasMoreElements()) {
+			MapperTreeNode child = (MapperTreeNode) e.nextElement();
+			// String s = child.getXPathName();
+			if (child.getXPathName().equals(name))
 				return child;
 		}
 
 		return null;
 	}
-	 public Enumeration children() {
-	        if (children == null) {
-	            return EMPTY_ENUMERATION;
-	        } else {
-	            return children.elements();
-	        }
-	    }
-	private int getIndex()
-	{
+
+	public Enumeration children() {
+		if (children == null) {
+			return EMPTY_ENUMERATION;
+		} else {
+			return children.elements();
+		}
+	}
+
+	private int getIndex() {
 		int index = 1;
-		MapperTreeNode parent = (MapperTreeNode)this.getParent();
-		if(null != parent) {
+		MapperTreeNode parent = (MapperTreeNode) this.getParent();
+		if (null != parent) {
 			Enumeration e = parent.children();
-			while ( e.hasMoreElements() ) {
-				MapperTreeNode child = (MapperTreeNode)e.nextElement();
-				if(this == child)
+			while (e.hasMoreElements()) {
+				MapperTreeNode child = (MapperTreeNode) e.nextElement();
+				if (this == child)
 					break;
-				else if(child.getName().equals(this.name))
+				else if (child.getName().equals(this.name))
 					index++;
 			}
 		}
 		return index;
 	}
-	
-	private boolean hasSiblings()
-	{
-	  MapperTreeNode parent = (MapperTreeNode)this.getParent();
-	  if(null != parent) {
-		  Enumeration e = parent.children();
-		  int index = 0;
-		  while ( e.hasMoreElements() && index < 2 ) {
-		    index++;
-		  }
-		  return (index > 1);
-	  }
-	  return false;
+
+	private boolean hasSiblings() {
+		MapperTreeNode parent = (MapperTreeNode) this.getParent();
+		if (null != parent) {
+			Enumeration e = parent.children();
+			int index = 0;
+			while (e.hasMoreElements() && index < 2) {
+				index++;
+			}
+			return (index > 1);
+		}
+		return false;
 	}
-	public String getXPathName()
-	{
+
+	public String getXPathName() {
 		int index = getIndex();
 		String result = ((bAttribute && !isTextNode()) ? "@" : "") + name;
-		if(index > 1 && hasSiblings() && !bAttribute)
+		if (index > 1 && hasSiblings() && !bAttribute)
 			result += "[" + index + "]";
 
 		return result;
 	}
-	 public boolean isNodeChild(MapperTreeNode aNode) {
-	        boolean retval;
 
-	        if (aNode == null) {
-	            retval = false;
-	        } else {
-	            if (getChildCount() == 0) {
-	                retval = false;
-	            } else {
-	                retval = (aNode.getParent() == this);
-	            }
-	        }
+	public boolean isNodeChild(MapperTreeNode aNode) {
+		boolean retval;
 
-	        return retval;
-	    }
+		if (aNode == null) {
+			retval = false;
+		} else {
+			if (getChildCount() == 0) {
+				retval = false;
+			} else {
+				retval = (aNode.getParent() == this);
+			}
+		}
+
+		return retval;
+	}
 
 	public MapperTreeNode getChildAt(int index) {
-        if (children == null) {
-            throw new ArrayIndexOutOfBoundsException("node has no children");
-        }
-        return (MapperTreeNode)children.elementAt(index);
-    }
-	 public void remove(int childIndex) {
-	        MapperTreeNode child = (MapperTreeNode)getChildAt(childIndex);
-	        children.removeElementAt(childIndex);
-	        child.setParent(null);
-	    }
-	 public void setParent(MapperTreeNode newParent) {
-	        parent = newParent;
-	    }
-	 public int getIndex(MapperTreeNode aChild) {
-	        if (aChild == null) {
-	            throw new IllegalArgumentException("argument is null");
-	        }
+		if (children == null) {
+			throw new ArrayIndexOutOfBoundsException("node has no children");
+		}
+		return (MapperTreeNode) children.elementAt(index);
+	}
 
-	        if (!isNodeChild(aChild)) {
-	            return -1;
-	        }
-	        return children.indexOf(aChild);        // linear search
-	    }
-	 public void remove(MapperTreeNode aChild) {
-	        if (aChild == null) {
-	            throw new IllegalArgumentException("argument is null");
-	        }
+	public void remove(int childIndex) {
+		MapperTreeNode child = (MapperTreeNode) getChildAt(childIndex);
+		children.removeElementAt(childIndex);
+		child.setParent(null);
+	}
 
-	        if (!isNodeChild(aChild)) {
-	            throw new IllegalArgumentException("argument is not a child");
-	        }
-	        remove(getIndex(aChild));       // linear search
-	    }
+	public void setParent(MapperTreeNode newParent) {
+		parent = newParent;
+	}
 
-	 public boolean isNodeAncestor(MapperTreeNode anotherNode) {
-	        if (anotherNode == null) {
-	            return false;
-	        }
+	public int getIndex(MapperTreeNode aChild) {
+		if (aChild == null) {
+			throw new IllegalArgumentException("argument is null");
+		}
 
-	        MapperTreeNode ancestor = this;
+		if (!isNodeChild(aChild)) {
+			return -1;
+		}
+		return children.indexOf(aChild); // linear search
+	}
 
-	        do {
-	            if (ancestor == anotherNode) {
-	                return true;
-	            }
-	        } while((ancestor = ancestor.getParent()) != null);
+	public void remove(MapperTreeNode aChild) {
+		if (aChild == null) {
+			throw new IllegalArgumentException("argument is null");
+		}
 
-	        return false;
-	    }
+		if (!isNodeChild(aChild)) {
+			throw new IllegalArgumentException("argument is not a child");
+		}
+		remove(getIndex(aChild)); // linear search
+	}
+
+	public boolean isNodeAncestor(MapperTreeNode anotherNode) {
+		if (anotherNode == null) {
+			return false;
+		}
+
+		MapperTreeNode ancestor = this;
+
+		do {
+			if (ancestor == anotherNode) {
+				return true;
+			}
+		} while ((ancestor = ancestor.getParent()) != null);
+
+		return false;
+	}
+
 	public void insert(MapperTreeNode newChild, int childIndex) {
-        if (bAttribute) {
-            throw new IllegalStateException("node does not allow children");
-        } else if (newChild == null) {
-            throw new IllegalArgumentException("new child is null");
-        } else if (isNodeAncestor(newChild)) {
-            throw new IllegalArgumentException("new child is an ancestor");
-        }
+		if (bAttribute) {
+			throw new IllegalStateException("node does not allow children");
+		} else if (newChild == null) {
+			throw new IllegalArgumentException("new child is null");
+		} else if (isNodeAncestor(newChild)) {
+			throw new IllegalArgumentException("new child is an ancestor");
+		}
 
-            MapperTreeNode oldParent = (MapperTreeNode)newChild.getParent();
+		MapperTreeNode oldParent = (MapperTreeNode) newChild.getParent();
 
-            if (oldParent != null) {
-                oldParent.remove(newChild);
-            }
-            newChild.setParent(this);
-            if (children == null) {
-                children = new Vector();
-            }
-            children.insertElementAt(newChild, childIndex);
-    }
+		if (oldParent != null) {
+			oldParent.remove(newChild);
+		}
+		newChild.setParent(this);
+		if (children == null) {
+			children = new Vector();
+		}
+		children.insertElementAt(newChild, childIndex);
+	}
 
-	
 	public MapperTreeNode getParent() {
-        return parent;
-    }
-	
+		return parent;
+	}
+
 	public int getChildCount() {
-        if (children == null) {
-            return 0;
-        } else {
-            return children.size();
-        }
-    }
+		if (children == null) {
+			return 0;
+		} else {
+			return children.size();
+		}
+	}
+
 	public void add(MapperTreeNode newChild) {
-        if(newChild != null && newChild.getParent() == this)
-            insert(newChild, getChildCount() - 1);
-        else
-            insert(newChild, getChildCount());
-    }
-	
-	
-	public void setAllowsChildren(boolean allows)
-	{
+		if (newChild != null && newChild.getParent() == this)
+			insert(newChild, getChildCount() - 1);
+		else
+			insert(newChild, getChildCount());
+	}
+
+	public void setAllowsChildren(boolean allows) {
 		bAttribute = !allows;
 
 	}
-	
-	public boolean isTextNode() { return bTextNode; }
-	public void setValue(String value)
-	{
-		if(value!=null && value.length()>0)
-		{
-			if(!isTextNode() && null != textNode)
+
+	public boolean isTextNode() {
+		return bTextNode;
+	}
+
+	public void setValue(String value) {
+		if (value != null && value.length() > 0) {
+			if (!isTextNode() && null != textNode)
 				textNode.setValue(value);
 			else
 				value = value.trim();
 		}
 	}
-	
-	
+
 	public MapperTreeNode(String name, MapperTree mapperTree) {
 		this(name, mapperTree, false);
 	}
-	
-	private MapperTreeNode(MapperTree tree)
-	{
+
+	private MapperTreeNode(MapperTree tree) {
 		tree = tree;
 		bTextNode = true;
 		name = "text()";
 		setAllowsChildren(false);
 	}
+
 	public MapperTreeNode(String name, MapperTree mapperTree, boolean bAttrib) {
-		this.name  = name;
+		this.name = name;
 		this.tree = mapperTree;
-		
-		if(null == tree)
+
+		if (null == tree)
 			return;
 		setAllowsChildren(!bAttrib);
 		// Add text node
-		if(!tree.isSinkTree() && !bAttrib) {
+		if (!tree.isSinkTree() && !bAttrib) {
 			textNode = new MapperTreeNode(tree);
 			this.add(textNode);
-		}	
-	
+		}
+
 		addProperty("Name", name);
-		addProperty("Value",value);
-	
-	
-	
+		addProperty("Value", value);
+
 	}
-	
+
 	public MapperTree getTree() {
 		return tree;
 	}
 
-	public void addProperty(String name, Object value)
-	{ properties.add(new ObjectProperty(this, name, value)); }
-	
-	
-	
-	public String toString()
-	{
-		if(getShowValue()) {
-			if(bAttribute)
+	public void addProperty(String name, Object value) {
+		properties.add(new ObjectProperty(this, name, value));
+	}
+
+	public String toString() {
+		if (getShowValue()) {
+			if (bAttribute)
 				return name + "=\"" + value + "\"";
 			else
 				return name + " (" + value + ")";
@@ -334,148 +321,80 @@ public class MapperTreeNode extends DefaultMapObject implements ILinkable {
 
 		return name;
 	}
-	
-	
-	private boolean getShowValue()
-	{
-		if(tree != null)
-			return ((MapperTree)tree).getShowValues();
+
+	private boolean getShowValue() {
+		if (tree != null)
+			return ((MapperTree) tree).getShowValues();
 		else
 			return false;
 	}
-	
-	
-	
-//	public String toString()
-//	{
-//		String msg = "";
-////		if(getShowValue()) {
-//			if(bAttribute)
-//				msg = msg + name + "=\"" + value + "\"";
-//			else
-//				msg = msg + name + " (" + value + ")";
-////		}
-////
-////		return name;
-//			if (properties!=null){
-//				Iterator<ObjectProperty> iter = properties.iterator();
-//				while(iter.hasNext()){
-//					ObjectProperty o = iter.next();
-//					msg = msg +"["+o.toString()+"]";
-//				}
-//			}
-//	return msg;
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public Element render(PathList context, Element parent)
-	{
-		if(tree.isSinkTree()) {
+
+	public Element render(PathList context, Element parent) {
+		if (tree.isSinkTree()) {
 			return renderOutput(context, parent);
 		} else {
 			Iterator iter = getLinks().iterator();
 
-			while( iter.hasNext() ) {
-				LinkLine line = (LinkLine)iter.next();
-				if(line.getSrc() == this) {
+			while (iter.hasNext()) {
+				LinkLine line = (LinkLine) iter.next();
+				if (line.getSrc() == this) {
 					Element newElem = line.render(context, parent);
-					if(null != newElem)
+					if (null != newElem)
 						context.set(getFullPath());
 					return newElem;
 				}
 			}
-			
-			
-			
-			
+
 			return null;
 		}
 	}
-	
-	/**
-	 * Renders output element.
-	 *
-	 * @param context current context (XPath)
-	 * @param parent parent element, context
-	 * @return new context node or parent if context has not changed.
-	 */
-	private Element renderOutput(PathList context, Element parent)
-	{
-		if(null == parent)
+
+	private Element renderOutput(PathList context, Element parent) {
+		if (null == parent)
 			return null;
-		
-		if(!hasToBeRendered())
+
+		if (!hasToBeRendered())
 			return parent;
 
-		Document	doc			= parent.getOwnerDocument();
-		String		prevContext	= context.toString();
-		Element		result		= null;
-		Element		newElement	= createOutputElement(doc);
-		
-		if(isLinked()) {
+		Document doc = parent.getOwnerDocument();
+		String prevContext = context.toString();
+		Element result = null;
+		Element newElement = createOutputElement(doc);
+
+		if (isLinked()) {
 			ILinkable src = getSource();
-			if(src instanceof MapperTreeNode) {
-				MapperTreeNode node = (MapperTreeNode)src;
-				if(!node.isLeaf())
-					//here why not newElement unstead of parent
+			if (src instanceof MapperTreeNode) {
+				MapperTreeNode node = (MapperTreeNode) src;
+				if (!node.isLeaf())
 					result = node.render(context, newElement);
 			}
 		}
 
-//		if(null != result)
-//			//result.appendChild(newElement);
-//			System.out.println("mmmmmmmmm");
-//		else
-//			result = newElement;
-		if(null == result)
+		if (null == result)
 			result = newElement;
-		
-		if(parent != result)
+
+		if (parent != result)
 			parent.appendChild(result);
-		//why not using result instead of newElement?
 		renderOutputContents(context, result);
 
-		for (Enumeration e=children();e.hasMoreElements();) {
-			MapperTreeNode child = (MapperTreeNode)e.nextElement();
+		for (Enumeration e = children(); e.hasMoreElements();) {
+			MapperTreeNode child = (MapperTreeNode) e.nextElement();
 			child.render(context, result);
 		}
-	
+
 		context.set(prevContext);
-		
+
 		return result;
 	}
 
-	/**
-	 * Creates new output element.
-	 *
-	 * @param doc DOM document
-	 * @return new element.
-	 */
-	
-	public String getName()					{ return name; }
-	private Element createOutputElement(Document doc)
-	{
+	public String getName() {
+		return name;
+	}
+
+	private Element createOutputElement(Document doc) {
 		String parentName = getName();
 		Element newElement = null;
-		if(isLeaf()) {
+		if (isLeaf()) {
 			newElement = doc.createElement("xsl:attribute");
 			newElement.setAttribute("name", parentName);
 		} else {
@@ -483,58 +402,50 @@ public class MapperTreeNode extends DefaultMapObject implements ILinkable {
 		}
 		return newElement;
 	}
-//	private Element createSimpleOutputElement(Document doc)
-//	{
-//		String parentName = getName();
-//		Element newElement = doc.createElement(parentName);
-//		return newElement;
-//	}
 
-	/**
-	 * Renders contents of the output element.
-	 *
-	 * @param context current context (XPath)
-	 * @param parent parent element, context
-	 */
-	private void renderOutputContents(PathList context, Element parent)
-	{
-		if(isLinked()) {
+	private void renderOutputContents(PathList context, Element parent) {
+		if (isLinked()) {
 			ILinkable src = getSource();
-			if(src instanceof MapperTreeNode) {
-				MapperTreeNode node = (MapperTreeNode)src;
-				String srcPath = context.getRelativePath(node.getFullPath()); // Take in account parent xsl:for-each!
-				if(node.isLeaf() && null!=parent) {
+			if (src instanceof MapperTreeNode) {
+				MapperTreeNode node = (MapperTreeNode) src;
+				String srcPath = context.getRelativePath(node.getFullPath()); // Take
+																				// in
+																				// account
+																				// parent
+																				// xsl:for-each!
+				if (node.isLeaf() && null != parent) {
 					Document doc = parent.getOwnerDocument();
 					Element tmp = doc.createElement("xsl:value-of");
 					tmp.setAttribute("select", srcPath);
 					parent.appendChild(tmp);
 				}
-			} else if(src.getParentObject() != null) {
+			} else if (src.getParentObject() != null) {
 				IMapObject parentObj = src.getParentObject();
 				parentObj.render(context, parent);
 			}
 		} else {
 			String val = getValue();
-			if(val.length() > 0)
+			if (val.length() > 0)
 				parent.setTextContent(XMLUtils.escape(val));
 		}
 	}
 
-	public boolean isLeaf()						{ return bAttribute; }
-	public String getValue()
-	{
-		if(!isTextNode() && null != textNode)
+	public boolean isLeaf() {
+		return bAttribute;
+	}
+
+	public String getValue() {
+		if (!isTextNode() && null != textNode)
 			return textNode.getValue();
 		else
 			return value;
 	}
-	
-	public boolean hasToBeRendered()
-	{
+
+	public boolean hasToBeRendered() {
 		Enumeration e = this.children();
-		while ( e.hasMoreElements() ) {
-			MapperTreeNode child = (MapperTreeNode)e.nextElement();
-			if(child.hasToBeRendered())
+		while (e.hasMoreElements()) {
+			MapperTreeNode child = (MapperTreeNode) e.nextElement();
+			if (child.hasToBeRendered())
 				return true;
 		}
 		return isLinked() || (this.getValue().trim() != "");

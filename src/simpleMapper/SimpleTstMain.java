@@ -76,7 +76,7 @@ public static void showXpath(MapperTreeNode root){
 
 	public static void main(String[] args) {
 		
-		//testxsd();
+		testxsd();
 		testxml();
 	}
 }
