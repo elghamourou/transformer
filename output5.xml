@@ -1,0 +1,11 @@
+<dst xmlns:var="urn:var" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<dataDst>
+<dstname>sampleData</dstname>
+<dstdesc>some description</dstdesc>
+<dstdesc>some description2</dstdesc>
+<dstdesc>some description3</dstdesc>
+</dataDst>
+<dstcnt>value_10</dstcnt>
+<dstcnt>value_20</dstcnt>
+<dstcnt>value_30</dstcnt>
+</dst>

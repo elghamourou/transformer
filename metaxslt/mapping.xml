@@ -1,0 +1,24 @@
+
+<dst>
+	<datadst>
+		<namedst>
+			<map:value xmlns:map="mapping" path='/src/data/name'>
+			</map:value>
+		</namedst>
+		<adressdst>
+			<map:value xmlns:map="mapping" path='/src/data/adress'>
+				
+			</map:value>
+		</adressdst>
+	</datadst>
+	
+	<niknamesdst>
+			<map:list xmlns:map="mapping" path='/src/niknames/nik'>
+				<nikdst>
+					<map:value xmlns:map="mapping" path='.' />
+					<map:value xmlns:map="mapping" path='/src/data/name/@id'/>
+				</nikdst>
+			</map:list>
+	</niknamesdst>
+	
+</dst>

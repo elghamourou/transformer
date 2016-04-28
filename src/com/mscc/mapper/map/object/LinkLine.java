@@ -17,10 +17,10 @@ public class LinkLine extends DefaultMapObject {
 
 	private int _lineType = XSL_VALUE_OF;
 	private ILinkable _src = null, _dst = null;
-	private int _x1 = 0, _y1 = 0, _x2 = 0, _y2 = 0;
 
-	public LinkLine(ILinkable src, ILinkable dst) {
+	public LinkLine(ILinkable src, ILinkable dst, int type) {
 
+		this._lineType = type;
 		if (((src instanceof MapperTreeNode) && src.isOutput()) || ((dst instanceof MapperTreeNode) && !dst.isOutput())) {
 			ILinkable tmp = src;
 			src = dst;
@@ -90,10 +90,19 @@ public class LinkLine extends DefaultMapObject {
 			String srcPath = context.getRelativePath(_src.getXPath());
 			Element newElement = doc.createElement(xslcmd);
 			newElement.setAttribute("select", srcPath);
-			parent.appendChild(newElement);
+			
 			bNewContext = (getType() == LinkLine.XSL_FOR_EACH);
-			if (bNewContext)
+			if (bNewContext){
 				context.set(_src.getXPath());
+				
+				newElement.appendChild(parent);			
+				Element newElement2 = doc.createElement("xsl:value-of");
+				newElement2.setAttribute("select", ".");
+				parent.appendChild(newElement2);
+			}else{
+				parent.appendChild(newElement);
+			}
+				
 			return bNewContext ? newElement : parent;
 		}
 	}

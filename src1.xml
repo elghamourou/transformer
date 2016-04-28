@@ -1,0 +1,11 @@
+<src>
+	<dataSrc type="xyz">
+		<name>sampleData</name>
+		<desc>some description</desc>
+		<desc>some description2</desc>
+		<desc>some description3</desc>
+	</dataSrc>
+	<content>value_10</content>
+	<content>value_20</content>
+	<content>value_30</content>
+</src>

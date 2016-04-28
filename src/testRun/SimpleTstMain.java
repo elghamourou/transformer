@@ -3,6 +3,7 @@ package testRun;
 import java.util.Enumeration;
 
 import com.mscc.mapper.map.Map;
+import com.mscc.mapper.map.object.LinkLine;
 import com.mscc.mapper.renderer.XSLTRenderer;
 import com.mscc.mapper.tree.MapperTree;
 import com.mscc.mapper.tree.MapperTreeNode;
@@ -31,15 +32,15 @@ public static void showXpath(MapperTreeNode root){
 		
 		MapperTreeNode nodeSrc = src.getNodeByXPath("/src/dataSrc/name");
 		MapperTreeNode nodeDst = dst.getNodeByXPath("/dst/dataDst/dstname");
-		map.addLink(nodeSrc, nodeDst);
+		map.addLink(nodeSrc, nodeDst, LinkLine.XSL_VALUE_OF);
 		
 		MapperTreeNode nodeSrc2 = src.getNodeByXPath("/src/dataSrc/desc");
 		MapperTreeNode nodeDst2 = dst.getNodeByXPath("/dst/dataDst/dstdesc");
-		map.addLink(nodeSrc2, nodeDst2);
+		map.addLink(nodeSrc2, nodeDst2, LinkLine.XSL_FOR_EACH);
 		
 		MapperTreeNode nodeSrc3 = src.getNodeByXPath("/src/content");
 		MapperTreeNode nodeDst3 = dst.getNodeByXPath("/dst/dstcnt");
-		map.addLink(nodeSrc3, nodeDst3);
+		map.addLink(nodeSrc3, nodeDst3, LinkLine.XSL_FOR_EACH);
 				
 		XSLTRenderer xsltRenderer = new XSLTRenderer();
 		xsltRenderer.render(map);
@@ -60,15 +61,15 @@ public static void showXpath(MapperTreeNode root){
 		
 		MapperTreeNode nodeSrc = src.getNodeByXPath("/src/dataSrc/name");
 		MapperTreeNode nodeDst = dst.getNodeByXPath("/dst/dataDst/dstname");
-		map.addLink(nodeSrc, nodeDst);
+		map.addLink(nodeSrc, nodeDst, LinkLine.XSL_VALUE_OF);
 		
 		MapperTreeNode nodeSrc2 = src.getNodeByXPath("/src/dataSrc/desc");
 		MapperTreeNode nodeDst2 = dst.getNodeByXPath("/dst/dataDst/dstdesc");
-		map.addLink(nodeSrc2, nodeDst2);
+		map.addLink(nodeSrc2, nodeDst2, LinkLine.XSL_FOR_EACH);
 		
 		MapperTreeNode nodeSrc3 = src.getNodeByXPath("/src/content");
 		MapperTreeNode nodeDst3 = dst.getNodeByXPath("/dst/dstcnt");
-		map.addLink(nodeSrc3, nodeDst3);
+		map.addLink(nodeSrc3, nodeDst3, LinkLine.XSL_FOR_EACH);
 		
 		
 		

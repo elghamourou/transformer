@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="bib1.xsl"?>
+<customer id="id_1234567">
+	<name>
+		<first>Sherlock</first>
+		<middle></middle>
+		<last>Holmes</last>
+	</name>
+	<address>
+		<street>221b Baker Street</street>
+		<city>London</city>
+		<state></state>
+		<country>England</country>
+		<postalcode>W1U</postalcode>
+	</address>
+</customer>

@@ -15,7 +15,7 @@ public class ChooseBox extends DragableMapObject {
 		LinkPoint param = new LinkPoint("when");
 		_linkPoints.add(param);
 		WhenBox wb = _map.addNewWhenBox();
-		_map.addLink(wb.getOutputLink(), param);
+		_map.addLink(wb.getOutputLink(), param, LinkLine.XSL_VALUE_OF);
 		return param;
 	}
 

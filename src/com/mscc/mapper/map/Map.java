@@ -60,8 +60,8 @@ public class Map extends DefaultMapObject {
 		objects.clear();
 	}
 
-	public LinkLine addLink(ILinkable src, ILinkable dst) {
-		LinkLine line = objects.addLink(src, dst);
+	public LinkLine addLink(ILinkable src, ILinkable dst, int type) {
+		LinkLine line = objects.addLink(src, dst, type);
 		return line;
 	}
 

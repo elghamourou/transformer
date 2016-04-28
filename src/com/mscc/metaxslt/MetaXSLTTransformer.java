@@ -1,4 +1,4 @@
-package com.mscc.transformer;
+package com.mscc.metaxslt;
 
 import java.io.File;
 
@@ -10,28 +10,27 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-public class XSLTTransformer {
+public class MetaXSLTTransformer {
 
 	
 	public static void main(String[] args) throws TransformerException {
-		
-		
-		
-//		TransformerFactory factory = TransformerFactory.newInstance();
-//        Source xslt = new StreamSource(new File("srctodst4.xslt"));
-//        Transformer transformer = factory.newTransformer(xslt);
-//
-//        Source text = new StreamSource(new File("src1.xml"));
-//        transformer.transform(text, new StreamResult(new File("output5.xml")));
-//        
+
+		TransformerFactory factory = TransformerFactory.newInstance();
+        Source xslt = new StreamSource(new File("metaxslt/map-generator.xslt"));
+        Transformer transformer = factory.newTransformer(xslt);
+
+        Source text = new StreamSource(new File("metaxslt/mapping.xml"));
+        transformer.transform(text, new StreamResult(new File("metaxslt/srcToDst.xslt")));
         
-		TransformerFactory factory2= TransformerFactory.newInstance();
+        
+        
+        
+        TransformerFactory factory2= TransformerFactory.newInstance();
         Source xslt2 = new StreamSource(new File("metaxslt/srcToDst.xslt"));
         Transformer transformer2 = factory2.newTransformer(xslt2);
 
         Source text2 = new StreamSource(new File("metaxslt/src.xml"));
         transformer2.transform(text2, new StreamResult(new File("metaxslt/transformedDst.xml")));
-        
         
 	}
 }

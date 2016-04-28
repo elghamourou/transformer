@@ -26,11 +26,11 @@ public class Objects extends ArrayList {
 		_map = map;
 	}
 
-	public LinkLine addLink(ILinkable src, ILinkable dst) {
+	public LinkLine addLink(ILinkable src, ILinkable dst, int type) {
 		if ((null != src.getParentObject() && null != dst.getParentObject()) && (src.getParentObject() == dst.getParentObject()))
 			return null;
 
-		LinkLine line = new LinkLine(src, dst);
+		LinkLine line = new LinkLine(src, dst, type);
 
 		super.add(line);
 
@@ -346,7 +346,7 @@ public class Objects extends ArrayList {
 			dst = getLinkable(dstPath);
 
 		if ((null != src) && (null != dst)) {
-			LinkLine newLink = addLink(src, dst);
+			LinkLine newLink = addLink(src, dst, LinkLine.XSL_VALUE_OF);
 
 			newLink.load((Element) node);
 

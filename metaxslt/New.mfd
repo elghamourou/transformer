@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="xslt"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="1" kind="14">
+					<properties/>
+					<view rbx="150" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="src" expanded="1">
+										<entry name="data" expanded="1">
+											<entry name="name" outkey="162138976" expanded="1"/>
+											<entry name="adress" outkey="162140176"/>
+										</entry>
+										<entry name="niknames" outkey="162152896" expanded="1">
+											<entry name="nik" outkey="162141256"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="C:\Users\pc\Documents\Altova\src.xsd" inputinstance="C:\Users\pc\Documents\Altova\src.xml" outputinstance="C:\Users\pc\Documents\Altova\src.xml" instanceroot="{}src" userdefinedschemalocation="M:/project/transformer/metaxslt/src.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="337" lty="-4" rbx="487" rby="196"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="dst" expanded="1">
+										<entry name="datadst" expanded="1">
+											<entry name="namedst" inpkey="162139816"/>
+											<entry name="adressdst" inpkey="162141736"/>
+										</entry>
+										<entry name="niknamesdst" inpkey="162140896" expanded="1">
+											<entry name="nikdst" inpkey="162141496"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="C:\Users\pc\Documents\Altova\dst.xsd" inputinstance="C:\Users\pc\Documents\Altova\dst.xml" outputinstance="C:\Users\pc\Documents\Altova\dst.xml" instanceroot="{}dst" userdefinedschemalocation="M:/project/transformer/metaxslt/dst.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="162138976">
+						<edges>
+							<edge vertexkey="162139816" edgekey="162743464"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="162140176">
+						<edges>
+							<edge vertexkey="162141736" edgekey="173826712"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="162141256">
+						<edges>
+							<edge vertexkey="162141496" edgekey="173819032"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="162152896">
+						<edges>
+							<edge vertexkey="162140896" edgekey="173829736"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

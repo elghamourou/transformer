@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="dst">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="datadst">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="namedst" type="xs:string"/>
+							<xs:element name="adressdst">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="niknamesdst">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nikdst" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
