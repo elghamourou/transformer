@@ -3,26 +3,45 @@
 <xsl:template match="/">
 <dst>
 	<datadst>
+		
 		<namedst>
+			
 			<xsl:value-of select="/src/data/name">
 			</xsl:value-of>
 		</namedst>
 		<adressdst>
-			<xsl:value-of select="/src/data/adress">
-				
-			</xsl:value-of>
+			
+			
+				<xsl:value-of select="/src/data/adress"/>
+				<xsl:for-each select="/src/data/name/@id">
+<xsl:variable name="string-value" select="."/>
+<xsl:if test="starts-with($string-value, 'to')">
+					<xsl:value-of select="/src/data/name/@id"/>
+					
+				</xsl:if>
+</xsl:for-each>
+			
 		</adressdst>
 	</datadst>
-	
-	<niknamesdst>
+
+	<xsl:for-each select="/src/niknames">
+		<niknamesdst>
 			<xsl:for-each select="/src/niknames/nik">
 				<nikdst>
-					<xsl:value-of select="."/>
-					<xsl:value-of select="/src/data/name/@id"/>
+<!-- 					<map:to-attribute xmlns:map="mapping" name="attr" -->
+<!-- 						path='/src/data/name' /> -->
+<!-- 					<map:value xmlns:map="mapping" path='.' /> -->
+					<xsl:for-each select="/src/data/name/@id">
+<xsl:variable name="string-value" select="."/>
+<xsl:if test="substring($string-value, (string-length($string-value) - string-length('co')) + 1) = 'co'">
+						<xsl:value-of select="/src/data/name/@id"/>
+					</xsl:if>
+</xsl:for-each>
+
 				</nikdst>
 			</xsl:for-each>
-	</niknamesdst>
-	
+		</niknamesdst>
+	</xsl:for-each>
 </dst>
 </xsl:template>
 </xsl:stylesheet>

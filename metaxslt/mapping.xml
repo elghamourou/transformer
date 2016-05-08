@@ -1,24 +1,52 @@
 
 <dst>
 	<datadst>
+		<toremove>
+			<todelete>
+				
+			</todelete>
+		</toremove>
 		<namedst>
+			<toremove>
+				<todelete>
+				</todelete>
+			</toremove>
 			<map:value xmlns:map="mapping" path='/src/data/name'>
 			</map:value>
 		</namedst>
 		<adressdst>
-			<map:value xmlns:map="mapping" path='/src/data/adress'>
-				
-			</map:value>
+			<toremove>
+				<todelete>
+				</todelete>
+			</toremove>
+			<map:concate xmlns:map="mapping">
+				<map:arg path='/src/data/adress' />
+				<map:if-starts-with path="/src/data/name/@id"
+					string="to" xmlns:map="mapping">
+					<map:arg path='/src/data/name/@id' />
+					<toremove>
+						<todelete>
+						</todelete>
+					</toremove>
+				</map:if-starts-with>
+			</map:concate>
 		</adressdst>
 	</datadst>
-	
-	<niknamesdst>
+
+	<map:list xmlns:map="mapping" path='/src/niknames'>
+		<niknamesdst>
 			<map:list xmlns:map="mapping" path='/src/niknames/nik'>
 				<nikdst>
-					<map:value xmlns:map="mapping" path='.' />
-					<map:value xmlns:map="mapping" path='/src/data/name/@id'/>
+<!-- 					<map:to-attribute xmlns:map="mapping" name="attr" -->
+<!-- 						path='/src/data/name' /> -->
+<!-- 					<map:value xmlns:map="mapping" path='.' /> -->
+					<map:if-ends-with path="/src/data/name/@id"
+						string="co" xmlns:map="mapping">
+						<map:value xmlns:map="mapping" path='/src/data/name/@id' />
+					</map:if-ends-with>
+
 				</nikdst>
 			</map:list>
-	</niknamesdst>
-	
+		</niknamesdst>
+	</map:list>
 </dst>

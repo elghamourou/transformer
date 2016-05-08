@@ -33,5 +33,16 @@ public class XSLTTransformer {
         transformer2.transform(text2, new StreamResult(new File("metaxslt/transformedDst.xml")));
         
         
+        
+        
+        //clean
+        TransformerFactory factory3= TransformerFactory.newInstance();
+        Source xslt3 = new StreamSource(new File("metaxslt/clean.xslt"));
+        Transformer transformer3 = factory3.newTransformer(xslt3);
+
+        Source text3 = new StreamSource(new File("metaxslt/transformedDst.xml"));
+        transformer3.transform(text3, new StreamResult(new File("metaxslt/transformedDstClean.xml")));
+        
+        
 	}
 }
