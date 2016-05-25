@@ -3,10 +3,12 @@ package com.mscc.schema;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
   
+
 
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlObject;
@@ -31,24 +33,22 @@ public class XSDGenerator {
 	public XSDGenerator() {
 		// TODO Auto-generated constructor stub
 	}
-	public static void main(String[] args) {
+	
+	public static void demo(List<String> xmlfiles, String output){
+	
 		 try {
 			 	XSDGenerator xmlBeans = new XSDGenerator();
-			 	
 			 	List<File> inputFiles = new ArrayList<File>();
-			 	inputFiles.add(new File("dst.xml"));
-			 	//inputFiles.add(new File("note1.xml"));
-			 	//inputFiles.add(new File("note2.xml"));
+			 	for(String fileName: xmlfiles){
+			 		inputFiles.add(new File(fileName));
+			 	}
 			 	
 			 	
 	            SchemaDocument schemaDocument = xmlBeans.generateSchema(inputFiles);
 	  
-	            StringWriter writer = new StringWriter();
+	            FileWriter writer = new FileWriter(new File(output));
 	            schemaDocument.save(writer, new XmlOptions().setSavePrettyPrint());
 	            writer.close();
-	  
-	            String xmlText = writer.toString();
-	            System.out.println(xmlText);
 	  
 	        } catch (IOException e) {
 	            e.printStackTrace();

@@ -1,0 +1,31 @@
+<hdps>
+	<uid>null</uid>
+	<al>
+		<diagnosticDate>20141030</diagnosticDate>
+		<id>5</id>
+		<severity />
+		<label>pollen</label>
+	</al>
+	<obx>
+		<id>4</id>
+		<resultUid>weight</resultUid>
+		<examDate>20141016</examDate>
+		<valueReference>74.0</valueReference>
+		<unitLabel>kg</unitLabel>
+	</obx>
+	<sourceUid>hdps2_458999</sourceUid>
+	<pid>
+		<id>3</id>
+		<lastName>fromont</lastName>
+		<address>44 rue de la potiniere&lt;br/&gt;Batiment C&lt;br/&gt;porte
+			A^^Paris^vcx^</address>
+		<gender>M</gender>
+		<birthDate>19590302</birthDate>
+		<deceasedDate />
+		<code>12569999</code>
+		<firstName>David</firstName>
+		<maritalStatus />
+		<homePhone>(979)729-7853</homePhone>
+	</pid>
+	<messageType>A01</messageType>
+</hdps>

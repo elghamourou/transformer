@@ -1,55 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="hdps">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="uid" type="xs:string"/>
-				<xs:element name="al">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="diagnosticDate" type="xs:int"/>
-							<xs:element name="id" type="xs:byte"/>
-							<xs:element name="severity">
-								<xs:complexType/>
-							</xs:element>
-							<xs:element name="label" type="xs:string"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="obx">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="id" type="xs:byte"/>
-							<xs:element name="resultUid" type="xs:string"/>
-							<xs:element name="examDate" type="xs:int"/>
-							<xs:element name="valueReference" type="xs:decimal"/>
-							<xs:element name="unitLabel" type="xs:string"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="sourceUid" type="xs:string"/>
-				<xs:element name="pid">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="id" type="xs:byte"/>
-							<xs:element name="lastName" type="xs:string"/>
-							<xs:element name="address" type="xs:string"/>
-							<xs:element name="gender" type="xs:string"/>
-							<xs:element name="birthDate" type="xs:int"/>
-							<xs:element name="deceasedDate">
-								<xs:complexType/>
-							</xs:element>
-							<xs:element name="code" type="xs:int"/>
-							<xs:element name="firstName" type="xs:string"/>
-							<xs:element name="maritalStatus">
-								<xs:complexType/>
-							</xs:element>
-							<xs:element name="homePhone" type="xs:string"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="messageType" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hdps" type="hdpsType"/>
+  <xs:complexType name="alType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="diagnosticDate"/>
+      <xs:element type="xs:byte" name="id"/>
+      <xs:element type="xs:string" name="severity"/>
+      <xs:element type="xs:string" name="label"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pidType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="id"/>
+      <xs:element type="xs:string" name="lastName"/>
+      <xs:element type="xs:string" name="address"/>
+      <xs:element type="xs:string" name="gender"/>
+      <xs:element type="xs:int" name="birthDate"/>
+      <xs:element type="xs:string" name="deceasedDate"/>
+      <xs:element type="xs:int" name="code"/>
+      <xs:element type="xs:string" name="firstName"/>
+      <xs:element type="xs:string" name="maritalStatus"/>
+      <xs:element type="xs:string" name="homePhone"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hdpsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="uid"/>
+      <xs:element type="alType" name="al"/>
+      <xs:element type="obxType" name="obx"/>
+      <xs:element type="xs:string" name="sourceUid"/>
+      <xs:element type="pidType" name="pid"/>
+      <xs:element type="xs:string" name="messageType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obxType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="id"/>
+      <xs:element type="xs:string" name="resultUid"/>
+      <xs:element type="xs:int" name="examDate"/>
+      <xs:element type="xs:float" name="valueReference"/>
+      <xs:element type="xs:string" name="unitLabel"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

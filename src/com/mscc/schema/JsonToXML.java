@@ -1,5 +1,7 @@
 package com.mscc.schema;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -19,11 +21,14 @@ public class JsonToXML {
 			  byte[] encoded = Files.readAllBytes(Paths.get(path));
 			  return new String(encoded, encoding);
 			}
-	
-	public static void main(String[] args) throws JSONException, IOException {
-		JSONObject json = new JSONObject(readFile("hdps/hdpsJson-3.json", Charset.forName("utf-8")));
-		String xml = XML.toString(json,"hdps");
-		System.out.println(xml);
+	public static void demo(String jsonfilename, String rootname, String output) throws JSONException, IOException{
+		JSONObject json = new JSONObject(readFile(jsonfilename, Charset.forName("utf-8")));
+		String xml = XML.toString(json,rootname);
+		FileWriter writer = new FileWriter(new File(output));
+		writer.write(xml);
+		writer.flush();writer.close();
+		
 	}
+	
 
 }

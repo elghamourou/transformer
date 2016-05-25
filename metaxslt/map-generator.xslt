@@ -7,10 +7,13 @@
 		result-prefix="xsl" />
 
 
+
 	<xsl:template match="/">
-		
+<!-- 		xmlns:uuid="java:java.util.UUID-->
 		<xsl:variable name="outermostElementName" select="name(/*)" />
-		<axsl:stylesheet version="2.0">
+		<axsl:stylesheet version="2.0" 
+		xmlns:uuid="xalan://java.util.UUID" 
+		extension-element-prefixes="uuid">
 			<axsl:output indent="yes" method="xml" encoding="utf-8"
 				omit-xml-declaration="yes" />
 			<axsl:template match="/">
@@ -50,6 +53,17 @@
 			<xsl:apply-templates />
 		</axsl:value-of>
 	</xsl:template>
+	
+	<xsl:template match="map:cte">
+		<axsl:variable name="thecte" select="'{@val}'" />
+		<axsl:copy-of select="$thecte" />
+	</xsl:template>
+
+	<xsl:template match="map:uuid">
+		<axsl:variable name="uuid" select="uuid:randomUUID()"/>
+		<axsl:copy-of select="$uuid" />
+	</xsl:template>
+
 
 	<xsl:template match="map:list">
 		<axsl:for-each select="{@path}">

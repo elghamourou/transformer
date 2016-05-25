@@ -1,7 +1,9 @@
 <ADT_A01 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <MSH>
-      <MSH.1 Item="1" Type="ST" LongName="Field Separator">MSH.11</MSH.1>
-      <MSH.2 Item="2" Type="ST" LongName="Encoding Characters">MSH.21</MSH.2>
+      <MSH.1 Item="1" Type="ST" LongName="Field Separator"><map:cte xmlns:map="mapping" val='|'>
+															</map:cte></MSH.1>
+      <MSH.2 Item="2" Type="ST" LongName="Encoding Characters"><map:cte xmlns:map="mapping" val='^~\&amp;'>
+															</map:cte></MSH.2>
       <MSH.3 Item="3" Type="HD" LongName="Sending Application">
          <HD.1 Type="IS" LongName="namespace ID"><map:value xmlns:map="mapping" path='/hdps/uid'>
 												</map:value></HD.1>
@@ -29,15 +31,22 @@
         </MSH.7>
       <MSH.8 Item="8" Type="ST" LongName="Security">MSH.81</MSH.8>
       <MSH.9 Item="9" Type="CM" LongName="Message Type">
-         <CM_MSG.1 Type="ID" LongName="message type">CM_MSG.11</CM_MSG.1>
-         <CM_MSG.2 Type="ID" LongName="trigger event">CM_MSG.21</CM_MSG.2>
+         <CM_MSG.1 Type="ID" LongName="message type"><map:cte xmlns:map="mapping" val='ADT'>
+															</map:cte></CM_MSG.1>
+         <CM_MSG.2 Type="ID" LongName="trigger event"><map:cte xmlns:map="mapping" val='A01'>
+															</map:cte></CM_MSG.2>
         </MSH.9>
-      <MSH.10 Item="10" Type="ST" LongName="Message Control ID">MSH.101</MSH.10>
+      <MSH.10 Item="10" Type="ST" LongName="Message Control ID"><map:uuid xmlns:map="mapping">
+															</map:uuid>
+															<!--	<map:value xmlns:map="mapping" path='/hdps/sourceUid'>
+																	</map:value> -->
+															</MSH.10>
       <MSH.11 Item="11" Type="PT" LongName="Processing ID">
          <PT.1 Type="ST" LongName="processing ID">PT.11</PT.1>
          <PT.2 Type="ST" LongName="processing mode">PT.21</PT.2>
         </MSH.11>
-      <MSH.12 Item="12" Type="ID" Table="HL70104" LongName="Version ID">MSH.121</MSH.12>
+      <MSH.12 Item="12" Type="ID" Table="HL70104" LongName="Version ID"><map:cte xmlns:map="mapping" val='2.3'>
+															</map:cte></MSH.12>
       <MSH.13 Item="13" Type="NM" LongName="Sequence Number">MSH.131</MSH.13>
       <MSH.14 Item="14" Type="ST" LongName="Continuation Pointer">MSH.141</MSH.14>
       <MSH.15 Item="15" Type="ID" Table="HL70155" LongName="Accept Acknowledgement Type">MSH.151</MSH.15>
