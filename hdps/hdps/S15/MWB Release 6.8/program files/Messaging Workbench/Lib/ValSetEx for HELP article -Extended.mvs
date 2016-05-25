@@ -1,0 +1,116 @@
+PID.3.1 -  ID
+	1234567
+		PID.3.4.1 -  namespace ID
+			USVHA
+		PID.5.1.1 -  surname
+			Doe
+		PID.5.2 -  given name
+			John
+		PID.5.3 -  second and further given names or initials thereof
+			E
+		PID.7.1 -  Date/Time
+			19520328
+		PID.10.1 -  identifier
+			2106-3
+				PID.10.2 -  text
+					White
+				PID.10.3 -  name of coding system
+					HL70005
+			2131-1
+				PID.10.2 -  text
+					Other Race
+				PID.10.3 -  name of coding system
+					HL70005
+		PD1.7 -  Living Will Code
+			N
+		PV1.2 -  Patient Class
+			I
+		IN1.2.1 -  identifier
+			JH345
+	9999999
+		PID.3.4.1 -  namespace ID
+			AUSDVA
+		PID.5.1.1 -  surname
+			Smith
+		PID.5.2 -  given name
+			Jane
+		PID.5.3 -  second and further given names or initials thereof
+			W
+		PID.7.1 -  Date/Time
+			19491117
+		PID.10.1 -  identifier
+			2054-5
+				PID.10.2 -  text
+					Black or African American
+				PID.10.3 -  name of coding system
+					HL70005
+		PD1.7 -  Living Will Code
+			Y
+		PV1.2 -  Patient Class
+			O
+		IN1.2.1 -  identifier
+			E99999
+OBX.3.1 -  identifier
+	GLU
+		OBX.3.2 -  text
+			Blood Glucose, Serum
+		OBX.3.3 -  name of coding system
+			LN
+		OBX.5 -  Observation Value
+			56
+				OBX.8 -  Abnormal Flags
+					L
+			87
+				OBX.8 -  Abnormal Flags
+					No Value
+			244
+				OBX.8 -  Abnormal Flags
+					H
+		OBX.6.1 -  identifier
+			mg/dl
+		OBX.7 -  References Range
+			70 - 110 mg/dl
+	BUN
+		OBX.3.2 -  text
+			Blood Urea Nitrogen, Serum
+		OBX.3.3 -  name of coding system
+			LN
+		OBX.5 -  Observation Value
+			4
+				OBX.8 -  Abnormal Flags
+					L
+			10
+				OBX.8 -  Abnormal Flags
+					No Value
+			40
+				OBX.8 -  Abnormal Flags
+					H
+		OBX.6.1 -  identifier
+			mg/dl
+		OBX.7 -  References Range
+			5 - 15 mg/dl
+	HGB
+		OBX.3.2 -  text
+			Hemaglobin, Blood
+		OBX.3.3 -  name of coding system
+			LN
+		OBX.5 -  Observation Value
+			4.6
+				OBX.8 -  Abnormal Flags
+					LL
+			10.3
+				OBX.8 -  Abnormal Flags
+					L
+			14.2
+				OBX.8 -  Abnormal Flags
+					No Value
+			16.5
+				OBX.8 -  Abnormal Flags
+					H
+			20.1
+				OBX.8 -  Abnormal Flags
+					HH
+		OBX.6.1 -  identifier
+			gm/dl
+		OBX.7 -  References Range
+			M:13-18 F:12-16 gm/dl

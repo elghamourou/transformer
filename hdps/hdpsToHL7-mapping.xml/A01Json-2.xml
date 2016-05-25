@@ -1,0 +1,24 @@
+<hdps>
+	<uid>null</uid>
+	<al>
+		<diagnosticDate>20080407</diagnosticDate>
+		<id>4</id>
+		<severity />
+		<label>Penniciline</label>
+	</al>
+	<dg>null</dg>
+	<sourceUid>a1f48367-48c3-405f-9283-9b8ad88295af</sourceUid>
+	<pid>
+		<id>11</id>
+		<lastName>Montergiev</lastName>
+		<address>^^PARIS^^fr</address>
+		<gender>U</gender>
+		<birthDate>19780301</birthDate>
+		<deceasedDate />
+		<code>1610775114705</code>
+		<firstName>Philippe</firstName>
+		<maritalStatus />
+		<homePhone />
+	</pid>
+	<messageType>A01</messageType>
+</hdps>

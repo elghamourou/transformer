@@ -1,0 +1,1363 @@
+
+<!--(MSH , EVN , PID , PD1? , NK1* , PV1 , PV2? , DB1* , OBX* , AL1* , DG1* , DRG? , ADT_A01.PROCEDURE* , GT1* , ADT_A01.INSURANCE* , ACC? , UB1? , UB2?)-->
+<ADT_A01 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--(MSH.1 , MSH.2 , MSH.3? , MSH.4? , MSH.5? , MSH.6? , MSH.7? , MSH.8? , MSH.9 , MSH.10 , MSH.11 , MSH.12 , MSH.13? , MSH.14? , MSH.15? , MSH.16? , MSH.17? , MSH.18? , MSH.19?)-->
+   <MSH>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.1 Item="1" Type="ST" LongName="Field Separator">MSH.11</MSH.1>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.2 Item="2" Type="ST" LongName="Encoding Characters">MSH.21</MSH.2>
+      <!--@(Item?, Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+      <MSH.3 Item="3" Type="HD" LongName="Sending Application">
+         <!--@(Type?, LongName?)-->
+         <HD.1 Type="IS" LongName="namespace ID">HD.11</HD.1>
+         <!--@(Type?, LongName?)-->
+         <HD.2 Type="ST" LongName="universal ID">HD.21</HD.2>
+         <!--@(Type?, LongName?)-->
+         <HD.3 Type="ID" LongName="universal ID type">HD.31</HD.3>
+        </MSH.3>
+      <!--@(Item?, Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+      <MSH.4 Item="4" Type="HD" LongName="Sending Facility">
+         <!--@(Type?, LongName?)-->
+         <HD.1 Type="IS" LongName="namespace ID">HD.12</HD.1>
+         <!--@(Type?, LongName?)-->
+         <HD.2 Type="ST" LongName="universal ID">HD.22</HD.2>
+         <!--@(Type?, LongName?)-->
+         <HD.3 Type="ID" LongName="universal ID type">HD.32</HD.3>
+        </MSH.4>
+      <!--@(Item?, Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+      <MSH.5 Item="5" Type="HD" LongName="Receiving Application">
+         <!--@(Type?, LongName?)-->
+         <HD.1 Type="IS" LongName="namespace ID">HD.13</HD.1>
+         <!--@(Type?, LongName?)-->
+         <HD.2 Type="ST" LongName="universal ID">HD.23</HD.2>
+         <!--@(Type?, LongName?)-->
+         <HD.3 Type="ID" LongName="universal ID type">HD.33</HD.3>
+        </MSH.5>
+      <!--@(Item?, Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+      <MSH.6 Item="6" Type="HD" LongName="Receiving Facility">
+         <!--@(Type?, LongName?)-->
+         <HD.1 Type="IS" LongName="namespace ID">HD.14</HD.1>
+         <!--@(Type?, LongName?)-->
+         <HD.2 Type="ST" LongName="universal ID">HD.24</HD.2>
+         <!--@(Type?, LongName?)-->
+         <HD.3 Type="ID" LongName="universal ID type">HD.34</HD.3>
+        </MSH.6>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <MSH.7 Item="7" Type="TS" LongName="Date / Time of Message">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.11</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.21</TS.2>
+        </MSH.7>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.8 Item="8" Type="ST" LongName="Security">MSH.81</MSH.8>
+      <!--@(Item?, Type?, LongName?) (CM_MSG.1? , CM_MSG.2?)-->
+      <MSH.9 Item="9" Type="CM" LongName="Message Type">
+         <!--@(Type?, LongName?)-->
+         <CM_MSG.1 Type="ID" LongName="message type">CM_MSG.11</CM_MSG.1>
+         <!--@(Type?, LongName?)-->
+         <CM_MSG.2 Type="ID" LongName="trigger event">CM_MSG.21</CM_MSG.2>
+        </MSH.9>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.10 Item="10" Type="ST" LongName="Message Control ID">MSH.101</MSH.10>
+      <!--@(Item?, Type?, LongName?) (PT.1? , PT.2?)-->
+      <MSH.11 Item="11" Type="PT" LongName="Processing ID">
+         <!--@(Type?, LongName?)-->
+         <PT.1 Type="ST" LongName="processing ID">PT.11</PT.1>
+         <!--@(Type?, LongName?)-->
+         <PT.2 Type="ST" LongName="processing mode">PT.21</PT.2>
+        </MSH.11>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <MSH.12 Item="12" Type="ID" Table="HL70104" LongName="Version ID">MSH.121</MSH.12>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.13 Item="13" Type="NM" LongName="Sequence Number">MSH.131</MSH.13>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.14 Item="14" Type="ST" LongName="Continuation Pointer">MSH.141</MSH.14>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <MSH.15 Item="15" Type="ID" Table="HL70155" LongName="Accept Acknowledgement Type">MSH.151</MSH.15>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <MSH.16 Item="16" Type="ID" Table="HL70155" LongName="Application Acknowledgement Type">MSH.161</MSH.16>
+      <!--@(Item?, Type?, LongName?)-->
+      <MSH.17 Item="17" Type="ID" LongName="Country Code">MSH.171</MSH.17>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <MSH.18 Item="692" Type="ID" Table="HL70211" LongName="Character Set">MSH.181</MSH.18>
+      <!--@(Item?, Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <MSH.19 Item="693" Type="CE" LongName="Principal Language of Message">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.11</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.21</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.31</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.41</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.51</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.61</CE.6>
+        </MSH.19>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </MSH>
+   <!--(EVN.1 , EVN.2? , EVN.3? , EVN.4? , EVN.5? , EVN.6?)-->
+   <EVN>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <EVN.1 Item="99" Type="ID" Table="HL70003" LongName="Event Type Code">EVN.11</EVN.1>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <EVN.2 Item="100" Type="TS" LongName="Recorded Date/Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.12</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.22</TS.2>
+        </EVN.2>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <EVN.3 Item="101" Type="TS" LongName="Date/Time Planned Event">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.13</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.23</TS.2>
+        </EVN.3>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <EVN.4 Item="102" Type="ID" Table="HL70062" LongName="Event Reason Code">EVN.41</EVN.4>
+      <!--@(Item?, Type?, Table?, LongName?) (CN.1? , CN.2? , CN.3? , CN.4? , CN.5? , CN.6? , CN.7? , CN.8? , CN.9?)-->
+      <EVN.5 Item="103" Type="CN" Table="HL70188" LongName="Operator ID">
+         <!--@(Type?, LongName?)-->
+         <CN.1 Type="ST" LongName="ID number (ST)">CN.11</CN.1>
+         <!--@(Type?, LongName?)-->
+         <CN.2 Type="ST" LongName="family name">CN.21</CN.2>
+         <!--@(Type?, LongName?)-->
+         <CN.3 Type="ST" LongName="given name">CN.31</CN.3>
+         <!--@(Type?, LongName?)-->
+         <CN.4 Type="ST" LongName="middle initial or name">CN.41</CN.4>
+         <!--@(Type?, LongName?)-->
+         <CN.5 Type="ST" LongName="suffix (e.g., JR or III)">CN.51</CN.5>
+         <!--@(Type?, LongName?)-->
+         <CN.6 Type="ST" LongName="prefix (e.g., DR)">CN.61</CN.6>
+         <!--@(Type?, LongName?)-->
+         <CN.7 Type="ST" LongName="degree (e.g., MD)">CN.71</CN.7>
+         <!--@(Type?, LongName?)-->
+         <CN.8 Type="ID" LongName="source table">CN.81</CN.8>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CN.9 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.15</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.25</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.35</HD.3>
+            </CN.9>
+        </EVN.5>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <EVN.6 Item="1278" Type="TS" LongName="Event occured">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.14</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.24</TS.2>
+        </EVN.6>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </EVN>
+   <!--(PID.1? , PID.2? , PID.3+ , PID.4? , PID.5 , PID.6? , PID.7? , PID.8? , PID.9* , PID.10? , PID.11* , PID.12? , PID.13* , PID.14* , PID.15? , PID.16* , PID.17? , PID.18? , PID.19? , PID.20? , PID.21? , PID.22? , PID.23? , PID.24? , PID.25? , PID.26? , PID.27? , PID.28? , PID.29? , PID.30?)-->
+   <PID>
+      <!--@(Item?, Type?, LongName?)-->
+      <PID.1 Item="104" Type="SI" LongName="Set ID - Patient ID">PID.11</PID.1>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PID.2 Item="105" Type="CX" LongName="Patient ID (External ID)">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.11</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.21</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.31</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.16</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.26</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.36</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.51</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.17</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.27</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.37</HD.3>
+            </CX.6>
+        </PID.2>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PID.3 Item="106" Type="CX" LongName="Patient ID (Internal ID)">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.12</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.22</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.32</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.18</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.28</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.38</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.52</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.19</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.29</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.39</HD.3>
+            </CX.6>
+        </PID.3>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PID.4 Item="107" Type="CX" LongName="Alternate Patient ID">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.13</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.23</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.33</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.110</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.210</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.310</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.53</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.111</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.211</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.311</HD.3>
+            </CX.6>
+        </PID.4>
+      <!--@(Item?, Type?, LongName?) (XPN.1? , XPN.2? , XPN.3? , XPN.4? , XPN.5? , XPN.6? , XPN.7? , XPN.8?)-->
+      <PID.5 Item="108" Type="XPN" LongName="Patient Name">
+         <!--@(Type?, LongName?)-->
+         <XPN.1 Type="ST" LongName="family name">XPN.11</XPN.1>
+         <!--@(Type?, LongName?)-->
+         <XPN.2 Type="ST" LongName="given name">XPN.21</XPN.2>
+         <!--@(Type?, LongName?)-->
+         <XPN.3 Type="ST" LongName="middle initial or name">XPN.31</XPN.3>
+         <!--@(Type?, LongName?)-->
+         <XPN.4 Type="ST" LongName="suffix (e.g., JR or III)">XPN.41</XPN.4>
+         <!--@(Type?, LongName?)-->
+         <XPN.5 Type="ST" LongName="prefix (e.g., DR)">XPN.51</XPN.5>
+         <!--@(Type?, LongName?)-->
+         <XPN.6 Type="ST" LongName="degree (e.g., MD)">XPN.61</XPN.6>
+         <!--@(Type?, LongName?)-->
+         <XPN.7 Type="ID" LongName="name type code">XPN.71</XPN.7>
+         <!--@(Type?, LongName?)-->
+         <XPN.8 Type="ID" LongName="Name Representation code">XPN.81</XPN.8>
+        </PID.5>
+      <!--@(Item?, Type?, LongName?) (XPN.1? , XPN.2? , XPN.3? , XPN.4? , XPN.5? , XPN.6? , XPN.7? , XPN.8?)-->
+      <PID.6 Item="109" Type="XPN" LongName="Mother's Maiden Name">
+         <!--@(Type?, LongName?)-->
+         <XPN.1 Type="ST" LongName="family name">XPN.12</XPN.1>
+         <!--@(Type?, LongName?)-->
+         <XPN.2 Type="ST" LongName="given name">XPN.22</XPN.2>
+         <!--@(Type?, LongName?)-->
+         <XPN.3 Type="ST" LongName="middle initial or name">XPN.32</XPN.3>
+         <!--@(Type?, LongName?)-->
+         <XPN.4 Type="ST" LongName="suffix (e.g., JR or III)">XPN.42</XPN.4>
+         <!--@(Type?, LongName?)-->
+         <XPN.5 Type="ST" LongName="prefix (e.g., DR)">XPN.52</XPN.5>
+         <!--@(Type?, LongName?)-->
+         <XPN.6 Type="ST" LongName="degree (e.g., MD)">XPN.62</XPN.6>
+         <!--@(Type?, LongName?)-->
+         <XPN.7 Type="ID" LongName="name type code">XPN.72</XPN.7>
+         <!--@(Type?, LongName?)-->
+         <XPN.8 Type="ID" LongName="Name Representation code">XPN.82</XPN.8>
+        </PID.6>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PID.7 Item="110" Type="TS" LongName="Date of Birth">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.15</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.25</TS.2>
+        </PID.7>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.8 Item="111" Type="IS" Table="HL70001" LongName="Sex">PID.81</PID.8>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.10 Item="113" Type="IS" Table="HL70005" LongName="Race">PID.101</PID.10>
+      <!--@(Item?, Type?, LongName?)-->
+      <PID.12 Item="115" Type="IS" LongName="County Code">PID.121</PID.12>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PID.15 Item="118" Type="CE" Table="HL70296" LongName="Primary Language">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.12</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.22</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.32</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.42</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.52</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.62</CE.6>
+        </PID.15>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.17 Item="120" Type="IS" Table="HL70006" LongName="Religion">PID.171</PID.17>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PID.18 Item="121" Type="CX" LongName="Patient Account Number">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.14</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.24</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.34</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.112</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.212</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.312</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.54</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.113</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.213</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.313</HD.3>
+            </CX.6>
+        </PID.18>
+      <!--@(Item?, Type?, LongName?)-->
+      <PID.19 Item="122" Type="ST" LongName="SSN Number - Patient">PID.191</PID.19>
+      <!--@(Item?, Type?, LongName?) (DLN.1? , DLN.2? , DLN.3?)-->
+      <PID.20 Item="123" Type="DLN" LongName="Driver's License Number">
+         <!--@(Type?, LongName?)-->
+         <DLN.1 Type="ST" LongName="Driver´s License Number">DLN.11</DLN.1>
+         <!--@(Type?, LongName?)-->
+         <DLN.2 Type="IS" LongName="Issuing State, province, country">DLN.21</DLN.2>
+         <!--@(Type?, LongName?)-->
+         <DLN.3 Type="DT" LongName="expiration date">DLN.31</DLN.3>
+        </PID.20>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PID.21 Item="124" Type="CX" LongName="Mother's Identifier">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.15</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.25</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.35</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.114</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.214</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.314</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.55</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.115</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.215</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.315</HD.3>
+            </CX.6>
+        </PID.21>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.22 Item="125" Type="IS" Table="HL70189" LongName="Ethnic Group">PID.221</PID.22>
+      <!--@(Item?, Type?, LongName?)-->
+      <PID.23 Item="126" Type="ST" LongName="Birth Place">PID.231</PID.23>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.24 Item="127" Type="ID" Table="HL70136" LongName="Multiple Birth Indicator">PID.241</PID.24>
+      <!--@(Item?, Type?, LongName?)-->
+      <PID.25 Item="128" Type="NM" LongName="Birth Order">PID.251</PID.25>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.26 Item="129" Type="IS" Table="HL70171" LongName="Citizenship">PID.261</PID.26>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PID.27 Item="130" Type="CE" Table="HL70172" LongName="Veterans Military Status">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.13</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.23</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.33</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.43</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.53</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.63</CE.6>
+        </PID.27>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PID.28 Item="739" Type="CE" Table="HL70212" LongName="Nationality Code">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.14</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.24</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.34</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.44</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.54</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.64</CE.6>
+        </PID.28>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PID.29 Item="740" Type="TS" LongName="Patient Death Date and Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.16</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.26</TS.2>
+        </PID.29>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PID.30 Item="741" Type="ID" Table="HL70136" LongName="Patient Death Indicator">PID.301</PID.30>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </PID>
+   <!--(PD1.1? , PD1.2? , PD1.3* , PD1.4* , PD1.5? , PD1.6? , PD1.7? , PD1.8? , PD1.9? , PD1.10* , PD1.11? , PD1.12?)-->
+   <PD1>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.1 Item="755" Type="IS" Table="HL70223" LongName="Living Dependency">PD1.11</PD1.1>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.2 Item="742" Type="IS" Table="HL70220" LongName="Living Arrangement">PD1.21</PD1.2>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.5 Item="745" Type="IS" Table="HL70231" LongName="Student Indicator">PD1.51</PD1.5>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.6 Item="753" Type="IS" Table="HL70310" LongName="Handicap">PD1.61</PD1.6>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.7 Item="759" Type="IS" Table="HL70315" LongName="Living Will">PD1.71</PD1.7>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.8 Item="760" Type="IS" Table="HL70316" LongName="Organ Donor">PD1.81</PD1.8>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.9 Item="761" Type="ID" Table="HL70136" LongName="Separate Bill">PD1.91</PD1.9>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PD1.11 Item="743" Type="CE" Table="HL70215" LongName="Publicity Indicator">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.15</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.25</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.35</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.45</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.55</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.65</CE.6>
+        </PD1.11>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PD1.12 Item="744" Type="ID" Table="HL70136" LongName="Protection Indicator">PD1.121</PD1.12>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </PD1>
+   <!--(PV1.1? , PV1.2 , PV1.3? , PV1.4? , PV1.5? , PV1.6? , PV1.7? , PV1.8? , PV1.9* , PV1.10? , PV1.11? , PV1.12? , PV1.13? , PV1.14? , PV1.15? , PV1.16? , PV1.17? , PV1.18? , PV1.19? , PV1.20* , PV1.21? , PV1.22? , PV1.23? , PV1.24* , PV1.25* , PV1.26* , PV1.27* , PV1.28? , PV1.29? , PV1.30? , PV1.31? , PV1.32? , PV1.33? , PV1.34? , PV1.35? , PV1.36? , PV1.37? , PV1.38? , PV1.39? , PV1.40? , PV1.41? , PV1.42? , PV1.43? , PV1.44? , PV1.45? , PV1.46? , PV1.47? , PV1.48? , PV1.49? , PV1.50? , PV1.51? , PV1.52*)-->
+   <PV1>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.1 Item="131" Type="SI" LongName="Set ID - Patient Visit">PV1.11</PV1.1>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.2 Item="132" Type="ID" Table="HL70004" LongName="Patient Class">PV1.21</PV1.2>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV1.3 Item="133" Type="PL" LongName="Assigned Patient Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.11</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.21</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.31</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.116</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.216</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.316</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.51</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.61</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.71</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.81</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.91</PL.9>
+        </PV1.3>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.4 Item="134" Type="ID" Table="HL70007" LongName="Admission Type">PV1.41</PV1.4>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PV1.5 Item="135" Type="CX" LongName="Preadmit Number">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.16</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.26</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.36</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.117</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.217</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.317</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.56</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.118</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.218</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.318</HD.3>
+            </CX.6>
+        </PV1.5>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV1.6 Item="136" Type="PL" LongName="Prior Patient Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.12</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.22</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.32</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.119</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.219</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.319</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.52</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.62</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.72</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.82</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.92</PL.9>
+        </PV1.6>
+      <!--@(Item?, Type?, Table?, LongName?) (XCN.1? , XCN.2? , XCN.3? , XCN.4? , XCN.5? , XCN.6? , XCN.7? , XCN.8? , XCN.9? , XCN.10? , XCN.11? , XCN.12? , XCN.13? , XCN.14?)-->
+      <PV1.7 Item="137" Type="XCN" Table="HL70010" LongName="Attending Doctor">
+         <!--@(Type?, LongName?)-->
+         <XCN.1 Type="ST" LongName="ID number (ST)">XCN.11</XCN.1>
+         <!--@(Type?, LongName?)-->
+         <XCN.2 Type="ST" LongName="family name">XCN.21</XCN.2>
+         <!--@(Type?, LongName?)-->
+         <XCN.3 Type="ST" LongName="given name">XCN.31</XCN.3>
+         <!--@(Type?, LongName?)-->
+         <XCN.4 Type="ST" LongName="middle initial or name">XCN.41</XCN.4>
+         <!--@(Type?, LongName?)-->
+         <XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">XCN.51</XCN.5>
+         <!--@(Type?, LongName?)-->
+         <XCN.6 Type="ST" LongName="prefix (e.g., DR)">XCN.61</XCN.6>
+         <!--@(Type?, LongName?)-->
+         <XCN.7 Type="ST" LongName="degree (e.g., MD)">XCN.71</XCN.7>
+         <!--@(Type?, LongName?)-->
+         <XCN.8 Type="ID" LongName="source table">XCN.81</XCN.8>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.9 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.120</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.220</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.320</HD.3>
+            </XCN.9>
+         <!--@(Type?, LongName?)-->
+         <XCN.10 Type="ID" LongName="name type">XCN.101</XCN.10>
+         <!--@(Type?, LongName?)-->
+         <XCN.11 Type="ST" LongName="identifier check digit">XCN.111</XCN.11>
+         <!--@(Type?, LongName?)-->
+         <XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">XCN.121</XCN.12>
+         <!--@(Type?, LongName?)-->
+         <XCN.13 Type="IS" LongName="identifier type code">XCN.131</XCN.13>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.14 Type="HD" LongName="assigning facility ID">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.121</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.221</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.321</HD.3>
+            </XCN.14>
+        </PV1.7>
+      <!--@(Item?, Type?, Table?, LongName?) (XCN.1? , XCN.2? , XCN.3? , XCN.4? , XCN.5? , XCN.6? , XCN.7? , XCN.8? , XCN.9? , XCN.10? , XCN.11? , XCN.12? , XCN.13? , XCN.14?)-->
+      <PV1.8 Item="138" Type="XCN" Table="HL70010" LongName="Referring Doctor">
+         <!--@(Type?, LongName?)-->
+         <XCN.1 Type="ST" LongName="ID number (ST)">XCN.12</XCN.1>
+         <!--@(Type?, LongName?)-->
+         <XCN.2 Type="ST" LongName="family name">XCN.22</XCN.2>
+         <!--@(Type?, LongName?)-->
+         <XCN.3 Type="ST" LongName="given name">XCN.32</XCN.3>
+         <!--@(Type?, LongName?)-->
+         <XCN.4 Type="ST" LongName="middle initial or name">XCN.42</XCN.4>
+         <!--@(Type?, LongName?)-->
+         <XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">XCN.52</XCN.5>
+         <!--@(Type?, LongName?)-->
+         <XCN.6 Type="ST" LongName="prefix (e.g., DR)">XCN.62</XCN.6>
+         <!--@(Type?, LongName?)-->
+         <XCN.7 Type="ST" LongName="degree (e.g., MD)">XCN.72</XCN.7>
+         <!--@(Type?, LongName?)-->
+         <XCN.8 Type="ID" LongName="source table">XCN.82</XCN.8>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.9 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.122</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.222</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.322</HD.3>
+            </XCN.9>
+         <!--@(Type?, LongName?)-->
+         <XCN.10 Type="ID" LongName="name type">XCN.102</XCN.10>
+         <!--@(Type?, LongName?)-->
+         <XCN.11 Type="ST" LongName="identifier check digit">XCN.112</XCN.11>
+         <!--@(Type?, LongName?)-->
+         <XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">XCN.122</XCN.12>
+         <!--@(Type?, LongName?)-->
+         <XCN.13 Type="IS" LongName="identifier type code">XCN.132</XCN.13>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.14 Type="HD" LongName="assigning facility ID">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.123</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.223</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.323</HD.3>
+            </XCN.14>
+        </PV1.8>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.10 Item="140" Type="ID" Table="HL70069" LongName="Hospital Service">PV1.101</PV1.10>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV1.11 Item="141" Type="PL" LongName="Temporary Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.13</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.23</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.33</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.124</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.224</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.324</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.53</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.63</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.73</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.83</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.93</PL.9>
+        </PV1.11>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.12 Item="142" Type="ID" Table="HL70087" LongName="Preadmit Test Indicator">PV1.121</PV1.12>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.13 Item="143" Type="ID" Table="HL70092" LongName="Readmission Indicator">PV1.131</PV1.13>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.14 Item="144" Type="ID" Table="HL70023" LongName="Admit Source">PV1.141</PV1.14>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.15 Item="145" Type="IS" Table="HL70009" LongName="Ambulatory Status">PV1.151</PV1.15>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.16 Item="146" Type="ID" Table="HL70099" LongName="VIP Indicator">PV1.161</PV1.16>
+      <!--@(Item?, Type?, Table?, LongName?) (XCN.1? , XCN.2? , XCN.3? , XCN.4? , XCN.5? , XCN.6? , XCN.7? , XCN.8? , XCN.9? , XCN.10? , XCN.11? , XCN.12? , XCN.13? , XCN.14?)-->
+      <PV1.17 Item="147" Type="XCN" Table="HL70010" LongName="Admitting Doctor">
+         <!--@(Type?, LongName?)-->
+         <XCN.1 Type="ST" LongName="ID number (ST)">XCN.13</XCN.1>
+         <!--@(Type?, LongName?)-->
+         <XCN.2 Type="ST" LongName="family name">XCN.23</XCN.2>
+         <!--@(Type?, LongName?)-->
+         <XCN.3 Type="ST" LongName="given name">XCN.33</XCN.3>
+         <!--@(Type?, LongName?)-->
+         <XCN.4 Type="ST" LongName="middle initial or name">XCN.43</XCN.4>
+         <!--@(Type?, LongName?)-->
+         <XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">XCN.53</XCN.5>
+         <!--@(Type?, LongName?)-->
+         <XCN.6 Type="ST" LongName="prefix (e.g., DR)">XCN.63</XCN.6>
+         <!--@(Type?, LongName?)-->
+         <XCN.7 Type="ST" LongName="degree (e.g., MD)">XCN.73</XCN.7>
+         <!--@(Type?, LongName?)-->
+         <XCN.8 Type="ID" LongName="source table">XCN.83</XCN.8>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.9 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.125</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.225</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.325</HD.3>
+            </XCN.9>
+         <!--@(Type?, LongName?)-->
+         <XCN.10 Type="ID" LongName="name type">XCN.103</XCN.10>
+         <!--@(Type?, LongName?)-->
+         <XCN.11 Type="ST" LongName="identifier check digit">XCN.113</XCN.11>
+         <!--@(Type?, LongName?)-->
+         <XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">XCN.123</XCN.12>
+         <!--@(Type?, LongName?)-->
+         <XCN.13 Type="IS" LongName="identifier type code">XCN.133</XCN.13>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.14 Type="HD" LongName="assigning facility ID">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.126</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.226</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.326</HD.3>
+            </XCN.14>
+        </PV1.17>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.18 Item="148" Type="ID" Table="HL70018" LongName="Patient Type">PV1.181</PV1.18>
+      <!--@(Item?, Type?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PV1.19 Item="149" Type="CX" LongName="Visit Number">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.17</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.27</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.37</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.127</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.227</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.327</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.57</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.128</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.228</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.328</HD.3>
+            </CX.6>
+        </PV1.19>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.21 Item="151" Type="ID" Table="HL70032" LongName="Charge Price Indicator">PV1.211</PV1.21>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.22 Item="152" Type="ID" Table="HL70045" LongName="Courtesy Code">PV1.221</PV1.22>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.23 Item="153" Type="ID" Table="HL70046" LongName="Credit Rating">PV1.231</PV1.23>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.28 Item="158" Type="ID" Table="HL70073" LongName="Interest Code">PV1.281</PV1.28>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.29 Item="159" Type="ID" Table="HL70110" LongName="Transfer to Bad Debt Code">PV1.291</PV1.29>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.30 Item="160" Type="DT" LongName="Transfer to Bad Debt Date">PV1.301</PV1.30>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.31 Item="161" Type="ID" Table="HL70021" LongName="Bad Debt Agency Code">PV1.311</PV1.31>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.32 Item="162" Type="NM" LongName="Bad Debt Transfer Amount">PV1.321</PV1.32>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.33 Item="163" Type="NM" LongName="Bad Debt Recovery Amount">PV1.331</PV1.33>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.34 Item="164" Type="ID" Table="HL70111" LongName="Delete Account Indicator">PV1.341</PV1.34>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.35 Item="165" Type="DT" LongName="Delete Account Date">PV1.351</PV1.35>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.36 Item="166" Type="ID" Table="HL70112" LongName="Discharge Disposition">PV1.361</PV1.36>
+      <!--@(Item?, Type?, Table?, LongName?) (CM_DLD.1? , CM_DLD.2?)-->
+      <PV1.37 Item="167" Type="CM" Table="HL70113" LongName="Discharged to Location">
+         <!--@(Type?, LongName?)-->
+         <CM_DLD.1 Type="ID" LongName="discharge location">CM_DLD.11</CM_DLD.1>
+         <!--@(Type?, LongName?) (TS.1? , TS.2?)-->
+         <CM_DLD.2 Type="TS" LongName="effective date">
+            <!--@(Type?, LongName?)-->
+            <TS.1 Type="ST" LongName="time of an event">TS.17</TS.1>
+            <!--@(Type?, LongName?)-->
+            <TS.2 Type="ST" LongName="degree of precision">TS.27</TS.2>
+            </CM_DLD.2>
+        </PV1.37>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.38 Item="168" Type="ID" Table="HL70114" LongName="Diet Type">PV1.381</PV1.38>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.39 Item="169" Type="ID" Table="HL70115" LongName="Servicing Facility">PV1.391</PV1.39>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.40 Item="170" Type="IS" Table="HL70116" LongName="Bed Status">PV1.401</PV1.40>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.41 Item="171" Type="ID" Table="HL70117" LongName="Account Status">PV1.411</PV1.41>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV1.42 Item="172" Type="PL" LongName="Pending Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.14</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.24</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.34</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.129</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.229</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.329</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.54</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.64</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.74</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.84</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.94</PL.9>
+        </PV1.42>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV1.43 Item="173" Type="PL" LongName="Prior Temporary Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.15</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.25</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.35</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.130</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.230</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.330</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.55</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.65</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.75</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.85</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.95</PL.9>
+        </PV1.43>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PV1.44 Item="174" Type="TS" LongName="Admit Date/Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.18</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.28</TS.2>
+        </PV1.44>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PV1.45 Item="175" Type="TS" LongName="Discharge Date/Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.19</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.29</TS.2>
+        </PV1.45>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.46 Item="176" Type="NM" LongName="Current Patient Balance">PV1.461</PV1.46>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.47 Item="177" Type="NM" LongName="Total Charges">PV1.471</PV1.47>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.48 Item="178" Type="NM" LongName="Total Adjustments">PV1.481</PV1.48>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV1.49 Item="179" Type="NM" LongName="Total Payments">PV1.491</PV1.49>
+      <!--@(Item?, Type?, Table?, LongName?) (CX.1? , CX.2? , CX.3? , CX.4? , CX.5? , CX.6?)-->
+      <PV1.50 Item="180" Type="CX" Table="HL70192" LongName="Alternate Visit ID">
+         <!--@(Type?, LongName?)-->
+         <CX.1 Type="ST" LongName="ID">CX.18</CX.1>
+         <!--@(Type?, LongName?)-->
+         <CX.2 Type="ST" LongName="check digit">CX.28</CX.2>
+         <!--@(Type?, LongName?)-->
+         <CX.3 Type="ID" LongName="code identifying the check digit scheme employed">CX.38</CX.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.4 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.131</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.231</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.331</HD.3>
+            </CX.4>
+         <!--@(Type?, Table?, LongName?)-->
+         <CX.5 Type="IS" Table="HL70203" LongName="identifier type code">CX.58</CX.5>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <CX.6 Type="HD" LongName="assigning facility">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.132</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.232</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.332</HD.3>
+            </CX.6>
+        </PV1.50>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV1.51 Item="1226" Type="IS" Table="HL70326" LongName="Visit Indicator">PV1.511</PV1.51>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </PV1>
+   <!--(PV2.1? , PV2.2? , PV2.3? , PV2.4? , PV2.5* , PV2.6? , PV2.7? , PV2.8? , PV2.9? , PV2.10? , PV2.11? , PV2.12? , PV2.13? , PV2.14? , PV2.15? , PV2.16? , PV2.17? , PV2.18? , PV2.19? , PV2.20? , PV2.21? , PV2.22? , PV2.23* , PV2.24? , PV2.25? , PV2.26? , PV2.27? , PV2.28? , PV2.29? , PV2.30? , PV2.31? , PV2.32? , PV2.33? , PV2.34? , PV2.35? , PV2.36? , PV2.37?)-->
+   <PV2>
+      <!--@(Item?, Type?, LongName?) (PL.1? , PL.2? , PL.3? , PL.4? , PL.5? , PL.6? , PL.7? , PL.8? , PL.9?)-->
+      <PV2.1 Item="181" Type="PL" LongName="Prior Pending Location">
+         <!--@(Type?, LongName?)-->
+         <PL.1 Type="ID" LongName="point of care (ID)">PL.16</PL.1>
+         <!--@(Type?, LongName?)-->
+         <PL.2 Type="IS" LongName="room">PL.26</PL.2>
+         <!--@(Type?, LongName?)-->
+         <PL.3 Type="IS" LongName="bed">PL.36</PL.3>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <PL.4 Type="HD" LongName="facility (HD)">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.133</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.233</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.333</HD.3>
+            </PL.4>
+         <!--@(Type?, LongName?)-->
+         <PL.5 Type="IS" LongName="location status">PL.56</PL.5>
+         <!--@(Type?, LongName?)-->
+         <PL.6 Type="IS" LongName="person location type">PL.66</PL.6>
+         <!--@(Type?, LongName?)-->
+         <PL.7 Type="IS" LongName="building">PL.76</PL.7>
+         <!--@(Type?, LongName?)-->
+         <PL.8 Type="ST" LongName="floor">PL.86</PL.8>
+         <!--@(Type?, LongName?)-->
+         <PL.9 Type="ST" LongName="Location type">PL.96</PL.9>
+        </PV2.1>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PV2.2 Item="182" Type="CE" Table="HL70129" LongName="Accommodation Code">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.16</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.26</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.36</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.46</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.56</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.66</CE.6>
+        </PV2.2>
+      <!--@(Item?, Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PV2.3 Item="183" Type="CE" LongName="Admit Reason">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.17</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.27</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.37</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.47</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.57</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.67</CE.6>
+        </PV2.3>
+      <!--@(Item?, Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <PV2.4 Item="184" Type="CE" LongName="Transfer Reason">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.18</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.28</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.38</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.48</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.58</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.68</CE.6>
+        </PV2.4>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.6 Item="186" Type="ST" LongName="Patient Valuables Location">PV2.61</PV2.6>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.7 Item="187" Type="IS" Table="HL70130" LongName="Visit User Code">PV2.71</PV2.7>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PV2.8 Item="188" Type="TS" LongName="Expected Admit Date">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.110</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.210</TS.2>
+        </PV2.8>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PV2.9 Item="189" Type="TS" LongName="Expected Discharge Date">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.111</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.211</TS.2>
+        </PV2.9>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.10 Item="711" Type="NM" LongName="Estimated Length of Inpatient Stay">PV2.101</PV2.10>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.11 Item="712" Type="NM" LongName="Actual Length of Inpatient Stay">PV2.111</PV2.11>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.12 Item="713" Type="ST" LongName="Visit Description">PV2.121</PV2.12>
+      <!--@(Item?, Type?, LongName?) (XCN.1? , XCN.2? , XCN.3? , XCN.4? , XCN.5? , XCN.6? , XCN.7? , XCN.8? , XCN.9? , XCN.10? , XCN.11? , XCN.12? , XCN.13? , XCN.14?)-->
+      <PV2.13 Item="714" Type="XCN" LongName="Referral Source Code">
+         <!--@(Type?, LongName?)-->
+         <XCN.1 Type="ST" LongName="ID number (ST)">XCN.14</XCN.1>
+         <!--@(Type?, LongName?)-->
+         <XCN.2 Type="ST" LongName="family name">XCN.24</XCN.2>
+         <!--@(Type?, LongName?)-->
+         <XCN.3 Type="ST" LongName="given name">XCN.34</XCN.3>
+         <!--@(Type?, LongName?)-->
+         <XCN.4 Type="ST" LongName="middle initial or name">XCN.44</XCN.4>
+         <!--@(Type?, LongName?)-->
+         <XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">XCN.54</XCN.5>
+         <!--@(Type?, LongName?)-->
+         <XCN.6 Type="ST" LongName="prefix (e.g., DR)">XCN.64</XCN.6>
+         <!--@(Type?, LongName?)-->
+         <XCN.7 Type="ST" LongName="degree (e.g., MD)">XCN.74</XCN.7>
+         <!--@(Type?, LongName?)-->
+         <XCN.8 Type="ID" LongName="source table">XCN.84</XCN.8>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.9 Type="HD" LongName="assigning authority">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.134</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.234</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.334</HD.3>
+            </XCN.9>
+         <!--@(Type?, LongName?)-->
+         <XCN.10 Type="ID" LongName="name type">XCN.104</XCN.10>
+         <!--@(Type?, LongName?)-->
+         <XCN.11 Type="ST" LongName="identifier check digit">XCN.114</XCN.11>
+         <!--@(Type?, LongName?)-->
+         <XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">XCN.124</XCN.12>
+         <!--@(Type?, LongName?)-->
+         <XCN.13 Type="IS" LongName="identifier type code">XCN.134</XCN.13>
+         <!--@(Type?, LongName?) (HD.1? , HD.2? , HD.3?)-->
+         <XCN.14 Type="HD" LongName="assigning facility ID">
+            <!--@(Type?, LongName?)-->
+            <HD.1 Type="IS" LongName="namespace ID">HD.135</HD.1>
+            <!--@(Type?, LongName?)-->
+            <HD.2 Type="ST" LongName="universal ID">HD.235</HD.2>
+            <!--@(Type?, LongName?)-->
+            <HD.3 Type="ID" LongName="universal ID type">HD.335</HD.3>
+            </XCN.14>
+        </PV2.13>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.14 Item="715" Type="DT" LongName="Previous Service Date">PV2.141</PV2.14>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.15 Item="716" Type="ID" Table="HL70136" LongName="Employment Illness Related Indicator">PV2.151</PV2.15>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.16 Item="717" Type="IS" Table="HL70213" LongName="Purge Status Code">PV2.161</PV2.16>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.17 Item="718" Type="DT" LongName="Purge Status Date">PV2.171</PV2.17>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.18 Item="719" Type="IS" Table="HL70214" LongName="Special Program Code">PV2.181</PV2.18>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.19 Item="720" Type="ID" Table="HL70136" LongName="Retention Indicator">PV2.191</PV2.19>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.20 Item="721" Type="NM" LongName="Expected Number of Insurance Plans">PV2.201</PV2.20>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.21 Item="722" Type="IS" Table="HL70215" LongName="Visit Publicity Code">PV2.211</PV2.21>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.22 Item="723" Type="ID" Table="HL70136" LongName="Visit Protection Indicator">PV2.221</PV2.22>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.24 Item="725" Type="IS" Table="HL70216" LongName="Patient Status Code">PV2.241</PV2.24>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.25 Item="726" Type="IS" Table="HL70217" LongName="Visit Priority Code">PV2.251</PV2.25>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.26 Item="727" Type="DT" LongName="Previous Treatment Date">PV2.261</PV2.26>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.27 Item="728" Type="IS" Table="HL70112" LongName="Expected Discharge Disposition">PV2.271</PV2.27>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.28 Item="729" Type="DT" LongName="Signature on File Date">PV2.281</PV2.28>
+      <!--@(Item?, Type?, LongName?)-->
+      <PV2.29 Item="730" Type="DT" LongName="First Similar Illness Date">PV2.291</PV2.29>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.30 Item="731" Type="IS" Table="HL70218" LongName="Patient Charge Adjustment Code">PV2.301</PV2.30>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.31 Item="732" Type="IS" Table="HL70219" LongName="Recurring Service Code">PV2.311</PV2.31>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.32 Item="733" Type="ID" Table="HL70136" LongName="Billing Media Code">PV2.321</PV2.32>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <PV2.33 Item="734" Type="TS" LongName="Expected Surgery Date &amp; Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.112</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.212</TS.2>
+        </PV2.33>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.34 Item="735" Type="ID" Table="HL70136" LongName="Military Partnership Code">PV2.341</PV2.34>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.35 Item="736" Type="ID" Table="HL70136" LongName="Military Non-Availabiltiy Code">PV2.351</PV2.35>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.36 Item="737" Type="ID" Table="HL70136" LongName="Newborn Baby Indicator">PV2.361</PV2.36>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <PV2.37 Item="738" Type="ID" Table="HL70136" LongName="Baby Detained Indicator">PV2.371</PV2.37>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </PV2>
+   <!--(DRG.1? , DRG.2? , DRG.3? , DRG.4? , DRG.5? , DRG.6? , DRG.7? , DRG.8? , DRG.9? , DRG.10?)-->
+   <DRG>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <DRG.1 Item="382" Type="CE" Table="HL70055" LongName="Diagnostic Related Group">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.19</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.29</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.39</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.49</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.59</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.69</CE.6>
+        </DRG.1>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <DRG.2 Item="769" Type="TS" LongName="DRG Assigned Date/Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.113</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.213</TS.2>
+        </DRG.2>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <DRG.3 Item="383" Type="ID" Table="HL70136" LongName="DRG Approval Indicator">DRG.31</DRG.3>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <DRG.4 Item="384" Type="IS" Table="HL70056" LongName="DRG Grouper Review Code">DRG.41</DRG.4>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <DRG.5 Item="385" Type="CE" Table="HL70083" LongName="Outlier Type">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.110</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.210</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.310</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.410</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.510</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.610</CE.6>
+        </DRG.5>
+      <!--@(Item?, Type?, LongName?)-->
+      <DRG.6 Item="386" Type="NM" LongName="Outlier Days">DRG.61</DRG.6>
+      <!--@(Item?, Type?, LongName?) (CP.1? , CP.2? , CP.3? , CP.4? , CP.5? , CP.6?)-->
+      <DRG.7 Item="387" Type="CP" LongName="Outlier Cost">
+         <!--@(Type?, LongName?) (MO.1? , MO.2?)-->
+         <CP.1 Type="MO" LongName="price">
+            <!--@(Type?, LongName?)-->
+            <MO.1 Type="NM" LongName="quantity">MO.11</MO.1>
+            <!--@(Type?, LongName?)-->
+            <MO.2 Type="ID" LongName="denomination">MO.21</MO.2>
+            </CP.1>
+         <!--@(Type?, LongName?)-->
+         <CP.2 Type="ID" LongName="price type">CP.21</CP.2>
+         <!--@(Type?, LongName?)-->
+         <CP.3 Type="NM" LongName="from value">CP.31</CP.3>
+         <!--@(Type?, LongName?)-->
+         <CP.4 Type="NM" LongName="to value">CP.41</CP.4>
+         <!--@(Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+         <CP.5 Type="CE" LongName="range units">
+            <!--@(Type?, LongName?)-->
+            <CE.1 Type="ID" LongName="identifier">CE.111</CE.1>
+            <!--@(Type?, LongName?)-->
+            <CE.2 Type="ST" LongName="text">CE.211</CE.2>
+            <!--@(Type?, LongName?)-->
+            <CE.3 Type="ST" LongName="name of coding system">CE.311</CE.3>
+            <!--@(Type?, LongName?)-->
+            <CE.4 Type="ID" LongName="alternate identifier">CE.411</CE.4>
+            <!--@(Type?, LongName?)-->
+            <CE.5 Type="ST" LongName="alternate text">CE.511</CE.5>
+            <!--@(Type?, LongName?)-->
+            <CE.6 Type="ST" LongName="name of alternate coding system">CE.611</CE.6>
+            </CP.5>
+         <!--@(Type?, LongName?)-->
+         <CP.6 Type="ID" LongName="range type">CP.61</CP.6>
+        </DRG.7>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <DRG.8 Item="770" Type="IS" Table="HL70229" LongName="DRG Payor">DRG.81</DRG.8>
+      <!--@(Item?, Type?, LongName?) (CP.1? , CP.2? , CP.3? , CP.4? , CP.5? , CP.6?)-->
+      <DRG.9 Item="771" Type="CP" LongName="Outlier Reimbursement">
+         <!--@(Type?, LongName?) (MO.1? , MO.2?)-->
+         <CP.1 Type="MO" LongName="price">
+            <!--@(Type?, LongName?)-->
+            <MO.1 Type="NM" LongName="quantity">MO.12</MO.1>
+            <!--@(Type?, LongName?)-->
+            <MO.2 Type="ID" LongName="denomination">MO.22</MO.2>
+            </CP.1>
+         <!--@(Type?, LongName?)-->
+         <CP.2 Type="ID" LongName="price type">CP.22</CP.2>
+         <!--@(Type?, LongName?)-->
+         <CP.3 Type="NM" LongName="from value">CP.32</CP.3>
+         <!--@(Type?, LongName?)-->
+         <CP.4 Type="NM" LongName="to value">CP.42</CP.4>
+         <!--@(Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+         <CP.5 Type="CE" LongName="range units">
+            <!--@(Type?, LongName?)-->
+            <CE.1 Type="ID" LongName="identifier">CE.112</CE.1>
+            <!--@(Type?, LongName?)-->
+            <CE.2 Type="ST" LongName="text">CE.212</CE.2>
+            <!--@(Type?, LongName?)-->
+            <CE.3 Type="ST" LongName="name of coding system">CE.312</CE.3>
+            <!--@(Type?, LongName?)-->
+            <CE.4 Type="ID" LongName="alternate identifier">CE.412</CE.4>
+            <!--@(Type?, LongName?)-->
+            <CE.5 Type="ST" LongName="alternate text">CE.512</CE.5>
+            <!--@(Type?, LongName?)-->
+            <CE.6 Type="ST" LongName="name of alternate coding system">CE.612</CE.6>
+            </CP.5>
+         <!--@(Type?, LongName?)-->
+         <CP.6 Type="ID" LongName="range type">CP.62</CP.6>
+        </DRG.9>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <DRG.10 Item="767" Type="ID" Table="HL70136" LongName="Confidential Indicator">DRG.101</DRG.10>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </DRG>
+   <!--(ACC.1? , ACC.2? , ACC.3? , ACC.4? , ACC.5? , ACC.6?)-->
+   <ACC>
+      <!--@(Item?, Type?, LongName?) (TS.1? , TS.2?)-->
+      <ACC.1 Item="527" Type="TS" LongName="Accident Date/Time">
+         <!--@(Type?, LongName?)-->
+         <TS.1 Type="ST" LongName="time of an event">TS.114</TS.1>
+         <!--@(Type?, LongName?)-->
+         <TS.2 Type="ST" LongName="degree of precision">TS.214</TS.2>
+        </ACC.1>
+      <!--@(Item?, Type?, Table?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <ACC.2 Item="528" Type="CE" Table="HL70050" LongName="Accident Code">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.113</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.213</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.313</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.413</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.513</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.613</CE.6>
+        </ACC.2>
+      <!--@(Item?, Type?, LongName?)-->
+      <ACC.3 Item="529" Type="ST" LongName="Accident Location">ACC.31</ACC.3>
+      <!--@(Item?, Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <ACC.4 Item="812" Type="CE" LongName="Auto Accident State">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.114</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.214</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.314</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.414</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.514</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.614</CE.6>
+        </ACC.4>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <ACC.5 Item="813" Type="ID" Table="HL70136" LongName="Accident Job Related Indicator">ACC.51</ACC.5>
+      <!--@(Item?, Type?, Table?, LongName?)-->
+      <ACC.6 Item="814" Type="ID" Table="HL70136" LongName="Accident Death Indicator">ACC.61</ACC.6>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </ACC>
+   <!--(UB1.1? , UB1.2? , UB1.3? , UB1.4? , UB1.5? , UB1.6? , UB1.7* , UB1.8? , UB1.9? , UB1.10* , UB1.11? , UB1.12? , UB1.13? , UB1.14? , UB1.15? , UB1.16* , UB1.17? , UB1.18? , UB1.19? , UB1.20? , UB1.21? , UB1.22? , UB1.23?)-->
+   <UB1>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.1 Item="530" Type="SI" LongName="Set ID - UB1">UB1.11</UB1.1>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.2 Item="531" Type="NM" LongName="Blood Deductible  (43)">UB1.21</UB1.2>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.3 Item="532" Type="NM" LongName="Blood Furnished Pints Of (40)">UB1.31</UB1.3>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.4 Item="533" Type="NM" LongName="Blood Replaced Pints (41)">UB1.41</UB1.4>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.5 Item="534" Type="NM" LongName="Blood Not Replaced Pints(42)">UB1.51</UB1.5>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.6 Item="535" Type="NM" LongName="Co Insurance Days (25)">UB1.61</UB1.6>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.8 Item="537" Type="NM" LongName="Covered Days   (23)">UB1.81</UB1.8>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.9 Item="538" Type="NM" LongName="Non Covered Days   (24)">UB1.91</UB1.9>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.11 Item="540" Type="NM" LongName="Number Of Grace Days (90)">UB1.111</UB1.11>
+      <!--@(Item?, Type?, LongName?) (CE.1? , CE.2? , CE.3? , CE.4? , CE.5? , CE.6?)-->
+      <UB1.12 Item="541" Type="CE" LongName="Spec Program Indicator (44)">
+         <!--@(Type?, LongName?)-->
+         <CE.1 Type="ID" LongName="identifier">CE.115</CE.1>
+         <!--@(Type?, LongName?)-->
+         <CE.2 Type="ST" LongName="text">CE.215</CE.2>
+         <!--@(Type?, LongName?)-->
+         <CE.3 Type="ST" LongName="name of coding system">CE.315</CE.3>
+         <!--@(Type?, LongName?)-->
+         <CE.4 Type="ID" LongName="alternate identifier">CE.415</CE.4>
+         <!--@(Type?, LongName?)-->
+         <CE.5 Type="ST" LongName="alternate text">CE.515</CE.5>
+         <!--@(Type?, LongName?)-->
+         <CE.6 Type="ST" LongName="name of alternate coding system">CE.615</CE.6>
+        </UB1.12>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.13 Item="542" Type="ID" LongName="PSRO/UR Approval Indicator (87)">UB1.131</UB1.13>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.14 Item="543" Type="DT" LongName="PSRO/UR Approved Stay Fm (88)">UB1.141</UB1.14>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.15 Item="544" Type="DT" LongName="PSRO/UR Approved Stay To (89)">UB1.151</UB1.15>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.17 Item="546" Type="ID" LongName="Occurrence Span (33)">UB1.171</UB1.17>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.18 Item="547" Type="DT" LongName="Occur Span Start Date(33)">UB1.181</UB1.18>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.19 Item="548" Type="DT" LongName="Occur Span End Date (33)">UB1.191</UB1.19>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.20 Item="549" Type="ST" LongName="UB 82 Locator 2">UB1.201</UB1.20>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.21 Item="550" Type="ST" LongName="UB 82 Locator 9">UB1.211</UB1.21>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.22 Item="551" Type="ST" LongName="UB 82 Locator 27">UB1.221</UB1.22>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB1.23 Item="552" Type="ST" LongName="UB 82 Locator 45">UB1.231</UB1.23>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </UB1>
+   <!--(UB2.1? , UB2.2? , UB2.3* , UB2.4? , UB2.5? , UB2.6* , UB2.7* , UB2.8* , UB2.9* , UB2.10* , UB2.11? , UB2.12* , UB2.13* , UB2.14* , UB2.15? , UB2.16* , UB2.17?)-->
+   <UB2>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.1 Item="553" Type="SI" LongName="Set ID - UB2">UB2.11</UB2.1>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.2 Item="554" Type="ST" LongName="Co-Insurance Days (9)">UB2.21</UB2.2>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.4 Item="556" Type="ST" LongName="Covered Days (7)">UB2.41</UB2.4>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.5 Item="557" Type="ST" LongName="Non-Covered Days (8)">UB2.51</UB2.5>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.11 Item="563" Type="ST" LongName="UB92 Locator 31 (National)">UB2.111</UB2.11>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.15 Item="567" Type="ST" LongName="UB92 Locator 57 (National)">UB2.151</UB2.15>
+      <!--@(Item?, Type?, LongName?)-->
+      <UB2.17 Item="815" Type="NM" LongName="Special Visit Count">UB2.171</UB2.17>
+        <ns:anyElement xmlns:ns="anyNS"/>
+    </UB2>
+</ADT_A01>

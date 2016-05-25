@@ -1,0 +1,364 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List
+href="Conformance%20Profile%20Table%20Library%20Constraint_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Conformance%20Profile%20Table%20Library%20Constraint_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Conformance Profile Table Library Constraint</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Albany OIFO</o:Author>
+  <o:LastAuthor>Albany OIFO</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>104</o:TotalTime>
+  <o:Created>2005-09-13T14:32:00Z</o:Created>
+  <o:LastSaved>2005-09-13T14:32:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>994</o:Words>
+  <o:Characters>5671</o:Characters>
+  <o:Company>VHA</o:Company>
+  <o:Lines>47</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6652</o:CharactersWithSpaces>
+  <o:Version>11.6408</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align="center"><b>Conformance Profile Table Library Constraint</b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This feature makes it possible to constrain the general
+table library containing all HL7 and local table definitions to profile
+specific version. With HL7 version 2.6, the HL7 Conformance profile has been
+extended to include table references. This feature permits the messaging
+analyst/developer to include only those tables and table elements that are</p>
+
+<p class=MsoNormal><span class=GramE>pertinent</span> to the particular
+profile. For example, although HL7 table 0003 – Event type is referenced in
+every message, there is only one element on that table that applies to any
+given profile.<span style='mso-spacerun:yes'>  </span>This feature permits
+expression of such relationships, and the exclusion of extraneous tables and table
+elements from the profile definition. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the process of table constraint is completed, the
+constrained table becomes an integral part of the profile, and the principal
+table library for all table library functions supported in the MWB, such as
+table lookup. This ‘local’ table library can be amended to account for new tables
+and new table elements through this same process as necessary over time.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The table constraint option is accessed through the <st1:place
+w:st="on">Main</st1:place> form’s ‘Tools’ menu option as shown in the cut away
+illustration below.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1029" type="#_x0000_t75" style='width:219pt;
+ height:549.6pt'>
+ <v:imagedata src="Conformance%20Profile%20Table%20Library%20Constraint_files/image001.png"
+  o:title="TMcut"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=365 height=916
+src="Conformance%20Profile%20Table%20Library%20Constraint_files/image002.jpg"
+v:shapes="_x0000_s1029"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Cut-away of Tools Menu with Table Constraint option
+highlighted<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The basic objective of this function is to identify those
+tables and constituent elements in the complete (or default) table library that
+will be used in the profile being worked on. Referring to the figure below,
+operationally that entails moving table elements from the right hand tree view
+(2), which represents the general library, to the left hand tree view (1). Note
+that the General Table Library as presented on the right hand side is
+automatically constrained by the MWB to include only those tables that are
+referenced in the profile and have a non-NS usage.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape id="_x0000_s1028"
+ type="#_x0000_t75" style='width:431.4pt;height:398.4pt'>
+ <v:imagedata src="Conformance%20Profile%20Table%20Library%20Constraint_files/image003.png"
+  o:title="tblconstnum"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=719 height=664
+src="Conformance%20Profile%20Table%20Library%20Constraint_files/image004.jpg"
+v:shapes="_x0000_s1028"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Table Constraint form with operational areas numbered
+for reference in the text<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Copying Tables and Table elements into the localized
+profile<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>When invoking the Table
+Constraint process for the first time, it will be evident that the General
+Library tree (2) has elements with children as indicated by the + symbol to the
+left of each table name. The child nodes represent the table elements for a
+particular table. The Localized Profile Table library (1) will have the same
+tables listed, but without any child nodes. The objective is to copy those
+table elements (child nodes) from the right hand tree (2) to the left hand tree
+(1) that are appropriate for the profile.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The most straightforward
+method of copying elements is to ‘drag’ them from (2) to (1) and ‘drop’ them.
+If you determine that all of the elements in a particular table will be used in
+the profile, then select the table in (2) with the left mouse button, hold it
+down, and drag it over to (1) and release. All of the elements from the table
+selected in (2) will be added to the corresponding table in (1). The ‘drop’
+action may be done on any part of tree (1)<span class=GramE>,</span> the MWB
+will ensure that the elements go to the proper table, even if the drop action
+occurred in some other location or node within the tree. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Copying the contents of an
+entire table is illustrated above by examining table ‘0001 – Administrative
+sex’. Note that when the entire contents are copied, a check is placed to the
+left of the table id as well as to the left of each table element in tree (2).
+In tree (1), each element is similarly checked, indicating that their origin
+was from the general table library. As we’ll discuss below, table elements in
+the profile do not necessarily have to originate from the general table
+library.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>To copy a single element from
+a table in (2) to its corresponding table in (1), simply select the table
+element in tree (2), drag it to tree (1) and drop as above. Copying a single
+element is illustrated above by examining table ‘0002 – Marital status. Here
+only the table element is checked in the corresponding trees.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>It is also possible to copy a
+group of selected tables or a group of selected table elements for a particular
+table by using the standard Windows ‘multi select’ feature. <span class=GramE>Assuming
+some familiarity with Windows, suffice it to say that holding the shift key
+down while selecting nodes in tree (2) will permit selection of a contiguous
+block of nodes, while holding the control key down will permit selecting a
+group of non-contiguous nodes.</span> Once selected, these may be dragged as
+above over to tree (1) and dropped to copy the table elements.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Adding new table elements<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Notice in section (3) that
+whenever a table selection is made in either tree, the attributes of the table
+are displayed. The attributes are rendered in gray text, indicating that they
+are read only. Unlike table elements as discussed below, tables may only be
+added to the profile by referencing them in the body of the profile. They may
+not be added directly through this table constraint process.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>In section (4), the
+attributes for a selected table element are displayed. If the element is
+derived from the general table library, its attributes are not editable in the
+constraint process. New table elements local to the profile and independent of
+the general table library may be added however. This permits the use of
+implementation specific table values that may not be appropriate for more
+general use, and so need only be documented within the profile.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>To add a new table element,
+select either a table or an element within a table in tree (1). Click the add
+element button <!--[if gte vml 1]><v:shape id="_x0000_s1027"
+ type="#_x0000_t75" style='width:24pt;height:24.6pt'>
+ <v:imagedata src="Conformance%20Profile%20Table%20Library%20Constraint_files/image005.png"
+  o:title="elemadd"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=40 height=41
+src="Conformance%20Profile%20Table%20Library%20Constraint_files/image006.jpg"
+v:shapes="_x0000_s1027"><![endif]><span style='mso-spacerun:yes'>  </span>in
+area (5) beneath the element attributes box. The new element will be added to
+tree (1) as the last element for the table. Fill in <span class=GramE>it’s</span>
+attributes. The Code and Description attributes are required at a minimum. Note
+that unlike elements copied from the general library, purely local elements
+like this have no check mark to their left in the tree. The lack of a check
+mark then distinguishes between local and derivative table elements.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Table elements may also be
+deleted by selecting them in tree (1) and clicking the delete button <!--[if gte vml 1]><v:shape id="_x0000_s1026"
+ type="#_x0000_t75" style='width:25.8pt;height:24.6pt'>
+ <v:imagedata src="Conformance%20Profile%20Table%20Library%20Constraint_files/image007.png"
+  o:title="elemdel"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=43 height=41
+src="Conformance%20Profile%20Table%20Library%20Constraint_files/image008.jpg"
+v:shapes="_x0000_s1026"><![endif]><span style='mso-spacerun:yes'> </span>in
+area (5). Note that tables may not be deleted in this way. To remove a table
+reference, it must either be removed from the body of the profile, or message
+elements that reference it must be given a usage of ‘NS’ <span class=GramE>–<span
+style='mso-spacerun:yes'>  </span>Not</span> Supported.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The remaining tool in area
+(5) is the ‘Copy General Elements’ button <!--[if gte vml 1]><v:shape id="_x0000_s1025"
+ type="#_x0000_t75" style='width:29.4pt;height:24.6pt'>
+ <v:imagedata src="Conformance%20Profile%20Table%20Library%20Constraint_files/image009.png"
+  o:title="nodemove"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=49 height=41
+src="Conformance%20Profile%20Table%20Library%20Constraint_files/image010.jpg"
+v:shapes="_x0000_s1025"><![endif]><span style='mso-spacerun:yes'> </span>and it
+performs the same function as the ‘Drag/Drop’ gesture. It may be used as an
+alternative to ‘Drag/Drop’ to copy elements from tree (2) to tree (1).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Finally, in area (6) the
+‘Save as Table Lib’ button permits saving the constrained table library as an
+external table library (.<span class=SpellE>mwt</span> extension).<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

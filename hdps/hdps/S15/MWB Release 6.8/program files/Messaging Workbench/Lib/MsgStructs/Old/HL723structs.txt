@@ -1,0 +1,244 @@
+SEGMENTLIBS="HL7 2-3.mcf"
+ACK_ALL=MSH,MSA,[ERR]=No event description in HL7 table 0003
+ADT_A01=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK - Admit/visit notification
+ADT_A02=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK - Transfer a patient
+ADT_A03=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[OBX]}=ADT/ACK -  Discharge/end visit
+ADT_A04=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Register a patient
+ADT_A05=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Pre-admit a patient
+ADT_A06=MSH,EVN,PID,[PD1],[MRG],{[NK1]},PV1,[PV2],{[DB1]},[DRG],{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Change an outpatient to an inpatient
+ADT_A07=MSH,EVN,PID,[PD1],[MRG],{[NK1]},PV1,[PV2],{[DB1]},[DRG],{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Change an inpatient to an outpatient
+ADT_A08=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Update patient information
+ADT_A09=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},{[DG1]}=ADT/ACK -  Patient departing - tracking
+ADT_A10=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},{[DG1]}=ADT/ACK -  Patient arriving - tracking
+ADT_A11=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},{[DG1]}=ADT/ACK -  Cancel admit/visit notification
+ADT_A12=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},[DG1]=ADT/ACK -  Cancel transfer
+ADT_A13=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Cancel discharge/end visit
+ADT_A14=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Pending admit
+ADT_A15=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},{[DG1]}=ADT/ACK -  Pending transfer
+ADT_A16=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},[DG1],[DRG]=ADT/ACK -  Pending discharge
+ADT_A17=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},PID,[PD1],PV1,[,PV2,],{[DB1]},{[OBX]}=ADT/ACK -  Swap patients
+ADT_A18=MSH,EVN,PID,[PD1],[MRG],PV1=ADT/ACK -  Merge patient information (for backward compatibility only)
+ADT_A20=MSH,EVN,NPU=ADT/ACK -  Bed status update
+ADT_A21=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Patient goes on a "leave of absence"
+ADT_A22=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Patient returns from a "leave of absence"
+ADT_A23=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Delete a patient record
+ADT_A24=MSH,EVN,PID,[PD1],[PV1],{[DB1]},PID,[PD1],[PV1],{[DB1]}=ADT/ACK -  Link patient information
+ADT_A25=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Cancel pending discharge
+ADT_A26=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Cancel pending transfer
+ADT_A27=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Cancel pending admit
+ADT_A28=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Add person information
+ADT_A29=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Delete person information
+ADT_A30=MSH,EVN,PID,[PD1],MRG=ADT/ACK -  Merge person information (for backward compatibility only)
+ADT_A31=MSH,EVN,PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2]=ADT/ACK -  Update person information
+ADT_A32=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Cancel patient arriving - tracking
+ADT_A33=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]}=ADT/ACK -  Cancel patient departing - tracking
+ADT_A34=MSH,EVN,PID,[PD1],MRG=ADT/ACK -  Merge patient information - patient ID only (for backward compatibility only)
+ADT_A35=MSH,EVN,PID,[PD1],MRG=ADT/ACK -  Merge patient information - account number only (for backward compatibility only)
+ADT_A36=MSH,EVN,PID,[PD1],MRG=ADT/ACK -  Merge patient information - patient ID and account number (for backward compatibility only)
+ADT_A37=MSH,EVN,PID,[PD1],[PV1],{[DB1]},PID,[PV1],{[DB1]}=ADT/ACK -  Unlink patient information
+ADT_A38=MSH,EVN,PID,[PD1],PV1,[PV2],{[DB1]},{[OBX]},{[DG1]},[DRG]=ADT/ACK - Cancel pre-admit
+ADT_A39=MSH,EVN,{,PID,[PD1],MRG,[PV1],}=ADT/ACK - Merge person - patient ID (for backward compatibility only)
+ADT_A40=MSH,EVN,{,PID,[PD1],MRG,[PV1],}=ADT/ACK - Merge patient - patient identifier list
+ADT_A41=MSH,EVN,{,PID,[PD1],MRG,[PV1],}=ADT/ACK - Merge account - patient account number
+ADT_A42=MSH,EVN,{,PID,[PD1],MRG,[PV1],}=ADT/ACK - Merge visit - visit number
+ADT_A43=MSH,EVN,{,PID,[PD1],MRG,}=ADT/ACK - Move patient information - patient identifier list
+ADT_A44=MSH,EVN,{,PID,[PD1],MRG,}=ADT/ACK - Move account information - patient account number
+ADT_A45=MSH,EVN,PID,[PD1],{,MRG,PV1,}=ADT/ACK - Move visit information - visit number
+ADT_A46=MSH,EVN,PID,[PD1],MRG=ADT/ACK - Change patient ID (for backward compatibility only)
+ADT_A47=MSH,EVN,PID,[PD1],MRG=ADT/ACK - Change patient identifier list
+ADT_A48=MSH,EVN,PID,[PD1],MRG=ADT/ACK - Change alternate patient ID (for backward compatibility only)
+ADT_A49=MSH,EVN,PID,[PD1],MRG=ADT/ACK - Change patient account number
+ADT_A50=MSH,EVN,PID,[PD1],MRG,PV1=ADT/ACK - Change visit number
+ADT_A51=MSH,EVN,PID,[PD1],MRG,PV1=ADT/ACK - Change alternate visit ID
+ARD_A19=MSH,MSA,[ERR],QRD,[QRF],{,[EVN],PID,[PD1],{[NK1]},PV1,[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2],},[DSC]=QRY/ADR -  Patient query
+BAR_P01=MSH,EVN,PID,[PD1],{,[,PV1,],[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},{[NK1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2],}=BAR/ACK - Add patient accounts
+BAR_P02=MSH,EVN,{,PID,[PD1],[PV1],{[DB1]},}=BAR/ACK - Purge patient accounts
+BAR_P05=MSH,EVN,PID,[PD1],{,[PV1],[PV2],{[DB1]},{[OBX]},{[AL1]},{[DG1]},[DRG],[,{,PR1,{[ROL]},},],{[GT1]},{[NK1]},[,{,IN1,[IN2],[IN3],},],[ACC],[UB1],[UB2],}=BAR/ACK - Update account
+BAR_P06=MSH,EVN,{,PID,[PV1],}=BAR/ACK - End account
+CRM_C01=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Register a patient on a clinical trial
+CRM_C02=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Cancel a patient registration on clinical trial (for clerical mistakes only)
+CRM_C03=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Correct/update registration information
+CRM_C04=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Patient has gone off a clinical trial
+CRM_C05=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Patient enters phase of clinical trial
+CRM_C06=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Cancel patient entering a phase (clerical mistake)
+CRM_C07=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Correct/update phase information
+CRM_C08=MSH,{,PID,[PV1],CSR,{,[CSP],},}=CRM - Patient has gone off phase of clinical trial
+CSU_C09=MSH,{,PID,[PD1],{[NTE]},[,PV1,[PV2],],CSR,{,[CSP],{,[CSS],[,{,[ORC],OBR,{,OBX,},},],{,[ORC],{,RXA,RXR,},},},},}=CSU - Automated time intervals for reporting, like monthly
+CSU_C10=MSH,{,PID,[PD1],{[NTE]},[,PV1,[PV2],],CSR,{,[CSP],{,[CSS],[,{,[ORC],OBR,{,OBX,},},],{,[ORC],{,RXA,RXR,},},},},}=CSU - Patient completes the clinical trial
+CSU_C11=MSH,{,PID,[PD1],{[NTE]},[,PV1,[PV2],],CSR,{,[CSP],{,[CSS],[,{,[ORC],OBR,{,OBX,},},],{,[ORC],{,RXA,RXR,},},},},}=CSU - Patient completes a phase of the clinical trial
+CSU_C12=MSH,{,PID,[PD1],{[NTE]},[,PV1,[PV2],],CSR,{,[CSP],{,[CSS],[,{,[ORC],OBR,{,OBX,},},],{,[ORC],{,RXA,RXR,},},},},}=CSU - Update/correction of patient order/result information
+DFT_P03=MSH,EVN,PID,[PD1],[PV1],[PV2],{[DB1]},{[OBX]},{,FT1,[,{,PR1,{[ROL]},},],},{[DG1]},[DRG],{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC]=DFT/ACK - Post detail financial transaction
+DOC_T12=MSH,MSA,[ERR],QRD,{,[EVN],PID,PV1,TXA,{[OBX]},},[DSC]=QRY/DOC - Document query
+DSR_Q01=MSH,MSA,[ERR],[QAK],QRD,[QRF],{,DSP,},[DSC]=QRY/DSR - Query sent for immediate response
+DSR_Q03=MSH,[MSA],QRD,[QRF],{,DSP,},[DSC],{,DSP,},[DSC]=DSR/ACK - Deferred response to a query
+EDR_Q01=MSH,MSA,[ERR],QAK,{,DSP,},[DSC]=QRY/DSR - Query sent for immediate response
+EQQ_Q01=MSH,EQL,[DSC]=QRY/DSR - Query sent for immediate response
+ERP_Q01=MSH,MSA,[ERR],QAK,ERQ,[DSC]=QRY/DSR - Query sent for immediate response
+MDM_T01=MSH,EVN,PID,PV1,TXA=MDM/ACK - Original document notification
+MDM_T02=MSH,EVN,PID,PV1,TXA,{,OBX,}=MDM/ACK - Original document notification and content
+MDM_T03=MSH,EVN,PID,PV1,TXA=MDM/ACK - Document status change notification
+MDM_T04=MSH,EVN,PID,PV1,TXA,{,OBX,}=MDM/ACK - Document status change notification and content
+MDM_T05=MSH,EVN,PID,PV1,TXA=MDM/ACK - Document addendum notification
+MDM_T06=MSH,EVN,PID,PV1,TXA,{,OBX,}=MDM/ACK - Document addendum notification and content
+MDM_T07=MSH,EVN,PID,PV1,TXA=MDM/ACK - Document edit notification
+MDM_T08=MSH,EVN,PID,PV1,TXA,{,OBX,}=MDM/ACK - Document edit notification and content
+MDM_T09=MSH,EVN,PID,PV1,TXA=MDM/ACK - Document replacement notification
+MDM_T10=MSH,EVN,PID,PV1,TXA,{,OBX,}=MDM/ACK - Document replacement notification and content
+MDM_T11=MSH,EVN,PID,PV1,TXA=MDM/ACK - Document cancel notification
+MFK_M01=MSH,MSA,[ERR],MFI,{,[MFA],}=MFN/MFK - Master file not otherwise specified (for backward compatibility only)
+MFK_M02=MSH,MSA,MFI,{[MFA]}=MFN/MFK - Master file - staff practitioner
+MFK_M03=MSH,MSA,[ERR],MFI,{,[MFA],}=MFN/MFK - Master file - test/observation (for backward compatibility only)
+MFK_M04=MSH,MSA,MFI,{,[MFA],}=MFN/MFK - Master files charge description
+MFK_M05=MSH,MSA,MFI,{[MFA]}=MFN/MFK - Patient location master file
+MFK_M07=MSH,MSA,MFI,{,[MFA],}=MFN/MFK - Clinical study without phases but with schedules master file
+MFN_M01=MSH,MFI,{,MFE,[?],}=MFN/MFK - Master file not otherwise specified (for backward compatibility only)
+MFN_M02=MSH,MFI,{,MFE,STF,[PRA],}=MFN/MFK - Master file - staff practitioner
+MFN_M03=MSH,MFI,{,MFE,OM1,[,[OM2],[OM3],[OM4],],[,OM3,{[OM4]},],[,OM5,{[OM4]},],[,OM6,OM2,],}=MFN/MFK - Master file - test/observation (for backward compatibility only)
+MFN_M04=MSH,MFI,{,MFE,CDM,{,[PRC],},}=MFN/MFK - Master files charge description
+MFN_M05=MSH,MFI,{,MFE,LOC,{[LCH]},{[LRL]},{,LDP,{[LCH]},{[LCC]},},}=MFN/MFK - Patient location master file
+MFN_M06=MSH,MFI,{,MFE,CM0,[,{,CM1,{[CM2]},},],}=MFN/MFK - Clinical study with phases and schedules master file
+MFN_M07=MSH,MFI,{,MFE,CM0,[,{,CM1,{[CM2]},},],}=MFN/MFK - Clinical study without phases but with schedules master file
+MFN_M08=MSH,MFI,{,MFE,[,[OM2],[OM3],[OM4],],}=MFN/MFK - Test/observation (numeric) master file
+MFN_M09=MSH,MFI,{,MFE,[,OM3,{[OM4]},],}=MFN/MFK - Test/observation (categorical) master file
+MFN_M10=MSH,MFI,{,[,OM5,{[OM4]},],}=MFN/MFK - Test /observation batteries master file
+MFN_M11=MSH,MFI,{,MFE,OM1,[,OM6,OM2,],}=MFN/MFK - Test/calculated observations master file
+ORF_R02=MSH,MSA,QRD,[QRF],{,[,PID,{[NTE]},],{,[ORC],OBR,{,[NTE],},{,[OBX],{,[NTE],},},{,[CTI],},},},[DSC]=QRY - Query for results of observation
+ORF_R04=MSH,MSA,QRD,[QRF],{,[,PID,{[NTE]},],{,[ORC],OBR,{,[NTE],},{,[OBX],{,[NTE],},},{,[CTI],},},},[DSC]=ORF - Response to query; transmission of requested observation
+ORU_R01=MSH,{,[,PID,[PD1],{[NTE]},[,PV1,[PV2],],],{,[ORC],OBR,{,[NTE],},{,[OBX],{,[NTE],},},{,[CTI],},},},[DSC]=ORU/ACK - Unsolicited transmission of an observation message
+OSQ_Q06=MSH,QRD,[QRF],[DSC]=OSQ/OSR - Query for order status
+OSR_Q06=MSH,MSA,[ERR],{[NTE]},QRD,[QRF],[,[,PID,{[NTE]},],{,ORC,[?],{[NTE]},{[CTI]},},],[DSC]=OSQ/OSR - Query for order status
+PEX_P07=MSH,EVN,PID,[PD1],{[NTE]},[,PV1,[PV2],],{,PES,{,PEO,{,PCR,[,RXE,{[RXR]},],[,{,RXA,[RXR],},],{[PRB]},{[OBX]},{[NTE]},[,NK1,[,RXE,{[RXR]},],[,{,RXA,[RXR],},],{[PRB]},{[OBX]},],[,{,CSR,{[CSP]},},],},},}=PEX - Unsolicited initial individual product experience report
+PEX_P08=MSH,EVN,PID,[PD1],{[NTE]},[,PV1,[PV2],],{,PES,{,PEO,{,PCR,[,RXE,{[RXR]},],[,{,RXA,[RXR],},],{[PRB]},{[OBX]},{[NTE]},[,NK1,[,RXE,{[RXR]},],[,{,RXA,[RXR],},],{[PRB]},{[OBX]},],[,{,CSR,{[CSP]},},],},},}=PEX - Unsolicited update individual product experience report
+PGL_PC6=MSH,PID,[,PV1,[PV2],],{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PGL - PC/ goal add
+PGL_PC7=MSH,PID,[,PV1,[PV2],],{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PGL - PC/ goal update
+PGL_PC8=MSH,PID,[,PV1,[PV2],],{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PGL - PC/ goal delete
+PIN_I07=MSH,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=PIN/ACK - Unsolicited insurance information
+PPG_PCG=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPG - PC/ pathway (goal-oriented) add
+PPG_PCH=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPG - PC/ pathway (goal-oriented) update
+PPG_PCJ=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPG - PC/ pathway (goal-oriented) delete
+PPP_PCB=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPP - PC/ pathway (problem-oriented) add
+PPP_PCC=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPP - PC/ pathway (problem-oriented) update
+PPP_PCD=MSH,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],}=PPP - PC/ pathway (problem-oriented) delete
+PPR_PC1=MSH,PID,[,PV1,[PV2],],{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PPR - PC/ problem add
+PPR_PC2=MSH,PID,[,PV1,[PV2],],{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PPR - PC/ problem update
+PPR_PC3=MSH,PID,[,PV1,[PV2],],{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],}=PPR - PC/ problem delete
+PPT_PCL=MSH,MSA,[ERR],QRD,{,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],},}=PPT - PC/ pathway (goal-oriented) query response
+PPV_PCA=MSH,MSA,[ERR],QRD,{,PID,[,PV1,[PV2],],{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},}=PPV - PC/ goal response
+PRR_PC5=MSH,MSA,[ERR],QRD,{,PID,[,PV1,[PV2],],{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PTH,{[VAR]},},],[,{,OBX,{[NTE]},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},}=PRR - PC/ problem response
+PTR_PCF=MSH,MSA,[ERR],QRD,{,PID,[,PV1,[PV2],],{,PTH,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,PRB,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{,NTE,},},],[,{,GOL,{[NTE]},{[VAR]},[,{,ROL,{[VAR]},},],[,{,OBX,{[NTE]},},],},],[,{,ORC,[,OBR,{[NTE]},{[VAR]},[,{,OBX,{[NTE]},{[VAR]},},],],},],},],},}=PTR - PC/ pathway (problem-oriented) query response
+QCK_Q02=MSH,MSA,[ERR],[QAK]=QRY/QCK - Query sent for deferred response
+QRY_A19=MSH,QRD,[QRF]=QRY/ADR -  Patient query
+QRY_PC4=MSH,QRD,[QRF]=QRY - PC/ problem query
+QRY_PC9=MSH,QRD,[QRF]=QRY - PC/ goal query
+QRY_PCE=MSH,QRD,[QRF]=QRY - PC/ pathway (problem-oriented) query
+QRY_PCK=MSH,QRD,[QRF]=QRY - PC/ pathway (goal-oriented) query
+QRY_Q01=MSH,QRD,[QRF],[DSC]=QRY/DSR - Query sent for immediate response
+QRY_Q02=MSH,QRD,[QRF],[DSC],QCK=QRY/QCK - Query sent for deferred response
+QRY_R02=MSH,QRD,QRF=QRY - Query for results of observation
+QRY_T12=MSH,QRD,[QRF]=QRY/DOC - Document query
+RAR_RAR=MSH,MSA,[ERR],{,QRD,[QRF],[,PID,{,[NTE],},],{,ORC,[,RXE,{,RXR,},{,[RXC],},],{,RXA,},},},[DSC]=RAR - Pharmacy administration information query response
+RAS_O01=MSH,{[NTE]},[,PID,[PD1],{[NTE]},{[AL1]},[,PV1,[PV2],],],{,ORC,[,RXO,[,{,NTE,},{,RXR,},[,{,RXC,},{[NTE]},],],],[,RXE,{,RXR,},{[RXC]},],{,RXA,},RXR,{,[,OBX,{,[NTE],},],},{,[CTI],},}=ORM - Order message (also RDE, RDS, RGV, RAS)
+RAS_O02=MSH,{[NTE]},[,PID,{[NTE]},]=ORR - Order response (also RRE, RRD, RRG, RRA)
+RCI_I05=MSH,MSA,QRD,[QRF],{,PRD,{[CTD]},},PID,{[DG1]},{[DRG]},{[AL1]},[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],{[NTE]}=RQC/RCI - Request for patient clinical information
+RCL_I06=MSH,MSA,QRD,[QRF],{,PRD,{[CTD]},},PID,{[DG1]},{[DRG]},{[AL1]},{[NTE]},{[DSP]},[DSC]=RQC/RCL - Request/receipt of clinical data listing
+RDE_O01=MSH,{[NTE]},[,PID,[PD1],{[NTE]},[,PV1,[PV2],],[,{,IN1,[IN2],[IN3],},],[GT1],{[AL1]},],{,ORC,[,RXO,{[NTE]},{,RXR,},[,{,RXC,},{[NTE]},],],RXE,{,RXR,},{[RXC]},{,[OBX],{[NTE]},},[CTI],}=ORM - Order message (also RDE, RDS, RGV, RAS)
+RDR_RDR=MSH,MSA,[ERR],{,QRD,[QRF],[,PID,{,[NTE],},],{,ORC,[,RXE,{,RXR,},{,[RXC],},],{,RXD,{,RXR,},{[RXC]},},},},[DSC]=RDR - Pharmacy dispense information query response
+RDS_O01=MSH,{[NTE]},[,PID,[PD1],{[NTE]},{[AL1]},[,PV1,[PV2],],],{,ORC,[,RXO,[,{,NTE,},{,RXR,},[,{,RXC,},{[NTE]},],],],[,RXE,{,RXR,},{[RXC]},],RXD,{,RXR,},{[RXC]},{,OBX,{[NTE]},},}=ORM - Order message (also RDE, RDS, RGV, RAS)
+REF_I12=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],[,PV1,[PV2],],{[NTE]}=REF/RRI -  Patient referral
+REF_I13=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],[,PV1,[PV2],],{[NTE]}=REF/RRI - Modify patient referral
+REF_I14=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],[,PV1,[PV2],],{[NTE]}=REF/RRI - Cancel patient referral
+REF_I15=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],[,PV1,[PV2],],{[NTE]}=REF/RRI - Request patient referral status
+RER_RER=MSH,MSA,[ERR],{,QRD,[QRF],[,PID,{,[NTE],},],{,ORC,RXE,{,RXR,},{,[RXC],},},},[DSC]=RER - Pharmacy encoded order information query response
+RGR_RGR=MSH,MSA,[ERR],{,QRD,[QRF],[,PID,{,[NTE],},],{,ORC,[,RXE,{,RXR,},{,[RXC],},],{,RXG,},{,RXR,},{,[RXC],},},},[DSC]=RGR - Pharmacy dose information query response
+RGV_O01=MSH,{[NTE]},[,PID,{[NTE]},[,{,AL1,},[,PV1,[PV2],],],{,ORC,[,RXO,[,{,NTE,},{,RXR,},[,{,RXC,},{[NTE]},],],],[,RXE,{,RXR,},{[RXC]},],{,RXG,{,RXR,},{[RXC]},{,[,OBX,{[NTE]},],},},},]=ORM - Order message (also RDE, RDS, RGV, RAS)
+ROR_ROR=MSH,MSA,[ERR],{,QRD,[QRF],[,PID,{,[NTE],},],{,ORC,RXO,{,RXR,},{,[RXC],},},},[DSC]=ROR - Pharmacy prescription order query response
+RPA_I08=MSH,MSA,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},{,PR1,[,AUT,[CTD],],},[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],{[NTE]},]=RQA/RPA - Request for treatment authorization information
+RPA_I09=MSH,MSA,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},{,PR1,[,AUT,[CTD],],},[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],{[NTE]},]=RQA/RPA - Request for modification to an authorization
+RPA_I10=MSH,MSA,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},{,PR1,[,AUT,[CTD],],},[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],{[NTE]},]=RQA/RPA - Request for resubmission of an authorization
+RPA_I11=MSH,MSA,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},[,{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},{,PR1,[,AUT,[CTD],],},[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],{[NTE]},]=RQA/RPA - Request for cancellation of an authorization
+RPI_I01=MSH,MSA,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=RQI/RPI - Request for insurance information
+RPI_I04=MSH,MSA,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=RQD/RPI - Request for patient demographic data
+RPL_I02=MSH,MSA,{,PRD,{[CTD]},},{[NTE]},{[DSP]},[DSC]=RQI/RPL - Request/receipt of patient selection display list
+RPR_I03=MSH,MSA,{,PRD,{[CTD]},},{[PID]},{[NTE]}=RQI/RPR - Request/receipt of patient selection list
+RQA_I08=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=RQA/RPA - Request for treatment authorization information
+RQA_I09=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=RQA/RPA - Request for modification to an authorization
+RQA_I10=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=RQA/RPA - Request for resubmission of an authorization
+RQA_I11=MSH,[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=RQA/RPA - Request for cancellation of an authorization
+RQC_I05=MSH,QRD,[QRF],{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},{[NTE]}=RQC/RCI - Request for patient clinical information
+RQC_I06=MSH,QRD,[QRF],{,PRD,{[CTD]},},PID,{[NK1]},[GT1],{[NTE]}=RQC/RCL - Request/receipt of clinical data listing
+RQI_I01=MSH,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=RQI/RPI - Request for insurance information
+RQI_I02=MSH,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=RQI/RPL - Request/receipt of patient selection display list
+RQI_I03=MSH,{,PRD,{[CTD]},},PID,{[NK1]},[,{[GT1]},{,IN1,[IN2],[IN3],},],{[NTE]}=RQI/RPR - Request/receipt of patient selection list
+RQP_I04=MSH,{,PRD,{[CTD]},},PID,{[NK1]},{[GT1]},{[NTE]}=RQD/RPI - Request for patient demographic data
+RQQ_Q01=MSH,ERQ,[DSC]=QRY/DSR - Query sent for immediate response
+RRA_O02=MSH,MSA,[ERR],{[NTE]},[,[,PID,{[NTE]},],{,ORC,[,{,RXA,RXR,},],},]=ORR - Order response (also RRE, RRD, RRG, RRA)
+RRD_O02=MSH,MSA,[ERR],{[NTE]},[,[,PID,{[NTE]},],{,ORC,[,RXD,{,RXR,},{[RXC]},],},]=ORR - Order response (also RRE, RRD, RRG, RRA)
+RRE_O01=MSH,MSA,[ERR],{[NTE]},[,[,PID,{[NTE]},],{,ORC,[,RXE,{,RXR,},{[RXC]},],},]=ORM - Order message (also RDE, RDS, RGV, RAS)
+RRG_O02=MSH,MSA,[ERR],{[NTE]},[,[,PID,{[NTE]},],{,ORC,[,RXG,{,RXR,},{[RXC]},],},]=ORR - Order response (also RRE, RRD, RRG, RRA)
+RRI_I12=MSH,[MSA],[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=REF/RRI -  Patient referral
+RRI_I13=MSH,[MSA],[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=REF/RRI - Modify patient referral
+RRI_I14=MSH,[MSA],[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=REF/RRI - Cancel patient referral
+RRI_I15=MSH,[MSA],[RF1],[,AUT,[CTD],],{,PRD,{[CTD]},},PID,[ACC],{[DG1]},{[DRG]},{[AL1]},[,{,PR1,[,AUT,[CTD],],},],[,{,OBR,{[NTE]},[,{,OBX,{[NTE]},},],},],[,PV1,[PV2],],{[NTE]}=REF/RRI - Request patient referral status
+SIU_S12=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of new appointment booking
+SIU_S13=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of appointment rescheduling
+SIU_S14=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of appointment modification
+SIU_S15=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of appointment cancellation
+SIU_S16=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of appointment discontinuation
+SIU_S17=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of appointment deletion
+SIU_S18=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of addition of service/resource on appointment
+SIU_S19=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of modification of service/resource on appointment
+SIU_S20=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of cancellation of service/resource on appointment
+SIU_S21=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of discontinuation of service/resource on appointment
+SIU_S22=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of deletion of service/resource on appointment
+SIU_S23=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of blocked schedule time slot(s)
+SIU_S24=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK - Notification of opened ("unblocked") schedule time slot(s)
+SIU_S26=MSH,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],}=SIU/ACK Notification that patient did not show up for schedule appointment
+SPQ_Q01=MSH,SPR,[RDF],[DSC]=QRY/DSR - Query sent for immediate response
+SQM_S25=MSH,QRD,[QRF],[,ARQ,[APR],[PID],{,RGS,[,{,AIS,[APR],},],[,{,AIG,[APR],},],[,{,AIP,[APR],},],[,{,AIL,[APR],},],},],[DSC]=SQM/SQR - Schedule query message and response
+SQR_S25=MSH,MSA,[ERR],QAK,[,{,SCH,{[NTE]},[,PID,[PV1],[PV2],[DG1],],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIP,{[NTE]},},],[,{,AIL,{[NTE]},},],},},],[DSC]=SQM/SQR - Schedule query message and response
+SRM_S01=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request new appointment booking
+SRM_S02=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request appointment rescheduling
+SRM_S03=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request appointment modification
+SRM_S04=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request appointment cancellation
+SRM_S05=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request appointment discontinuation
+SRM_S06=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request appointment deletion
+SRM_S07=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request addition of service/resource on appointment
+SRM_S08=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request modification of service/resource on appointment
+SRM_S09=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request cancellation of service/resource on appointment
+SRM_S10=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request discontinuation of service/resource on appointment
+SRM_S11=MSH,ARQ,[APR],{[NTE]},[,{,PID,[PV1],[PV2],{[OBX]},{[DG1]},},],{,RGS,[,{,AIS,[APR],{[NTE]},},],[,{,AIG,[APR],{[NTE]},},],[,{,AIL,[APR],{[NTE]},},],[,{,AIP,[APR],{[NTE]},},],}=SRM/SRR - Request deletion of service/resource on appointment
+SRR_S01=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request new appointment booking
+SRR_S02=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request appointment rescheduling
+SRR_S03=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request appointment modification
+SRR_S04=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request appointment cancellation
+SRR_S05=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request appointment discontinuation
+SRR_S06=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request appointment deletion
+SRR_S07=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request addition of service/resource on appointment
+SRR_S08=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request modification of service/resource on appointment
+SRR_S09=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request cancellation of service/resource on appointment
+SRR_S10=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request discontinuation of service/resource on appointment
+SRR_S11=MSH,MSA,[ERR],[,SCH,{[NTE]},[,{,PID,[PV1],[PV2],{[DG1]},},],{,RGS,[,{,AIS,{[NTE]},},],[,{,AIG,{[NTE]},},],[,{,AIL,{[NTE]},},],[,{,AIP,{[NTE]},},],},]=SRM/SRR - Request deletion of service/resource on appointment
+SUR_P09=MSH,{,FAC,{,PSH,PDC,},PSH,{,FAC,PDC,NTE,},}=SUR - Summary product experience report
+TBR_Q01=MSH,MSA,[ERR],QAK,RDF,{,RDT,},[DSC]=QRY/DSR - Query sent for immediate response
+UDM_Q05=MSH,URD,[URS],{,DSP,},[DSC]=UDM/ACK - Unsolicited display update message
+VQQ_Q01=MSH,VTQ,[RDF],[DSC]=QRY/DSR - Query sent for immediate response
+VXQ_V01=MSH,QRD,[QRF]=VXQ - Query for vaccination record
+VXR_V03=MSH,MSA,QRD,[QRF],PID,[PD1],{[NK1]},[,PV1,[PV2],],[,{,IN1,[IN2],[IN3],},],[,{,[ORC],RXA,[RXR],[,{,OBX,{[NTE]},},],},]=VXR - Vaccination record response
+VXU_V04=MSH,PID,[PD1],{[NK1]},[,PV1,[PV2],],[,{,IN1,[IN2],[IN3],},],[,{,[ORC],RXA,[RXR],{,[,OBX,{[NTE]},],},},]=VXU - Unsolicited vaccination record update
+MFD_M03=MSH,MFI,{,[MFA],}=MFN/MFK - Master file - test/observation (for backward compatibility only)
+MFQ_M01=MSH,QRD,[QRF],[DSC]=MFN/MFK - Master file not otherwise specified (for backward compatibility only)
+MFQ_M02=MSH,QRD,[QRF],[DSC]=MFN/MFK - Master file - staff practitioner
+MFQ_M03=MSH,QRD,[QRF],[DSC]=MFN/MFK - Master file - test/observation (for backward compatibility only)
+MFR_M01=MSH,MSA,[ERR],QRD,[QRF],MFI,{,MFE,[Z..],},[DSC]=MFN/MFK - Master file not otherwise specified (for backward compatibility only)
+MFR_M02=MSH,MSA,[ERR],QRD,[QRF],MFI,{,MFE,[Z..],},[DSC]=MFN/MFK - Master file - staff practitioner
+MFR_M03=MSH,MSA,[ERR],QRD,[QRF],MFI,{,MFE,[Z..],},[DSC]=MFN/MFK - Master file - test/observation (for backward compatibility only)
+NMD_N01=MSH,{,[,NCK,{[NTE]},],[,NST,{[NTE]},],[,NSC,{[NTE]},],}=NMQ/NMR - Application management query message
+NMQ_N02=MSH,[,QRD,[QRF],],{,[NCK],[NST],[NSC],}=NMD/ACK - Application management data message (unsolicited)
+NMR_N02=MSH,MSA,[ERR],[QRD],{,[NCK],{[NTE]},[NST],{[NTE]},[NSC],{[NTE]},}=NMD/ACK - Application management data message (unsolicited)
+ORM_O01=MSH,{[NTE]},[,PID,{[NTE]},[PV1],],{,ORC,[,<,OBR,|,RQD,|,RQ1,|,RXO,|,ODS,|,ODT,>,{[NTE]},{[OBX]},{NTE},],[BLG],}=ORM - Order message (also RDE, RDS, RGV, RAS)
+ORR_O02=MSH,MSA,{[NTE]},[,[PID],{[NTE]},{,ORC,[,<,OBR,|,RQD,|,RQ1,|,RXO,|,ODS,|,ODT,>,],{[NTE]},},]=ORR - Order response (also RRE, RRD, RRG, RRA)
+ORU_R03=MSH,{,[,PID,{[NTE]},[PV1],],{,[ORC],OBR,{,[NTE],},{,[OBX],{,[NTE],},},},},[DSC]=QRY/DSR Display-oriented results, query/unsol. update (for backward compatibility only) (Replaced by Q05)
+QRY_P04=MSH,QRD,[QRF],[DSC]=QRY/DSP - Generate bill and A/R statements
+DSR_P04=MSH,MSA,[ERR],QRD,[QRF],{,DSP,},[DSC]=QRY/DSP - Generate bill and A/R statements
+DSR_R03=MSH,[MSA],QRD,[QRF],{,DSP,},[DSC]=QRY/DSR Display-oriented results, query/unsol. update (for backward compatibility only) (Replaced by Q05)
+MFD_M01=MSH,MFI,{,[MFA],}=MFN/MFK - Master file not otherwise specified (for backward compatibility only)

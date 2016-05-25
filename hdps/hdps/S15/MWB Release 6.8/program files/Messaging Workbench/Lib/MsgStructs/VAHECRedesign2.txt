@@ -1,0 +1,15 @@
+SEGMENTLIBS="HL7 2-3-1.mcf","VistA-HEC ZSeg.mcf"=MSGSTRUCTFILE=VAHECRedesign2.txt
+ORU_Z07=BHS,{MSH,PID,PD1,ZPD,ZTA,ZIE,{ZEL},ZEN,ZCD,{ZMH},{ZRD},ZCT,{ZEM}{ZGD}ZIC,ZIR,{ZDP,ZIC,ZIR}ZIO,{NTE}{IN1}ZMT,ZMT,ZMT,ZBT, {ZFE}ZSP}[{OBX}],BTS=No event description in HL7 table 0003
+ORF_Z07=MSH,MSA,QRD,PID,PD1,ZPD,ZTA,ZIE,{ZEL}ZEN,ZCD,{ZMH}{ZRD}ZCT,{ZEM}{ZGD}ZIC,ZIR,{ZDP,ZIC,ZIR}ZIO,{NTE}{IN1}ZMT,ZMT,ZMT,ZBT,{ZFE}ZSP,[{OBX}]=No event description in HL7 table 0003
+ORU_Z09=BHS,{MSH,PID,PD1,FT1,ZIC}BTS=No event description in HL7 table 0003
+ORU_Z04=BHS,{MSH,PID,PD1,IN1,ZIV}BTS=No event description in HL7 table 0003
+ORU_Z03=BHS,{MSH,PID,ZIV}BTS=No event description in HL7 table 0003
+ORU_Z05=BHS,{MSH,PID,ZPD,ZEL,ZGD}BTS=No event description in HL7 table 0003
+ORU_Z06=BHS,{MSH,PID,ZIC,ZIR,{ZDP,ZIC,ZIR}ZMT}BTS=No event description in HL7 table 0003
+ORU_Z08=BHS,{MSH,PID,ZIV}BTS=No event description in HL7 table 0003
+ORU_Z10=BHS,{MSH,PID,ZIC,ZIR,{ZDP,ZIC,ZIR}ZMT}ZBT=No event description in HL7 table 0003
+ORF_Z10=BHS,{MSH,QRD,PID,ZIC,ZIR,{ZDPZIC,ZIR}ZMT}ZBT=No event description in HL7 table 0003
+ORU_Z11=BHS,{MSH,PID,ZPD,ZIE,{ZEL}ZEN,ZMT,ZCD,ZMH,ZSP,{ZRD}[OBX]}BTS=No event description in HL7 table 0003
+ORF_Z11=MSH,MSA,QRD,QRF,PID,ZPD,ZIE,{ZEL}ZEN,ZMT,ZCD,ZMH,ZSP,{ZRD}[OBX]=No event description in HL7 table 0003
+ORU_Z12=BHS,{MSH,PID,ZPD}BTS=No event description in HL7 table 0003
+ORU_Z13=BHS,{MSH,PID,ZPD}BTS=No event description in HL7 table 0003

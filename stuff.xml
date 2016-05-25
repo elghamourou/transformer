@@ -1,0 +1,1664 @@
+    <!--Zero or more repetitions:-->
+    <urn:PD1.3 Item="756" Type="XON" LongName="Patient Primary Facility">
+      <!--Optional:-->
+      <urn:XON.1 Type="ST" LongName="organization name">string</urn:XON.1>
+      <!--Optional:-->
+      <urn:XON.2 Type="IS" LongName="organization name type code">string</urn:XON.2>
+      <!--Optional:-->
+      <urn:XON.3 Type="NM" LongName="ID number (NM)">string</urn:XON.3>
+      <!--Optional:-->
+      <urn:XON.4 Type="ST" LongName="check digit">string</urn:XON.4>
+      <!--Optional:-->
+      <urn:XON.5 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XON.5>
+      <!--Optional:-->
+      <urn:XON.6 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.6>
+      <!--Optional:-->
+      <urn:XON.7 Type="IS" LongName="identifier type code">string</urn:XON.7>
+      <!--Optional:-->
+      <urn:XON.8 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.8>
+    </urn:PD1.3>
+    <!--Zero or more repetitions:-->
+    <urn:PD1.4 Item="757" Type="XCN" LongName="Patient Primary Care Provider Name &amp; ID No.">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PD1.4>
+    <!--Optional:-->
+    <urn:PD1.5 Item="745" Type="IS" Table="HL70231" LongName="Student Indicator">string</urn:PD1.5>
+    <!--Optional:-->
+    <urn:PD1.6 Item="753" Type="IS" Table="HL70310" LongName="Handicap">string</urn:PD1.6>
+    <!--Optional:-->
+    <urn:PD1.7 Item="759" Type="IS" Table="HL70315" LongName="Living Will">string</urn:PD1.7>
+    <!--Optional:-->
+    <urn:PD1.8 Item="760" Type="IS" Table="HL70316" LongName="Organ Donor">string</urn:PD1.8>
+    <!--Optional:-->
+    <urn:PD1.9 Item="761" Type="ID" Table="HL70136" LongName="Separate Bill">string</urn:PD1.9>
+    <!--Zero or more repetitions:-->
+    <urn:PD1.10 Item="762" Type="CX" LongName="Duplicate Patient">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:PD1.10>
+    <!--Optional:-->
+    <urn:PD1.11 Item="743" Type="CE" Table="HL70215" LongName="Publicity Indicator">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:PD1.11>
+    <!--Optional:-->
+    <urn:PD1.12 Item="744" Type="ID" Table="HL70136" LongName="Protection Indicator">string</urn:PD1.12>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:PD1>
+  <!--Zero or more repetitions:-->
+  <urn:NK1>
+    <urn:NK1.1 Item="190" Type="SI" LongName="Set ID - Next of Kin">string</urn:NK1.1>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.2 Item="191" Type="XPN" LongName="Name">
+      <!--Optional:-->
+      <urn:XPN.1 Type="ST" LongName="family name">string</urn:XPN.1>
+      <!--Optional:-->
+      <urn:XPN.2 Type="ST" LongName="given name">string</urn:XPN.2>
+      <!--Optional:-->
+      <urn:XPN.3 Type="ST" LongName="middle initial or name">string</urn:XPN.3>
+      <!--Optional:-->
+      <urn:XPN.4 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XPN.4>
+      <!--Optional:-->
+      <urn:XPN.5 Type="ST" LongName="prefix (e.g., DR)">string</urn:XPN.5>
+      <!--Optional:-->
+      <urn:XPN.6 Type="ST" LongName="degree (e.g., MD)">string</urn:XPN.6>
+      <!--Optional:-->
+      <urn:XPN.7 Type="ID" LongName="name type code">string</urn:XPN.7>
+      <!--Optional:-->
+      <urn:XPN.8 Type="ID" LongName="Name Representation code">string</urn:XPN.8>
+    </urn:NK1.2>
+    <!--Optional:-->
+    <urn:NK1.3 Item="192" Type="CE" Table="HL70063" LongName="Relationship">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.3>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.4 Item="193" Type="XAD" LongName="Address">
+      <!--Optional:-->
+      <urn:XAD.1 Type="ST" LongName="street address">string</urn:XAD.1>
+      <!--Optional:-->
+      <urn:XAD.2 Type="ST" LongName="other designation">string</urn:XAD.2>
+      <!--Optional:-->
+      <urn:XAD.3 Type="ST" LongName="city">string</urn:XAD.3>
+      <!--Optional:-->
+      <urn:XAD.4 Type="ST" LongName="state or province">string</urn:XAD.4>
+      <!--Optional:-->
+      <urn:XAD.5 Type="ST" LongName="zip or postal code">string</urn:XAD.5>
+      <!--Optional:-->
+      <urn:XAD.6 Type="ID" LongName="country">string</urn:XAD.6>
+      <!--Optional:-->
+      <urn:XAD.7 Type="ID" LongName="address type">string</urn:XAD.7>
+      <!--Optional:-->
+      <urn:XAD.8 Type="ST" LongName="other geographic designation">string</urn:XAD.8>
+      <!--Optional:-->
+      <urn:XAD.9 Type="IS" LongName="county/parish code">string</urn:XAD.9>
+      <!--Optional:-->
+      <urn:XAD.10 Type="IS" LongName="census tract">string</urn:XAD.10>
+    </urn:NK1.4>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.5 Item="194" Type="XTN" LongName="Phone Number">
+      <!--Optional:-->
+      <urn:XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">string</urn:XTN.1>
+      <!--Optional:-->
+      <urn:XTN.2 Type="ID" LongName="telecommunication use code">string</urn:XTN.2>
+      <!--Optional:-->
+      <urn:XTN.3 Type="ID" LongName="telecommunication equipment type (ID)">string</urn:XTN.3>
+      <!--Optional:-->
+      <urn:XTN.4 Type="ST" LongName="Email address">string</urn:XTN.4>
+      <!--Optional:-->
+      <urn:XTN.5 Type="NM" LongName="Country Code">string</urn:XTN.5>
+      <!--Optional:-->
+      <urn:XTN.6 Type="NM" LongName="Area/city code">string</urn:XTN.6>
+      <!--Optional:-->
+      <urn:XTN.7 Type="NM" LongName="Phone number">string</urn:XTN.7>
+      <!--Optional:-->
+      <urn:XTN.8 Type="NM" LongName="Extension">string</urn:XTN.8>
+      <!--Optional:-->
+      <urn:XTN.9 Type="ST" LongName="any text">string</urn:XTN.9>
+    </urn:NK1.5>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.6 Item="195" Type="XTN" LongName="Business Phone Number">
+      <!--Optional:-->
+      <urn:XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">string</urn:XTN.1>
+      <!--Optional:-->
+      <urn:XTN.2 Type="ID" LongName="telecommunication use code">string</urn:XTN.2>
+      <!--Optional:-->
+      <urn:XTN.3 Type="ID" LongName="telecommunication equipment type (ID)">string</urn:XTN.3>
+      <!--Optional:-->
+      <urn:XTN.4 Type="ST" LongName="Email address">string</urn:XTN.4>
+      <!--Optional:-->
+      <urn:XTN.5 Type="NM" LongName="Country Code">string</urn:XTN.5>
+      <!--Optional:-->
+      <urn:XTN.6 Type="NM" LongName="Area/city code">string</urn:XTN.6>
+      <!--Optional:-->
+      <urn:XTN.7 Type="NM" LongName="Phone number">string</urn:XTN.7>
+      <!--Optional:-->
+      <urn:XTN.8 Type="NM" LongName="Extension">string</urn:XTN.8>
+      <!--Optional:-->
+      <urn:XTN.9 Type="ST" LongName="any text">string</urn:XTN.9>
+    </urn:NK1.6>
+    <!--Optional:-->
+    <urn:NK1.7 Item="196" Type="CE" Table="HL70131" LongName="Contact Role">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.7>
+    <!--Optional:-->
+    <urn:NK1.8 Item="197" Type="DT" LongName="Start Date">string</urn:NK1.8>
+    <!--Optional:-->
+    <urn:NK1.9 Item="198" Type="DT" LongName="End Date">string</urn:NK1.9>
+    <!--Optional:-->
+    <urn:NK1.10 Item="199" Type="ST" LongName="Next of Kin/Associated Parties Job Title">string</urn:NK1.10>
+    <!--Optional:-->
+    <urn:NK1.11 Item="200" Type="JCC" LongName="Next of Kin Job/Associated Parties Code/Class">
+      <!--Optional:-->
+      <urn:JCC.1 Type="IS" LongName="job code">string</urn:JCC.1>
+      <!--Optional:-->
+      <urn:JCC.2 Type="IS" LongName="job class">string</urn:JCC.2>
+    </urn:NK1.11>
+    <!--Optional:-->
+    <urn:NK1.12 Item="201" Type="CX" LongName="Next of Kin/Associated Parties Employee Number">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:NK1.12>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.13 Item="202" Type="XON" LongName="Organization Name">
+      <!--Optional:-->
+      <urn:XON.1 Type="ST" LongName="organization name">string</urn:XON.1>
+      <!--Optional:-->
+      <urn:XON.2 Type="IS" LongName="organization name type code">string</urn:XON.2>
+      <!--Optional:-->
+      <urn:XON.3 Type="NM" LongName="ID number (NM)">string</urn:XON.3>
+      <!--Optional:-->
+      <urn:XON.4 Type="ST" LongName="check digit">string</urn:XON.4>
+      <!--Optional:-->
+      <urn:XON.5 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XON.5>
+      <!--Optional:-->
+      <urn:XON.6 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.6>
+      <!--Optional:-->
+      <urn:XON.7 Type="IS" LongName="identifier type code">string</urn:XON.7>
+      <!--Optional:-->
+      <urn:XON.8 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.8>
+    </urn:NK1.13>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.14 Item="119" Type="IS" Table="HL70002" LongName="Marital Status">string</urn:NK1.14>
+    <!--Optional:-->
+    <urn:NK1.15 Item="111" Type="IS" Table="HL70001" LongName="Sex">string</urn:NK1.15>
+    <!--Optional:-->
+    <urn:NK1.16 Item="110" Type="TS" LongName="Date of Birth">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:NK1.16>
+    <!--Optional:-->
+    <urn:NK1.17 Item="755" Type="IS" Table="HL70223" LongName="Living Dependency">string</urn:NK1.17>
+    <!--Optional:-->
+    <urn:NK1.18 Item="145" Type="IS" Table="HL70009" LongName="Ambulatory Status">string</urn:NK1.18>
+    <!--Optional:-->
+    <urn:NK1.19 Item="129" Type="IS" Table="HL70171" LongName="Citizenship">string</urn:NK1.19>
+    <!--Optional:-->
+    <urn:NK1.20 Item="118" Type="CE" Table="HL70296" LongName="Primary Language">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.20>
+    <!--Optional:-->
+    <urn:NK1.21 Item="742" Type="IS" Table="HL70220" LongName="Living Arrangement">string</urn:NK1.21>
+    <!--Optional:-->
+    <urn:NK1.22 Item="743" Type="CE" Table="HL70215" LongName="Publicity Indicator">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.22>
+    <!--Optional:-->
+    <urn:NK1.23 Item="744" Type="ID" Table="HL70136" LongName="Protection Indicator">string</urn:NK1.23>
+    <!--Optional:-->
+    <urn:NK1.24 Item="745" Type="IS" Table="HL70231" LongName="Student Indicator">string</urn:NK1.24>
+    <!--Optional:-->
+    <urn:NK1.25 Item="120" Type="IS" Table="HL70006" LongName="Religion">string</urn:NK1.25>
+    <!--Optional:-->
+    <urn:NK1.26 Item="746" Type="XPN" LongName="Mother’s Maiden Name">
+      <!--Optional:-->
+      <urn:XPN.1 Type="ST" LongName="family name">string</urn:XPN.1>
+      <!--Optional:-->
+      <urn:XPN.2 Type="ST" LongName="given name">string</urn:XPN.2>
+      <!--Optional:-->
+      <urn:XPN.3 Type="ST" LongName="middle initial or name">string</urn:XPN.3>
+      <!--Optional:-->
+      <urn:XPN.4 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XPN.4>
+      <!--Optional:-->
+      <urn:XPN.5 Type="ST" LongName="prefix (e.g., DR)">string</urn:XPN.5>
+      <!--Optional:-->
+      <urn:XPN.6 Type="ST" LongName="degree (e.g., MD)">string</urn:XPN.6>
+      <!--Optional:-->
+      <urn:XPN.7 Type="ID" LongName="name type code">string</urn:XPN.7>
+      <!--Optional:-->
+      <urn:XPN.8 Type="ID" LongName="Name Representation code">string</urn:XPN.8>
+    </urn:NK1.26>
+    <!--Optional:-->
+    <urn:NK1.27 Item="739" Type="CE" Table="HL70212" LongName="Nationality Code">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.27>
+    <!--Optional:-->
+    <urn:NK1.28 Item="125" Type="IS" Table="HL70189" LongName="Ethnic Group">string</urn:NK1.28>
+    <!--Optional:-->
+    <urn:NK1.29 Item="747" Type="CE" Table="HL70222" LongName="Contact Reason">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:NK1.29>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.30 Item="748" Type="XPN" LongName="Contact Person's Name">
+      <!--Optional:-->
+      <urn:XPN.1 Type="ST" LongName="family name">string</urn:XPN.1>
+      <!--Optional:-->
+      <urn:XPN.2 Type="ST" LongName="given name">string</urn:XPN.2>
+      <!--Optional:-->
+      <urn:XPN.3 Type="ST" LongName="middle initial or name">string</urn:XPN.3>
+      <!--Optional:-->
+      <urn:XPN.4 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XPN.4>
+      <!--Optional:-->
+      <urn:XPN.5 Type="ST" LongName="prefix (e.g., DR)">string</urn:XPN.5>
+      <!--Optional:-->
+      <urn:XPN.6 Type="ST" LongName="degree (e.g., MD)">string</urn:XPN.6>
+      <!--Optional:-->
+      <urn:XPN.7 Type="ID" LongName="name type code">string</urn:XPN.7>
+      <!--Optional:-->
+      <urn:XPN.8 Type="ID" LongName="Name Representation code">string</urn:XPN.8>
+    </urn:NK1.30>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.31 Item="749" Type="XTN" LongName="Contact Person’s Telephone Number">
+      <!--Optional:-->
+      <urn:XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">string</urn:XTN.1>
+      <!--Optional:-->
+      <urn:XTN.2 Type="ID" LongName="telecommunication use code">string</urn:XTN.2>
+      <!--Optional:-->
+      <urn:XTN.3 Type="ID" LongName="telecommunication equipment type (ID)">string</urn:XTN.3>
+      <!--Optional:-->
+      <urn:XTN.4 Type="ST" LongName="Email address">string</urn:XTN.4>
+      <!--Optional:-->
+      <urn:XTN.5 Type="NM" LongName="Country Code">string</urn:XTN.5>
+      <!--Optional:-->
+      <urn:XTN.6 Type="NM" LongName="Area/city code">string</urn:XTN.6>
+      <!--Optional:-->
+      <urn:XTN.7 Type="NM" LongName="Phone number">string</urn:XTN.7>
+      <!--Optional:-->
+      <urn:XTN.8 Type="NM" LongName="Extension">string</urn:XTN.8>
+      <!--Optional:-->
+      <urn:XTN.9 Type="ST" LongName="any text">string</urn:XTN.9>
+    </urn:NK1.31>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.32 Item="750" Type="XAD" LongName="Contact Person’s Address">
+      <!--Optional:-->
+      <urn:XAD.1 Type="ST" LongName="street address">string</urn:XAD.1>
+      <!--Optional:-->
+      <urn:XAD.2 Type="ST" LongName="other designation">string</urn:XAD.2>
+      <!--Optional:-->
+      <urn:XAD.3 Type="ST" LongName="city">string</urn:XAD.3>
+      <!--Optional:-->
+      <urn:XAD.4 Type="ST" LongName="state or province">string</urn:XAD.4>
+      <!--Optional:-->
+      <urn:XAD.5 Type="ST" LongName="zip or postal code">string</urn:XAD.5>
+      <!--Optional:-->
+      <urn:XAD.6 Type="ID" LongName="country">string</urn:XAD.6>
+      <!--Optional:-->
+      <urn:XAD.7 Type="ID" LongName="address type">string</urn:XAD.7>
+      <!--Optional:-->
+      <urn:XAD.8 Type="ST" LongName="other geographic designation">string</urn:XAD.8>
+      <!--Optional:-->
+      <urn:XAD.9 Type="IS" LongName="county/parish code">string</urn:XAD.9>
+      <!--Optional:-->
+      <urn:XAD.10 Type="IS" LongName="census tract">string</urn:XAD.10>
+    </urn:NK1.32>
+    <!--Zero or more repetitions:-->
+    <urn:NK1.33 Item="751" Type="CX" LongName="Associated Party’s Identifiers">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:NK1.33>
+    <!--Optional:-->
+    <urn:NK1.34 Item="752" Type="IS" Table="HL70311" LongName="Job Status">string</urn:NK1.34>
+    <!--Optional:-->
+    <urn:NK1.35 Item="113" Type="IS" Table="HL70005" LongName="Race">string</urn:NK1.35>
+    <!--Optional:-->
+    <urn:NK1.36 Item="753" Type="IS" Table="HL70310" LongName="Handicap">string</urn:NK1.36>
+    <!--Optional:-->
+    <urn:NK1.37 Item="754" Type="ST" LongName="Contact Person Social Security Number">string</urn:NK1.37>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:NK1>
+  <urn:PV1>
+    <!--Optional:-->
+    <urn:PV1.1 Item="131" Type="SI" LongName="Set ID - Patient Visit">string</urn:PV1.1>
+    <urn:PV1.2 Item="132" Type="ID" Table="HL70004" LongName="Patient Class">string</urn:PV1.2>
+    <!--Optional:-->
+    <urn:PV1.3 Item="133" Type="PL" LongName="Assigned Patient Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV1.3>
+    <!--Optional:-->
+    <urn:PV1.4 Item="134" Type="ID" Table="HL70007" LongName="Admission Type">string</urn:PV1.4>
+    <!--Optional:-->
+    <urn:PV1.5 Item="135" Type="CX" LongName="Preadmit Number">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:PV1.5>
+    <!--Optional:-->
+    <urn:PV1.6 Item="136" Type="PL" LongName="Prior Patient Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV1.6>
+    <!--Optional:-->
+    <urn:PV1.7 Item="137" Type="XCN" Table="HL70010" LongName="Attending Doctor">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV1.7>
+    <!--Optional:-->
+    <urn:PV1.8 Item="138" Type="XCN" Table="HL70010" LongName="Referring Doctor">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV1.8>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.9 Item="139" Type="XCN" Table="HL70010" LongName="Consulting Doctor">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV1.9>
+    <!--Optional:-->
+    <urn:PV1.10 Item="140" Type="ID" Table="HL70069" LongName="Hospital Service">string</urn:PV1.10>
+    <!--Optional:-->
+    <urn:PV1.11 Item="141" Type="PL" LongName="Temporary Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV1.11>
+    <!--Optional:-->
+    <urn:PV1.12 Item="142" Type="ID" Table="HL70087" LongName="Preadmit Test Indicator">string</urn:PV1.12>
+    <!--Optional:-->
+    <urn:PV1.13 Item="143" Type="ID" Table="HL70092" LongName="Readmission Indicator">string</urn:PV1.13>
+    <!--Optional:-->
+    <urn:PV1.14 Item="144" Type="ID" Table="HL70023" LongName="Admit Source">string</urn:PV1.14>
+    <!--Optional:-->
+    <urn:PV1.15 Item="145" Type="IS" Table="HL70009" LongName="Ambulatory Status">string</urn:PV1.15>
+    <!--Optional:-->
+    <urn:PV1.16 Item="146" Type="ID" Table="HL70099" LongName="VIP Indicator">string</urn:PV1.16>
+    <!--Optional:-->
+    <urn:PV1.17 Item="147" Type="XCN" Table="HL70010" LongName="Admitting Doctor">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV1.17>
+    <!--Optional:-->
+    <urn:PV1.18 Item="148" Type="ID" Table="HL70018" LongName="Patient Type">string</urn:PV1.18>
+    <!--Optional:-->
+    <urn:PV1.19 Item="149" Type="CX" LongName="Visit Number">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:PV1.19>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.20 Item="150" Type="FC" Table="HL70064" LongName="Financial Class">
+      <!--Optional:-->
+      <urn:FC.1 Type="IS" LongName="Financial Class">string</urn:FC.1>
+      <!--Optional:-->
+      <urn:FC.2 Type="TS" LongName="Effective Date">
+        <!--Optional:-->
+        <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+        <!--Optional:-->
+        <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+      </urn:FC.2>
+    </urn:PV1.20>
+    <!--Optional:-->
+    <urn:PV1.21 Item="151" Type="ID" Table="HL70032" LongName="Charge Price Indicator">string</urn:PV1.21>
+    <!--Optional:-->
+    <urn:PV1.22 Item="152" Type="ID" Table="HL70045" LongName="Courtesy Code">string</urn:PV1.22>
+    <!--Optional:-->
+    <urn:PV1.23 Item="153" Type="ID" Table="HL70046" LongName="Credit Rating">string</urn:PV1.23>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.24 Item="154" Type="ID" Table="HL70044" LongName="Contract Code">string</urn:PV1.24>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.25 Item="155" Type="DT" LongName="Contract Effective Date">string</urn:PV1.25>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.26 Item="156" Type="NM" LongName="Contract Amount">string</urn:PV1.26>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.27 Item="157" Type="NM" LongName="Contract Period">string</urn:PV1.27>
+    <!--Optional:-->
+    <urn:PV1.28 Item="158" Type="ID" Table="HL70073" LongName="Interest Code">string</urn:PV1.28>
+    <!--Optional:-->
+    <urn:PV1.29 Item="159" Type="ID" Table="HL70110" LongName="Transfer to Bad Debt Code">string</urn:PV1.29>
+    <!--Optional:-->
+    <urn:PV1.30 Item="160" Type="DT" LongName="Transfer to Bad Debt Date">string</urn:PV1.30>
+    <!--Optional:-->
+    <urn:PV1.31 Item="161" Type="ID" Table="HL70021" LongName="Bad Debt Agency Code">string</urn:PV1.31>
+    <!--Optional:-->
+    <urn:PV1.32 Item="162" Type="NM" LongName="Bad Debt Transfer Amount">string</urn:PV1.32>
+    <!--Optional:-->
+    <urn:PV1.33 Item="163" Type="NM" LongName="Bad Debt Recovery Amount">string</urn:PV1.33>
+    <!--Optional:-->
+    <urn:PV1.34 Item="164" Type="ID" Table="HL70111" LongName="Delete Account Indicator">string</urn:PV1.34>
+    <!--Optional:-->
+    <urn:PV1.35 Item="165" Type="DT" LongName="Delete Account Date">string</urn:PV1.35>
+    <!--Optional:-->
+    <urn:PV1.36 Item="166" Type="ID" Table="HL70112" LongName="Discharge Disposition">string</urn:PV1.36>
+    <!--Optional:-->
+    <urn:PV1.37 Item="167" Type="CM" Table="HL70113" LongName="Discharged to Location">
+      <!--Optional:-->
+      <urn:CM_DLD.1 Type="ID" LongName="discharge location">string</urn:CM_DLD.1>
+      <!--Optional:-->
+      <urn:CM_DLD.2 Type="TS" LongName="effective date">
+        <!--Optional:-->
+        <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+        <!--Optional:-->
+        <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+      </urn:CM_DLD.2>
+    </urn:PV1.37>
+    <!--Optional:-->
+    <urn:PV1.38 Item="168" Type="ID" Table="HL70114" LongName="Diet Type">string</urn:PV1.38>
+    <!--Optional:-->
+    <urn:PV1.39 Item="169" Type="ID" Table="HL70115" LongName="Servicing Facility">string</urn:PV1.39>
+    <!--Optional:-->
+    <urn:PV1.40 Item="170" Type="IS" Table="HL70116" LongName="Bed Status">string</urn:PV1.40>
+    <!--Optional:-->
+    <urn:PV1.41 Item="171" Type="ID" Table="HL70117" LongName="Account Status">string</urn:PV1.41>
+    <!--Optional:-->
+    <urn:PV1.42 Item="172" Type="PL" LongName="Pending Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV1.42>
+    <!--Optional:-->
+    <urn:PV1.43 Item="173" Type="PL" LongName="Prior Temporary Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV1.43>
+    <!--Optional:-->
+    <urn:PV1.44 Item="174" Type="TS" LongName="Admit Date/Time">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:PV1.44>
+    <!--Optional:-->
+    <urn:PV1.45 Item="175" Type="TS" LongName="Discharge Date/Time">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:PV1.45>
+    <!--Optional:-->
+    <urn:PV1.46 Item="176" Type="NM" LongName="Current Patient Balance">string</urn:PV1.46>
+    <!--Optional:-->
+    <urn:PV1.47 Item="177" Type="NM" LongName="Total Charges">string</urn:PV1.47>
+    <!--Optional:-->
+    <urn:PV1.48 Item="178" Type="NM" LongName="Total Adjustments">string</urn:PV1.48>
+    <!--Optional:-->
+    <urn:PV1.49 Item="179" Type="NM" LongName="Total Payments">string</urn:PV1.49>
+    <!--Optional:-->
+    <urn:PV1.50 Item="180" Type="CX" Table="HL70192" LongName="Alternate Visit ID">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:PV1.50>
+    <!--Optional:-->
+    <urn:PV1.51 Item="1226" Type="IS" Table="HL70326" LongName="Visit Indicator">string</urn:PV1.51>
+    <!--Zero or more repetitions:-->
+    <urn:PV1.52 Item="1274" Type="XCN" Table="HL70010" LongName="Other Healthcare Provider">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV1.52>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:PV1>
+  <!--Optional:-->
+  <urn:PV2>
+    <!--Optional:-->
+    <urn:PV2.1 Item="181" Type="PL" LongName="Prior Pending Location">
+      <!--Optional:-->
+      <urn:PL.1 Type="ID" LongName="point of care (ID)">string</urn:PL.1>
+      <!--Optional:-->
+      <urn:PL.2 Type="IS" LongName="room">string</urn:PL.2>
+      <!--Optional:-->
+      <urn:PL.3 Type="IS" LongName="bed">string</urn:PL.3>
+      <!--Optional:-->
+      <urn:PL.4 Type="HD" LongName="facility (HD)">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:PL.4>
+      <!--Optional:-->
+      <urn:PL.5 Type="IS" LongName="location status">string</urn:PL.5>
+      <!--Optional:-->
+      <urn:PL.6 Type="IS" LongName="person location type">string</urn:PL.6>
+      <!--Optional:-->
+      <urn:PL.7 Type="IS" LongName="building">string</urn:PL.7>
+      <!--Optional:-->
+      <urn:PL.8 Type="ST" LongName="floor">string</urn:PL.8>
+      <!--Optional:-->
+      <urn:PL.9 Type="ST" LongName="Location type">string</urn:PL.9>
+    </urn:PV2.1>
+    <!--Optional:-->
+    <urn:PV2.2 Item="182" Type="CE" Table="HL70129" LongName="Accommodation Code">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:PV2.2>
+    <!--Optional:-->
+    <urn:PV2.3 Item="183" Type="CE" LongName="Admit Reason">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:PV2.3>
+    <!--Optional:-->
+    <urn:PV2.4 Item="184" Type="CE" LongName="Transfer Reason">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:PV2.4>
+    <!--Zero or more repetitions:-->
+    <urn:PV2.5 Item="185" Type="ST" LongName="Patient Valuables">string</urn:PV2.5>
+    <!--Optional:-->
+    <urn:PV2.6 Item="186" Type="ST" LongName="Patient Valuables Location">string</urn:PV2.6>
+    <!--Optional:-->
+    <urn:PV2.7 Item="187" Type="IS" Table="HL70130" LongName="Visit User Code">string</urn:PV2.7>
+    <!--Optional:-->
+    <urn:PV2.8 Item="188" Type="TS" LongName="Expected Admit Date">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:PV2.8>
+    <!--Optional:-->
+    <urn:PV2.9 Item="189" Type="TS" LongName="Expected Discharge Date">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:PV2.9>
+    <!--Optional:-->
+    <urn:PV2.10 Item="711" Type="NM" LongName="Estimated Length of Inpatient Stay">string</urn:PV2.10>
+    <!--Optional:-->
+    <urn:PV2.11 Item="712" Type="NM" LongName="Actual Length of Inpatient Stay">string</urn:PV2.11>
+    <!--Optional:-->
+    <urn:PV2.12 Item="713" Type="ST" LongName="Visit Description">string</urn:PV2.12>
+    <!--Optional:-->
+    <urn:PV2.13 Item="714" Type="XCN" LongName="Referral Source Code">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:PV2.13>
+    <!--Optional:-->
+    <urn:PV2.14 Item="715" Type="DT" LongName="Previous Service Date">string</urn:PV2.14>
+    <!--Optional:-->
+    <urn:PV2.15 Item="716" Type="ID" Table="HL70136" LongName="Employment Illness Related Indicator">string</urn:PV2.15>
+    <!--Optional:-->
+    <urn:PV2.16 Item="717" Type="IS" Table="HL70213" LongName="Purge Status Code">string</urn:PV2.16>
+    <!--Optional:-->
+    <urn:PV2.17 Item="718" Type="DT" LongName="Purge Status Date">string</urn:PV2.17>
+    <!--Optional:-->
+    <urn:PV2.18 Item="719" Type="IS" Table="HL70214" LongName="Special Program Code">string</urn:PV2.18>
+    <!--Optional:-->
+    <urn:PV2.19 Item="720" Type="ID" Table="HL70136" LongName="Retention Indicator">string</urn:PV2.19>
+    <!--Optional:-->
+    <urn:PV2.20 Item="721" Type="NM" LongName="Expected Number of Insurance Plans">string</urn:PV2.20>
+    <!--Optional:-->
+    <urn:PV2.21 Item="722" Type="IS" Table="HL70215" LongName="Visit Publicity Code">string</urn:PV2.21>
+    <!--Optional:-->
+    <urn:PV2.22 Item="723" Type="ID" Table="HL70136" LongName="Visit Protection Indicator">string</urn:PV2.22>
+    <!--Zero or more repetitions:-->
+    <urn:PV2.23 Item="724" Type="XON" LongName="Clinic Organization Name">
+      <!--Optional:-->
+      <urn:XON.1 Type="ST" LongName="organization name">string</urn:XON.1>
+      <!--Optional:-->
+      <urn:XON.2 Type="IS" LongName="organization name type code">string</urn:XON.2>
+      <!--Optional:-->
+      <urn:XON.3 Type="NM" LongName="ID number (NM)">string</urn:XON.3>
+      <!--Optional:-->
+      <urn:XON.4 Type="ST" LongName="check digit">string</urn:XON.4>
+      <!--Optional:-->
+      <urn:XON.5 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XON.5>
+      <!--Optional:-->
+      <urn:XON.6 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.6>
+      <!--Optional:-->
+      <urn:XON.7 Type="IS" LongName="identifier type code">string</urn:XON.7>
+      <!--Optional:-->
+      <urn:XON.8 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XON.8>
+    </urn:PV2.23>
+    <!--Optional:-->
+    <urn:PV2.24 Item="725" Type="IS" Table="HL70216" LongName="Patient Status Code">string</urn:PV2.24>
+    <!--Optional:-->
+    <urn:PV2.25 Item="726" Type="IS" Table="HL70217" LongName="Visit Priority Code">string</urn:PV2.25>
+    <!--Optional:-->
+    <urn:PV2.26 Item="727" Type="DT" LongName="Previous Treatment Date">string</urn:PV2.26>
+    <!--Optional:-->
+    <urn:PV2.27 Item="728" Type="IS" Table="HL70112" LongName="Expected Discharge Disposition">string</urn:PV2.27>
+    <!--Optional:-->
+    <urn:PV2.28 Item="729" Type="DT" LongName="Signature on File Date">string</urn:PV2.28>
+    <!--Optional:-->
+    <urn:PV2.29 Item="730" Type="DT" LongName="First Similar Illness Date">string</urn:PV2.29>
+    <!--Optional:-->
+    <urn:PV2.30 Item="731" Type="IS" Table="HL70218" LongName="Patient Charge Adjustment Code">string</urn:PV2.30>
+    <!--Optional:-->
+    <urn:PV2.31 Item="732" Type="IS" Table="HL70219" LongName="Recurring Service Code">string</urn:PV2.31>
+    <!--Optional:-->
+    <urn:PV2.32 Item="733" Type="ID" Table="HL70136" LongName="Billing Media Code">string</urn:PV2.32>
+    <!--Optional:-->
+    <urn:PV2.33 Item="734" Type="TS" LongName="Expected Surgery Date &amp; Time">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:PV2.33>
+    <!--Optional:-->
+    <urn:PV2.34 Item="735" Type="ID" Table="HL70136" LongName="Military Partnership Code">string</urn:PV2.34>
+    <!--Optional:-->
+    <urn:PV2.35 Item="736" Type="ID" Table="HL70136" LongName="Military Non-Availabiltiy Code">string</urn:PV2.35>
+    <!--Optional:-->
+    <urn:PV2.36 Item="737" Type="ID" Table="HL70136" LongName="Newborn Baby Indicator">string</urn:PV2.36>
+    <!--Optional:-->
+    <urn:PV2.37 Item="738" Type="ID" Table="HL70136" LongName="Baby Detained Indicator">string</urn:PV2.37>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:PV2>
+  <!--Zero or more repetitions:-->
+  <urn:DB1>
+    <urn:DB1.1 Item="1283" Type="SI" LongName="Set ID - DB1">string</urn:DB1.1>
+    <!--Optional:-->
+    <urn:DB1.2 Item="1284" Type="IS" Table="HL70033" LongName="Disabled person code">string</urn:DB1.2>
+    <!--Zero or more repetitions:-->
+    <urn:DB1.3 Item="1285" Type="CX" LongName="Disabled person identifier">
+      <!--Optional:-->
+      <urn:CX.1 Type="ST" LongName="ID">string</urn:CX.1>
+      <!--Optional:-->
+      <urn:CX.2 Type="ST" LongName="check digit">string</urn:CX.2>
+      <!--Optional:-->
+      <urn:CX.3 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:CX.3>
+      <!--Optional:-->
+      <urn:CX.4 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.4>
+      <!--Optional:-->
+      <urn:CX.5 Type="IS" Table="HL70203" LongName="identifier type code">string</urn:CX.5>
+      <!--Optional:-->
+      <urn:CX.6 Type="HD" LongName="assigning facility">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:CX.6>
+    </urn:DB1.3>
+    <!--Optional:-->
+    <urn:DB1.4 Item="1286" Type="ID" Table="HL70136" LongName="Disabled Indicator">string</urn:DB1.4>
+    <!--Optional:-->
+    <urn:DB1.5 Item="1287" Type="DT" LongName="Disability start date">string</urn:DB1.5>
+    <!--Optional:-->
+    <urn:DB1.6 Item="1288" Type="DT" LongName="Disability end date">string</urn:DB1.6>
+    <!--Optional:-->
+    <urn:DB1.7 Item="1289" Type="DT" LongName="Disability return to work date">string</urn:DB1.7>
+    <!--Optional:-->
+    <urn:DB1.8 Item="1290" Type="DT" LongName="Disability unable to work date">string</urn:DB1.8>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:DB1>
+  <!--Zero or more repetitions:-->
+  <urn:OBX>
+    <!--Optional:-->
+    <urn:OBX.1 Item="569" Type="SI" LongName="Set ID - OBX">string</urn:OBX.1>
+    <urn:OBX.2 Item="570" Type="ID" Table="HL70125" LongName="Value Type">string</urn:OBX.2>
+    <urn:OBX.3 Item="571" Type="CE" LongName="Observation Identifier">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:OBX.3>
+    <!--Optional:-->
+    <urn:OBX.4 Item="572" Type="ST" LongName="Observation Sub-ID">string</urn:OBX.4>
+    <!--Zero or more repetitions:-->
+    <urn:OBX.5 Item="573" Type="*" LongName="Observation Value">
+      e
+      <!--You may enter ANY elements at this point-->
+      <AnyElement/>
+      gero
+    </urn:OBX.5>
+    <!--Optional:-->
+    <urn:OBX.6 Item="574" Type="CE" LongName="Units">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:OBX.6>
+    <!--Optional:-->
+    <urn:OBX.7 Item="575" Type="ST" LongName="References Range">string</urn:OBX.7>
+    <!--Zero or more repetitions:-->
+    <urn:OBX.8 Item="576" Type="ID" Table="HL70078" LongName="Abnormal Flags">string</urn:OBX.8>
+    <!--Optional:-->
+    <urn:OBX.9 Item="577" Type="NM" LongName="Probability">string</urn:OBX.9>
+    <!--Optional:-->
+    <urn:OBX.10 Item="578" Type="ID" Table="HL70080" LongName="Nature of Abnormal Test">string</urn:OBX.10>
+    <urn:OBX.11 Item="579" Type="ID" Table="HL70085" LongName="Observ Result Status">string</urn:OBX.11>
+    <!--Optional:-->
+    <urn:OBX.12 Item="580" Type="TS" LongName="Date Last Obs Normal Values">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:OBX.12>
+    <!--Optional:-->
+    <urn:OBX.13 Item="581" Type="ST" LongName="User Defined Access Checks">string</urn:OBX.13>
+    <!--Optional:-->
+    <urn:OBX.14 Item="582" Type="TS" LongName="Date/Time of the Observation">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:OBX.14>
+    <!--Optional:-->
+    <urn:OBX.15 Item="583" Type="CE" LongName="Producer's ID">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:OBX.15>
+    <!--Optional:-->
+    <urn:OBX.16 Item="584" Type="XCN" LongName="Responsible Observer">
+      <!--Optional:-->
+      <urn:XCN.1 Type="ST" LongName="ID number (ST)">string</urn:XCN.1>
+      <!--Optional:-->
+      <urn:XCN.2 Type="ST" LongName="family name">string</urn:XCN.2>
+      <!--Optional:-->
+      <urn:XCN.3 Type="ST" LongName="given name">string</urn:XCN.3>
+      <!--Optional:-->
+      <urn:XCN.4 Type="ST" LongName="middle initial or name">string</urn:XCN.4>
+      <!--Optional:-->
+      <urn:XCN.5 Type="ST" LongName="suffix (e.g., JR or III)">string</urn:XCN.5>
+      <!--Optional:-->
+      <urn:XCN.6 Type="ST" LongName="prefix (e.g., DR)">string</urn:XCN.6>
+      <!--Optional:-->
+      <urn:XCN.7 Type="ST" LongName="degree (e.g., MD)">string</urn:XCN.7>
+      <!--Optional:-->
+      <urn:XCN.8 Type="ID" LongName="source table">string</urn:XCN.8>
+      <!--Optional:-->
+      <urn:XCN.9 Type="HD" LongName="assigning authority">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.9>
+      <!--Optional:-->
+      <urn:XCN.10 Type="ID" LongName="name type">string</urn:XCN.10>
+      <!--Optional:-->
+      <urn:XCN.11 Type="ST" LongName="identifier check digit">string</urn:XCN.11>
+      <!--Optional:-->
+      <urn:XCN.12 Type="ID" LongName="code identifying the check digit scheme employed">string</urn:XCN.12>
+      <!--Optional:-->
+      <urn:XCN.13 Type="IS" LongName="identifier type code">string</urn:XCN.13>
+      <!--Optional:-->
+      <urn:XCN.14 Type="HD" LongName="assigning facility ID">
+        <!--Optional:-->
+        <urn:HD.1 Type="IS" LongName="namespace ID">string</urn:HD.1>
+        <!--Optional:-->
+        <urn:HD.2 Type="ST" LongName="universal ID">string</urn:HD.2>
+        <!--Optional:-->
+        <urn:HD.3 Type="ID" LongName="universal ID type">string</urn:HD.3>
+      </urn:XCN.14>
+    </urn:OBX.16>
+    <!--Zero or more repetitions:-->
+    <urn:OBX.17 Item="936" Type="CE" LongName="Observation Method">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:OBX.17>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:OBX>
+  <!--Zero or more repetitions:-->
+  <urn:AL1>
+    <urn:AL1.1 Item="203" Type="SI" LongName="Set ID - AL1">string</urn:AL1.1>
+    <!--Optional:-->
+    <urn:AL1.2 Item="204" Type="ID" Table="HL70127" LongName="Allergy Type">string</urn:AL1.2>
+    <urn:AL1.3 Item="205" Type="CE" LongName="Allergy Code/Mnemonic/ Description">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:AL1.3>
+    <!--Optional:-->
+    <urn:AL1.4 Item="206" Type="ID" Table="HL70128" LongName="Allergy Severity">string</urn:AL1.4>
+    <!--Optional:-->
+    <urn:AL1.5 Item="207" Type="ST" LongName="Allergy Reaction">string</urn:AL1.5>
+    <!--Optional:-->
+    <urn:AL1.6 Item="208" Type="DT" LongName="Identification Date">string</urn:AL1.6>
+    <!--You may enter ANY elements at this point-->
+    <AnyElement/>
+  </urn:AL1>
+  <!--Zero or more repetitions:-->
+  <urn:DG1>
+    <urn:DG1.1 Item="375" Type="SI" LongName="Set ID - Diagnosis">string</urn:DG1.1>
+    <!--Optional:-->
+    <urn:DG1.2 Item="376" Type="ID" Table="HL70053" LongName="Diagnosis Coding Method">string</urn:DG1.2>
+    <!--Optional:-->
+    <urn:DG1.3 Item="377" Type="CE" Table="HL70051" LongName="Diagnosis Code">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:DG1.3>
+    <!--Optional:-->
+    <urn:DG1.4 Item="378" Type="ST" LongName="Diagnosis Description">string</urn:DG1.4>
+    <!--Optional:-->
+    <urn:DG1.5 Item="379" Type="TS" LongName="Diagnosis Date/Time">
+      <!--Optional:-->
+      <urn:TS.1 Type="ST" LongName="time of an event">string</urn:TS.1>
+      <!--Optional:-->
+      <urn:TS.2 Type="ST" LongName="degree of precision">string</urn:TS.2>
+    </urn:DG1.5>
+    <urn:DG1.6 Item="380" Type="IS" Table="HL70052" LongName="Diagnosis Type">string</urn:DG1.6>
+    <!--Optional:-->
+    <urn:DG1.7 Item="381" Type="CE" Table="HL70118" LongName="Major Diagnostic Category">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:DG1.7>
+    <!--Optional:-->
+    <urn:DG1.8 Item="382" Type="CE" Table="HL70055" LongName="Diagnostic Related Group">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:DG1.8>
+    <!--Optional:-->
+    <urn:DG1.9 Item="383" Type="ID" Table="HL70136" LongName="DRG Approval Indicator">string</urn:DG1.9>
+    <!--Optional:-->
+    <urn:DG1.10 Item="384" Type="IS" Table="HL70056" LongName="DRG Grouper Review Code">string</urn:DG1.10>
+    <!--Optional:-->
+    <urn:DG1.11 Item="385" Type="CE" Table="HL70083" LongName="Outlier Type">
+      <!--Optional:-->
+      <urn:CE.1 Type="ID" LongName="identifier">string</urn:CE.1>
+      <!--Optional:-->
+      <urn:CE.2 Type="ST" LongName="text">string</urn:CE.2>
+      <!--Optional:-->
+      <urn:CE.3 Type="ST" LongName="name of coding system">string</urn:CE.3>
+      <!--Optional:-->
+      <urn:CE.4 Type="ID" LongName="alternate identifier">string</urn:CE.4>
+      <!--Optional:-->
+      <urn:CE.5 Type="ST" LongName="alternate text">string</urn:CE.5>
+      <!--Optional:-->
+      <urn:CE.6 Type="ST" LongName="name of alternate coding system">string</urn:CE.6>
+    </urn:DG1.11>
+    <!--Optional:-->
+    <urn:DG1.12 Item="386" Type="NM" LongName="Outlier Days">string</urn:DG1.12>
+    <!--Optional:-->
+    <urn:DG1.13 Item="387" Type="CP" LongName="Outlier Cost">
+      <!--Optional:-->
+      <urn:CP.1 Type="MO" LongName="price">
+        <!--Optional:-->
+        <!--Optional:-->
+      </urn:CP.1>
+      <!--Optional:-->
+      <!--Optional:-->
+      <!--Optional:-->
+      <!--Optional:-->
+      <!--Optional:-->
+    </urn:DG1.13>
+    <!--Optional:-->
+    <!--Optional:-->
+    <!--Zero or more repetitions:-->
+    <!--Optional:-->
+    <!--Optional:-->
+    <!--Optional:-->
+  </urn:DG1>
+  <!--Optional:-->
+  <!--Zero or more repetitions:-->
+  <!--Zero or more repetitions:-->
+  <!--Zero or more repetitions:-->
+  <!--Optional:-->
+  <!--Optional:-->
+  <!--Optional:-->
+</urn:ADT_A01>

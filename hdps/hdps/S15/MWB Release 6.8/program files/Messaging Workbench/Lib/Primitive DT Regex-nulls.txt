@@ -1,0 +1,12 @@
+DT=
+ST=
+FT=
+TX=
+GTS=
+ID=
+IS=
+NM=
+SI=
+TM=
+TN=
+DTM=

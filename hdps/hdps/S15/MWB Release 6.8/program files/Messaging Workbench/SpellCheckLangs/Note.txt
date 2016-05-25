@@ -1,0 +1,5 @@
+5/06
+
+The zip file contains folder with executables for installation of language specific spell check dictionaries. Suggest unzipping into this folder, then execute the languages of interest to be installed (e.g. ISEnFrGe.exe to install English, French and German languages) . By default they will be installed into 'C:\program files\common files\ISpell'.
+
+Installed languages will be available for selection in the MWB Options page. Other Windows supplied dictionaries may also be available depending on version of Office installed. The spell check feature is only available in the Annotations Notebook, and only if a language is selected in MWB options.

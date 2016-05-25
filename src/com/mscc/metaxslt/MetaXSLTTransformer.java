@@ -19,18 +19,18 @@ public class MetaXSLTTransformer {
         Source xslt = new StreamSource(new File("metaxslt/map-generator.xslt"));
         Transformer transformer = factory.newTransformer(xslt);
 
-        Source text = new StreamSource(new File("metaxslt/mapping.xml"));
-        transformer.transform(text, new StreamResult(new File("metaxslt/srcToDst.xslt")));
+        Source text = new StreamSource(new File("hdps/hdpsToHL7-mapping.xml/hdpsToHL7-mappingL.xml"));
+        transformer.transform(text, new StreamResult(new File("hdps/hdpsToHL7-mapping.xml/hdpsToHL7.xslt")));
         
         
         
         
         TransformerFactory factory2= TransformerFactory.newInstance();
-        Source xslt2 = new StreamSource(new File("metaxslt/srcToDst.xslt"));
+        Source xslt2 = new StreamSource(new File("hdps/hdpsToHL7-mapping.xml/hdpsToHL7.xslt"));
         Transformer transformer2 = factory2.newTransformer(xslt2);
 
-        Source text2 = new StreamSource(new File("metaxslt/src.xml"));
-        transformer2.transform(text2, new StreamResult(new File("metaxslt/transformedDst.xml")));
+        Source text2 = new StreamSource(new File("hdps/hdpsToHL7-mapping.xml/A01Json-2.xml"));
+        transformer2.transform(text2, new StreamResult(new File("hdps/hdpsToHL7-mapping.xml/transformedhdps.xml")));
         
         
         
@@ -39,8 +39,8 @@ public class MetaXSLTTransformer {
         Source xslt3 = new StreamSource(new File("metaxslt/clean.xslt"));
         Transformer transformer3 = factory3.newTransformer(xslt3);
 
-        Source text3 = new StreamSource(new File("metaxslt/transformedDst.xml"));
-        transformer3.transform(text3, new StreamResult(new File("metaxslt/transformedDstClean.xml")));
+        Source text3 = new StreamSource(new File("hdps/hdpsToHL7-mapping.xml/transformedhdps.xml"));
+        transformer3.transform(text3, new StreamResult(new File("hdps/hdpsToHL7-mapping.xml/transformedhdpsClean.xml")));
         
 	}
 }

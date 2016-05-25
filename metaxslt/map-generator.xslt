@@ -32,11 +32,13 @@
 
 	<!-- template to copy attributes -->
 	<xsl:template match="@*">
+	<!--
 		<xsl:attribute name="{local-name()}">
 			<xsl:value-of select="." />
 		</xsl:attribute>
+	-->
 	</xsl:template>
-
+	
 	<!-- template to copy the rest of the nodes -->
 	<xsl:template match="comment() | text() | processing-instruction()">
 		<xsl:copy />

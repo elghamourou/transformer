@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="hdps">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="uid" type="xs:string"/>
+				<xs:element name="sourceUid" type="xs:string"/>
+				<xs:element name="pid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="uid" type="xs:string"/>
+							<xs:element name="lastName" type="xs:string"/>
+							<xs:element name="address" type="xs:string"/>
+							<xs:element name="gender" type="xs:string"/>
+							<xs:element name="birthDate" type="xs:int"/>
+							<xs:element name="deceasedDate">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="code" type="xs:string"/>
+							<xs:element name="firstName" type="xs:string"/>
+							<xs:element name="maritalStatus">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="homePhone" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="messageType" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

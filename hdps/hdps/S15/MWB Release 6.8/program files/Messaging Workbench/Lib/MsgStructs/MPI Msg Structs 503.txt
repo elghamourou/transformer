@@ -1,0 +1,17 @@
+SEGMENTLIBS="MPI 2-4 Admin Segs.mcf","HL7 2-4.mcf","VistA-HEC ZSeg.mcf"
+ADT_A01=MSH,EVN,PID,PD1,PV1=ADT/ACK - Admit/visit notification
+ADT_A03=MSH,EVN,PID,PD1,PV1=ADT/ACK -  Discharge/end visit
+ADT_A04=MSH,EVN,PID,PD1,PV1,OBX,ZPD,ZSP,ZEL,ZCT,ZEM,ZFF=ADT/ACK -  Register a patient
+ADT_A08=MSH,EVN,PID,PD1,PV1,OBX,ZPD,ZSP,ZEL,ZCT,ZEM,ZFF=ADT/ACK -  Update patient information
+ADT_A24=MSH,EVN,PID,PD1=ADT/ACK -  Link patient information
+ADT_A28=MSH,EVN,PID,PD1=ADT/ACK -  Add person information
+ADT_A29=MSH,EVN,PID,PD1=ADT/ACK -  Delete person information
+ADT_A31=MSH,EVN,PID,PD1=ADT/ACK -  Update person information
+ADT_A37=MSH,EVN,PID,PID=ADT/ACK -  Unlink patient information
+ADT_A40=MSH,EVN,PID,PD1,MRG=ADT/ACK - Merge patient - patient identifier list
+QRY_A19=MSH,QRD=QRY/ADR -  Patient query
+ADR_A19=MSH,MSA,QRD,EVN,PID,PD1=QRY/ADR -  Patient query
+MFN_M05=MSH,MFI,{MFE,ZET}=MFN/MFK - Patient location master file
+MFK_M05=MSH,MSA=MFN/MFK - Patient location master file
+ACK_ALL=MSH,MSA=No event description in HL7 table 0003
+

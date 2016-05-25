@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MWB Profile Reconciliation</title>
+</head>
+
+<body>
+
+<h1 style="mso-outline-level:1" align="center">MWB Profile Reconciliation</h1>
+<p class="MsoNormal" align="center"><a href="Default.htm">&nbsp;Home<o:p>
+</o:p>
+</a></p>
+<p class="MsoNormal">The profile reconciliation feature allows one profile or
+specification (referred to as the object profile or specification) to take on
+the attributes of another profile or specification. Note that throughout this
+document the terms specification and profile will be used interchangeably. Reconciliation
+can be handy especially in cases where you are starting with a captured message,
+and you want its element attributes to comply with either a standard library, or
+even a specialized project library. Among other applications, it is also very useful
+for transferring example values from one profile to another.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">Operationally, reconciliation works in similar fashion to
+profile comparison. You first load the object profile i.e. the one you want to
+change. Then as with specification comparison, you select a comparison profile.
+This is the one that has the attribute values that you want to transfer to the
+object profile.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">The reconciliation takes place at and below the segment
+level, transferring the comparison profile’s attribute values right down to
+the sub-component level. It takes place segment by segment, using the comparison
+profile’s list of segments as the iterative driver. Segments appearing in the
+comparison profile but not in the object profile are disregarded. Conversely,
+segments appearing in the object profile but not in the comparison profile are
+ignored as well. The ordering of segments within the two profiles is not
+important, i.e. they do not have to be the same.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">Within each segment, the evaluation takes place
+positionally, which means that if the fields are out of synch with each other,
+then the data types of the object specification’s fields are likely to change
+along with the other selected attributes. The exception to this, is that when
+the data type attribute is not selected for reconciliation, the process will not
+carry beyond the field level i.e. component and sub-component reconciliation
+will not occur.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">After selection of the object and comparison profiles, the
+next step is to select <b>Reconcile Profile</b> from the <b>Profile Comparison</b>
+drop down menu on the toolbar. This opens up a new tab on the MWB. A prominent
+feature on this tab is the <b>Attribute checklist</b>. Ordinarily a default set
+of attributes will be checked, corresponding to the attributes used in
+comparison (these are defined via the <b>Maint/Options/Fld Compare tab</b>). You
+may alter them as you need. Only the checked attributes will be used in the reconciliation
+process, so for example if you are interested in your object specification
+taking on the value of the <b> optionality</b> in the comparison spec, then you must
+have the <b>Optionality attribute</b> checked. If not, no change will be
+effected on that attribute. Note that <b>Usage Note</b> is synonymous with <b>Implementation
+note</b>, as is <b>VSExample</b> with <b>Example Value</b>.</p>
+<p class="MsoNormal">There are 3 buttons that can help you in the attribute
+selection process. The top one will always set the selection to the defaults
+used in specification comparison as discussed above. The second button will
+invert the selection, which is helpful in selection by exclusion. The third
+button clears all of the checks and allows you to start fresh.</p>
+<p class="MsoNormal">It is possible through the <b>Maint/Options</b> menu to
+extend the list of attributes available for selection. The list of attributes
+available via this option is much greater than that normally pertinent for
+profile reconciliation, and may expose 'internal' attributes that can be of
+little or no value in reconciliation. If you find that you are confused by the
+selection of available attributes, it is suggested that you click on the <b>Set
+Default </b>&nbsp;button, which will select the attributes of value in
+reconciliation. </o:p>
+</p>
+<p class="MsoNormal">After the attributes are selected, decide on a reconciliation
+method. There are three types of reconciliation. The first unconditionally
+replaces the object profile’s attribute values with those of the comparison
+specification. The second mode, will only replace the object profile’s
+attribute value if the comparison attributes value is non-null. So for example,
+if the object profile had a value for the length attribute of 3, but the
+comparison profile had a length attribute value of 0 (0 is considered null for
+numeric attributes), then the object length attribute value would remain 3. The
+third mode of reconciliation ensures that the object profile’s attribute
+values will be replaced only if they are null. Thus for example if the object
+spec had an example value of ‘3’ for a particular field, and the comparison
+spec had one of ‘5’, no change to the object spec would occur since it had a
+non-null value.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">As was mentioned above, the reconciliation takes place
+positionally, so given a segment <b>ZZZ</b> for example with 3 fields in the
+object specification and 5 in the comparison specification, reconciliation will
+occur in the first 3 fields of the object specification and by default the reconciliation
+will end there. If you want however, you may elect by checking the <b>Add
+Missing Fields</b> box to add the remaining fields from the comparison
+specification to the end of the object specification’s <b>ZZZ </b>segment. The
+result is that both <b>ZZZ</b> segment specifications will have 5 fields.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">The <b>Report only</b> box signifies that you don’t want
+any changes to occur, but you would like to see a report of what changes would
+occur in the reconciliation process. This box is checked by default in the
+belief that its always a good idea to do a ‘dry run’ before making the
+actual changes. This is a complicated and complex process, it’s a good idea to
+be able to anticipate the results before committing. On the other hand, there is
+no real danger to performing a reconciliation. You may elect to abandon the
+changed specification by not saving it or save it as another file without
+affecting the original profile.&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">Press the <b>Reconcile </b>button to start the process.
+When the process is completed, the <b>Display/Reports tab</b> will be focused,
+and you will be presented with a report of the ‘proposed’ changes in the
+case that you selected <b>Report only</b>, or the actual changes otherwise. To
+view the actual changes in the specification, click on the <b>Message Definition
+tab.<o:p>
+</b>&nbsp;<o:p>
+</o:p>
+</p>
+<p class="MsoNormal">The <b>Reconcile</b> tab will remain visible until the <b>Close
+</b>button is clicked, or until another comparison spec is selected. This allows
+for a somewhat incremental approach to the process. Keep in mind however that
+the only way to return the object spec to its original state is to re-load it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center"><a href="Default.htm">Home</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADT_A01 xmlns="urn:hl7-org:v2xml">
+	<MSH>
+		<MSH.3>
+			<HD.1>null</HD.1>
+		</MSH.3>
+	</MSH>
+	<PID>
+		<PID.1>11</PID.1>
+		<PID.3>
+			<CX.1>1610775114705</CX.1>
+		</PID.3>
+		<PID.5>
+			<XPN.1>Montergiev</XPN.1>
+			<XPN.2>Philippe</XPN.2>
+		</PID.5>
+		<PID.7>
+			<TS.1>19780301</TS.1>
+		</PID.7>
+		<PID.8>U</PID.8>
+		<PID.11>
+			<XAD.1>^^PARIS^^fr</XAD.1>
+			<XAD.3>^^PARIS^^fr</XAD.3>
+		</PID.11>
+	</PID>
+</ADT_A01>
+

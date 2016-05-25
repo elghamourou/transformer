@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"><b><a href="Default.htm">Home</a></b></p>
+
+<p align="center"><b><font size="5">Working with Existing Specifications</font></b></p>
+
+<p><b>These instructions are intended to get you working quickly with an
+existing specification. They will be most helpful if you have
+taken the <a href="AppDescriptionPage.htm"> introductory tour</a> first.</b></p>
+<p><b><u>Basics of the Message Definition Tab</u></b></p>
+<p>Bring up the MWB application by double clicking its icon then select
+File/Open.&nbsp;</p>
+<p>Navigate to the /projects/examples folder and select the Killdara Example
+Message Profile.mwb file. Wait for the specification to be restored within the
+Message Definition tab (On most systems this will take just a few seconds, but
+on some Windows 2000 systems the delay may be noticeably longer.).</p>
+<p>After loading, it would be a good idea to use the File/Save As option to save
+a clone of this specification to play with. This way, any changes you make will
+not affect the example shipped with the product.</p>
+<p>The top panel of the <b>Message Definition tab</b> exposes parameters that
+apply to the specification or the particular message. You are free to change all
+of them except for the message <b>Structure</b> text. The message structure text
+is directly editable only when entering a new message specification (procedure
+described elsewhere). The message structure of an existing specification such as
+this can however be altered by adding segments and segment groups using the tool
+bar above (buttons with <b>+F </b>and <b>+G</b> on tool bar) or by using the
+Delete button on the toolbar).</p>
+<p>Note the Specification Type selectors in this panel. These buttons govern the
+content of the optionality list box in the <b>Element Parameters</b> in the
+panel below. The kind of optionality designations is directly related to the
+type of conformance selected. Selecting <b>Conformance with&nbsp; Optionality</b>
+or <b>Strict Conformance</b> also causes other application events to occur.
+Clicking either of these will enable the <b>Conformance Profile button</b>,
+which in turn allows you to enter conformance related parameters for the
+specification, including <b>Use Case</b> parameters. Clicking either of these
+buttons will also cause elements that were initially designated as
+&quot;optional&quot; or &quot;backward&quot; to be automatically designated as
+not supported throughout the message.</p>
+<p>In the lower panel, a representation of the message in tree form is
+displayed, and next to it a collection of input fields for describing the
+various message elements. As you navigate through the tree using the mouse, the
+Element Parameters will change to reflect those associated with the selected
+element in the tree. You may change the parameters to suit your particular
+messaging application. Any changes that you make here will become permanent if
+the specification is saved. Note that some of these fields are not appropriate
+for certain message elements, and will therefore be grayed out when they are
+selected in the tree. For example when a segment element is selected in the tree
+the Data type and other inappropriate fields will be grayed out.</p>
+<p>Notice that the elements in the tree view are color coded. These colors
+represent the data linkage associations for the element.&nbsp; For example, an
+red folder indicates an element that is required, but for which no data link has
+been established. You may click on the legend button at the top of the tree view
+for an explanation of the other colors. </p>
+<p>Data links may be established by clicking on the <b>Data Link tool button</b>
+(chain icon) which brings up a floating dialog showing a tree view of available
+data elements derived either from <b>ODBC data connections</b> or <b>Constants</b>
+that may be linked to a primitive data element. The data elements may be dragged
+from the Data Form and dropped onto the Data Link field of the selected
+primitive element or simply double clicking the Data Element will link<b> </b>it
+to the selected message element. </p>
+<p>Aside from the importance of documenting <b>message element to data element
+associations</b>, these linkages have another important aspect. When a link in
+established, an <b>example value</b> from the database element or constant is
+associated with the message element. These example values allow the MWB tool to
+produce <b>example message instances</b>, which can be invaluable in both
+documentation and testing (<b>Report Generation</b> is discussed elsewhere in
+this document). Example Values may be defined for a message element without the
+need to also define a data link, but documentation of data and message element
+associations is an important aspect of the interface definition.</p>
+<p>Another method of linking data elements to message elements is via <b>Tables</b>.
+Wherever a message element has a table defined, double clicking on the table
+field will bring up a floating window with a list of elements for the indicated
+table. If you select one of the elements, it will be automatically linked to the
+data element, the element value associated as an example value for the message
+element, and the table element will be automatically added to the Data Tree as a
+constant element for linkage to other message elements.</p>
+<p>&nbsp;</p>
+<p><b><u>Basics of the Data Sources Tab</u></b></p>
+<p>The key to defining database linkages is to identify the data sources and
+associated fields available for linking to message elements. The <b>Data Sources
+tab</b> facilitates this process. In this version of the MWB, only <b>ODBC data
+sources </b>are supported. First select an available ODBC Data Source from your
+system which the MWB provides in the drop down list. Next select one or more of
+the associated data sets. These may be <b>Table,</b> <b>Stored Procedure</b> or <b>Query</b>
+data sets. Table and Stored Procedure data sets are selected from the respective
+lists provided by the MWB. Queries are named and defined ad hoc, although query
+definitions are stored with the specification and previously defined queries may
+be selected from the <b>Existing Queries</b> list.</p>
+<p>Each time an ODBC database is selected, it is added to the Data tree on the
+right of the tab, labeled <b>Available Fields</b>. Each of it's selected data
+sets and their associated fields are also added to this tree in hierarchical
+fashion. This tree is the same one that appears on the floating Data Linkage
+form described above and used to link message elements to data elements.</p>
+<p>Another feature of the Data Sources tab is the ability to define <b>constant
+values</b> and to add them to the tree for eventual linkage as well. Supply a <b>name</b>
+and a <b>value</b> for each constant to be added to the tree. By application
+convention, the Constants node is always the first one in the data tree, and 2
+predefined constants are supplied by the application: <b>Field Separator</b> and
+<b>Encoding Characters</b>, with each value set to its respective HL7 suggested
+value.</p>
+<p>Note that constants added to the Data Tree in this manner will be saved with
+the specification and be <b>restored to the Constants node only if they are
+linked to a message element.</b> If they are not linked to a message element,
+they will be discarded when the specification definition is closed. There is
+however another method of defining constants that will guarantee their
+persistence between sessions whether or not they are linked to a message element
+in a particular specification. The <b>Maint/Options</b> Dialog has a <b>Constants
+tab</b> for defining persistent constants. Constants defined in this manner
+become part of the application option file, and are restored to the Constants
+node of the data tree each time the application is started.</p>
+<p>An interesting feature of of the this tab is the ability to select particular
+values from a data set to serve as example values in the message definition.
+Ordinarily when a field from an ODBC data source is linked to a message element,
+the value (if any) of the field in the first record of the dataset is used as
+the messeage element example value. This may not always be appropriate
+especially if the value is null. By selecting a data set element on the data
+tree, a table is automatically displayed beneath the data tree. This table
+allows you to scroll through the available records in the dataset. You may stop
+at any record you choose, and click the &quot;<b>Apply as e.g.</b>&quot; button.
+The values in this record will then be applied to the linked message elements as
+example values.</p>
+<p>&nbsp;</p>
+<p><b><u>Basics of the Display/Reports Tab</u></b></p>
+<p>The Display/Reports tab provides a list of reports to run and a view window
+for the reports. For some report formats (txt and rtf) the window permits
+editing and formatting with basic text editor tools. For the other types of
+reports (xml,html) it is a display window only.</p>
+<p>There are 4 basic categories of reports offered at this time:</p>
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" valign="top">1. Specification Reports</td>
+    <td width="50%">These reports are the mainstay of the application. They are
+      designed to communicate the specification to interested outside parties.
+      They are available in a variety of formats: plain text, Rich text, XML and
+      HTML.
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">2. Example Message Reports</td>
+    <td width="50%">Example message reports provide a means for viewing an
+      example of what an actual message will look like. It is available as a
+      plain text ER7 encoded message, a variety of XML formats, and in an html
+      format.
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">3. Specification Comparison Reports</td>
+    <td width="50%">Specification comparison reports compare 2 message
+      specifications and produces a report showing the object specification with
+      the comparison specification element differences juxtaposed.
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">4. Utility Reports</td>
+    <td width="50%">These reports are meant to display application related
+      information as for example data type discrepancies from within a
+      specification. They are generally only available in plain text and are not
+      meant for distribution. Some of them are not even available for selection,
+      but run automatically by the application under certain circumstances and
+      the user alerted. One such report is triggered by discrepancies in message
+      capture.</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>The <b>Specification Reports</b> all begin with '<b>Spec'</b> in the drop
+down list. By far the most interesting of them is the <b>Spec XML</b> report the
+running of which will be desribed below. The others frankly will be
+disappointing in that no real effort has been extended to format them in a
+presentable manner - perhaps in another release.</p>
+<p>Select <b>Spec XML </b>from the dropdown list. This invokes the report.
+Notice that the XML plain text file is built in the display window as the report
+is run. This file may be saved vial the File menu option. Note that the <b>main
+menu for the Display/Reports tab is different than it is for the other tabs.</b>
+If you save it as such, it is a plain xml text file.</p>
+<p>With the report displayed in the window, click on the rightmost button on the
+tool bar (if you hover over this button with the mouse it will show &quot;<b>browser</b>&quot;
+in the help window). This invokes the <b>IE 5.5</b> <b>web browser </b>within
+the display window, and displays the XML report under the influence of an IE 5.5
+default style sheet. Notice that the message elements and values are color coded
+an that the specification is expressed hierarchically. You may collapse and
+expand the different levels by clicking on the - and + signs in the report. If
+you choose to save the report in this format, it will be <b>saved as an html
+file</b> suitable for publication on the web.</p>
+<p>Go to the <b>File</b> menu and select <b>Apply XSL Translation</b>. Notice
+that there are three fields displayed each with an adjacent button containing an
+ellipsis. Click on the button for the <b>Active Specification Style Sheet</b>
+and navigate to the folder containing the style sheet to be applied. Assuming
+that you selected installation defaults, the location for these style sheets
+will be C:\Program Files\Messaging Workbench\Projects\<b>Lib\XSL Spec</b>\.
+Select one of the supplied style sheets (perhaps hl7_conformance_profile_full-ex - sg.xsl).
+You may set this as the default, or just use it for this instance (default style
+sheets may also be set from the main menu under Maint/Options). Click OK to
+continue.</p>
+<p>Again select the Spec XML report from the drop down list, which re-runs the
+report. Notice that the report is expressed in a much different form from either
+the plain text XML or the I.E. 5.5 default formatting. This view may also be
+saved as a html file suitable for posting to a web. For those who would prefer
+that it be stored as a word document, select <b>Edit/Select</b> All from the
+Edit menu, then <b>Edit/Copy</b>, bring up <b>MS</b> <b>Word</b>, and <b>paste
+the document into MS Word</b>.</p>
+<p>You may apply other style sheets to the specification using the same
+procedure described above. You are not limited to using the style sheets
+supplied with the application, but are free to develop your own for application
+to this and other XML reports produced by the MWB.</p>
+<p>The <b>Example Message</b> reports may be produced as text files using ER7
+encoding and saved as such. These are very valuable in terms of documentation
+and may even be used in initial testing of parsers. These reports all begin with
+&quot;<b>Ex Msg</b>&quot; in the list. Of these, one is the ER7 text version
+already mentioned and one is an XML DTD which will be discussed below. The other
+2 are XML expressions of the Example Message Instance. The EX Msg - XML -
+Conformance is a message instance developed expressly for messages that adhere
+to a conformance profile, and will be the one described most fully here. The
+Other EX Msg - General is an XML message expression that could possibly suit any
+broadly HL7 conformant specification, which is a less rigid standard.</p>
+<p>Each of the two XML message expressions can optionally be expressed using a <b>verbose
+path name</b> as in <b>&lt;field_separator&gt;|&lt;/field_separator&gt;</b> or <b>compact
+path name</b> as in <b>&lt;MSH.1&gt;|&lt;/MSH.1&gt;</b> . The option is toggled
+(and default set) by using the option <b>File/Print Setu</b>p. This option also
+applies the the DTDs generated as well.</p>
+<p>A DTD for a the <b>EX Msg - XML - Conformance </b>message instance may be
+created by running the <b>EX Msg - XML - Conf DTD</b> report ( a new DTD does
+not need to be generated for each instance of the general XML message instance -
+EX Msg - General ). This creates <b>a DTD specific for the Conformance Profile
+under consideration</b>. The generated DTD file should be saved in a folder for
+eventual distribution and/or application to its corresponding XML message
+instance. To associate a DTD with an XML message instance within the MWB, use
+the <b>File/Apply DTD to Report </b>option. Select the report to apply the DTD
+to, and select the DTD file to be applied. When you click Ok, a message will be
+displayed indicating that the next time the selected XML report is run the DTD
+will be applied.</p>
+<p>Once the DTD is applied to the report you can check it by clicking on the
+Browser button to launch IE 5.5 in the view window. Assuming that the files are
+ok, IE5 will display the file in the standard hierarchical format with an
+indication that the DTD has been applied.</p>
+<p>In practice, attaching the DTD to the report within the MWB is of limited
+use, since the applied DTD has a local file&nbsp; URL that will render the XML
+report invalid on other systems. If the report is to be exported or validated
+within another tool, it is recommended that the XML report and the DTD be
+shipped together as separate files and recombined for validation on the foreign
+system or within the other tool.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b><a href="Default.htm">&nbsp;&nbsp; Home</a></b></p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

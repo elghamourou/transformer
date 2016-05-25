@@ -1,0 +1,30 @@
+Instructions for generating profiles from Message Structure store.
+
+To run:
+
+Maint/Options MsgStructs tab
+
+1. Select a structure store, or alternatively create a new one.
+
+2. Select message structures on the list for which you want profiles generated (alternatively, delete structures from the list that you don't want).
+
+3. At bottom of form is a button labelled Gen Profile Rpts, click it. Respond to the warning message by clicking YES.
+
+4.On the form that pops up, fill in: 
+
+-  Output Form (required); where generated files will be stored
+
+- Segment lib(s) (required)
+
+- Stylesheet; if left blank resultant xml will be spec XML; defaults to HL7RegistryTransform 
+
+- Spec Root name; will appear as first part of specification name for each of the selected messages. Second part of name is the message and event type. 
+
+- Versions, and Organization
+
+- Output Profile Format (required); currently only xml format supported
+
+
+5. Click ok. The hourglass will appear. As each message structure is processed, it will pop to the head of the list of selected structures, and will loose its hihlighting once processed. It takes several moments to probably minutes to process each structure depending on the number of segments.
+
+As each one is processed it becomes available as an XML profile in the selected output folder.  

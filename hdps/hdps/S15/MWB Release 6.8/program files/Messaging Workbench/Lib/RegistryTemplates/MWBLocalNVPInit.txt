@@ -1,0 +1,9 @@
+Organization=(replace with Your Organization Name)
+Affiliate=(leave blank or replace with affiliate name)
+First_Name=(your First Name)
+Last_Name=(your last name)
+Email=(your Email address)
+Phone=(your phone number)
+Fax=(your fax number)
+Comment=(blank or comment)
+Associated=

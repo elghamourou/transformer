@@ -1,0 +1,26 @@
+The main SpecXML report stylesheet is MWBProfile.xsl
+
+MWBProfileNOX.xsl renders a SpecXML report that omits message elements that have an optionality of X or NS (i.e. not supported).
+
+MWBProfileFO.xsl renders a SpecXML report that omits element below the field level.
+
+The primary intent of the second 2 stylesheets is to demonstrate how the standard SpecXML report may be modified by the user to meet local requirements
+
+pdr 4/02
+
+5/5/02
+
+Added VA MWBProfile, which simply customizes the MWBProfile.xsl by adding a VA logo to the output. The VA logo reference may be replaced in the xsl file to customize it for a different orgsnization.
+
+4/03
+Add MWBProfileRev.xsl which displays review notes for a profile
+
+1/08
+MWBProfileRevNO.xsl - shows report by element with notes only
+MWBProfileNOX.xsl - shows only elements not marked NS or U
+MWBTableRpt.xsl - report shows table definitions only
+MWBDTProfile.xsl - report shows data type defs
+MWBProfileActCode.xsl - report shows only those elements with Coded Entries
+MWBProfileRGX.xsl - report shows column for regex
+3/8
+MWBProfile-no msg.xsl - report ignores message annotations if included

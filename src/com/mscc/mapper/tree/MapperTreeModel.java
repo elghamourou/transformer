@@ -1,5 +1,8 @@
 package com.mscc.mapper.tree;
 
+import org.jdom2.Document;
+import org.jdom2.Element;
+
 public class MapperTreeModel {
 
 	MapperTreeNode root;
@@ -33,15 +36,37 @@ public class MapperTreeModel {
 	}
 
 	public String toString() {
-		return getTreeText(this, this.getRoot(), "");
+		return getTreeText(this, this.getRoot(), "\t");
 	}
 
 	private static String getTreeText(MapperTreeModel model, Object object, String indent) {
 		String myRow = indent + object + "\n";
 		for (int i = 0; i < model.getChildCount(object); i++) {
-			myRow += getTreeText(model, model.getChild(object, i), indent + "  ");
+			myRow += getTreeText(model, model.getChild(object, i), indent + "\t");
 		}
 		return myRow;
+	}
+	
+	public Element toXml() {
+		return getXMLTree(this, this.getRoot());
+	}
+	
+	private static Document xmldoc = null;
+	private static Element getXMLTree(MapperTreeModel model, MapperTreeNode mtn) {
+		Element element=new Element(mtn.getName());
+		
+		if(xmldoc==null){
+			xmldoc=new Document();
+			xmldoc.setRootElement(element);
+		}
+		
+		for (int i = 0; i < model.getChildCount(mtn); i++) {
+			if(!((MapperTreeNode)model.getChild(mtn, i)).isTextNode()){
+				element.addContent(getXMLTree(model, (MapperTreeNode)model.getChild(mtn, i)));
+			}
+			
+		}
+		return element;
 	}
 
 }
