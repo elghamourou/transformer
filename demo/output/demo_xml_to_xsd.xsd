@@ -1,0 +1,114 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:hl7-org:v2xml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ADT_A01" type="urn:ADT_A01Type" xmlns:urn="urn:hl7-org:v2xml"/>
+  <xs:complexType name="ADT_A01.INSURANCEType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="IN1"/>
+      <xs:element type="xs:string" name="IN2"/>
+      <xs:element type="xs:string" name="IN3"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PIDType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="PID.1"/>
+      <xs:element type="urn:PID.3Type" name="PID.3" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="urn:PID.5Type" name="PID.5" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:string" name="PID.8"/>
+      <xs:element type="urn:PID.11Type" name="PID.11" xmlns:urn="urn:hl7-org:v2xml"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AL1.3Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CE.2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MSH.9Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CM_MSG.1"/>
+      <xs:element type="xs:string" name="CM_MSG.2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OBX.6Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CE.2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PID.11Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="AD.1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OBXType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="OBX.1"/>
+      <xs:element type="xs:string" name="OBX.2"/>
+      <xs:element type="urn:OBX.3Type" name="OBX.3" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:float" name="OBX.5"/>
+      <xs:element type="urn:OBX.6Type" name="OBX.6" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="urn:OBX.14Type" name="OBX.14" xmlns:urn="urn:hl7-org:v2xml"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MSHType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="MSH.1"/>
+      <xs:element type="xs:string" name="MSH.2"/>
+      <xs:element type="xs:string" name="MSH.3"/>
+      <xs:element type="urn:MSH.7Type" name="MSH.7" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="urn:MSH.9Type" name="MSH.9" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:short" name="MSH.10"/>
+      <xs:element type="xs:duration" name="MSH.11"/>
+      <xs:element type="xs:float" name="MSH.12"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OBX.3Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="CE.1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PID.3Type">
+    <xs:sequence>
+      <xs:element type="xs:long" name="CM_PAT_ID.1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OBX.14Type">
+    <xs:sequence>
+      <xs:element type="xs:int" name="TS.1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AL1Type">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="AL1.1"/>
+      <xs:element type="urn:AL1.3Type" name="AL1.3" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:int" name="AL1.6"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PID.5Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="PN.1"/>
+      <xs:element type="xs:string" name="PN.2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ADT_A01Type">
+    <xs:sequence>
+      <xs:element type="urn:MSHType" name="MSH" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:string" name="EVN"/>
+      <xs:element type="urn:PIDType" name="PID" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:string" name="NK1"/>
+      <xs:element type="xs:string" name="PV1"/>
+      <xs:element type="xs:string" name="PV2"/>
+      <xs:element type="urn:OBXType" name="OBX" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="urn:AL1Type" name="AL1" maxOccurs="unbounded" minOccurs="0" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:string" name="DG1"/>
+      <xs:element type="xs:string" name="PR1"/>
+      <xs:element type="xs:string" name="GT1"/>
+      <xs:element type="urn:ADT_A01.INSURANCEType" name="ADT_A01.INSURANCE" xmlns:urn="urn:hl7-org:v2xml"/>
+      <xs:element type="xs:string" name="ACC"/>
+      <xs:element type="xs:string" name="UB1"/>
+      <xs:element type="xs:string" name="UB2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MSH.7Type">
+    <xs:sequence>
+      <xs:element type="xs:int" name="TS.1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

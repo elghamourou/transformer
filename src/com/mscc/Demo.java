@@ -47,5 +47,28 @@ public class Demo {
 		String dataSource = "demo/mapping/hdps.xml";
 		String transformedOutput = "demo/mapping/hl7.xml";
 		MetaXSLTTransformer.demo_transormmation(dataSource, transormer_xslt_output, transformedOutput);
+		
+		
+		
+		
+		
+		//mapper project demo
+		//loading mapper project (project mapping workbench)
+		
+		
+		//Mapping project Demo
+		//creating, loading, modifying and deleting project
+		//project verstion managment
+		
+		//creating, modifying and deleting mappings
+		//mapping 
+		
+		
+		
+		
+		//verstion managment
+		
+		
+		
 	}
 }
