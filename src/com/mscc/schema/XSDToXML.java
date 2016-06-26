@@ -5,8 +5,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.xml.namespace.QName;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 
 import org.apache.xmlbeans.impl.xsd2inst.SchemaInstanceGenerator;
 import org.apache.xmlbeans.impl.xsd2inst.SampleXmlUtil;
@@ -27,7 +33,7 @@ import jlibs.xml.sax.XMLDocument;
 
 public class XSDToXML {
 
-	public static void main(String[] args) throws IOException, TransformerConfigurationException {
+	public static void main(String[] args) throws IOException, TransformerException {
 		SchemaInstanceGenerator xmlGen = new SchemaInstanceGenerator();
 		/*
 		 * Generates a document based on the given Schema file
@@ -62,7 +68,7 @@ public class XSDToXML {
 //		XMLOutputter outter=new XMLOutputter();
 //		outter.setFormat(Format.getPrettyFormat());
 //		outter.output(mt.getModel().toXml(), System.out);
-		XSModel xsModel = new XSParser().parse("xsd2_3/ADT_A01.xsd", "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
+		XSModel xsModel = new XSParser().parse("xsd2_3/ADT_A01.xsd");//, "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
 		XSInstance xsInstance = new XSInstance();
 		xsInstance.minimumElementsGenerated = 1;
 		xsInstance.maximumElementsGenerated = 1;
@@ -82,14 +88,30 @@ public class XSDToXML {
 		XMLDocument sampleXml = new XMLDocument(new StreamResult(os), true, 4, null);
 		xsInstance.generate(xsModel, rootElement, sampleXml);
 		
+		System.out.println("==========================");
+		System.out.println(xsModel.getElementDeclaration("HD.1", "urn:hl7-org:v2xml").getName());
+		System.out.println(xsModel.getElementDeclaration("HD.1", "urn:hl7-org:v2xml").getNillable());
+		System.out.println(xsModel.getElementDeclaration("HD.1", "urn:hl7-org:v2xml").getConstraintType());
+		System.out.println(xsModel.getElementDeclaration("HD.1", "urn:hl7-org:v2xml").getName());
+		System.out.println(xsModel.getElementDeclaration("HD.1", "urn:hl7-org:v2xml").getName());
+		System.out.println("==========================");
+
 		
-		String xmlString = new String(os.toByteArray(),"UTF-8");
+		String xmlString = new String(os.toByteArray());
 		xmlString = xmlString.replaceAll( "(?s)<!--.*?-->", "" );
 		xmlString = xmlString.replaceAll("(?m)^[ \t]*\r?\n", "");;
-		PrintWriter out = new PrintWriter("GeneratedXML.xml");
+		PrintWriter out = new PrintWriter("GeneratedXML-tst_nodep2.xml");
 		out.print(xmlString);
 		out.flush();
 		out.close();
+		
+		TransformerFactory factory3= TransformerFactory.newInstance();
+        Source xslt3 = new StreamSource(new File("metaxslt/cleanRepTree.xslt"));
+        Transformer transformer3 = factory3.newTransformer(xslt3);
+
+        Source text3 = new StreamSource(new File("GeneratedXML-tst_nodep2.xml"));
+        //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+        transformer3.transform(text3, new StreamResult(new File("GeneratedXML-tst_nodep2-clean.xml")));
 		
 	}
 }
