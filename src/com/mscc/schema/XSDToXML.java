@@ -3,6 +3,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.Charset;
 
 import javax.xml.namespace.QName;
 import javax.xml.transform.OutputKeys;
@@ -14,6 +15,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.xmlbeans.impl.xsd2inst.SchemaInstanceGenerator;
 import org.apache.xmlbeans.impl.xsd2inst.SampleXmlUtil;
 import org.jdom2.output.Format;
@@ -34,7 +36,7 @@ import jlibs.xml.sax.XMLDocument;
 public class XSDToXML {
 
 	public static void main(String[] args) throws IOException, TransformerException {
-		SchemaInstanceGenerator xmlGen = new SchemaInstanceGenerator();
+		//SchemaInstanceGenerator xmlGen = new SchemaInstanceGenerator();
 		/*
 		 * Generates a document based on the given Schema file
 			having the given element as root.
@@ -68,7 +70,8 @@ public class XSDToXML {
 //		XMLOutputter outter=new XMLOutputter();
 //		outter.setFormat(Format.getPrettyFormat());
 //		outter.output(mt.getModel().toXml(), System.out);
-		XSModel xsModel = new XSParser().parse("xsd2_3/ADT_A01.xsd");//, "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
+		XSParser parser = new XSParser();
+		XSModel xsModel = parser.parse("xsd2_3/ADT_A01.xsd");//, "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
 		XSInstance xsInstance = new XSInstance();
 		xsInstance.minimumElementsGenerated = 1;
 		xsInstance.maximumElementsGenerated = 1;
@@ -100,18 +103,18 @@ public class XSDToXML {
 		String xmlString = new String(os.toByteArray());
 		xmlString = xmlString.replaceAll( "(?s)<!--.*?-->", "" );
 		xmlString = xmlString.replaceAll("(?m)^[ \t]*\r?\n", "");;
-		PrintWriter out = new PrintWriter("GeneratedXML-tst_nodep2.xml");
-		out.print(xmlString);
-		out.flush();
-		out.close();
+//		PrintWriter out = new PrintWriter("GeneratedXML-tst_nodep2.xml");
+//		out.print(xmlString);
+//		out.flush();
+//		out.close();
 		
 		TransformerFactory factory3= TransformerFactory.newInstance();
         Source xslt3 = new StreamSource(new File("metaxslt/cleanRepTree.xslt"));
         Transformer transformer3 = factory3.newTransformer(xslt3);
 
-        Source text3 = new StreamSource(new File("GeneratedXML-tst_nodep2.xml"));
+        Source text3 = new StreamSource(IOUtils.toInputStream(xmlString, Charset.forName("UTF-8")));
         //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-        transformer3.transform(text3, new StreamResult(new File("GeneratedXML-tst_nodep2-clean.xml")));
+        transformer3.transform(text3, new StreamResult(new File("GeneratedXML-tst_nodep3.xml")));
 		
 	}
 }

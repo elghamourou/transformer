@@ -1,8 +1,11 @@
 package com.mscc.mapper.project;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,7 +14,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.namespace.QName;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+
+import jlibs.xml.sax.XMLDocument;
+import jlibs.xml.xsd.XSInstance;
+import jlibs.xml.xsd.XSParser;
+
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.xerces.xs.XSModel;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 import org.apache.xmlbeans.impl.xb.xsdschema.SchemaDocument;
@@ -52,6 +70,8 @@ public class MappingHandler {
 	private String name;
 	private String mappingSourceXSD;
 	private String mappingDestinationXSD;
+	private String mappingSourceTreeRepr;
+	private String mappingDestinationTreeRepr;
 	private String rootFolder;
 
 	public String getName() {
@@ -73,6 +93,8 @@ public class MappingHandler {
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		this.mappingSourceXSD = folderPath.resolve("source.xsd").toString();
 		this.mappingDestinationXSD = folderPath.resolve("destination.xsd").toString();
+		this.mappingSourceTreeRepr = folderPath.resolve("sourceTree.xml").toString();
+		this.mappingDestinationTreeRepr = folderPath.resolve("destinationTree.xml").toString();
 
 	}
 
@@ -210,40 +232,130 @@ public class MappingHandler {
 
 	}
 
-	public void loadSourceXSDFromXml(List<String> xmlFiles) throws XmlException, IOException {
+	public void loadSourceXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException {
 
 		List<File> inputFiles = new ArrayList<File>();
 		for (String fileName : xmlFiles) {
 			inputFiles.add(new File(fileName));
 		}
 		generateXSDFromXML(inputFiles, mappingSourceXSD);
+		generateSourceTreeRepr(root, NameSpace);
 	}
 
-	public void loadDestinationXSDFromXml(List<String> xmlFiles) throws XmlException, IOException {
+	public void loadDestinationXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException {
 		List<File> inputFiles = new ArrayList<File>();
 		for (String fileName : xmlFiles) {
 			inputFiles.add(new File(fileName));
 		}
 		generateXSDFromXML(inputFiles, mappingDestinationXSD);
+		generateDestinationTreeRepr(root, NameSpace);
 	}
 
-	public void loadSourceXSDFromJson(List<String> jsonFiles) throws JSONException, IOException, XmlException {
-		generateXSDFromJson(jsonFiles, mappingSourceXSD, mappingSource);
+	public void loadSourceXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException {
+		generateXSDFromJson(jsonFiles, mappingSourceXSD, root);
+		generateSourceTreeRepr(root, NameSpace);
 	}
 
-	public void loadDestinationXSDFromJson(List<String> jsonFiles) throws JSONException, IOException, XmlException {
-		generateXSDFromJson(jsonFiles, mappingDestinationXSD, mappingDestination);
+	public void loadDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException {
+		generateXSDFromJson(jsonFiles, mappingDestinationXSD, root);
+		generateDestinationTreeRepr(root, NameSpace);
 	}
 
-	public void loadSourceXSD(String xsdFile) throws IOException {
+	public void loadSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws IOException, TransformerException {
+		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
-
 		FileUtils.copyFile(new File(xsdFile), new File(rootFolderPath.resolve(mappingSourceXSD).toString()));
+		for(String xsdDep:xsdFileDeps){
+			File depFile = new File(xsdDep);
+			FileUtils.copyFile(depFile, new File(rootFolderPath.resolve(folderPath.resolve(depFile.getName()).toString()).toString()));
+		}
+		generateSourceTreeRepr(root, NameSpace);
 	}
 
-	public void loadDestinationXSD(String xsdFile) throws IOException {
+	public void loadDestinationXSD(String xsdFile, String root, String NameSpace,  String... xsdFileDeps) throws IOException, TransformerException {
+		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
 		FileUtils.copyFile(new File(xsdFile), new File(rootFolderPath.resolve(mappingDestinationXSD).toString()));
+		for(String xsdDep:xsdFileDeps){
+			File depFile = new File(xsdDep);
+			FileUtils.copyFile(depFile, new File(rootFolderPath.resolve(folderPath.resolve(depFile.getName()).toString()).toString()));
+		}
+		generateDestinationTreeRepr(root, NameSpace);
+	}
+	
+	private void generateSourceTreeRepr(String root, String NameSpace) throws FileNotFoundException, TransformerException{
+		Path folderPath = Paths.get(this.mappingFolderPath);
+		Path rootFolderPath = Paths.get(this.rootFolder);
+		File sourceTreeRepsFile = new File(rootFolderPath.resolve(mappingSourceTreeRepr).toString());
+		
+												//?
+		XSModel xsModel = new XSParser().parse(rootFolderPath.resolve(mappingSourceXSD).toString());//, "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
+		XSInstance xsInstance = new XSInstance();
+		xsInstance.minimumElementsGenerated = 1;
+		xsInstance.maximumElementsGenerated = 1;
+		xsInstance.generateOptionalElements = Boolean.TRUE; // null means random
+		xsInstance.generateDefaultAttributes =  Boolean.FALSE;
+		xsInstance.generateDefaultElementValues =  Boolean.FALSE;
+		
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		
+		QName rootElement = new QName(NameSpace, root );//"urn:hl7-org:v2xml","ADT_A01"
+		XMLDocument sampleXml = new XMLDocument(new StreamResult(os), true, 4, null);
+		xsInstance.generate(xsModel, rootElement, sampleXml);
+		
+		
+		String xmlString = new String(os.toByteArray());
+		xmlString = xmlString.replaceAll( "(?s)<!--.*?-->", "" );
+		xmlString = xmlString.replaceAll("(?m)^[ \t]*\r?\n", "");;
+
+
+		TransformerFactory factory= TransformerFactory.newInstance();
+        Source xslt = new StreamSource(new File("metaxslt/cleanRepTree.xslt"));
+        Transformer transformer = factory.newTransformer(xslt);
+
+        Source text = new StreamSource(IOUtils.toInputStream(xmlString, Charset.forName("UTF-8")));
+        //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+        transformer.transform(text, new StreamResult(sourceTreeRepsFile));
+		
+		
+		
+	}
+	
+	private void generateDestinationTreeRepr(String root, String NameSpace) throws FileNotFoundException, TransformerException{
+		Path folderPath = Paths.get(this.mappingFolderPath);
+		Path rootFolderPath = Paths.get(this.rootFolder);
+		File destinationTreeRepsFile = new File(rootFolderPath.resolve(mappingDestinationTreeRepr).toString());
+	
+												//?
+		XSModel xsModel = new XSParser().parse(rootFolderPath.resolve(mappingDestinationXSD).toString());
+		XSInstance xsInstance = new XSInstance();
+		xsInstance.minimumElementsGenerated = 1;
+		xsInstance.maximumElementsGenerated = 1;
+		xsInstance.generateOptionalElements = Boolean.TRUE; // null means random
+		xsInstance.generateDefaultAttributes =  Boolean.FALSE;
+		xsInstance.generateDefaultElementValues =  Boolean.FALSE;
+		
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		
+		QName rootElement = new QName(NameSpace, root);//"urn:hl7-org:v2xml","ADT_A01"
+		XMLDocument sampleXml = new XMLDocument(new StreamResult(os), true, 4, null);
+		xsInstance.generate(xsModel, rootElement, sampleXml);
+	
+	
+		String xmlString = new String(os.toByteArray());
+		xmlString = xmlString.replaceAll( "(?s)<!--.*?-->", "" );
+		xmlString = xmlString.replaceAll("(?m)^[ \t]*\r?\n", "");;
+		
+		TransformerFactory factory= TransformerFactory.newInstance();
+        Source xslt = new StreamSource(new File("metaxslt/cleanRepTree.xslt"));
+        Transformer transformer = factory.newTransformer(xslt);
+
+        Source text = new StreamSource(IOUtils.toInputStream(xmlString, Charset.forName("UTF-8")));
+        //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+        transformer.transform(text, new StreamResult(destinationTreeRepsFile));
+	
+	
+		
 	}
 
 	@Override

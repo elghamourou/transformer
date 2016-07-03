@@ -395,7 +395,7 @@
 	<PID.19 Item="122" Type="ST" LongName="SSN Number - Patient">
 	</PID.19>
 	<PID.20 Item="123" Type="DLN" LongName="Driver's License Number">
-	<DLN.1 Type="ST" LongName="Driver´s License Number">
+	<DLN.1 Type="ST" LongName="DriverÂ´s License Number">
 	</DLN.1>
 	<DLN.2 Type="IS" LongName="Issuing State, province, country">
 	</DLN.2>
@@ -838,7 +838,7 @@
 	</NK1.24>
 	<NK1.25 Item="120" Type="IS" Table="HL70006" LongName="Religion">
 	</NK1.25>
-	<NK1.26 Item="746" Type="XPN" LongName="Mother’s Maiden Name">
+	<NK1.26 Item="746" Type="XPN" LongName="Motherâ€™s Maiden Name">
 	<XPN.1 Type="ST" LongName="family name">
 	</XPN.1>
 	<XPN.2 Type="ST" LongName="given name">
@@ -904,7 +904,7 @@
 	<XPN.8 Type="ID" LongName="Name Representation code">
 	</XPN.8>
 	</NK1.30>
-	<NK1.31 Item="749" Type="XTN" LongName="Contact Person’s Telephone Number">
+	<NK1.31 Item="749" Type="XTN" LongName="Contact Personâ€™s Telephone Number">
 	<XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">
 	</XTN.1>
 	<XTN.2 Type="ID" LongName="telecommunication use code">
@@ -924,7 +924,7 @@
 	<XTN.9 Type="ST" LongName="any text">
 	</XTN.9>
 	</NK1.31>
-	<NK1.32 Item="750" Type="XAD" LongName="Contact Person’s Address">
+	<NK1.32 Item="750" Type="XAD" LongName="Contact Personâ€™s Address">
 	<XAD.1 Type="ST" LongName="street address">
 	</XAD.1>
 	<XAD.2 Type="ST" LongName="other designation">
@@ -946,7 +946,7 @@
 	<XAD.10 Type="IS" LongName="census tract">
 	</XAD.10>
 	</NK1.32>
-	<NK1.33 Item="751" Type="CX" LongName="Associated Party’s Identifiers">
+	<NK1.33 Item="751" Type="CX" LongName="Associated Partyâ€™s Identifiers">
 	<CX.1 Type="ST" LongName="ID">
 	</CX.1>
 	<CX.2 Type="ST" LongName="check digit">
@@ -2913,7 +2913,7 @@
 	</GT1.40>
 	<GT1.41 Item="120" Type="IS" Table="HL70006" LongName="Religion">
 	</GT1.41>
-	<GT1.42 Item="746" Type="XPN" LongName="Mother’s Maiden Name">
+	<GT1.42 Item="746" Type="XPN" LongName="Motherâ€™s Maiden Name">
 	<XPN.1 Type="ST" LongName="family name">
 	</XPN.1>
 	<XPN.2 Type="ST" LongName="given name">
@@ -2965,7 +2965,7 @@
 	<XPN.8 Type="ID" LongName="Name Representation code">
 	</XPN.8>
 	</GT1.45>
-	<GT1.46 Item="749" Type="XTN" LongName="Contact Person’s Telephone Number">
+	<GT1.46 Item="749" Type="XTN" LongName="Contact Personâ€™s Telephone Number">
 	<XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">
 	</XTN.1>
 	<XTN.2 Type="ID" LongName="telecommunication use code">
@@ -3888,7 +3888,7 @@
 	</IN2.38>
 	<IN2.39 Item="120" Type="IS" Table="HL70006" LongName="Religion">
 	</IN2.39>
-	<IN2.40 Item="746" Type="XPN" LongName="Mother’s Maiden Name">
+	<IN2.40 Item="746" Type="XPN" LongName="Motherâ€™s Maiden Name">
 	<XPN.1 Type="ST" LongName="family name">
 	</XPN.1>
 	<XPN.2 Type="ST" LongName="given name">
@@ -3978,7 +3978,7 @@
 	</IN2.50>
 	<IN2.51 Item="791" Type="IS" Table="HL70222" LongName="Employer Contact Reason">
 	</IN2.51>
-	<IN2.52 Item="792" Type="XPN" LongName="Insured’s Contact Person’s Name">
+	<IN2.52 Item="792" Type="XPN" LongName="Insuredâ€™s Contact Personâ€™s Name">
 	<XPN.1 Type="ST" LongName="family name">
 	</XPN.1>
 	<XPN.2 Type="ST" LongName="given name">
@@ -3996,7 +3996,7 @@
 	<XPN.8 Type="ID" LongName="Name Representation code">
 	</XPN.8>
 	</IN2.52>
-	<IN2.53 Item="793" Type="XTN" LongName="Insured’s Contact Person Telephone Number">
+	<IN2.53 Item="793" Type="XTN" LongName="Insuredâ€™s Contact Person Telephone Number">
 	<XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">
 	</XTN.1>
 	<XTN.2 Type="ID" LongName="telecommunication use code">
@@ -4016,7 +4016,7 @@
 	<XTN.9 Type="ST" LongName="any text">
 	</XTN.9>
 	</IN2.53>
-	<IN2.54 Item="794" Type="IS" Table="HL70222" LongName="Insured’s Contact Person Reason">
+	<IN2.54 Item="794" Type="IS" Table="HL70222" LongName="Insuredâ€™s Contact Person Reason">
 	</IN2.54>
 	<IN2.55 Item="795" Type="DT" LongName="Relationship To The Patient Start Date">
 	</IN2.55>
@@ -4074,9 +4074,9 @@
 	</HD.3>
 	</CX.6>
 	</IN2.61>
-	<IN2.62 Item="802" Type="IS" Table="HL70063" LongName="Guarantor’s Relationship To Insured">
+	<IN2.62 Item="802" Type="IS" Table="HL70063" LongName="Guarantorâ€™s Relationship To Insured">
 	</IN2.62>
-	<IN2.63 Item="803" Type="XTN" LongName="Insured’s Telephone Number - Home">
+	<IN2.63 Item="803" Type="XTN" LongName="Insuredâ€™s Telephone Number - Home">
 	<XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">
 	</XTN.1>
 	<XTN.2 Type="ID" LongName="telecommunication use code">
@@ -4096,7 +4096,7 @@
 	<XTN.9 Type="ST" LongName="any text">
 	</XTN.9>
 	</IN2.63>
-	<IN2.64 Item="804" Type="XTN" LongName="Insured’s Employer Telephone Number">
+	<IN2.64 Item="804" Type="XTN" LongName="Insuredâ€™s Employer Telephone Number">
 	<XTN.1 Type="TN" LongName="[(999)] 999-9999 [X99999][C any text]">
 	</XTN.1>
 	<XTN.2 Type="ID" LongName="telecommunication use code">

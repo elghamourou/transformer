@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.transform.TransformerException;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -20,6 +22,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.xmlbeans.XmlException;
 import org.ini4j.Ini;
 import org.ini4j.InvalidFileFormatException;
+import org.json.JSONException;
 
 public class ProjectHandler {
 	private Map<String, MappingHandler> mappings = new HashMap<String, MappingHandler>();
@@ -241,28 +244,28 @@ public class ProjectHandler {
 		}
 	}
 	
-	public void importSourceXSDFromXML(List<String> xmlFiles) throws XmlException, IOException{
-		this.activeMapping.loadSourceXSDFromXml(xmlFiles);
+	public void importSourceXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException{
+		this.activeMapping.loadSourceXSDFromXml(xmlFiles, root, NameSpace);
 	}
 	
-	public void importDestinationXSDFromXML(List<String> xmlFiles) throws XmlException, IOException{
-		this.activeMapping.loadDestinationXSDFromXml(xmlFiles);
+	public void importDestinationXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException{
+		this.activeMapping.loadDestinationXSDFromXml(xmlFiles, root, NameSpace);
 	}
 	
-	public void importSourceXSDFromJson(List<String> jsonFiles) throws XmlException, IOException{
-		this.activeMapping.loadSourceXSDFromJson(jsonFiles);
+	public void importSourceXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException{
+		this.activeMapping.loadSourceXSDFromJson(jsonFiles, root, NameSpace);
 	}
 	
-	public void importDestinationXSDFromJson(List<String> jsonFiles) throws XmlException, IOException{
-		this.activeMapping.loadDestinationXSDFromJson(jsonFiles);
+	public void importDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException{
+		this.activeMapping.loadDestinationXSDFromJson(jsonFiles, root, NameSpace);
 	}
 	
-	public void importSourceXSD(String xsdFile) throws XmlException, IOException{
-		this.activeMapping.loadSourceXSD(xsdFile);
+	public void importSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+		this.activeMapping.loadSourceXSD(xsdFile, root, NameSpace, xsdFileDeps);
 	}
 	
-	public void importDestinationXSD(String xsdFile) throws XmlException, IOException{
-		this.activeMapping.loadDestinationXSD(xsdFile);
+	public void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+		this.activeMapping.loadDestinationXSD(xsdFile, root, NameSpace, xsdFileDeps);
 	}
 	
 	@Override

@@ -5,7 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.transform.TransformerException;
+
 import org.apache.xmlbeans.XmlException;
+import org.json.JSONException;
 
 public final class MapperProjectHandler {
 	
@@ -78,28 +81,28 @@ public final class MapperProjectHandler {
 	
 	
 	
-	public static void importSourceXSDFromXML(List<String> xmlFiles) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importSourceXSDFromXML(xmlFiles);;
+	public static void importSourceXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importSourceXSDFromXML(xmlFiles, root, NameSpace);;
 	}
 	
-	public static void importDestinationXSDFromXML(List<String> xmlFiles) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importDestinationXSDFromXML(xmlFiles);
+	public static void importDestinationXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importDestinationXSDFromXML(xmlFiles, root, NameSpace);
 	}
 	
-	public static void importSourceXSDFromJson(List<String> jsonFiles) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importSourceXSDFromJson(jsonFiles);
+	public static void importSourceXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importSourceXSDFromJson(jsonFiles, root, NameSpace);
 	}
 	
-	public static void importDestinationXSDFromJson(List<String> jsonFiles) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importDestinationXSDFromJson(jsonFiles);;
+	public static void importDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importDestinationXSDFromJson(jsonFiles, root, NameSpace);;
 	}
 	
-	public static void importSourceXSD(String xsdFile) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importSourceXSD(xsdFile);;
+	public static void importSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importSourceXSD(xsdFile, root, NameSpace, xsdFileDeps);
 	}
 	
-	public static void importDestinationXSD(String xsdFile) throws XmlException, IOException{
-		MapperProjectHandler.activeProjectHandler.importDestinationXSD(xsdFile);;
+	public static void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+		MapperProjectHandler.activeProjectHandler.importDestinationXSD(xsdFile, root, NameSpace, xsdFileDeps);;
 	}
 	
 	

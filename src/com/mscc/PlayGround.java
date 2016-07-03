@@ -4,40 +4,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.transform.TransformerException;
+
 import org.apache.xmlbeans.XmlException;
 
 import com.mscc.mapper.project.MapperProjectHandler;
 import com.mscc.mapper.project.MappingBean;
 import com.mscc.mapper.project.MappingProjectException;
 import com.mscc.mapper.project.ProjectBean;
-import com.mscc.mapper.project.ProjectHandler;
 
 public class PlayGround {
 
-	//file managment
-	//property file
-	//list (perhaps csv file)
-	//xml files (mapping)
 	
-	/* to parse this
-	 [happy]
-	 age = 99
-	 height = 77.66
-	 homeDir = /home/happy
-   int age = ini.get("happy", "age", int.class);
-   double height = ini.get("happy", "height", double.class);
-   String dir = ini.get("happy", "homeDir");
-   
-   To write this
-    [sleepy]
-	 age = 55
-	 weight = 45.6
-   ini.put("sleepy", "age", 55);
-   ini.put("sleepy", "weight", 45.6);
-   ini.store();
-	*/
-	
-	public static void main(String[] args) throws IOException, MappingProjectException, XmlException {
+	public static void main(String[] args) throws IOException, MappingProjectException, XmlException, TransformerException {
 		
 		
 		
@@ -61,8 +40,8 @@ public class PlayGround {
 		List<String> xmlFiles = new ArrayList<String>();
 		xmlFiles.add("demo/src.xml");
 		MapperProjectHandler.getActiveProjectHandler().createMapping(mapping1);
-		MapperProjectHandler.getActiveProjectHandler().importSourceXSDFromXML(xmlFiles);
-		MapperProjectHandler.getActiveProjectHandler().importDestinationXSD("xsd2_3/ADT_A01.xsd");
+		MapperProjectHandler.getActiveProjectHandler().importSourceXSDFromXML(xmlFiles,"src", null);
+		MapperProjectHandler.getActiveProjectHandler().importDestinationXSD("xsd2_3/ADT_A01.xsd","ADT_A01","urn:hl7-org:v2xml", "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
 		
 		MappingBean mapping2 = new MappingBean();
 		
@@ -73,8 +52,8 @@ public class PlayGround {
 		List<String> jsonFiles = new ArrayList<String>();
 		jsonFiles.add("demo/demo.hdps");
 		MapperProjectHandler.getActiveProjectHandler().createMapping(mapping2);
-		MapperProjectHandler.getActiveProjectHandler().importSourceXSDFromJson(jsonFiles);
-		MapperProjectHandler.getActiveProjectHandler().importDestinationXSD("xsd2_3/ADT_A01.xsd");
+		MapperProjectHandler.getActiveProjectHandler().importSourceXSDFromJson(jsonFiles, "hdps_R01",null);
+		MapperProjectHandler.getActiveProjectHandler().importDestinationXSD("xsd2_3/ADT_A01.xsd","ADT_A01","urn:hl7-org:v2xml", "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
 		
 		MapperProjectHandler.importProject("M:/project/transformer/project/hdps_to_hl7", false);
 		System.out.println(MapperProjectHandler.getActiveProjectHandler());
