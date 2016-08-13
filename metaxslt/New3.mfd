@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="1" kind="14">
+					<properties/>
+					<view rbx="150" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="src" expanded="1">
+										<entry name="data" expanded="1"/>
+										<entry name="niknames" expanded="1">
+											<entry name="nik" outkey="114894808"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="src.xsd" outputinstance="src.xml" instanceroot="{}src" userdefinedschemalocation="M:/project/transformer/metaxslt/src.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="504" lty="33" rbx="654" rby="233"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="dst" expanded="1">
+										<entry name="niknamesdst" expanded="1">
+											<entry name="nikdst" inpkey="114909568"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="dst.xsd" outputinstance="dst.xml" instanceroot="{}dst" userdefinedschemalocation="M:/project/transformer/metaxslt/dst.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="avg" library="core" uid="3" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="114895528"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="114895648"/>
+					</targets>
+					<view ltx="241" lty="90" rbx="-56" rby="21"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="114894808">
+						<edges>
+							<edge vertexkey="114895528" edgekey="125908520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114895648">
+						<edges>
+							<edge vertexkey="114909568" edgekey="125912984"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

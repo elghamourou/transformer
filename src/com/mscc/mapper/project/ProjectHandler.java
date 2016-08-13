@@ -14,6 +14,7 @@ import java.util.Map;
 
 import javax.xml.transform.TransformerException;
 
+import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -23,6 +24,9 @@ import org.apache.xmlbeans.XmlException;
 import org.ini4j.Ini;
 import org.ini4j.InvalidFileFormatException;
 import org.json.JSONException;
+
+import com.mscc.mapper.utils.ZipUtil;
+import com.mscc.metaxslt.MetaXSLTTransformer;
 
 public class ProjectHandler {
 	private Map<String, MappingHandler> mappings = new HashMap<String, MappingHandler>();
@@ -191,14 +195,17 @@ public class ProjectHandler {
 		//export project to path
 	}
 
-	public void build(String buildPath, boolean isPackaged) throws IOException {
+	
+	public void build(String buildPath, boolean isPackaged, String mappingName) throws IOException, TransformerException, ArchiveException {
+		
+		Path rPath = Paths.get(buildPath);
 		//create build folder
 		File buildRoot = new File(buildPath);
 		if(!buildRoot.exists()){
 			 
 			FileUtils.forceMkdir(buildRoot);
 		}
-		Path bPath = Paths.get(buildPath);
+		Path bPath = Paths.get(rPath.resolve(mappingName).toString());
 		//create discriptor (manifest) file
 		File descriptor_file =(new File(bPath.resolve("transformer.dsc").toString()));
 		
@@ -219,6 +226,7 @@ public class ProjectHandler {
 		    String source = mh.getMappingSource();
 		    String dst = mh.getMappingDestination();
 		    String ver = mh.getMappingVersion();
+		    String mappingFile = mh.getMappingFilePath();
 		    
 		    //creating mapping folders
 		    File srcFolder = new File(bPath.resolve(source).toString());
@@ -240,7 +248,16 @@ public class ProjectHandler {
 			}
 			
 			//parse coresponding mapping file to generate transformation xslt
-		    
+			String mapping_file_name = mappingFile;
+			Path xslt_path_folder = Paths.get(verFolder.toURI());
+			
+			String transormer_xslt_output = xslt_path_folder.resolve("transformer.xslt").toString();
+			MetaXSLTTransformer.demo_transormer_generator(mapping_file_name, transormer_xslt_output);
+			
+			if(isPackaged){
+				ZipUtil.compress(rPath.resolve(mappingName).toString(), rPath.resolve(mappingName+".mscc").toString());
+		        
+			}
 		}
 	}
 	
@@ -262,6 +279,10 @@ public class ProjectHandler {
 	
 	public void importSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
 		this.activeMapping.loadSourceXSD(xsdFile, root, NameSpace, xsdFileDeps);
+	}
+	
+	public void importMappingFile(String mappingFile) throws IOException {
+		this.activeMapping.loadMappingFile(mappingFile);
 	}
 	
 	public void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{

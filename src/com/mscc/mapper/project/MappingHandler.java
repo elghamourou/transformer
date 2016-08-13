@@ -57,6 +57,11 @@ public class MappingHandler {
 		return mappingVersion;
 	}
 
+	public String getMappingFilePath() {
+		Path rootFolderPath = Paths.get(this.rootFolder);
+		return rootFolderPath.resolve(mappingFilePath).toString();
+	}
+
 	private String mappingDestination;
 	private String mappingVersion;
 	private String mappingFolderPath;
@@ -272,6 +277,14 @@ public class MappingHandler {
 		generateSourceTreeRepr(root, NameSpace);
 	}
 
+	public void loadMappingFile(String mappingFile) throws IOException {
+		//Path folderPath = Paths.get(this.mappingFolderPath);
+		Path rootFolderPath = Paths.get(this.rootFolder);
+		FileUtils.copyFile(new File(mappingFile), new File(rootFolderPath.resolve(mappingFilePath).toString()));
+		
+	}
+	
+	
 	public void loadDestinationXSD(String xsdFile, String root, String NameSpace,  String... xsdFileDeps) throws IOException, TransformerException {
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);

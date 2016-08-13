@@ -1,6 +1,7 @@
 package com.mscc.metaxslt;
 
 import java.io.File;
+import java.io.StringWriter;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
@@ -21,6 +22,19 @@ public class MetaXSLTTransformer {
 
         Source text = new StreamSource(new File(mapping));
         transformer.transform(text, new StreamResult(new File(transformerOutput)));
+//        StringWriter outputWriter = new StringWriter();
+//        transformer.transform(text, new StreamResult(outputWriter));
+//        
+//        
+//        
+//        
+//        String xslt_not_formated = outputWriter.toString();
+//        TransformerFactory factory2 = TransformerFactory.newInstance();
+//        Source xslt_formatter = new StreamSource(new File("metaxslt/formatter.xslt"));
+//        Transformer transformer_formatter = factory2.newTransformer(xslt_formatter);
+//        Source result_not_formatted_source = new StreamSource(xslt_not_formated);
+//        transformer_formatter.transform(result_not_formatted_source, new StreamResult(new File(transformerOutput)));
+//        
         
 	}
 	

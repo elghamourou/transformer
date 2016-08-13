@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.xml.transform.TransformerException;
 
+import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.xmlbeans.XmlException;
 import org.json.JSONException;
 
@@ -75,8 +76,8 @@ public final class MapperProjectHandler {
 		MapperProjectHandler.activeProjectHandler.exportProject(projectName, exportTo, isPackaged);
 	}
 	
-	public static void buildProject(String buildPath, boolean isPackaged) throws IOException{
-		MapperProjectHandler.activeProjectHandler.build(buildPath, isPackaged);
+	public static void buildProject(String buildPath, boolean isPackaged, String mappingName) throws IOException, TransformerException, ArchiveException{
+		MapperProjectHandler.activeProjectHandler.build(buildPath, isPackaged, mappingName);
 	}
 	
 	
@@ -101,10 +102,17 @@ public final class MapperProjectHandler {
 		MapperProjectHandler.activeProjectHandler.importSourceXSD(xsdFile, root, NameSpace, xsdFileDeps);
 	}
 	
+//	public static String exportSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+//		return MapperProjectHandler.activeProjectHandler.exportSourceXSD();
+//	}
+	
 	public static void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
 		MapperProjectHandler.activeProjectHandler.importDestinationXSD(xsdFile, root, NameSpace, xsdFileDeps);;
 	}
 	
+	public static void importMappingFile(String mappingFile) throws IOException{
+		MapperProjectHandler.activeProjectHandler.importMappingFile(mappingFile);
+	}
 	
 	public static void newVesrion(){
 		//create new version
