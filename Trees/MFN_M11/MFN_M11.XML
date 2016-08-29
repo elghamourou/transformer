@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<MFN_M11 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MSH>
+	<MSH.1 Item="1" LongName="Field Separator" Type="ST">
+	<map:cte val="|" xmlns:map="mapping"/>
+        </MSH.1>
+	<MSH.2 Item="2" LongName="Encoding Characters" Type="ST">
+	<map:cte val="^~\&amp;" xmlns:map="mapping"/>
+        </MSH.2>
+	<MSH.3 Item="3" LongName="Sending Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.3>
+	<MSH.4 Item="4" LongName="Sending Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.4>
+	<MSH.5 Item="5" LongName="Receiving Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.5>
+	<MSH.6 Item="6" LongName="Receiving Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.6>
+	<MSH.7 Item="7" LongName="Date / Time of Message" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MSH.7>
+	<MSH.8 Item="8" LongName="Security" Type="ST">
+	</MSH.8>
+	<MSH.9 Item="9" LongName="Message Type" Type="CM">
+	<CM_MSG.1 LongName="message type" Type="ID">
+	<map:cte val="MFN" xmlns:map="mapping"/>
+            </CM_MSG.1>
+	<CM_MSG.2 LongName="trigger event" Type="ID">
+	<map:cte val="M11" xmlns:map="mapping"/>
+            </CM_MSG.2>
+	</MSH.9>
+	<MSH.10 Item="10" LongName="Message Control ID" Type="ST">
+	<map:uuid xmlns:map="mapping"/>
+        </MSH.10>
+	<MSH.11 Item="11" LongName="Processing ID" Type="PT">
+	<PT.1 LongName="processing ID" Type="ST">
+	</PT.1>
+	<PT.2 LongName="processing mode" Type="ST">
+	</PT.2>
+	</MSH.11>
+	<MSH.12 Item="12" LongName="Version ID" Table="HL70104" Type="ID">
+	<map:cte val="2.3" xmlns:map="mapping"/>
+        </MSH.12>
+	<MSH.13 Item="13" LongName="Sequence Number" Type="NM">
+	</MSH.13>
+	<MSH.14 Item="14" LongName="Continuation Pointer" Type="ST">
+	</MSH.14>
+	<MSH.15 Item="15" LongName="Accept Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.15>
+	<MSH.16 Item="16" LongName="Application Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.16>
+	<MSH.17 Item="17" LongName="Country Code" Type="ID">
+	</MSH.17>
+	<MSH.18 Item="692" LongName="Character Set" Table="HL70211" Type="ID">
+	</MSH.18>
+	<MSH.19 Item="693" LongName="Principal Language of Message" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MSH.19>
+	
+	</MSH>
+	<MFI>
+	<MFI.1 Item="658" LongName="Master File Identifier" Table="HL70175" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFI.1>
+	<MFI.2 Item="659" LongName="Master File Application Identifier" Table="HL70176" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MFI.2>
+	<MFI.3 Item="660" LongName="File-Level Event Code" Table="HL70178" Type="ID">
+	</MFI.3>
+	<MFI.4 Item="661" LongName="Entered Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.4>
+	<MFI.5 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.5>
+	<MFI.6 Item="663" LongName="Response Level Code" Table="HL70179" Type="ID">
+	</MFI.6>
+	
+	</MFI>
+	<MFN_M11.MF_TEST_CALCULATED>
+	<MFE>
+	<MFE.1 Item="664" LongName="Record-Level Event Code" Table="HL70180" Type="ID">
+	</MFE.1>
+	<MFE.2 Item="665" LongName="MFN Control ID" Type="ST">
+	</MFE.2>
+	<MFE.3 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFE.3>
+	<MFE.4 Item="667" LongName="Primary Key Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFE.4>
+	
+	</MFE>
+	<OM1>
+	<OM1.1 Item="586" LongName="Sequence Number - Test/ Observation Master File" Type="NM">
+	</OM1.1>
+	<OM1.2 Item="587" LongName="Producer's Test/Observation ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.2>
+	<OM1.3 Item="588" LongName="Permitted Data Types" Table="HL70125" Type="ID">
+	</OM1.3>
+	<OM1.4 Item="589" LongName="Specimen Required" Table="HL70136" Type="ID">
+	</OM1.4>
+	<OM1.5 Item="590" LongName="Producer ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.5>
+	<OM1.6 Item="591" LongName="Observation Description" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.6>
+	<OM1.7 Item="592" LongName="Other Test/Observation IDs for the Observation" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.7>
+	<OM1.8 Item="593" LongName="Other Names" Type="ST">
+	</OM1.8>
+	<OM1.9 Item="594" LongName="Preferred Report Name for the Observation" Type="ST">
+	</OM1.9>
+	<OM1.10 Item="595" LongName="Preferred Short Name or Mnemonic for Observation" Type="ST">
+	</OM1.10>
+	<OM1.11 Item="596" LongName="Preferred Long Name for the Observation" Type="ST">
+	</OM1.11>
+	<OM1.12 Item="597" LongName="Orderability" Table="HL70136" Type="ID">
+	</OM1.12>
+	<OM1.13 Item="598" LongName="Identity of Instrument Used to Perfrom this Study" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.13>
+	<OM1.14 Item="599" LongName="Coded Representation of Method" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.14>
+	<OM1.15 Item="600" LongName="Portable" Table="HL70136" Type="ID">
+	</OM1.15>
+	<OM1.16 Item="601" LongName="Observation Producing Department/Section" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.16>
+	<OM1.17 Item="602" LongName="Telephone Number of Section" Type="TN">
+	</OM1.17>
+	<OM1.18 Item="603" LongName="Nature of Test/Observation" Table="HL70174" Type="ID">
+	</OM1.18>
+	<OM1.19 Item="604" LongName="Report Subheader" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.19>
+	<OM1.20 Item="605" LongName="Report Display Order" Type="ST">
+	</OM1.20>
+	<OM1.21 Item="606" LongName="Date/Time Stamp for any change in Def Attri for Obs" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OM1.21>
+	<OM1.22 Item="607" LongName="Effective Date/Time of Change in Test Proc. that make Results Non-Comparable" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OM1.22>
+	<OM1.23 Item="608" LongName="Typical Turn-Around Time" Type="NM">
+	</OM1.23>
+	<OM1.24 Item="609" LongName="Processing Time" Type="NM">
+	</OM1.24>
+	<OM1.25 Item="610" LongName="Processing Priority" Table="HL70168" Type="ID">
+	</OM1.25>
+	<OM1.26 Item="611" LongName="Reporting Priority" Table="HL70169" Type="ID">
+	</OM1.26>
+	<OM1.27 Item="612" LongName="Outside Site(s) Where Observation may be Performed" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.27>
+	<OM1.28 Item="613" LongName="Address of Outside Site(s)" Type="AD">
+	<AD.1 LongName="street address" Type="ST">
+	</AD.1>
+	<AD.2 LongName="other designation" Type="ST">
+	</AD.2>
+	<AD.3 LongName="city" Type="ST">
+	</AD.3>
+	<AD.4 LongName="state or province" Type="ST">
+	</AD.4>
+	<AD.5 LongName="zip or postal code" Type="ST">
+	</AD.5>
+	<AD.6 LongName="country" Type="ID">
+	</AD.6>
+	<AD.7 LongName="address type" Type="ID">
+	</AD.7>
+	<AD.8 LongName="other geographic designation" Type="ST">
+	</AD.8>
+	</OM1.28>
+	<OM1.29 Item="614" LongName="Phone Number of Outside Site" Type="TN">
+	</OM1.29>
+	<OM1.30 Item="615" LongName="Confidentiality Code" Table="HL70177" Type="ID">
+	</OM1.30>
+	<OM1.31 Item="616" LongName="Observations Required to Interpret the Observation" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.31>
+	<ns:OM1.32 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="617" LongName="Interpretation of Observations" Type="TX">
+	<escape V="V1">
+	</escape>
+	</ns:OM1.32>
+	<OM1.33 Item="618" LongName="Contraindications to Observations" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.33>
+	<OM1.34 Item="619" LongName="Reflex Tests/Observations" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.34>
+	<OM1.35 Item="620" LongName="Rules that Trigger Reflex Testing" Type="ST">
+	</OM1.35>
+	<OM1.36 Item="621" LongName="Fixed Canned Message" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.36>
+	<ns:OM1.37 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="622" LongName="Patient Preparation" Type="TX">
+	<escape V="V2">
+	</escape>
+	</ns:OM1.37>
+	<OM1.38 Item="623" LongName="Procedure Medication" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.38>
+	<ns:OM1.39 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="624" LongName="Factors that may Effect the Observation" Type="TX">
+	<escape V="V3">
+	</escape>
+	</ns:OM1.39>
+	<OM1.40 Item="625" LongName="Test/Observation Performance Schedule" Type="ST">
+	</OM1.40>
+	<ns:OM1.41 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="626" LongName="Description of Test Methods" Type="TX">
+	<escape V="V4">
+	</escape>
+	</ns:OM1.41>
+	<OM1.42 Item="937" LongName="Kind of Quantity Observed" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.42>
+	<OM1.43 Item="938" LongName="Point versus Interval" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.43>
+	<ns:OM1.44 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="939" LongName="Challenge information" Type="TX">
+	<escape V="V5">
+	</escape>
+	</ns:OM1.44>
+	<OM1.45 Item="940" LongName="Relationship modifier" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.45>
+	<OM1.46 Item="941" LongName="Target anatomic site of test" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.46>
+	<OM1.47 Item="942" LongName="Modality of imaging measurement" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM1.47>
+	
+	</OM1>
+	<MFN_M11.MF_TEST_CALC_DETAIL>
+	<OM6>
+	<OM6.1 Item="586" LongName="Sequence Number - Test/ Observation Master File" Type="NM">
+	</OM6.1>
+	<ns:OM6.2 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="657" LongName="Derivation Rule" Type="TX">
+	<escape V="V6">
+	</escape>
+	</ns:OM6.2>
+	
+	</OM6>
+	<OM2>
+	<OM2.1 Item="586" LongName="Sequence Number - Test/ Observation Master File" Type="NM">
+	</OM2.1>
+	<OM2.2 Item="627" LongName="Units of Measure" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM2.2>
+	<OM2.3 Item="628" LongName="Range of Decimal Precision" Type="NM">
+	</OM2.3>
+	<OM2.4 Item="629" LongName="Corresponding SI Units of Measure" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OM2.4>
+	<ns:OM2.5 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="630" LongName="SI Conversion Factor" Type="TX">
+	<escape V="V7">
+	</escape>
+	</ns:OM2.5>
+	<OM2.6 Item="631" LongName="Reference (Normal) Range - Ordinal &amp; Continuous Obs" Type="CM">
+	<CM_RFR.1 LongName="reference range" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</CM_RFR.1>
+	<CM_RFR.2 LongName="sex" Type="IS">
+	</CM_RFR.2>
+	<CM_RFR.3 LongName="age range" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</CM_RFR.3>
+	<CM_RFR.4 LongName="age gestation" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</CM_RFR.4>
+	<ns:CM_RFR.5 xmlns="" xmlns:ns="urn:hl7-org:v2xml" LongName="species" Type="TX">
+	<escape V="V8">
+	</escape>
+	</ns:CM_RFR.5>
+	<CM_RFR.6 LongName="race/subspecies" Type="ST">
+	</CM_RFR.6>
+	<ns:CM_RFR.7 xmlns="" xmlns:ns="urn:hl7-org:v2xml" LongName="conditions" Type="TX">
+	<escape V="V9">
+	</escape>
+	</ns:CM_RFR.7>
+	</OM2.6>
+	<OM2.7 Item="632" LongName="Critical Range for Ordinal &amp; Continuous Obs" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</OM2.7>
+	<OM2.8 Item="633" LongName="Absolute Range for Ordinal &amp; Continuous Obs" Type="CM">
+	<CM_ABS_RANGE.1 LongName="Range" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</CM_ABS_RANGE.1>
+	<CM_ABS_RANGE.2 LongName="Numeric Change" Type="NM">
+	</CM_ABS_RANGE.2>
+	<CM_ABS_RANGE.3 LongName="Percent per Change" Type="NM">
+	</CM_ABS_RANGE.3>
+	<CM_ABS_RANGE.4 LongName="Days" Type="NM">
+	</CM_ABS_RANGE.4>
+	</OM2.8>
+	<OM2.9 Item="634" LongName="Delta Check Criteria" Type="CM">
+	<CM_DLT.1 LongName="Range" Type="CM">
+	<CM_RANGE.1 LongName="Low Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.1>
+	<CM_RANGE.2 LongName="High Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_RANGE.2>
+	</CM_DLT.1>
+	<CM_DLT.2 LongName="numeric threshold" Type="NM">
+	</CM_DLT.2>
+	<CM_DLT.3 LongName="change" Type="ST">
+	</CM_DLT.3>
+	<CM_DLT.4 LongName="length of time-days" Type="NM">
+	</CM_DLT.4>
+	</OM2.9>
+	<OM2.10 Item="635" LongName="Minimum Meaningful Increments" Type="NM">
+	</OM2.10>
+	
+	</OM2>
+	</MFN_M11.MF_TEST_CALC_DETAIL>
+	</MFN_M11.MF_TEST_CALCULATED>
+	</MFN_M11>

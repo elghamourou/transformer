@@ -1,0 +1,25 @@
+MSH/MSH.1 : <map:cte xmlns:map="mapping" val='|'>
+			</map:cte>
+			
+MSH/MSH.2 : <map:cte xmlns:map="mapping" val='^~\&amp;'>
+			</map:cte>
+
+MSH/MSH.9/CM_MSG.1: <map:cte xmlns:map="mapping" val='ADT'>
+				</map:cte>
+				
+MSH/MSH.9/CM_MSG.2: <map:cte xmlns:map="mapping" val='A01'>
+				</map:cte>
+
+
+MSH/MSH.10: <map:uuid xmlns:map="mapping">
+			</map:uuid>
+
+
+MSH/MSH.12: <map:cte xmlns:map="mapping" val='2.3'>
+			</map:cte>
+			
+			
+
+
+OBX/OBX.2: <map:cte xmlns:map="mapping" val='ST'>
+				</map:cte>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<MFN_M07 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MSH>
+	<MSH.1 Item="1" LongName="Field Separator" Type="ST">
+	<map:cte val="|" xmlns:map="mapping"/>
+        </MSH.1>
+	<MSH.2 Item="2" LongName="Encoding Characters" Type="ST">
+	<map:cte val="^~\&amp;" xmlns:map="mapping"/>
+        </MSH.2>
+	<MSH.3 Item="3" LongName="Sending Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.3>
+	<MSH.4 Item="4" LongName="Sending Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.4>
+	<MSH.5 Item="5" LongName="Receiving Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.5>
+	<MSH.6 Item="6" LongName="Receiving Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.6>
+	<MSH.7 Item="7" LongName="Date / Time of Message" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MSH.7>
+	<MSH.8 Item="8" LongName="Security" Type="ST">
+	</MSH.8>
+	<MSH.9 Item="9" LongName="Message Type" Type="CM">
+	<CM_MSG.1 LongName="message type" Type="ID">
+	<map:cte val="MFN" xmlns:map="mapping"/>
+            </CM_MSG.1>
+	<CM_MSG.2 LongName="trigger event" Type="ID">
+	<map:cte val="M07" xmlns:map="mapping"/>
+            </CM_MSG.2>
+	</MSH.9>
+	<MSH.10 Item="10" LongName="Message Control ID" Type="ST">
+	<map:uuid xmlns:map="mapping"/>
+        </MSH.10>
+	<MSH.11 Item="11" LongName="Processing ID" Type="PT">
+	<PT.1 LongName="processing ID" Type="ST">
+	</PT.1>
+	<PT.2 LongName="processing mode" Type="ST">
+	</PT.2>
+	</MSH.11>
+	<MSH.12 Item="12" LongName="Version ID" Table="HL70104" Type="ID">
+	<map:cte val="2.3" xmlns:map="mapping"/>
+        </MSH.12>
+	<MSH.13 Item="13" LongName="Sequence Number" Type="NM">
+	</MSH.13>
+	<MSH.14 Item="14" LongName="Continuation Pointer" Type="ST">
+	</MSH.14>
+	<MSH.15 Item="15" LongName="Accept Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.15>
+	<MSH.16 Item="16" LongName="Application Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.16>
+	<MSH.17 Item="17" LongName="Country Code" Type="ID">
+	</MSH.17>
+	<MSH.18 Item="692" LongName="Character Set" Table="HL70211" Type="ID">
+	</MSH.18>
+	<MSH.19 Item="693" LongName="Principal Language of Message" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MSH.19>
+	
+	</MSH>
+	<MFI>
+	<MFI.1 Item="658" LongName="Master File Identifier" Table="HL70175" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFI.1>
+	<MFI.2 Item="659" LongName="Master File Application Identifier" Table="HL70176" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MFI.2>
+	<MFI.3 Item="660" LongName="File-Level Event Code" Table="HL70178" Type="ID">
+	</MFI.3>
+	<MFI.4 Item="661" LongName="Entered Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.4>
+	<MFI.5 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.5>
+	<MFI.6 Item="663" LongName="Response Level Code" Table="HL70179" Type="ID">
+	</MFI.6>
+	
+	</MFI>
+	<MFN_M07.MF_CLIN_STUDY>
+	<MFE>
+	<MFE.1 Item="664" LongName="Record-Level Event Code" Table="HL70180" Type="ID">
+	</MFE.1>
+	<MFE.2 Item="665" LongName="MFN Control ID" Type="ST">
+	</MFE.2>
+	<MFE.3 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFE.3>
+	<MFE.4 Item="667" LongName="Primary Key Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFE.4>
+	
+	</MFE>
+	<CM0>
+	<CM0.1 Item="1010" LongName="CM0 - Set ID" Type="SI">
+	</CM0.1>
+	<CM0.2 Item="1011" LongName="Sponsor Study ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</CM0.2>
+	<CM0.3 Item="1012" LongName="Alternate Study ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM0.3>
+	<CM0.4 Item="1013" LongName="Title of Study" Type="ST">
+	</CM0.4>
+	<CM0.5 Item="1014" LongName="Chairman of Study" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</CM0.5>
+	<CM0.6 Item="1015" LongName="Last IRB Approval Date" Type="DT">
+	</CM0.6>
+	<CM0.7 Item="1016" LongName="Total Accrual to Date" Type="NM">
+	</CM0.7>
+	<CM0.8 Item="1017" LongName="Last Accrual Date" Type="DT">
+	</CM0.8>
+	<CM0.9 Item="1018" LongName="Contact for Study" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</CM0.9>
+	<CM0.10 Item="1019" LongName="Contact's Tel. Number" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</CM0.10>
+	<CM0.11 Item="1020" LongName="Contact's Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</CM0.11>
+	
+	</CM0>
+	<MFN_M07.MF_PHASE_SCHED_DETAIL>
+	<CM1>
+	<CM1.1 Item="1021" LongName="CM1 - Set ID" Type="SI">
+	</CM1.1>
+	<CM1.2 Item="1051" LongName="Study Phase Identifier" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM1.2>
+	<CM1.3 Item="1023" LongName="Description of Study Phase" Type="ST">
+	</CM1.3>
+	
+	</CM1>
+	<CM2>
+	<CM2.1 Item="1024" LongName="CM2 - Set ID" Type="SI">
+	</CM2.1>
+	<CM2.2 Item="1025" LongName="Scheduled Time Point" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM2.2>
+	<CM2.3 Item="1026" LongName="Description of Time Point" Type="ST">
+	</CM2.3>
+	<CM2.4 Item="1027" LongName="Events Scheduled This Time Point" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM2.4>
+	
+	</CM2>
+	</MFN_M07.MF_PHASE_SCHED_DETAIL>
+	</MFN_M07.MF_CLIN_STUDY>
+	</MFN_M07>

@@ -12,7 +12,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.csv.CSVFormat;
@@ -24,6 +27,7 @@ import org.apache.xmlbeans.XmlException;
 import org.ini4j.Ini;
 import org.ini4j.InvalidFileFormatException;
 import org.json.JSONException;
+import org.xml.sax.SAXException;
 
 import com.mscc.mapper.utils.ZipUtil;
 import com.mscc.metaxslt.MetaXSLTTransformer;
@@ -35,6 +39,10 @@ public class ProjectHandler {
 	private String mappingProjectRoot = null;
 	private String projectFolderPath = null;
 	private MappingHandler activeMapping = null;
+	public MappingHandler getActiveMapping() {
+		return activeMapping;
+	}
+
 	public String getProjectFolderPath() {
 		Path root = Paths.get(new File(this.mappingProjectRoot).toURI());
 		//Path root = Paths.get(this.mappingProjectRoot);
@@ -252,7 +260,7 @@ public class ProjectHandler {
 			Path xslt_path_folder = Paths.get(verFolder.toURI());
 			
 			String transormer_xslt_output = xslt_path_folder.resolve("transformer.xslt").toString();
-			MetaXSLTTransformer.demo_transormer_generator(mapping_file_name, transormer_xslt_output);
+			MetaXSLTTransformer.transormer_generator(mapping_file_name, transormer_xslt_output);
 			
 			if(isPackaged){
 				ZipUtil.compress(rPath.resolve(mappingName).toString(), rPath.resolve(mappingName+".mscc").toString());
@@ -265,7 +273,7 @@ public class ProjectHandler {
 		this.activeMapping.loadSourceXSDFromXml(xmlFiles, root, NameSpace);
 	}
 	
-	public void importDestinationXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException{
+	public void importDestinationXSDFromXML(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError{
 		this.activeMapping.loadDestinationXSDFromXml(xmlFiles, root, NameSpace);
 	}
 	
@@ -273,7 +281,7 @@ public class ProjectHandler {
 		this.activeMapping.loadSourceXSDFromJson(jsonFiles, root, NameSpace);
 	}
 	
-	public void importDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException{
+	public void importDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws XmlException, IOException, JSONException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError{
 		this.activeMapping.loadDestinationXSDFromJson(jsonFiles, root, NameSpace);
 	}
 	
@@ -285,7 +293,11 @@ public class ProjectHandler {
 		this.activeMapping.loadMappingFile(mappingFile);
 	}
 	
-	public void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException{
+	public void importMappingFile(File mappingFile) throws IOException {
+		this.activeMapping.loadMappingFile(mappingFile);
+	}
+	
+	public void importDestinationXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws XmlException, IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError{
 		this.activeMapping.loadDestinationXSD(xsdFile, root, NameSpace, xsdFileDeps);
 	}
 	

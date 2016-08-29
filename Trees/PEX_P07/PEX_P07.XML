@@ -1,0 +1,4719 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PEX_P07 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MSH>
+	<MSH.1 Item="1" LongName="Field Separator" Type="ST">
+	<map:cte val="|" xmlns:map="mapping"/>
+        </MSH.1>
+	<MSH.2 Item="2" LongName="Encoding Characters" Type="ST">
+	<map:cte val="^~\&amp;" xmlns:map="mapping"/>
+        </MSH.2>
+	<MSH.3 Item="3" LongName="Sending Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.3>
+	<MSH.4 Item="4" LongName="Sending Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.4>
+	<MSH.5 Item="5" LongName="Receiving Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.5>
+	<MSH.6 Item="6" LongName="Receiving Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.6>
+	<MSH.7 Item="7" LongName="Date / Time of Message" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MSH.7>
+	<MSH.8 Item="8" LongName="Security" Type="ST">
+	</MSH.8>
+	<MSH.9 Item="9" LongName="Message Type" Type="CM">
+	<CM_MSG.1 LongName="message type" Type="ID">
+	<map:cte val="PEX" xmlns:map="mapping"/>
+            </CM_MSG.1>
+	<CM_MSG.2 LongName="trigger event" Type="ID">
+	<map:cte val="P07" xmlns:map="mapping"/>
+            </CM_MSG.2>
+	</MSH.9>
+	<MSH.10 Item="10" LongName="Message Control ID" Type="ST">
+	<map:uuid xmlns:map="mapping"/>
+        </MSH.10>
+	<MSH.11 Item="11" LongName="Processing ID" Type="PT">
+	<PT.1 LongName="processing ID" Type="ST">
+	</PT.1>
+	<PT.2 LongName="processing mode" Type="ST">
+	</PT.2>
+	</MSH.11>
+	<MSH.12 Item="12" LongName="Version ID" Table="HL70104" Type="ID">
+	<map:cte val="2.3" xmlns:map="mapping"/>
+        </MSH.12>
+	<MSH.13 Item="13" LongName="Sequence Number" Type="NM">
+	</MSH.13>
+	<MSH.14 Item="14" LongName="Continuation Pointer" Type="ST">
+	</MSH.14>
+	<MSH.15 Item="15" LongName="Accept Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.15>
+	<MSH.16 Item="16" LongName="Application Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.16>
+	<MSH.17 Item="17" LongName="Country Code" Type="ID">
+	</MSH.17>
+	<MSH.18 Item="692" LongName="Character Set" Table="HL70211" Type="ID">
+	</MSH.18>
+	<MSH.19 Item="693" LongName="Principal Language of Message" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MSH.19>
+	
+	</MSH>
+	<EVN>
+	<EVN.1 Item="99" LongName="Event Type Code" Table="HL70003" Type="ID">
+	</EVN.1>
+	<EVN.2 Item="100" LongName="Recorded Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</EVN.2>
+	<EVN.3 Item="101" LongName="Date/Time Planned Event" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</EVN.3>
+	<EVN.4 Item="102" LongName="Event Reason Code" Table="HL70062" Type="ID">
+	</EVN.4>
+	<EVN.5 Item="103" LongName="Operator ID" Table="HL70188" Type="CN">
+	<CN.1 LongName="ID number (ST)" Type="ST">
+	</CN.1>
+	<CN.2 LongName="family name" Type="ST">
+	</CN.2>
+	<CN.3 LongName="given name" Type="ST">
+	</CN.3>
+	<CN.4 LongName="middle initial or name" Type="ST">
+	</CN.4>
+	<CN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</CN.5>
+	<CN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</CN.6>
+	<CN.7 LongName="degree (e.g., MD)" Type="ST">
+	</CN.7>
+	<CN.8 LongName="source table" Type="ID">
+	</CN.8>
+	<CN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CN.9>
+	</EVN.5>
+	<EVN.6 Item="1278" LongName="Event occured" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</EVN.6>
+	
+	</EVN>
+	<PID>
+	<PID.1 Item="104" LongName="Set ID - Patient ID" Type="SI">
+	</PID.1>
+	<PID.2 Item="105" LongName="Patient ID (External ID)" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PID.2>
+	<PID.3 Item="106" LongName="Patient ID (Internal ID)" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PID.3>
+	<PID.4 Item="107" LongName="Alternate Patient ID" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PID.4>
+	<PID.5 Item="108" LongName="Patient Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</PID.5>
+	<PID.6 Item="109" LongName="Mother's Maiden Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</PID.6>
+	<PID.7 Item="110" LongName="Date of Birth" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PID.7>
+	<PID.8 Item="111" LongName="Sex" Table="HL70001" Type="IS">
+	</PID.8>
+	<PID.9 Item="112" LongName="Patient Alias" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</PID.9>
+	<PID.10 Item="113" LongName="Race" Table="HL70005" Type="IS">
+	</PID.10>
+	<PID.11 Item="114" LongName="Patient Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</PID.11>
+	<PID.12 Item="115" LongName="County Code" Type="IS">
+	</PID.12>
+	<PID.13 Item="116" LongName="Phone Number - Home" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</PID.13>
+	<PID.14 Item="117" LongName="Phone Number - Business" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</PID.14>
+	<PID.15 Item="118" LongName="Primary Language" Table="HL70296" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PID.15>
+	<PID.16 Item="119" LongName="Marital Status" Table="HL70002" Type="IS">
+	</PID.16>
+	<PID.17 Item="120" LongName="Religion" Table="HL70006" Type="IS">
+	</PID.17>
+	<PID.18 Item="121" LongName="Patient Account Number" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PID.18>
+	<PID.19 Item="122" LongName="SSN Number - Patient" Type="ST">
+	</PID.19>
+	<PID.20 Item="123" LongName="Driver's License Number" Type="DLN">
+	<DLN.1 LongName="DriverÂ´s License Number" Type="ST">
+	</DLN.1>
+	<DLN.2 LongName="Issuing State, province, country" Type="IS">
+	</DLN.2>
+	<DLN.3 LongName="expiration date" Type="DT">
+	</DLN.3>
+	</PID.20>
+	<PID.21 Item="124" LongName="Mother's Identifier" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PID.21>
+	<PID.22 Item="125" LongName="Ethnic Group" Table="HL70189" Type="IS">
+	</PID.22>
+	<PID.23 Item="126" LongName="Birth Place" Type="ST">
+	</PID.23>
+	<PID.24 Item="127" LongName="Multiple Birth Indicator" Table="HL70136" Type="ID">
+	</PID.24>
+	<PID.25 Item="128" LongName="Birth Order" Type="NM">
+	</PID.25>
+	<PID.26 Item="129" LongName="Citizenship" Table="HL70171" Type="IS">
+	</PID.26>
+	<PID.27 Item="130" LongName="Veterans Military Status" Table="HL70172" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PID.27>
+	<PID.28 Item="739" LongName="Nationality Code" Table="HL70212" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PID.28>
+	<PID.29 Item="740" LongName="Patient Death Date and Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PID.29>
+	<PID.30 Item="741" LongName="Patient Death Indicator" Table="HL70136" Type="ID">
+	</PID.30>
+	
+	</PID>
+	<PD1>
+	<PD1.1 Item="755" LongName="Living Dependency" Table="HL70223" Type="IS">
+	</PD1.1>
+	<PD1.2 Item="742" LongName="Living Arrangement" Table="HL70220" Type="IS">
+	</PD1.2>
+	<PD1.3 Item="756" LongName="Patient Primary Facility" Type="XON">
+	<XON.1 LongName="organization name" Type="ST">
+	</XON.1>
+	<XON.2 LongName="organization name type code" Type="IS">
+	</XON.2>
+	<XON.3 LongName="ID number (NM)" Type="NM">
+	</XON.3>
+	<XON.4 LongName="check digit" Type="ST">
+	</XON.4>
+	<XON.5 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XON.5>
+	<XON.6 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.6>
+	<XON.7 LongName="identifier type code" Type="IS">
+	</XON.7>
+	<XON.8 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.8>
+	</PD1.3>
+	<PD1.4 Item="757" LongName="Patient Primary Care Provider Name &amp; ID No." Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PD1.4>
+	<PD1.5 Item="745" LongName="Student Indicator" Table="HL70231" Type="IS">
+	</PD1.5>
+	<PD1.6 Item="753" LongName="Handicap" Table="HL70310" Type="IS">
+	</PD1.6>
+	<PD1.7 Item="759" LongName="Living Will" Table="HL70315" Type="IS">
+	</PD1.7>
+	<PD1.8 Item="760" LongName="Organ Donor" Table="HL70316" Type="IS">
+	</PD1.8>
+	<PD1.9 Item="761" LongName="Separate Bill" Table="HL70136" Type="ID">
+	</PD1.9>
+	<PD1.10 Item="762" LongName="Duplicate Patient" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PD1.10>
+	<PD1.11 Item="743" LongName="Publicity Indicator" Table="HL70215" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PD1.11>
+	<PD1.12 Item="744" LongName="Protection Indicator" Table="HL70136" Type="ID">
+	</PD1.12>
+	
+	</PD1>
+	<NTE>
+	<NTE.1 Item="96" LongName="Set ID - Notes and Comments" Type="SI">
+	</NTE.1>
+	<NTE.2 Item="97" LongName="Source of Comment" Table="HL70105" Type="ID">
+	</NTE.2>
+	<ns:NTE.3 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="98" LongName="Comment" Type="FT">
+	<escape V="V1">
+	</escape>
+	</ns:NTE.3>
+	
+	</NTE>
+	<PEX_P07.VISIT>
+	<PV1>
+	<PV1.1 Item="131" LongName="Set ID - Patient Visit" Type="SI">
+	</PV1.1>
+	<PV1.2 Item="132" LongName="Patient Class" Table="HL70004" Type="ID">
+	</PV1.2>
+	<PV1.3 Item="133" LongName="Assigned Patient Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV1.3>
+	<PV1.4 Item="134" LongName="Admission Type" Table="HL70007" Type="ID">
+	</PV1.4>
+	<PV1.5 Item="135" LongName="Preadmit Number" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PV1.5>
+	<PV1.6 Item="136" LongName="Prior Patient Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV1.6>
+	<PV1.7 Item="137" LongName="Attending Doctor" Table="HL70010" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV1.7>
+	<PV1.8 Item="138" LongName="Referring Doctor" Table="HL70010" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV1.8>
+	<PV1.9 Item="139" LongName="Consulting Doctor" Table="HL70010" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV1.9>
+	<PV1.10 Item="140" LongName="Hospital Service" Table="HL70069" Type="ID">
+	</PV1.10>
+	<PV1.11 Item="141" LongName="Temporary Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV1.11>
+	<PV1.12 Item="142" LongName="Preadmit Test Indicator" Table="HL70087" Type="ID">
+	</PV1.12>
+	<PV1.13 Item="143" LongName="Readmission Indicator" Table="HL70092" Type="ID">
+	</PV1.13>
+	<PV1.14 Item="144" LongName="Admit Source" Table="HL70023" Type="ID">
+	</PV1.14>
+	<PV1.15 Item="145" LongName="Ambulatory Status" Table="HL70009" Type="IS">
+	</PV1.15>
+	<PV1.16 Item="146" LongName="VIP Indicator" Table="HL70099" Type="ID">
+	</PV1.16>
+	<PV1.17 Item="147" LongName="Admitting Doctor" Table="HL70010" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV1.17>
+	<PV1.18 Item="148" LongName="Patient Type" Table="HL70018" Type="ID">
+	</PV1.18>
+	<PV1.19 Item="149" LongName="Visit Number" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PV1.19>
+	<PV1.20 Item="150" LongName="Financial Class" Table="HL70064" Type="FC">
+	<FC.1 LongName="Financial Class" Type="IS">
+	</FC.1>
+	<FC.2 LongName="Effective Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</FC.2>
+	</PV1.20>
+	<PV1.21 Item="151" LongName="Charge Price Indicator" Table="HL70032" Type="ID">
+	</PV1.21>
+	<PV1.22 Item="152" LongName="Courtesy Code" Table="HL70045" Type="ID">
+	</PV1.22>
+	<PV1.23 Item="153" LongName="Credit Rating" Table="HL70046" Type="ID">
+	</PV1.23>
+	<PV1.24 Item="154" LongName="Contract Code" Table="HL70044" Type="ID">
+	</PV1.24>
+	<PV1.25 Item="155" LongName="Contract Effective Date" Type="DT">
+	</PV1.25>
+	<PV1.26 Item="156" LongName="Contract Amount" Type="NM">
+	</PV1.26>
+	<PV1.27 Item="157" LongName="Contract Period" Type="NM">
+	</PV1.27>
+	<PV1.28 Item="158" LongName="Interest Code" Table="HL70073" Type="ID">
+	</PV1.28>
+	<PV1.29 Item="159" LongName="Transfer to Bad Debt Code" Table="HL70110" Type="ID">
+	</PV1.29>
+	<PV1.30 Item="160" LongName="Transfer to Bad Debt Date" Type="DT">
+	</PV1.30>
+	<PV1.31 Item="161" LongName="Bad Debt Agency Code" Table="HL70021" Type="ID">
+	</PV1.31>
+	<PV1.32 Item="162" LongName="Bad Debt Transfer Amount" Type="NM">
+	</PV1.32>
+	<PV1.33 Item="163" LongName="Bad Debt Recovery Amount" Type="NM">
+	</PV1.33>
+	<PV1.34 Item="164" LongName="Delete Account Indicator" Table="HL70111" Type="ID">
+	</PV1.34>
+	<PV1.35 Item="165" LongName="Delete Account Date" Type="DT">
+	</PV1.35>
+	<PV1.36 Item="166" LongName="Discharge Disposition" Table="HL70112" Type="ID">
+	</PV1.36>
+	<PV1.37 Item="167" LongName="Discharged to Location" Table="HL70113" Type="CM">
+	<CM_DLD.1 LongName="discharge location" Type="ID">
+	</CM_DLD.1>
+	<CM_DLD.2 LongName="effective date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CM_DLD.2>
+	</PV1.37>
+	<PV1.38 Item="168" LongName="Diet Type" Table="HL70114" Type="ID">
+	</PV1.38>
+	<PV1.39 Item="169" LongName="Servicing Facility" Table="HL70115" Type="ID">
+	</PV1.39>
+	<PV1.40 Item="170" LongName="Bed Status" Table="HL70116" Type="IS">
+	</PV1.40>
+	<PV1.41 Item="171" LongName="Account Status" Table="HL70117" Type="ID">
+	</PV1.41>
+	<PV1.42 Item="172" LongName="Pending Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV1.42>
+	<PV1.43 Item="173" LongName="Prior Temporary Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV1.43>
+	<PV1.44 Item="174" LongName="Admit Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PV1.44>
+	<PV1.45 Item="175" LongName="Discharge Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PV1.45>
+	<PV1.46 Item="176" LongName="Current Patient Balance" Type="NM">
+	</PV1.46>
+	<PV1.47 Item="177" LongName="Total Charges" Type="NM">
+	</PV1.47>
+	<PV1.48 Item="178" LongName="Total Adjustments" Type="NM">
+	</PV1.48>
+	<PV1.49 Item="179" LongName="Total Payments" Type="NM">
+	</PV1.49>
+	<PV1.50 Item="180" LongName="Alternate Visit ID" Table="HL70192" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</PV1.50>
+	<PV1.51 Item="1226" LongName="Visit Indicator" Table="HL70326" Type="IS">
+	</PV1.51>
+	<PV1.52 Item="1274" LongName="Other Healthcare Provider" Table="HL70010" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV1.52>
+	
+	</PV1>
+	<PV2>
+	<PV2.1 Item="181" LongName="Prior Pending Location" Type="PL">
+	<PL.1 LongName="point of care (ID)" Type="ID">
+	</PL.1>
+	<PL.2 LongName="room" Type="IS">
+	</PL.2>
+	<PL.3 LongName="bed" Type="IS">
+	</PL.3>
+	<PL.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</PL.4>
+	<PL.5 LongName="location status" Type="IS">
+	</PL.5>
+	<PL.6 LongName="person location type" Type="IS">
+	</PL.6>
+	<PL.7 LongName="building" Type="IS">
+	</PL.7>
+	<PL.8 LongName="floor" Type="ST">
+	</PL.8>
+	<PL.9 LongName="Location type" Type="ST">
+	</PL.9>
+	</PV2.1>
+	<PV2.2 Item="182" LongName="Accommodation Code" Table="HL70129" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PV2.2>
+	<PV2.3 Item="183" LongName="Admit Reason" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PV2.3>
+	<PV2.4 Item="184" LongName="Transfer Reason" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PV2.4>
+	<PV2.5 Item="185" LongName="Patient Valuables" Type="ST">
+	</PV2.5>
+	<PV2.6 Item="186" LongName="Patient Valuables Location" Type="ST">
+	</PV2.6>
+	<PV2.7 Item="187" LongName="Visit User Code" Table="HL70130" Type="IS">
+	</PV2.7>
+	<PV2.8 Item="188" LongName="Expected Admit Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PV2.8>
+	<PV2.9 Item="189" LongName="Expected Discharge Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PV2.9>
+	<PV2.10 Item="711" LongName="Estimated Length of Inpatient Stay" Type="NM">
+	</PV2.10>
+	<PV2.11 Item="712" LongName="Actual Length of Inpatient Stay" Type="NM">
+	</PV2.11>
+	<PV2.12 Item="713" LongName="Visit Description" Type="ST">
+	</PV2.12>
+	<PV2.13 Item="714" LongName="Referral Source Code" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PV2.13>
+	<PV2.14 Item="715" LongName="Previous Service Date" Type="DT">
+	</PV2.14>
+	<PV2.15 Item="716" LongName="Employment Illness Related Indicator" Table="HL70136" Type="ID">
+	</PV2.15>
+	<PV2.16 Item="717" LongName="Purge Status Code" Table="HL70213" Type="IS">
+	</PV2.16>
+	<PV2.17 Item="718" LongName="Purge Status Date" Type="DT">
+	</PV2.17>
+	<PV2.18 Item="719" LongName="Special Program Code" Table="HL70214" Type="IS">
+	</PV2.18>
+	<PV2.19 Item="720" LongName="Retention Indicator" Table="HL70136" Type="ID">
+	</PV2.19>
+	<PV2.20 Item="721" LongName="Expected Number of Insurance Plans" Type="NM">
+	</PV2.20>
+	<PV2.21 Item="722" LongName="Visit Publicity Code" Table="HL70215" Type="IS">
+	</PV2.21>
+	<PV2.22 Item="723" LongName="Visit Protection Indicator" Table="HL70136" Type="ID">
+	</PV2.22>
+	<PV2.23 Item="724" LongName="Clinic Organization Name" Type="XON">
+	<XON.1 LongName="organization name" Type="ST">
+	</XON.1>
+	<XON.2 LongName="organization name type code" Type="IS">
+	</XON.2>
+	<XON.3 LongName="ID number (NM)" Type="NM">
+	</XON.3>
+	<XON.4 LongName="check digit" Type="ST">
+	</XON.4>
+	<XON.5 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XON.5>
+	<XON.6 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.6>
+	<XON.7 LongName="identifier type code" Type="IS">
+	</XON.7>
+	<XON.8 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.8>
+	</PV2.23>
+	<PV2.24 Item="725" LongName="Patient Status Code" Table="HL70216" Type="IS">
+	</PV2.24>
+	<PV2.25 Item="726" LongName="Visit Priority Code" Table="HL70217" Type="IS">
+	</PV2.25>
+	<PV2.26 Item="727" LongName="Previous Treatment Date" Type="DT">
+	</PV2.26>
+	<PV2.27 Item="728" LongName="Expected Discharge Disposition" Table="HL70112" Type="IS">
+	</PV2.27>
+	<PV2.28 Item="729" LongName="Signature on File Date" Type="DT">
+	</PV2.28>
+	<PV2.29 Item="730" LongName="First Similar Illness Date" Type="DT">
+	</PV2.29>
+	<PV2.30 Item="731" LongName="Patient Charge Adjustment Code" Table="HL70218" Type="IS">
+	</PV2.30>
+	<PV2.31 Item="732" LongName="Recurring Service Code" Table="HL70219" Type="IS">
+	</PV2.31>
+	<PV2.32 Item="733" LongName="Billing Media Code" Table="HL70136" Type="ID">
+	</PV2.32>
+	<PV2.33 Item="734" LongName="Expected Surgery Date &amp; Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PV2.33>
+	<PV2.34 Item="735" LongName="Military Partnership Code" Table="HL70136" Type="ID">
+	</PV2.34>
+	<PV2.35 Item="736" LongName="Military Non-Availabiltiy Code" Table="HL70136" Type="ID">
+	</PV2.35>
+	<PV2.36 Item="737" LongName="Newborn Baby Indicator" Table="HL70136" Type="ID">
+	</PV2.36>
+	<PV2.37 Item="738" LongName="Baby Detained Indicator" Table="HL70136" Type="ID">
+	</PV2.37>
+	
+	</PV2>
+	</PEX_P07.VISIT>
+	<PEX_P07.EXPERIENCE>
+	<PES>
+	<PES.1 Item="1059" LongName="Sender Organization Name" Type="XON">
+	<XON.1 LongName="organization name" Type="ST">
+	</XON.1>
+	<XON.2 LongName="organization name type code" Type="IS">
+	</XON.2>
+	<XON.3 LongName="ID number (NM)" Type="NM">
+	</XON.3>
+	<XON.4 LongName="check digit" Type="ST">
+	</XON.4>
+	<XON.5 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XON.5>
+	<XON.6 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.6>
+	<XON.7 LongName="identifier type code" Type="IS">
+	</XON.7>
+	<XON.8 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.8>
+	</PES.1>
+	<PES.2 Item="1060" LongName="Sender Individual Name" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</PES.2>
+	<PES.3 Item="1062" LongName="Sender Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</PES.3>
+	<PES.4 Item="1063" LongName="Sender Telephone" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</PES.4>
+	<PES.5 Item="1064" LongName="Sender Event Identifier" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</PES.5>
+	<PES.6 Item="1065" LongName="Sender Sequence Number" Type="NM">
+	</PES.6>
+	<ns:PES.7 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1066" LongName="Sender Event Description" Type="FT">
+	<escape V="V2">
+	</escape>
+	</ns:PES.7>
+	<ns:PES.8 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1067" LongName="Sender Comment" Type="FT">
+	<escape V="V3">
+	</escape>
+	</ns:PES.8>
+	<PES.9 Item="1068" LongName="Sender Aware Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PES.9>
+	<PES.10 Item="1069" LongName="Event Report Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PES.10>
+	<PES.11 Item="1070" LongName="Event Report Timing/Type" Table="HL70234" Type="ID">
+	</PES.11>
+	<PES.12 Item="1071" LongName="Event Report Source" Table="HL70235" Type="ID">
+	</PES.12>
+	<PES.13 Item="1072" LongName="Event Reported To" Table="HL70236" Type="ID">
+	</PES.13>
+	
+	</PES>
+	<PEX_P07.PEX_OBSERVATION>
+	<PEO>
+	<PEO.1 Item="1073" LongName="Event Identifiers Used" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PEO.1>
+	<PEO.2 Item="1074" LongName="Event Symptom/Diagnosis Code" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PEO.2>
+	<PEO.3 Item="1075" LongName="Event Onset Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PEO.3>
+	<PEO.4 Item="1076" LongName="Event Exacerbation Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PEO.4>
+	<PEO.5 Item="1077" LongName="Event Improved Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PEO.5>
+	<PEO.6 Item="1078" LongName="Event Ended Data/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PEO.6>
+	<PEO.7 Item="1079" LongName="Event Location Occurred Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</PEO.7>
+	<PEO.8 Item="1080" LongName="Event Qualification" Table="HL70237" Type="ID">
+	</PEO.8>
+	<PEO.9 Item="1081" LongName="Event Serious" Table="HL70238" Type="ID">
+	</PEO.9>
+	<PEO.10 Item="1082" LongName="Event Expected" Table="HL70239" Type="ID">
+	</PEO.10>
+	<PEO.11 Item="1083" LongName="Event Outcome" Table="HL70240" Type="ID">
+	</PEO.11>
+	<PEO.12 Item="1084" LongName="Patient Outcome" Table="HL70241" Type="ID">
+	</PEO.12>
+	<ns:PEO.13 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1085" LongName="Event Description From Others" Type="FT">
+	<escape V="V4">
+	</escape>
+	</ns:PEO.13>
+	<ns:PEO.14 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1086" LongName="Event From Original Reporter" Type="FT">
+	<escape V="V5">
+	</escape>
+	</ns:PEO.14>
+	<ns:PEO.15 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1087" LongName="Event Description From Patient" Type="FT">
+	<escape V="V6">
+	</escape>
+	</ns:PEO.15>
+	<ns:PEO.16 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1088" LongName="Event Description From Practitioner" Type="FT">
+	<escape V="V7">
+	</escape>
+	</ns:PEO.16>
+	<ns:PEO.17 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="1089" LongName="Event Description From Autopsy" Type="FT">
+	<escape V="V8">
+	</escape>
+	</ns:PEO.17>
+	<PEO.18 Item="1090" LongName="Cause Of Death" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PEO.18>
+	<PEO.19 Item="1091" LongName="Primary Observer Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</PEO.19>
+	<PEO.20 Item="1092" LongName="Primary Observer Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</PEO.20>
+	<PEO.21 Item="1093" LongName="Primary Observer Telephone" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</PEO.21>
+	<PEO.22 Item="1094" LongName="Primary Observerâ€™s Qualification" Table="HL70242" Type="ID">
+	</PEO.22>
+	<PEO.23 Item="1095" LongName="Confirmation Provided By" Table="HL70242" Type="ID">
+	</PEO.23>
+	<PEO.24 Item="1096" LongName="Primary Observer Aware Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PEO.24>
+	<PEO.25 Item="1097" LongName="Primary Observerâ€™s Identity May Be Divulged" Table="HL70243" Type="ID">
+	</PEO.25>
+	
+	</PEO>
+	<PEX_P07.PEX_CAUSE>
+	<PCR>
+	<PCR.1 Item="1098" LongName="Implicated Product" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.1>
+	<PCR.2 Item="1099" LongName="Generic Product" Table="HL70249" Type="IS">
+	</PCR.2>
+	<PCR.3 Item="1100" LongName="Product Class" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.3>
+	<PCR.4 Item="1101" LongName="Total Duration Of Therapy" Type="CQ">
+	<CQ.1 LongName="quantity" Type="NM">
+	</CQ.1>
+	<CQ.2 LongName="units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CQ.2>
+	</PCR.4>
+	<PCR.5 Item="1102" LongName="Product Manufacture Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PCR.5>
+	<PCR.6 Item="1103" LongName="Product Expiration Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PCR.6>
+	<PCR.7 Item="1104" LongName="Product Implantation Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PCR.7>
+	<PCR.8 Item="1105" LongName="Product Explantation Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PCR.8>
+	<PCR.9 Item="1106" LongName="Single Use Device" Table="HL70244" Type="IS">
+	</PCR.9>
+	<PCR.10 Item="1107" LongName="Indication For Product Use" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.10>
+	<PCR.11 Item="1108" LongName="Product Problem" Table="HL70245" Type="IS">
+	</PCR.11>
+	<PCR.12 Item="1109" LongName="Product Serial/Lot Number" Type="ST">
+	</PCR.12>
+	<PCR.13 Item="1110" LongName="Product Available For Inspection" Table="HL70246" Type="IS">
+	</PCR.13>
+	<PCR.14 Item="1111" LongName="Product Evaluation Performed" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.14>
+	<PCR.15 Item="1112" LongName="Product Evaluation Status" Table="HL70247" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.15>
+	<PCR.16 Item="1113" LongName="Product Evaluation Results" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PCR.16>
+	<PCR.17 Item="1114" LongName="Evaluated Product Source" Table="HL70248" Type="ID">
+	</PCR.17>
+	<PCR.18 Item="1115" LongName="Date Product Returned To Manufacturer" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PCR.18>
+	<PCR.19 Item="1116" LongName="Device Operator Qualifications" Table="HL70242" Type="ID">
+	</PCR.19>
+	<PCR.20 Item="1117" LongName="Relatedness Assessment" Table="HL70250" Type="ID">
+	</PCR.20>
+	<PCR.21 Item="1118" LongName="Action Taken In Response To The Event" Table="HL70251" Type="ID">
+	</PCR.21>
+	<PCR.22 Item="1119" LongName="Event Causality Observations" Table="HL70232" Type="ID">
+	</PCR.22>
+	<PCR.23 Item="1120" LongName="Indirect Exposure Mechanism" Table="HL70253" Type="ID">
+	</PCR.23>
+	
+	</PCR>
+	<PEX_P07.RX_ORDER>
+	<RXE>
+	<RXE.1 Item="221" LongName="Quantity/Timing" Type="TQ">
+	<TQ.1 LongName="quantity" Type="CQ">
+	<CQ.1 LongName="quantity" Type="NM">
+	</CQ.1>
+	<CQ.2 LongName="units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CQ.2>
+	</TQ.1>
+	<TQ.2 LongName="interval" Type="CM">
+	<CM_RI.1 LongName="repeat pattern" Type="IS">
+	</CM_RI.1>
+	<CM_RI.2 LongName="explicit time interval" Type="ST">
+	</CM_RI.2>
+	</TQ.2>
+	<TQ.3 LongName="duration" Type="ST">
+	</TQ.3>
+	<TQ.4 LongName="start date/time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</TQ.4>
+	<TQ.5 LongName="end date/time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</TQ.5>
+	<TQ.6 LongName="priority" Type="ST">
+	</TQ.6>
+	<TQ.7 LongName="condition" Type="ST">
+	</TQ.7>
+	<ns:TQ.8 xmlns="" xmlns:ns="urn:hl7-org:v2xml" LongName="text (TX)" Type="TX">
+	<escape V="V9">
+	</escape>
+	</ns:TQ.8>
+	<TQ.9 LongName="conjunction" Type="ST">
+	</TQ.9>
+	<TQ.10 LongName="order sequencing" Type="CM">
+	</TQ.10>
+	</RXE.1>
+	<RXE.2 Item="317" LongName="Give Code" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.2>
+	<RXE.3 Item="318" LongName="Give Amount - Minimum" Type="NM">
+	</RXE.3>
+	<RXE.4 Item="319" LongName="Give Amount - Maximum" Type="NM">
+	</RXE.4>
+	<RXE.5 Item="320" LongName="Give Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.5>
+	<RXE.6 Item="321" LongName="Give Dosage Form" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.6>
+	<RXE.7 Item="298" LongName="Provider's Administration Instructions" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.7>
+	<RXE.8 Item="299" LongName="Deliver To Location" Type="CM">
+	<CM_LA1.1 LongName="point of care (ST)" Type="ST">
+	</CM_LA1.1>
+	<CM_LA1.2 LongName="room" Type="IS">
+	</CM_LA1.2>
+	<CM_LA1.3 LongName="bed" Type="IS">
+	</CM_LA1.3>
+	<CM_LA1.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CM_LA1.4>
+	<CM_LA1.5 LongName="location status" Type="IS">
+	</CM_LA1.5>
+	<CM_LA1.6 LongName="person location type" Type="IS">
+	</CM_LA1.6>
+	<CM_LA1.7 LongName="building" Type="IS">
+	</CM_LA1.7>
+	<CM_LA1.8 LongName="floor" Type="ST">
+	</CM_LA1.8>
+	<CM_LA1.9 LongName="street address" Type="ST">
+	</CM_LA1.9>
+	<CM_LA1.10 LongName="other designation" Type="ST">
+	</CM_LA1.10>
+	<CM_LA1.11 LongName="city" Type="ST">
+	</CM_LA1.11>
+	<CM_LA1.12 LongName="state or province" Type="ST">
+	</CM_LA1.12>
+	<CM_LA1.13 LongName="zip or postal code" Type="ST">
+	</CM_LA1.13>
+	<CM_LA1.14 LongName="country" Type="ID">
+	</CM_LA1.14>
+	<CM_LA1.15 LongName="address type" Type="ID">
+	</CM_LA1.15>
+	<CM_LA1.16 LongName="other geographic designation" Type="ST">
+	</CM_LA1.16>
+	</RXE.8>
+	<RXE.9 Item="322" LongName="Substitution Status" Table="HL70167" Type="ID">
+	</RXE.9>
+	<RXE.10 Item="323" LongName="Dispense Amount" Type="NM">
+	</RXE.10>
+	<RXE.11 Item="324" LongName="Dispense Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.11>
+	<RXE.12 Item="304" LongName="Number of Refills" Type="NM">
+	</RXE.12>
+	<RXE.13 Item="305" LongName="Ordering Provider's DEA Number" Type="CN">
+	<CN.1 LongName="ID number (ST)" Type="ST">
+	</CN.1>
+	<CN.2 LongName="family name" Type="ST">
+	</CN.2>
+	<CN.3 LongName="given name" Type="ST">
+	</CN.3>
+	<CN.4 LongName="middle initial or name" Type="ST">
+	</CN.4>
+	<CN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</CN.5>
+	<CN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</CN.6>
+	<CN.7 LongName="degree (e.g., MD)" Type="ST">
+	</CN.7>
+	<CN.8 LongName="source table" Type="ID">
+	</CN.8>
+	<CN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CN.9>
+	</RXE.13>
+	<RXE.14 Item="306" LongName="Pharmacist/Treatment Supplier's Verifier ID" Type="CN">
+	<CN.1 LongName="ID number (ST)" Type="ST">
+	</CN.1>
+	<CN.2 LongName="family name" Type="ST">
+	</CN.2>
+	<CN.3 LongName="given name" Type="ST">
+	</CN.3>
+	<CN.4 LongName="middle initial or name" Type="ST">
+	</CN.4>
+	<CN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</CN.5>
+	<CN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</CN.6>
+	<CN.7 LongName="degree (e.g., MD)" Type="ST">
+	</CN.7>
+	<CN.8 LongName="source table" Type="ID">
+	</CN.8>
+	<CN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CN.9>
+	</RXE.14>
+	<RXE.15 Item="325" LongName="Prescription Number" Type="ST">
+	</RXE.15>
+	<RXE.16 Item="326" LongName="Number of Refills Remaining" Type="NM">
+	</RXE.16>
+	<RXE.17 Item="327" LongName="Number of Refills/Doses Dispensed" Type="NM">
+	</RXE.17>
+	<RXE.18 Item="328" LongName="Date / time of most recent refill or dose dispensed" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXE.18>
+	<RXE.19 Item="329" LongName="Total Daily Dose" Type="CQ">
+	<CQ.1 LongName="quantity" Type="NM">
+	</CQ.1>
+	<CQ.2 LongName="units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CQ.2>
+	</RXE.19>
+	<RXE.20 Item="307" LongName="Needs Human Review" Table="HL70136" Type="ID">
+	</RXE.20>
+	<RXE.21 Item="330" LongName="Pharmacy/Treatment Supplier's Special Dispensing Instructions" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.21>
+	<RXE.22 Item="331" LongName="Give Per (Time Unit)" Type="ST">
+	</RXE.22>
+	<RXE.23 Item="332" LongName="Give Rate Amount" Type="ST">
+	</RXE.23>
+	<RXE.24 Item="333" LongName="Give Rate Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.24>
+	<RXE.25 Item="1126" LongName="Give Strength" Type="NM">
+	</RXE.25>
+	<RXE.26 Item="1127" LongName="Give Strength Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.26>
+	<RXE.27 Item="1128" LongName="Give Indication" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.27>
+	<RXE.28 Item="1220" LongName="Dispense Package Size" Type="NM">
+	</RXE.28>
+	<RXE.29 Item="1221" LongName="Dispense Package Size Unit" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.29>
+	<RXE.30 Item="1222" LongName="Dispense Package Method" Table="HL70321" Type="ID">
+	</RXE.30>
+	
+	</RXE>
+	<RXR>
+	<RXR.1 Item="309" LongName="Route" Table="HL70162" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.1>
+	<RXR.2 Item="310" LongName="Site" Table="HL70163" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.2>
+	<RXR.3 Item="311" LongName="Administration Device" Table="HL70164" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.3>
+	<RXR.4 Item="312" LongName="Administration Method" Table="HL70165" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.4>
+	
+	</RXR>
+	</PEX_P07.RX_ORDER>
+	<PEX_P07.RX_ADMINISTRATION>
+	<RXA>
+	<RXA.1 Item="342" LongName="Give Sub-ID Counter" Type="ID">
+	</RXA.1>
+	<RXA.2 Item="344" LongName="Administration Sub-ID Counter" Type="NM">
+	</RXA.2>
+	<RXA.3 Item="345" LongName="Date/Time Start of Administration" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.3>
+	<RXA.4 Item="346" LongName="Date/Time End of Administration" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.4>
+	<RXA.5 Item="347" LongName="Administered Code" Table="HL70292" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.5>
+	<RXA.6 Item="348" LongName="Administered Amount" Type="NM">
+	</RXA.6>
+	<RXA.7 Item="349" LongName="Administered Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.7>
+	<RXA.8 Item="350" LongName="Administered Dosage Form" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.8>
+	<RXA.9 Item="351" LongName="Administration Notes" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.9>
+	<RXA.10 Item="352" LongName="Administering Provider" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</RXA.10>
+	<RXA.11 Item="353" LongName="Administered-at Location" Type="CM">
+	<CM_LA1.1 LongName="point of care (ST)" Type="ST">
+	</CM_LA1.1>
+	<CM_LA1.2 LongName="room" Type="IS">
+	</CM_LA1.2>
+	<CM_LA1.3 LongName="bed" Type="IS">
+	</CM_LA1.3>
+	<CM_LA1.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CM_LA1.4>
+	<CM_LA1.5 LongName="location status" Type="IS">
+	</CM_LA1.5>
+	<CM_LA1.6 LongName="person location type" Type="IS">
+	</CM_LA1.6>
+	<CM_LA1.7 LongName="building" Type="IS">
+	</CM_LA1.7>
+	<CM_LA1.8 LongName="floor" Type="ST">
+	</CM_LA1.8>
+	<CM_LA1.9 LongName="street address" Type="ST">
+	</CM_LA1.9>
+	<CM_LA1.10 LongName="other designation" Type="ST">
+	</CM_LA1.10>
+	<CM_LA1.11 LongName="city" Type="ST">
+	</CM_LA1.11>
+	<CM_LA1.12 LongName="state or province" Type="ST">
+	</CM_LA1.12>
+	<CM_LA1.13 LongName="zip or postal code" Type="ST">
+	</CM_LA1.13>
+	<CM_LA1.14 LongName="country" Type="ID">
+	</CM_LA1.14>
+	<CM_LA1.15 LongName="address type" Type="ID">
+	</CM_LA1.15>
+	<CM_LA1.16 LongName="other geographic designation" Type="ST">
+	</CM_LA1.16>
+	</RXA.11>
+	<RXA.12 Item="354" LongName="Administered Per (Time Unit)" Type="ST">
+	</RXA.12>
+	<RXA.13 Item="1134" LongName="Administered Strength" Type="NM">
+	</RXA.13>
+	<RXA.14 Item="1135" LongName="Administered Strength Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.14>
+	<RXA.15 Item="1129" LongName="Substance Lot Number" Type="ST">
+	</RXA.15>
+	<RXA.16 Item="1130" LongName="Substance Expiration Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.16>
+	<RXA.17 Item="1131" LongName="Substance Manufacturer Name" Table="HL70227" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.17>
+	<RXA.18 Item="1136" LongName="Substance Refusal Reason" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.18>
+	<RXA.19 Item="1123" LongName="Indication" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.19>
+	<RXA.20 Item="1223" LongName="Completion Status" Table="HL70322" Type="ID">
+	</RXA.20>
+	<RXA.21 Item="1224" LongName="Action Code-RXA" Table="HL70323" Type="ID">
+	</RXA.21>
+	<RXA.22 Item="1225" LongName="System Entry Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.22>
+	
+	</RXA>
+	<RXR>
+	<RXR.1 Item="309" LongName="Route" Table="HL70162" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.1>
+	<RXR.2 Item="310" LongName="Site" Table="HL70163" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.2>
+	<RXR.3 Item="311" LongName="Administration Device" Table="HL70164" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.3>
+	<RXR.4 Item="312" LongName="Administration Method" Table="HL70165" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.4>
+	
+	</RXR>
+	</PEX_P07.RX_ADMINISTRATION>
+	<PRB>
+	<PRB.1 Item="816" LongName="Action Code" Table="HL70287" Type="ID">
+	</PRB.1>
+	<PRB.2 Item="817" LongName="Action Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.2>
+	<PRB.3 Item="838" LongName="Problem ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.3>
+	<PRB.4 Item="839" LongName="Problem Instance ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</PRB.4>
+	<PRB.5 Item="820" LongName="Episode of Care ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</PRB.5>
+	<PRB.6 Item="841" LongName="Problem List Priority" Type="NM">
+	</PRB.6>
+	<PRB.7 Item="842" LongName="Problem Established Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.7>
+	<PRB.8 Item="843" LongName="Anticipated Problem Resolution Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.8>
+	<PRB.9 Item="844" LongName="Actual Problem Resolution Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.9>
+	<PRB.10 Item="845" LongName="Problem Classification" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.10>
+	<PRB.11 Item="846" LongName="Problem Management Discipline" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.11>
+	<PRB.12 Item="847" LongName="Problem Persistence" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.12>
+	<PRB.13 Item="848" LongName="Problem Confirmation Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.13>
+	<PRB.14 Item="849" LongName="Problem Life Cycle Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.14>
+	<PRB.15 Item="850" LongName="Problem Life Cycle Status Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.15>
+	<PRB.16 Item="851" LongName="Problem Date of Onset" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.16>
+	<PRB.17 Item="852" LongName="Problem Onset Text" Type="ST">
+	</PRB.17>
+	<PRB.18 Item="853" LongName="Problem Ranking" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.18>
+	<PRB.19 Item="854" LongName="Certainty of Problem" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.19>
+	<PRB.20 Item="855" LongName="Probability of Problem (0-1)" Type="NM">
+	</PRB.20>
+	<PRB.21 Item="856" LongName="Individual Awareness of Problem" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.21>
+	<PRB.22 Item="857" LongName="Problem Prognosis" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.22>
+	<PRB.23 Item="858" LongName="Individual Awareness of Prognosis" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.23>
+	<PRB.24 Item="859" LongName="Family/Significant Other Awareness of Problem/Prognosis" Type="ST">
+	</PRB.24>
+	<PRB.25 Item="823" LongName="Security/Sensitivity" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.25>
+	
+	</PRB>
+	<OBX>
+	<OBX.1 Item="569" LongName="Set ID - OBX" Type="SI">
+	</OBX.1>
+	<OBX.2 Item="570" LongName="Value Type" Table="HL70125" Type="ID">
+	</OBX.2>
+	<OBX.3 Item="571" LongName="Observation Identifier" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.3>
+	<OBX.4 Item="572" LongName="Observation Sub-ID" Type="ST">
+	</OBX.4>
+	<OBX.5 xmlns:ns="anyNS" Item="573" LongName="Observation Value" Type="*" anyAttr="anyValue">
+	
+	</OBX.5>
+	<OBX.6 Item="574" LongName="Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.6>
+	<OBX.7 Item="575" LongName="References Range" Type="ST">
+	</OBX.7>
+	<OBX.8 Item="576" LongName="Abnormal Flags" Table="HL70078" Type="ID">
+	</OBX.8>
+	<OBX.9 Item="577" LongName="Probability" Type="NM">
+	</OBX.9>
+	<OBX.10 Item="578" LongName="Nature of Abnormal Test" Table="HL70080" Type="ID">
+	</OBX.10>
+	<OBX.11 Item="579" LongName="Observ Result Status" Table="HL70085" Type="ID">
+	</OBX.11>
+	<OBX.12 Item="580" LongName="Date Last Obs Normal Values" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OBX.12>
+	<OBX.13 Item="581" LongName="User Defined Access Checks" Type="ST">
+	</OBX.13>
+	<OBX.14 Item="582" LongName="Date/Time of the Observation" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OBX.14>
+	<OBX.15 Item="583" LongName="Producer's ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.15>
+	<OBX.16 Item="584" LongName="Responsible Observer" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</OBX.16>
+	<OBX.17 Item="936" LongName="Observation Method" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.17>
+	
+	</OBX>
+	<NTE>
+	<NTE.1 Item="96" LongName="Set ID - Notes and Comments" Type="SI">
+	</NTE.1>
+	<NTE.2 Item="97" LongName="Source of Comment" Table="HL70105" Type="ID">
+	</NTE.2>
+	<ns:NTE.3 xmlns="" xmlns:ns="urn:hl7-org:v2xml" Item="98" LongName="Comment" Type="FT">
+	<escape V="V10">
+	</escape>
+	</ns:NTE.3>
+	
+	</NTE>
+	<PEX_P07.ASSOCIATED_PERSON>
+	<NK1>
+	<NK1.1 Item="190" LongName="Set ID - Next of Kin" Type="SI">
+	</NK1.1>
+	<NK1.2 Item="191" LongName="Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</NK1.2>
+	<NK1.3 Item="192" LongName="Relationship" Table="HL70063" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.3>
+	<NK1.4 Item="193" LongName="Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</NK1.4>
+	<NK1.5 Item="194" LongName="Phone Number" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</NK1.5>
+	<NK1.6 Item="195" LongName="Business Phone Number" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</NK1.6>
+	<NK1.7 Item="196" LongName="Contact Role" Table="HL70131" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.7>
+	<NK1.8 Item="197" LongName="Start Date" Type="DT">
+	</NK1.8>
+	<NK1.9 Item="198" LongName="End Date" Type="DT">
+	</NK1.9>
+	<NK1.10 Item="199" LongName="Next of Kin/Associated Parties Job Title" Type="ST">
+	</NK1.10>
+	<NK1.11 Item="200" LongName="Next of Kin Job/Associated Parties Code/Class" Type="JCC">
+	<JCC.1 LongName="job code" Type="IS">
+	</JCC.1>
+	<JCC.2 LongName="job class" Type="IS">
+	</JCC.2>
+	</NK1.11>
+	<NK1.12 Item="201" LongName="Next of Kin/Associated Parties Employee Number" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</NK1.12>
+	<NK1.13 Item="202" LongName="Organization Name" Type="XON">
+	<XON.1 LongName="organization name" Type="ST">
+	</XON.1>
+	<XON.2 LongName="organization name type code" Type="IS">
+	</XON.2>
+	<XON.3 LongName="ID number (NM)" Type="NM">
+	</XON.3>
+	<XON.4 LongName="check digit" Type="ST">
+	</XON.4>
+	<XON.5 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XON.5>
+	<XON.6 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.6>
+	<XON.7 LongName="identifier type code" Type="IS">
+	</XON.7>
+	<XON.8 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XON.8>
+	</NK1.13>
+	<NK1.14 Item="119" LongName="Marital Status" Table="HL70002" Type="IS">
+	</NK1.14>
+	<NK1.15 Item="111" LongName="Sex" Table="HL70001" Type="IS">
+	</NK1.15>
+	<NK1.16 Item="110" LongName="Date of Birth" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</NK1.16>
+	<NK1.17 Item="755" LongName="Living Dependency" Table="HL70223" Type="IS">
+	</NK1.17>
+	<NK1.18 Item="145" LongName="Ambulatory Status" Table="HL70009" Type="IS">
+	</NK1.18>
+	<NK1.19 Item="129" LongName="Citizenship" Table="HL70171" Type="IS">
+	</NK1.19>
+	<NK1.20 Item="118" LongName="Primary Language" Table="HL70296" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.20>
+	<NK1.21 Item="742" LongName="Living Arrangement" Table="HL70220" Type="IS">
+	</NK1.21>
+	<NK1.22 Item="743" LongName="Publicity Indicator" Table="HL70215" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.22>
+	<NK1.23 Item="744" LongName="Protection Indicator" Table="HL70136" Type="ID">
+	</NK1.23>
+	<NK1.24 Item="745" LongName="Student Indicator" Table="HL70231" Type="IS">
+	</NK1.24>
+	<NK1.25 Item="120" LongName="Religion" Table="HL70006" Type="IS">
+	</NK1.25>
+	<NK1.26 Item="746" LongName="Motherâ€™s Maiden Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</NK1.26>
+	<NK1.27 Item="739" LongName="Nationality Code" Table="HL70212" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.27>
+	<NK1.28 Item="125" LongName="Ethnic Group" Table="HL70189" Type="IS">
+	</NK1.28>
+	<NK1.29 Item="747" LongName="Contact Reason" Table="HL70222" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</NK1.29>
+	<NK1.30 Item="748" LongName="Contact Person's Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</NK1.30>
+	<NK1.31 Item="749" LongName="Contact Personâ€™s Telephone Number" Type="XTN">
+	<XTN.1 LongName="[(999)] 999-9999 [X99999][C any text]" Type="TN">
+	</XTN.1>
+	<XTN.2 LongName="telecommunication use code" Type="ID">
+	</XTN.2>
+	<XTN.3 LongName="telecommunication equipment type (ID)" Type="ID">
+	</XTN.3>
+	<XTN.4 LongName="Email address" Type="ST">
+	</XTN.4>
+	<XTN.5 LongName="Country Code" Type="NM">
+	</XTN.5>
+	<XTN.6 LongName="Area/city code" Type="NM">
+	</XTN.6>
+	<XTN.7 LongName="Phone number" Type="NM">
+	</XTN.7>
+	<XTN.8 LongName="Extension" Type="NM">
+	</XTN.8>
+	<XTN.9 LongName="any text" Type="ST">
+	</XTN.9>
+	</NK1.31>
+	<NK1.32 Item="750" LongName="Contact Personâ€™s Address" Type="XAD">
+	<XAD.1 LongName="street address" Type="ST">
+	</XAD.1>
+	<XAD.2 LongName="other designation" Type="ST">
+	</XAD.2>
+	<XAD.3 LongName="city" Type="ST">
+	</XAD.3>
+	<XAD.4 LongName="state or province" Type="ST">
+	</XAD.4>
+	<XAD.5 LongName="zip or postal code" Type="ST">
+	</XAD.5>
+	<XAD.6 LongName="country" Type="ID">
+	</XAD.6>
+	<XAD.7 LongName="address type" Type="ID">
+	</XAD.7>
+	<XAD.8 LongName="other geographic designation" Type="ST">
+	</XAD.8>
+	<XAD.9 LongName="county/parish code" Type="IS">
+	</XAD.9>
+	<XAD.10 LongName="census tract" Type="IS">
+	</XAD.10>
+	</NK1.32>
+	<NK1.33 Item="751" LongName="Associated Partyâ€™s Identifiers" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</NK1.33>
+	<NK1.34 Item="752" LongName="Job Status" Table="HL70311" Type="IS">
+	</NK1.34>
+	<NK1.35 Item="113" LongName="Race" Table="HL70005" Type="IS">
+	</NK1.35>
+	<NK1.36 Item="753" LongName="Handicap" Table="HL70310" Type="IS">
+	</NK1.36>
+	<NK1.37 Item="754" LongName="Contact Person Social Security Number" Type="ST">
+	</NK1.37>
+	
+	</NK1>
+	<PEX_P07.ASSOCIATED_RX_ORDER>
+	<RXE>
+	<RXE.1 Item="221" LongName="Quantity/Timing" Type="TQ">
+	<TQ.1 LongName="quantity" Type="CQ">
+	<CQ.1 LongName="quantity" Type="NM">
+	</CQ.1>
+	<CQ.2 LongName="units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CQ.2>
+	</TQ.1>
+	<TQ.2 LongName="interval" Type="CM">
+	<CM_RI.1 LongName="repeat pattern" Type="IS">
+	</CM_RI.1>
+	<CM_RI.2 LongName="explicit time interval" Type="ST">
+	</CM_RI.2>
+	</TQ.2>
+	<TQ.3 LongName="duration" Type="ST">
+	</TQ.3>
+	<TQ.4 LongName="start date/time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</TQ.4>
+	<TQ.5 LongName="end date/time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</TQ.5>
+	<TQ.6 LongName="priority" Type="ST">
+	</TQ.6>
+	<TQ.7 LongName="condition" Type="ST">
+	</TQ.7>
+	<ns:TQ.8 xmlns="" xmlns:ns="urn:hl7-org:v2xml" LongName="text (TX)" Type="TX">
+	<escape V="V11">
+	</escape>
+	</ns:TQ.8>
+	<TQ.9 LongName="conjunction" Type="ST">
+	</TQ.9>
+	<TQ.10 LongName="order sequencing" Type="CM">
+	</TQ.10>
+	</RXE.1>
+	<RXE.2 Item="317" LongName="Give Code" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.2>
+	<RXE.3 Item="318" LongName="Give Amount - Minimum" Type="NM">
+	</RXE.3>
+	<RXE.4 Item="319" LongName="Give Amount - Maximum" Type="NM">
+	</RXE.4>
+	<RXE.5 Item="320" LongName="Give Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.5>
+	<RXE.6 Item="321" LongName="Give Dosage Form" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.6>
+	<RXE.7 Item="298" LongName="Provider's Administration Instructions" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.7>
+	<RXE.8 Item="299" LongName="Deliver To Location" Type="CM">
+	<CM_LA1.1 LongName="point of care (ST)" Type="ST">
+	</CM_LA1.1>
+	<CM_LA1.2 LongName="room" Type="IS">
+	</CM_LA1.2>
+	<CM_LA1.3 LongName="bed" Type="IS">
+	</CM_LA1.3>
+	<CM_LA1.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CM_LA1.4>
+	<CM_LA1.5 LongName="location status" Type="IS">
+	</CM_LA1.5>
+	<CM_LA1.6 LongName="person location type" Type="IS">
+	</CM_LA1.6>
+	<CM_LA1.7 LongName="building" Type="IS">
+	</CM_LA1.7>
+	<CM_LA1.8 LongName="floor" Type="ST">
+	</CM_LA1.8>
+	<CM_LA1.9 LongName="street address" Type="ST">
+	</CM_LA1.9>
+	<CM_LA1.10 LongName="other designation" Type="ST">
+	</CM_LA1.10>
+	<CM_LA1.11 LongName="city" Type="ST">
+	</CM_LA1.11>
+	<CM_LA1.12 LongName="state or province" Type="ST">
+	</CM_LA1.12>
+	<CM_LA1.13 LongName="zip or postal code" Type="ST">
+	</CM_LA1.13>
+	<CM_LA1.14 LongName="country" Type="ID">
+	</CM_LA1.14>
+	<CM_LA1.15 LongName="address type" Type="ID">
+	</CM_LA1.15>
+	<CM_LA1.16 LongName="other geographic designation" Type="ST">
+	</CM_LA1.16>
+	</RXE.8>
+	<RXE.9 Item="322" LongName="Substitution Status" Table="HL70167" Type="ID">
+	</RXE.9>
+	<RXE.10 Item="323" LongName="Dispense Amount" Type="NM">
+	</RXE.10>
+	<RXE.11 Item="324" LongName="Dispense Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.11>
+	<RXE.12 Item="304" LongName="Number of Refills" Type="NM">
+	</RXE.12>
+	<RXE.13 Item="305" LongName="Ordering Provider's DEA Number" Type="CN">
+	<CN.1 LongName="ID number (ST)" Type="ST">
+	</CN.1>
+	<CN.2 LongName="family name" Type="ST">
+	</CN.2>
+	<CN.3 LongName="given name" Type="ST">
+	</CN.3>
+	<CN.4 LongName="middle initial or name" Type="ST">
+	</CN.4>
+	<CN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</CN.5>
+	<CN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</CN.6>
+	<CN.7 LongName="degree (e.g., MD)" Type="ST">
+	</CN.7>
+	<CN.8 LongName="source table" Type="ID">
+	</CN.8>
+	<CN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CN.9>
+	</RXE.13>
+	<RXE.14 Item="306" LongName="Pharmacist/Treatment Supplier's Verifier ID" Type="CN">
+	<CN.1 LongName="ID number (ST)" Type="ST">
+	</CN.1>
+	<CN.2 LongName="family name" Type="ST">
+	</CN.2>
+	<CN.3 LongName="given name" Type="ST">
+	</CN.3>
+	<CN.4 LongName="middle initial or name" Type="ST">
+	</CN.4>
+	<CN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</CN.5>
+	<CN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</CN.6>
+	<CN.7 LongName="degree (e.g., MD)" Type="ST">
+	</CN.7>
+	<CN.8 LongName="source table" Type="ID">
+	</CN.8>
+	<CN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CN.9>
+	</RXE.14>
+	<RXE.15 Item="325" LongName="Prescription Number" Type="ST">
+	</RXE.15>
+	<RXE.16 Item="326" LongName="Number of Refills Remaining" Type="NM">
+	</RXE.16>
+	<RXE.17 Item="327" LongName="Number of Refills/Doses Dispensed" Type="NM">
+	</RXE.17>
+	<RXE.18 Item="328" LongName="Date / time of most recent refill or dose dispensed" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXE.18>
+	<RXE.19 Item="329" LongName="Total Daily Dose" Type="CQ">
+	<CQ.1 LongName="quantity" Type="NM">
+	</CQ.1>
+	<CQ.2 LongName="units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CQ.2>
+	</RXE.19>
+	<RXE.20 Item="307" LongName="Needs Human Review" Table="HL70136" Type="ID">
+	</RXE.20>
+	<RXE.21 Item="330" LongName="Pharmacy/Treatment Supplier's Special Dispensing Instructions" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.21>
+	<RXE.22 Item="331" LongName="Give Per (Time Unit)" Type="ST">
+	</RXE.22>
+	<RXE.23 Item="332" LongName="Give Rate Amount" Type="ST">
+	</RXE.23>
+	<RXE.24 Item="333" LongName="Give Rate Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.24>
+	<RXE.25 Item="1126" LongName="Give Strength" Type="NM">
+	</RXE.25>
+	<RXE.26 Item="1127" LongName="Give Strength Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.26>
+	<RXE.27 Item="1128" LongName="Give Indication" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.27>
+	<RXE.28 Item="1220" LongName="Dispense Package Size" Type="NM">
+	</RXE.28>
+	<RXE.29 Item="1221" LongName="Dispense Package Size Unit" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXE.29>
+	<RXE.30 Item="1222" LongName="Dispense Package Method" Table="HL70321" Type="ID">
+	</RXE.30>
+	
+	</RXE>
+	<RXR>
+	<RXR.1 Item="309" LongName="Route" Table="HL70162" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.1>
+	<RXR.2 Item="310" LongName="Site" Table="HL70163" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.2>
+	<RXR.3 Item="311" LongName="Administration Device" Table="HL70164" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.3>
+	<RXR.4 Item="312" LongName="Administration Method" Table="HL70165" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.4>
+	
+	</RXR>
+	</PEX_P07.ASSOCIATED_RX_ORDER>
+	<PEX_P07.ASSOCIATED_RX_ADMIN>
+	<RXA>
+	<RXA.1 Item="342" LongName="Give Sub-ID Counter" Type="ID">
+	</RXA.1>
+	<RXA.2 Item="344" LongName="Administration Sub-ID Counter" Type="NM">
+	</RXA.2>
+	<RXA.3 Item="345" LongName="Date/Time Start of Administration" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.3>
+	<RXA.4 Item="346" LongName="Date/Time End of Administration" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.4>
+	<RXA.5 Item="347" LongName="Administered Code" Table="HL70292" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.5>
+	<RXA.6 Item="348" LongName="Administered Amount" Type="NM">
+	</RXA.6>
+	<RXA.7 Item="349" LongName="Administered Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.7>
+	<RXA.8 Item="350" LongName="Administered Dosage Form" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.8>
+	<RXA.9 Item="351" LongName="Administration Notes" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.9>
+	<RXA.10 Item="352" LongName="Administering Provider" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</RXA.10>
+	<RXA.11 Item="353" LongName="Administered-at Location" Type="CM">
+	<CM_LA1.1 LongName="point of care (ST)" Type="ST">
+	</CM_LA1.1>
+	<CM_LA1.2 LongName="room" Type="IS">
+	</CM_LA1.2>
+	<CM_LA1.3 LongName="bed" Type="IS">
+	</CM_LA1.3>
+	<CM_LA1.4 LongName="facility (HD)" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CM_LA1.4>
+	<CM_LA1.5 LongName="location status" Type="IS">
+	</CM_LA1.5>
+	<CM_LA1.6 LongName="person location type" Type="IS">
+	</CM_LA1.6>
+	<CM_LA1.7 LongName="building" Type="IS">
+	</CM_LA1.7>
+	<CM_LA1.8 LongName="floor" Type="ST">
+	</CM_LA1.8>
+	<CM_LA1.9 LongName="street address" Type="ST">
+	</CM_LA1.9>
+	<CM_LA1.10 LongName="other designation" Type="ST">
+	</CM_LA1.10>
+	<CM_LA1.11 LongName="city" Type="ST">
+	</CM_LA1.11>
+	<CM_LA1.12 LongName="state or province" Type="ST">
+	</CM_LA1.12>
+	<CM_LA1.13 LongName="zip or postal code" Type="ST">
+	</CM_LA1.13>
+	<CM_LA1.14 LongName="country" Type="ID">
+	</CM_LA1.14>
+	<CM_LA1.15 LongName="address type" Type="ID">
+	</CM_LA1.15>
+	<CM_LA1.16 LongName="other geographic designation" Type="ST">
+	</CM_LA1.16>
+	</RXA.11>
+	<RXA.12 Item="354" LongName="Administered Per (Time Unit)" Type="ST">
+	</RXA.12>
+	<RXA.13 Item="1134" LongName="Administered Strength" Type="NM">
+	</RXA.13>
+	<RXA.14 Item="1135" LongName="Administered Strength Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.14>
+	<RXA.15 Item="1129" LongName="Substance Lot Number" Type="ST">
+	</RXA.15>
+	<RXA.16 Item="1130" LongName="Substance Expiration Date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.16>
+	<RXA.17 Item="1131" LongName="Substance Manufacturer Name" Table="HL70227" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.17>
+	<RXA.18 Item="1136" LongName="Substance Refusal Reason" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.18>
+	<RXA.19 Item="1123" LongName="Indication" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXA.19>
+	<RXA.20 Item="1223" LongName="Completion Status" Table="HL70322" Type="ID">
+	</RXA.20>
+	<RXA.21 Item="1224" LongName="Action Code-RXA" Table="HL70323" Type="ID">
+	</RXA.21>
+	<RXA.22 Item="1225" LongName="System Entry Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</RXA.22>
+	
+	</RXA>
+	<RXR>
+	<RXR.1 Item="309" LongName="Route" Table="HL70162" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.1>
+	<RXR.2 Item="310" LongName="Site" Table="HL70163" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.2>
+	<RXR.3 Item="311" LongName="Administration Device" Table="HL70164" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.3>
+	<RXR.4 Item="312" LongName="Administration Method" Table="HL70165" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</RXR.4>
+	
+	</RXR>
+	</PEX_P07.ASSOCIATED_RX_ADMIN>
+	<PRB>
+	<PRB.1 Item="816" LongName="Action Code" Table="HL70287" Type="ID">
+	</PRB.1>
+	<PRB.2 Item="817" LongName="Action Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.2>
+	<PRB.3 Item="838" LongName="Problem ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.3>
+	<PRB.4 Item="839" LongName="Problem Instance ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</PRB.4>
+	<PRB.5 Item="820" LongName="Episode of Care ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</PRB.5>
+	<PRB.6 Item="841" LongName="Problem List Priority" Type="NM">
+	</PRB.6>
+	<PRB.7 Item="842" LongName="Problem Established Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.7>
+	<PRB.8 Item="843" LongName="Anticipated Problem Resolution Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.8>
+	<PRB.9 Item="844" LongName="Actual Problem Resolution Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.9>
+	<PRB.10 Item="845" LongName="Problem Classification" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.10>
+	<PRB.11 Item="846" LongName="Problem Management Discipline" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.11>
+	<PRB.12 Item="847" LongName="Problem Persistence" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.12>
+	<PRB.13 Item="848" LongName="Problem Confirmation Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.13>
+	<PRB.14 Item="849" LongName="Problem Life Cycle Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.14>
+	<PRB.15 Item="850" LongName="Problem Life Cycle Status Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.15>
+	<PRB.16 Item="851" LongName="Problem Date of Onset" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</PRB.16>
+	<PRB.17 Item="852" LongName="Problem Onset Text" Type="ST">
+	</PRB.17>
+	<PRB.18 Item="853" LongName="Problem Ranking" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.18>
+	<PRB.19 Item="854" LongName="Certainty of Problem" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.19>
+	<PRB.20 Item="855" LongName="Probability of Problem (0-1)" Type="NM">
+	</PRB.20>
+	<PRB.21 Item="856" LongName="Individual Awareness of Problem" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.21>
+	<PRB.22 Item="857" LongName="Problem Prognosis" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.22>
+	<PRB.23 Item="858" LongName="Individual Awareness of Prognosis" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.23>
+	<PRB.24 Item="859" LongName="Family/Significant Other Awareness of Problem/Prognosis" Type="ST">
+	</PRB.24>
+	<PRB.25 Item="823" LongName="Security/Sensitivity" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRB.25>
+	
+	</PRB>
+	<OBX>
+	<OBX.1 Item="569" LongName="Set ID - OBX" Type="SI">
+	</OBX.1>
+	<OBX.2 Item="570" LongName="Value Type" Table="HL70125" Type="ID">
+	</OBX.2>
+	<OBX.3 Item="571" LongName="Observation Identifier" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.3>
+	<OBX.4 Item="572" LongName="Observation Sub-ID" Type="ST">
+	</OBX.4>
+	<OBX.5 xmlns:ns="anyNS" Item="573" LongName="Observation Value" Type="*" anyAttr="anyValue">
+	
+	</OBX.5>
+	<OBX.6 Item="574" LongName="Units" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.6>
+	<OBX.7 Item="575" LongName="References Range" Type="ST">
+	</OBX.7>
+	<OBX.8 Item="576" LongName="Abnormal Flags" Table="HL70078" Type="ID">
+	</OBX.8>
+	<OBX.9 Item="577" LongName="Probability" Type="NM">
+	</OBX.9>
+	<OBX.10 Item="578" LongName="Nature of Abnormal Test" Table="HL70080" Type="ID">
+	</OBX.10>
+	<OBX.11 Item="579" LongName="Observ Result Status" Table="HL70085" Type="ID">
+	</OBX.11>
+	<OBX.12 Item="580" LongName="Date Last Obs Normal Values" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OBX.12>
+	<OBX.13 Item="581" LongName="User Defined Access Checks" Type="ST">
+	</OBX.13>
+	<OBX.14 Item="582" LongName="Date/Time of the Observation" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</OBX.14>
+	<OBX.15 Item="583" LongName="Producer's ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.15>
+	<OBX.16 Item="584" LongName="Responsible Observer" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</OBX.16>
+	<OBX.17 Item="936" LongName="Observation Method" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</OBX.17>
+	
+	</OBX>
+	</PEX_P07.ASSOCIATED_PERSON>
+	<PEX_P07.STUDY>
+	<CSR>
+	<CSR.1 Item="1011" LongName="Sponsor Study ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</CSR.1>
+	<CSR.2 Item="1036" LongName="Alternate Study ID" Type="EI">
+	<EI.1 LongName="entity identifier" Type="ST">
+	</EI.1>
+	<EI.2 LongName="namespace ID" Type="IS">
+	</EI.2>
+	<EI.3 LongName="universal ID" Type="ST">
+	</EI.3>
+	<EI.4 LongName="universal ID type" Type="ID">
+	</EI.4>
+	</CSR.2>
+	<CSR.3 Item="1037" LongName="Institution Registering the Patient" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.3>
+	<CSR.4 Item="1038" LongName="Sponsor Patient ID" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</CSR.4>
+	<CSR.5 Item="1039" LongName="Alternate Patient ID" Type="CX">
+	<CX.1 LongName="ID" Type="ST">
+	</CX.1>
+	<CX.2 LongName="check digit" Type="ST">
+	</CX.2>
+	<CX.3 LongName="code identifying the check digit scheme employed" Type="ID">
+	</CX.3>
+	<CX.4 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.4>
+	<CX.5 LongName="identifier type code" Table="HL70203" Type="IS">
+	</CX.5>
+	<CX.6 LongName="assigning facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</CX.6>
+	</CSR.5>
+	<CSR.6 Item="1040" LongName="Date/Time of Patient Study Registration" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSR.6>
+	<CSR.7 Item="1041" LongName="Person Performing Study Registration" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</CSR.7>
+	<CSR.8 Item="1042" LongName="Study Authorizing Provider" Type="XCN">
+	<XCN.1 LongName="ID number (ST)" Type="ST">
+	</XCN.1>
+	<XCN.2 LongName="family name" Type="ST">
+	</XCN.2>
+	<XCN.3 LongName="given name" Type="ST">
+	</XCN.3>
+	<XCN.4 LongName="middle initial or name" Type="ST">
+	</XCN.4>
+	<XCN.5 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XCN.5>
+	<XCN.6 LongName="prefix (e.g., DR)" Type="ST">
+	</XCN.6>
+	<XCN.7 LongName="degree (e.g., MD)" Type="ST">
+	</XCN.7>
+	<XCN.8 LongName="source table" Type="ID">
+	</XCN.8>
+	<XCN.9 LongName="assigning authority" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.9>
+	<XCN.10 LongName="name type" Type="ID">
+	</XCN.10>
+	<XCN.11 LongName="identifier check digit" Type="ST">
+	</XCN.11>
+	<XCN.12 LongName="code identifying the check digit scheme employed" Type="ID">
+	</XCN.12>
+	<XCN.13 LongName="identifier type code" Type="IS">
+	</XCN.13>
+	<XCN.14 LongName="assigning facility ID" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</XCN.14>
+	</CSR.8>
+	<CSR.9 Item="1043" LongName="Date/time Patient Study Consent Signed" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSR.9>
+	<CSR.10 Item="1044" LongName="Patient Study Eligibility Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.10>
+	<CSR.11 Item="1045" LongName="Study Randomization Date/time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSR.11>
+	<CSR.12 Item="1046" LongName="Study Randomized Arm" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.12>
+	<CSR.13 Item="1047" LongName="Stratum for Study Randomization" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.13>
+	<CSR.14 Item="1048" LongName="Patient Evaluability Status" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.14>
+	<CSR.15 Item="1049" LongName="Date/time Ended Study" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSR.15>
+	<CSR.16 Item="1050" LongName="Reason Ended Study" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSR.16>
+	
+	</CSR>
+	<CSP>
+	<CSP.1 Item="1051" LongName="Study Phase Identifier" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSP.1>
+	<CSP.2 Item="1052" LongName="Date/time Study Phase Began" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSP.2>
+	<CSP.3 Item="1053" LongName="Date/time Study Phase Ended" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CSP.3>
+	<CSP.4 Item="1054" LongName="Study Phase Evaluability" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CSP.4>
+	
+	</CSP>
+	</PEX_P07.STUDY>
+	</PEX_P07.PEX_CAUSE>
+	</PEX_P07.PEX_OBSERVATION>
+	</PEX_P07.EXPERIENCE>
+	</PEX_P07>

@@ -15,13 +15,23 @@ import java.util.List;
 import java.util.Map;
 
 import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import jlibs.xml.sax.XMLDocument;
 import jlibs.xml.xsd.XSInstance;
@@ -37,6 +47,10 @@ import org.ini4j.Ini;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.XML;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
 import com.mscc.schema.XSDGenerator;
 
@@ -77,6 +91,11 @@ public class MappingHandler {
 	private String mappingDestinationXSD;
 	private String mappingSourceTreeRepr;
 	private String mappingDestinationTreeRepr;
+	private File destinationTreeRepsFile;
+	public File getDestinationTreeRepsFile() {
+		return destinationTreeRepsFile;
+	}
+
 	private String rootFolder;
 
 	public String getName() {
@@ -247,7 +266,7 @@ public class MappingHandler {
 		generateSourceTreeRepr(root, NameSpace);
 	}
 
-	public void loadDestinationXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException {
+	public void loadDestinationXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 		List<File> inputFiles = new ArrayList<File>();
 		for (String fileName : xmlFiles) {
 			inputFiles.add(new File(fileName));
@@ -261,7 +280,7 @@ public class MappingHandler {
 		generateSourceTreeRepr(root, NameSpace);
 	}
 
-	public void loadDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException {
+	public void loadDestinationXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 		generateXSDFromJson(jsonFiles, mappingDestinationXSD, root);
 		generateDestinationTreeRepr(root, NameSpace);
 	}
@@ -284,8 +303,13 @@ public class MappingHandler {
 		
 	}
 	
-	
-	public void loadDestinationXSD(String xsdFile, String root, String NameSpace,  String... xsdFileDeps) throws IOException, TransformerException {
+	public void loadMappingFile(File mappingFile) throws IOException {
+		//Path folderPath = Paths.get(this.mappingFolderPath);
+		Path rootFolderPath = Paths.get(this.rootFolder);
+		FileUtils.copyFile(mappingFile, new File(rootFolderPath.resolve(mappingFilePath).toString()));
+		
+	}
+	public void loadDestinationXSD(String xsdFile, String root, String NameSpace,  String... xsdFileDeps) throws IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
 		FileUtils.copyFile(new File(xsdFile), new File(rootFolderPath.resolve(mappingDestinationXSD).toString()));
@@ -334,10 +358,10 @@ public class MappingHandler {
 		
 	}
 	
-	private void generateDestinationTreeRepr(String root, String NameSpace) throws FileNotFoundException, TransformerException{
+	private void generateDestinationTreeRepr(String root, String NameSpace) throws TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerFactoryConfigurationError{
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
-		File destinationTreeRepsFile = new File(rootFolderPath.resolve(mappingDestinationTreeRepr).toString());
+		destinationTreeRepsFile = new File(rootFolderPath.resolve(mappingDestinationTreeRepr).toString());
 	
 												//?
 		XSModel xsModel = new XSParser().parse(rootFolderPath.resolve(mappingDestinationXSD).toString());
@@ -366,8 +390,111 @@ public class MappingHandler {
         Source text = new StreamSource(IOUtils.toInputStream(xmlString, Charset.forName("UTF-8")));
         //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transformer.transform(text, new StreamResult(destinationTreeRepsFile));
+        
+        preloadingXML(destinationTreeRepsFile, root, "2.3");
+	
+		
+	}
 	
 	
+	private void preloadingXML(File xmlFile, String root, String hl7_version) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, TransformerFactoryConfigurationError, TransformerException{
+		DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
+		DocumentBuilder b = f.newDocumentBuilder();
+		Document doc = b.parse(xmlFile);
+		String namespace = "mapping";
+		String prefix = "map";
+		
+		String message = root.split("_")[0];
+		String trigger = root.split("_")[1];
+		
+		XPath xPath = XPathFactory.newInstance().newXPath();
+		Node node = (Node) xPath.compile("/"+root+"/MSH/MSH.1").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", "|");
+			node.appendChild(child);
+			}
+		
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/MSH/MSH.2").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", "^~\\&");
+			node.appendChild(child);
+			}
+		
+		
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/MSH/MSH.9/CM_MSG.1").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", message );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/MSH/MSH.9/CM_MSG.2").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", trigger );
+			node.appendChild(child);
+			}
+		
+		
+		
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/MSH/MSH.10").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "uuid");
+			child.setPrefix(prefix);
+			node.appendChild(child);
+			}
+		
+		
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/MSH/MSH.12").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", hl7_version );
+			node.appendChild(child);
+			}
+		
+		
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.2").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "cte");
+			child.setPrefix(prefix);
+			child.setAttribute("val", "ST" );
+			node.appendChild(child);
+			}
+		
+		
+		
+		Transformer tf = TransformerFactory.newInstance().newTransformer();
+		tf.setOutputProperty(OutputKeys.INDENT, "yes");
+		tf.setOutputProperty(OutputKeys.METHOD, "xml");
+		tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+		DOMSource domSource = new DOMSource(doc);
+		StreamResult sr = new StreamResult(xmlFile);
+		tf.transform(domSource, sr);
+		
+		
+		
+		
+		
+		
 		
 	}
 

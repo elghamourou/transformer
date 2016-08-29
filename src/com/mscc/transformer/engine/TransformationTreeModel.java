@@ -327,4 +327,56 @@ public class TransformationTreeModel {
 		return buf.toString();
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	public List<Transformation> getTranformationList() {
+		List<Transformation> suppurtedTrans = new ArrayList<Transformation>();
+
+		for (Entry<String, List<HashMap<String, List<HashMap<String, List<HashMap<String, String>>>>>>> transfoMsgs : tree.entrySet()) {
+
+			for (HashMap<String, List<HashMap<String, List<HashMap<String, String>>>>> transfoMsg : transfoMsgs.getValue()) {
+
+				for (Entry<String, List<HashMap<String, List<HashMap<String, String>>>>> srcMsgs : transfoMsg.entrySet()) {
+					for (HashMap<String, List<HashMap<String, String>>> srcMsg : srcMsgs.getValue()) {
+						for (Entry<String, List<HashMap<String, String>>> dstMsgs : srcMsg.entrySet()) {
+							for (HashMap<String, String> dstMsg : dstMsgs.getValue()) {
+								for (Entry<String, String> ver : dstMsg.entrySet()) {
+									//;;
+									// ver.getValue()
+									Transformation t = new Transformation();
+									t.setName(transfoMsgs.getKey());
+									t.setSource(srcMsgs.getKey());
+									t.setDestination(dstMsgs.getKey());
+									t.setVersion(ver.getKey());
+									suppurtedTrans.add(t);
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		return suppurtedTrans;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

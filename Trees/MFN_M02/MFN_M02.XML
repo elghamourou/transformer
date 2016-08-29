@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<MFN_M02 xmlns="urn:hl7-org:v2xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MSH>
+	<MSH.1 Item="1" LongName="Field Separator" Type="ST">
+	<map:cte val="|" xmlns:map="mapping"/>
+        </MSH.1>
+	<MSH.2 Item="2" LongName="Encoding Characters" Type="ST">
+	<map:cte val="^~\&amp;" xmlns:map="mapping"/>
+        </MSH.2>
+	<MSH.3 Item="3" LongName="Sending Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.3>
+	<MSH.4 Item="4" LongName="Sending Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.4>
+	<MSH.5 Item="5" LongName="Receiving Application" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.5>
+	<MSH.6 Item="6" LongName="Receiving Facility" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MSH.6>
+	<MSH.7 Item="7" LongName="Date / Time of Message" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MSH.7>
+	<MSH.8 Item="8" LongName="Security" Type="ST">
+	</MSH.8>
+	<MSH.9 Item="9" LongName="Message Type" Type="CM">
+	<CM_MSG.1 LongName="message type" Type="ID">
+	<map:cte val="MFN" xmlns:map="mapping"/>
+            </CM_MSG.1>
+	<CM_MSG.2 LongName="trigger event" Type="ID">
+	<map:cte val="M02" xmlns:map="mapping"/>
+            </CM_MSG.2>
+	</MSH.9>
+	<MSH.10 Item="10" LongName="Message Control ID" Type="ST">
+	<map:uuid xmlns:map="mapping"/>
+        </MSH.10>
+	<MSH.11 Item="11" LongName="Processing ID" Type="PT">
+	<PT.1 LongName="processing ID" Type="ST">
+	</PT.1>
+	<PT.2 LongName="processing mode" Type="ST">
+	</PT.2>
+	</MSH.11>
+	<MSH.12 Item="12" LongName="Version ID" Table="HL70104" Type="ID">
+	<map:cte val="2.3" xmlns:map="mapping"/>
+        </MSH.12>
+	<MSH.13 Item="13" LongName="Sequence Number" Type="NM">
+	</MSH.13>
+	<MSH.14 Item="14" LongName="Continuation Pointer" Type="ST">
+	</MSH.14>
+	<MSH.15 Item="15" LongName="Accept Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.15>
+	<MSH.16 Item="16" LongName="Application Acknowledgement Type" Table="HL70155" Type="ID">
+	</MSH.16>
+	<MSH.17 Item="17" LongName="Country Code" Type="ID">
+	</MSH.17>
+	<MSH.18 Item="692" LongName="Character Set" Table="HL70211" Type="ID">
+	</MSH.18>
+	<MSH.19 Item="693" LongName="Principal Language of Message" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MSH.19>
+	
+	</MSH>
+	<MFI>
+	<MFI.1 Item="658" LongName="Master File Identifier" Table="HL70175" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFI.1>
+	<MFI.2 Item="659" LongName="Master File Application Identifier" Table="HL70176" Type="HD">
+	<HD.1 LongName="namespace ID" Type="IS">
+	</HD.1>
+	<HD.2 LongName="universal ID" Type="ST">
+	</HD.2>
+	<HD.3 LongName="universal ID type" Type="ID">
+	</HD.3>
+	</MFI.2>
+	<MFI.3 Item="660" LongName="File-Level Event Code" Table="HL70178" Type="ID">
+	</MFI.3>
+	<MFI.4 Item="661" LongName="Entered Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.4>
+	<MFI.5 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFI.5>
+	<MFI.6 Item="663" LongName="Response Level Code" Table="HL70179" Type="ID">
+	</MFI.6>
+	
+	</MFI>
+	<MFN_M02.MF_STAFF>
+	<MFE>
+	<MFE.1 Item="664" LongName="Record-Level Event Code" Table="HL70180" Type="ID">
+	</MFE.1>
+	<MFE.2 Item="665" LongName="MFN Control ID" Type="ST">
+	</MFE.2>
+	<MFE.3 Item="662" LongName="Effective Date/Time" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</MFE.3>
+	<MFE.4 Item="667" LongName="Primary Key Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</MFE.4>
+	
+	</MFE>
+	<STF>
+	<STF.1 Item="671" LongName="STF - Primary Key Value" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.1>
+	<STF.2 Item="672" LongName="Staff ID Code" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.2>
+	<STF.3 Item="673" LongName="Staff Name" Type="XPN">
+	<XPN.1 LongName="family name" Type="ST">
+	</XPN.1>
+	<XPN.2 LongName="given name" Type="ST">
+	</XPN.2>
+	<XPN.3 LongName="middle initial or name" Type="ST">
+	</XPN.3>
+	<XPN.4 LongName="suffix (e.g., JR or III)" Type="ST">
+	</XPN.4>
+	<XPN.5 LongName="prefix (e.g., DR)" Type="ST">
+	</XPN.5>
+	<XPN.6 LongName="degree (e.g., MD)" Type="ST">
+	</XPN.6>
+	<XPN.7 LongName="name type code" Type="ID">
+	</XPN.7>
+	<XPN.8 LongName="Name Representation code" Type="ID">
+	</XPN.8>
+	</STF.3>
+	<STF.4 Item="674" LongName="Staff Type" Table="HL70182" Type="ID">
+	</STF.4>
+	<STF.5 Item="111" LongName="Sex" Table="HL70001" Type="IS">
+	</STF.5>
+	<STF.6 Item="110" LongName="Date of Birth" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</STF.6>
+	<STF.7 Item="675" LongName="Active/Inactive Flag" Table="HL70183" Type="ID">
+	</STF.7>
+	<STF.8 Item="676" LongName="Department" Table="HL70184" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.8>
+	<STF.9 Item="677" LongName="Service" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.9>
+	<STF.10 Item="678" LongName="Phone" Type="TN">
+	</STF.10>
+	<STF.11 Item="679" LongName="Office/Home Address" Type="AD">
+	<AD.1 LongName="street address" Type="ST">
+	</AD.1>
+	<AD.2 LongName="other designation" Type="ST">
+	</AD.2>
+	<AD.3 LongName="city" Type="ST">
+	</AD.3>
+	<AD.4 LongName="state or province" Type="ST">
+	</AD.4>
+	<AD.5 LongName="zip or postal code" Type="ST">
+	</AD.5>
+	<AD.6 LongName="country" Type="ID">
+	</AD.6>
+	<AD.7 LongName="address type" Type="ID">
+	</AD.7>
+	<AD.8 LongName="other geographic designation" Type="ST">
+	</AD.8>
+	</STF.11>
+	<STF.12 Item="680" LongName="Activation Date" Type="CM">
+	<CM_DIN.1 LongName="date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CM_DIN.1>
+	<CM_DIN.2 LongName="institution name" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_DIN.2>
+	</STF.12>
+	<STF.13 Item="681" LongName="Inactivation Date" Type="CM">
+	<CM_DIN.1 LongName="date" Type="TS">
+	<TS.1 LongName="time of an event" Type="ST">
+	</TS.1>
+	<TS.2 LongName="degree of precision" Type="ST">
+	</TS.2>
+	</CM_DIN.1>
+	<CM_DIN.2 LongName="institution name" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_DIN.2>
+	</STF.13>
+	<STF.14 Item="682" LongName="Backup Person ID" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.14>
+	<STF.15 Item="683" LongName="E-mail Address" Type="ST">
+	</STF.15>
+	<STF.16 Item="684" LongName="Preferred Method of Contact" Table="HL70185" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</STF.16>
+	<STF.17 Item="119" LongName="Marital Status" Table="HL70002" Type="IS">
+	</STF.17>
+	<STF.18 Item="785" LongName="Job Title" Type="ST">
+	</STF.18>
+	<STF.19 Item="786" LongName="Job Code/Class" Type="JCC">
+	<JCC.1 LongName="job code" Type="IS">
+	</JCC.1>
+	<JCC.2 LongName="job class" Type="IS">
+	</JCC.2>
+	</STF.19>
+	<STF.20 Item="1276" LongName="Employment Status" Table="HL70066" Type="IS">
+	</STF.20>
+	<STF.21 Item="1275" LongName="Additional Insured on Auto" Table="HL70136" Type="ID">
+	</STF.21>
+	<STF.22 Item="123" LongName="Driver's License Number" Type="DLN">
+	<DLN.1 LongName="DriverÂ´s License Number" Type="ST">
+	</DLN.1>
+	<DLN.2 LongName="Issuing State, province, country" Type="IS">
+	</DLN.2>
+	<DLN.3 LongName="expiration date" Type="DT">
+	</DLN.3>
+	</STF.22>
+	<STF.23 Item="1229" LongName="Copy Auto Ins" Table="HL70136" Type="ID">
+	</STF.23>
+	<STF.24 Item="1232" LongName="Auto Ins. Expires" Type="DT">
+	</STF.24>
+	<STF.25 Item="1298" LongName="Date Last DMV Review" Type="DT">
+	</STF.25>
+	<STF.26 Item="1297" LongName="Date Next DMV Review" Type="DT">
+	</STF.26>
+	
+	</STF>
+	<PRA>
+	<PRA.1 Item="685" LongName="PRA - Primary Key Value" Type="ST">
+	</PRA.1>
+	<PRA.2 Item="686" LongName="Practioner Group" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</PRA.2>
+	<PRA.3 Item="687" LongName="Practioner Category" Type="ID">
+	</PRA.3>
+	<PRA.4 Item="688" LongName="Provider Billing" Table="HL70186" Type="ID">
+	</PRA.4>
+	<PRA.5 Item="689" LongName="Specialty" Table="HL70187" Type="CM">
+	<CM_SPD.1 LongName="specialty name" Type="ST">
+	</CM_SPD.1>
+	<CM_SPD.2 LongName="governing board" Type="ST">
+	</CM_SPD.2>
+	<CM_SPD.3 LongName="eligible or certified" Type="ID">
+	</CM_SPD.3>
+	<CM_SPD.4 LongName="date of certification" Type="DT">
+	</CM_SPD.4>
+	</PRA.5>
+	<PRA.6 Item="690" LongName="Practitioner ID Numbers" Type="CM">
+	<CM_PLN.1 LongName="ID number" Type="ST">
+	</CM_PLN.1>
+	<CM_PLN.2 LongName="type of ID number (IS)" Type="IS">
+	</CM_PLN.2>
+	<CM_PLN.3 LongName="state/other qualifying info" Type="ST">
+	</CM_PLN.3>
+	<CM_PLN.4 LongName="expiration date" Type="DT">
+	</CM_PLN.4>
+	</PRA.6>
+	<PRA.7 Item="691" LongName="Privileges" Type="CM">
+	<CM_PIP.1 LongName="privilege" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_PIP.1>
+	<CM_PIP.2 LongName="privilege class" Type="CE">
+	<CE.1 LongName="identifier" Type="ID">
+	</CE.1>
+	<CE.2 LongName="text" Type="ST">
+	</CE.2>
+	<CE.3 LongName="name of coding system" Type="ST">
+	</CE.3>
+	<CE.4 LongName="alternate identifier" Type="ID">
+	</CE.4>
+	<CE.5 LongName="alternate text" Type="ST">
+	</CE.5>
+	<CE.6 LongName="name of alternate coding system" Type="ST">
+	</CE.6>
+	</CM_PIP.2>
+	<CM_PIP.3 LongName="expiration date" Type="DT">
+	</CM_PIP.3>
+	<CM_PIP.4 LongName="activation date" Type="DT">
+	</CM_PIP.4>
+	</PRA.7>
+	
+	</PRA>
+	</MFN_M02.MF_STAFF>
+	</MFN_M02>

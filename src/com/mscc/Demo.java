@@ -41,7 +41,7 @@ public class Demo {
 		//1: generating transformer xslt
 		String mapping_file_name = "demo/mapping/hdpsToHL7-mappingL.xml";
 		String transormer_xslt_output = "demo/mapping/hdpsToHL7.xslt";
-		MetaXSLTTransformer.demo_transormer_generator(mapping_file_name, transormer_xslt_output);
+		MetaXSLTTransformer.transormer_generator(mapping_file_name, transormer_xslt_output);
 		
 		//2: transforming data
 		String dataSource = "demo/mapping/hdps.xml";

@@ -71,7 +71,7 @@ public class PluginFolderMonitor {
 			throw new IllegalArgumentException("Path: " + path + " is not a folder");
 		}
 		
-		System.out.println("Watching path: " + path);
+		System.out.println("Watching path: " + path.toFile().getAbsolutePath());
 		
 		// We obtain the file system of the Path
 		FileSystem fs = path.getFileSystem ();
