@@ -50,12 +50,8 @@ import com.mscc.mapper.project.MapperProjectHandler;
 import com.mscc.mapper.project.MappingBean;
 import com.mscc.mapper.project.MappingProjectException;
 import com.mscc.mapper.project.ProjectBean;
-import com.mscc.mapper.utils.ZipUtil;
 import com.mscc.metaxslt.MetaXSLTTransformer;
-import com.mscc.transformer.engine.PluginFolderMonitor;
-import com.mscc.transformer.engine.SupportedTransformationTree;
 import com.mscc.transformer.engine.Transformation;
-import com.mscc.transformer.engine.TransformationTreeModel;
 import com.mscc.transformer.engine.TransformerEngine;
 
 public class PlayGround {

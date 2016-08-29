@@ -1,4 +1,4 @@
-package com.mscc.mapper.tree;
+package com.mscc.tree;
 
 import org.jdom2.Document;
 import org.jdom2.Element;

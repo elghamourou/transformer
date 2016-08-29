@@ -1,4 +1,4 @@
-package com.mscc.mapper.tree;
+package com.mscc.tree;
 
 import java.util.Iterator;
 import java.util.ArrayList;
