@@ -1,9 +1,12 @@
 package com.mscc.transformer.engine;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
+
+import com.mscc.transformer.engine.exceptions.TransformationNotSupported;
 
 public class TransformationTreeModel {
 
@@ -177,12 +180,31 @@ public class TransformationTreeModel {
 
 	private HashMap<String, String> getVerMapWithKey(List<HashMap<String, String>> list, String key) {
 
-		if (list != null) {
-			for (HashMap hm : list) {
-				if (hm.containsKey(key))
+		if(key!=null){
+			if (list != null) {
+				for (HashMap<String, String> hm : list) {
+					if (hm.containsKey(key))
+						return hm;
+				}
+			}
+		}else{
+			List<String> verList = new ArrayList<String>();
+			for (HashMap<String, String> hm : list) {
+				for(String akey: hm.keySet()){
+					verList.add(akey);
+				}
+
+			}
+			Collections.sort(verList);
+			String newerVersion = verList.get(verList.size()-1);
+			//System.out.println("Salaheddine says: the newer version which will be used is: "+newerVersion);
+			for (HashMap<String, String> hm : list) {
+				if (hm.containsKey(newerVersion))
 					return hm;
 			}
 		}
+		
+		
 
 		return null;
 	}
@@ -230,7 +252,15 @@ public class TransformationTreeModel {
 		tree.put(transformationName, transfoMsgs);
 	}
 
-	public String getTransformationXslt(String transformationName, String src, String dst, String ver) {
+	public String getTransformationXslt(String transformationName, String src, String dst, String ver) throws TransformationNotSupported {
+		
+		String unknown = "";
+		if(ver != null){
+			unknown ="(Transformation  version: "+ver +" is unknown)";
+		}else{
+			unknown ="No available transformation version is found";
+		}
+		
 		List<HashMap<String, List<HashMap<String, List<HashMap<String, String>>>>>> transfoMsgs = tree.get(transformationName);
 		if (transfoMsgs != null) {
 			HashMap<String, List<HashMap<String, List<HashMap<String, String>>>>> transfoMsg = getSrcMapWithKey(transfoMsgs, src);
@@ -243,14 +273,29 @@ public class TransformationTreeModel {
 						if (dstMsgs != null) {
 							HashMap<String, String> dstMsg = getVerMapWithKey(dstMsgs, ver);
 							if (dstMsg != null) {
-								return dstMsg.get(ver);
+								if(ver!=null){
+									return dstMsg.get(ver);
+								}else{
+									return dstMsg.get(dstMsg.keySet().iterator().next());
+								}
+								
 							}
+						}else{
+							unknown = "(Destination Message: "+dst +" is unknown)";
 						}
+					}else{
+						unknown = "(Destination Message: "+dst +" is unknown)";
 					}
+				}else{
+					unknown = "(Source Message: "+src +" is unknown)";
 				}
+			}else{
+				unknown = "(Source Message: "+src +" is unknown)";
 			}
+		}else{
+			unknown = "(Transformation Name: "+transformationName +" is unknown)";
 		}
-		return null;
+		throw new TransformationNotSupported("Transformation:["+transformationName+"("+src+"-->"+dst+") version "+ver+"] is not supported"+unknown);
 	}
 
 	public void removeTransformation(String transformationName) {

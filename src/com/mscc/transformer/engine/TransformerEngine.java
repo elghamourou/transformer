@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 
 import com.mscc.metaxslt.MetaXSLTTransformer;
+import com.mscc.transformer.engine.exceptions.TransformationNotSupported;
 
 public class TransformerEngine {
 	
@@ -34,7 +35,7 @@ public class TransformerEngine {
 			String source, 
 			String destination,
 			String version,
-			String message) throws TransformerException{
+			String message) throws TransformerException, TransformationNotSupported{
 		
 		
 //		System.out.println("Transforming message...");
@@ -50,9 +51,12 @@ public class TransformerEngine {
 		
 		String result = null;
 		Path pf = Paths.get(pluginFolder);
-		String transormer_xslt  = pf.resolve(tree.getTransformationXslt(name, source, destination, version)).toString();
-		
-		result = MetaXSLTTransformer.transorm(message, transormer_xslt);
+		String xslt_path_name = tree.getTransformationXslt(name, source, destination, version);
+		if(xslt_path_name!=null){
+			String transormer_xslt  = pf.resolve(xslt_path_name).toString();
+			
+			result = MetaXSLTTransformer.transorm(message, transormer_xslt);
+		}	
 		
 		return result;
 	}
