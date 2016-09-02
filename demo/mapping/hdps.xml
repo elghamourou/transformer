@@ -1,38 +1,7 @@
-<hdps>
-	<al>
-		<diagnosticDate>20080407</diagnosticDate>
-		<id>14</id>
-		<label>Penniciline</label>
-	</al>
-	<al>
-		<diagnosticDate>20141113</diagnosticDate>
-		<id>5</id>
-		<label>pollen</label>
-	</al>
-	<obx>
-		<id>13</id>
-		<resultUid>weight</resultUid>
-		<examDate>20141016</examDate>
-		<valueReference>78.0</valueReference>
-		<unitLabel>kg</unitLabel>
-	</obx>
-	<obx>
-		<id>15</id>
-		<resultUid>acgt</resultUid>
-		<examDate>20141016</examDate>
-		<valueReference>8.70</valueReference>
-		<unitLabel>N/X</unitLabel>
-	</obx>
-	<sourceUid>hdps2_458999</sourceUid>
-	<pid>
-		<id>12</id>
-		<lastName>Montergiev</lastName>
-		<address>16 Avenue Trudaine^^Paris^75009^fr</address>
-		<gender>M</gender>
-		<birthDate>19811016</birthDate>
-		<deceasedDate>20191016</deceasedDate>
-		<code>1610775114705</code>
-		<firstName>Philippe</firstName>
-	</pid>
-	<messageType>A01</messageType>
+<hdps> <al> <diagnosticDate>20080407</diagnosticDate> <id>14</id> <label>Penniciline</label> </al> <al> <diagnosticDate>20141113</diagnosticDate>
+<id>5</id> <label>pollen</label> </al> <obx> <id>13</id> <resultUid>weight</resultUid> <examDate>20141016</examDate> <valueReference>
+78.0</valueReference> <unitLabel>kg</unitLabel> </obx> <obx> <id>15</id> <resultUid>acgt</resultUid> <examDate>20141016</examDate>
+<valueReference>8.70</valueReference> <unitLabel>N/X</unitLabel> </obx> <sourceUid>hdps2_458999</sourceUid> <pid> <id>12</id> <lastName>
+Montergiev</lastName> <address>16 Avenue Trudaine^^Paris^75009^fr</address> <gender>M</gender> <birthDate>19811016</birthDate>
+<deceasedDate>20191016</deceasedDate> <code>1610775114705</code> <firstName>Philippe</firstName> </pid> <messageType>A01</messageType>
 </hdps>

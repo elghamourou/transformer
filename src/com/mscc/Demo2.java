@@ -55,7 +55,7 @@ import com.mscc.transformer.engine.Transformation;
 import com.mscc.transformer.engine.TransformerEngine;
 import com.mscc.transformer.engine.exceptions.TransformationNotSupported;
 
-public class PlayGround {
+public class Demo2 {
 
 	
 	public static void main(String[] args) throws IOException, MappingProjectException, XmlException, TransformerException, ArchiveException, InterruptedException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError, TransformationNotSupported {
@@ -79,6 +79,8 @@ public class PlayGround {
 		 * CallTransformationEngin (test on messages)
 		 * enhance the transform message from engine to handle unsuported and exception and multiple(default) versions
 		 * */
+		
+		//Demo 1
 		
 		//Create Mapping Project
 		createMappingProject("hdps_to_hl7", "1.0", "projects");
@@ -107,10 +109,320 @@ public class PlayGround {
 		
 		//calling transformation engine with an example
 		String hdpsMessage = IOUtils.toString(new FileReader("demo/mapping/hdps.xml"));
-		System.out.println(transform("HDPS_TO_HL7", "HDPS_A01", "ADT_A01", null, hdpsMessage));
+		System.out.println(transform("HDPS_TO_HL7", "HDPS_A01", "ADT_A01", "1.0", hdpsMessage));
+		
+		//._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._
+		
+		//demo 2
+		//Create Mapping Project
+		createMappingProject("hl7_to_hdps", "1.0", "projects");
+		
+		
+		//Create a mapping into active project
+		createMapping2("ADT_A01", "HDPS_A01", "1.0", xmlFiles, "hdps");
+		
+		//Create, edit and import mappingFile into active mapping
+		createMappingFile2("demo/mapping/HL7ToHdps-mapping.xml");
+		
+		//test mapping
+		testMappingRev("demo/mapping/HL7ToHdps-mapping.xml", "demo/mapping/hl7.xml", "demo/mapping/hdps2.xml");
+		testMappingRev2("demo/mapping/HL7ToHdps-mapping.xml", "demo/mapping/hl7.xml");
+		
+		//build plugin
+		buildPlugin("project/build", true, "HL7_TO_HDPS");
+		
+		//deploy the plugin
+		deployPlugin("project/build", "HL7_TO_HDPS", "plugins");
+		
+		
+		//getting all supported transformations
+		System.out.println(getSupportedTransformations());
+		
+		//calling transformation engine with an example
+		String hl7Message = IOUtils.toString(new FileReader("demo/mapping/hl7.xml"));
+		System.out.println(transform("HL7_TO_HDPS", "ADT_A01", "HDPS_A01", "1.0", hl7Message));
+		
+		
+		
+		
+		
+		
 		
 	}
 	
+private static void testMappingRev2(String mapping_file_name, String dataSource) throws TransformerException{
+		
+		String transormer_xslt_output = "demo/mapping/hl7ToHdps.xslt";
+		System.out.println(MetaXSLTTransformer.transormmation(dataSource, transormer_xslt_output));
+	}
+	
+	private static void testMappingRev(String mapping_file_name, String dataSource, String transformedOutput) throws TransformerException{
+		
+		String transormer_xslt_output = "demo/mapping/hl7ToHdps.xslt";
+		MetaXSLTTransformer.transormer_generator(mapping_file_name, transormer_xslt_output);
+		MetaXSLTTransformer.demo_transormmation(dataSource, transormer_xslt_output, transformedOutput);
+	}
+	
+private static void createMappingFile2(String mappingFileName) throws IOException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError, TransformerException, XPathExpressionException{
+		
+		File mappingFile = new File(mappingFileName);
+		FileUtils.copyFile(MapperProjectHandler.getActiveProjectHandler().getActiveMapping().getDestinationTreeRepsFile(), mappingFile);
+		
+		DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
+		DocumentBuilder b = f.newDocumentBuilder();
+		Document doc = b.parse(mappingFile);
+		String namespace = "mapping";
+		String prefix = "map";
+		String root = "ADT_A01";
+		
+		XPath xPath = XPathFactory.newInstance().newXPath();
+		Node node = (Node)(Node) xPath.compile("/hdps/uid").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path", "/"+root+"/MSH/MSH.3/HD.1");
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/id").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/code").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.3/CX.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/lastName").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.5/XPN.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/firstName").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.5/XPN.2" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/birthDate").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.7/TS.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/gender").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.8" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.11/XAD.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.11/XAD.3" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/homePhone").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.13/XTN.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/maritalStatus").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.16" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/pid/deceasedDate").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","/"+root+"/PID/PID.29/TS.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/obx/id").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path", "./OBX.1");
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/obx/resultUid").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path", "./OBX.3/CE.2");
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/obx/valueReference").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./OBX.5" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/obx/unitLabel").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./OBX.6/CE.2" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/obx/examDate").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./OBX.14/TS.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/hdps/obx").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element parent = doc.createElementNS(namespace, "list");
+			parent.setAttribute("path", "/"+root+"/OBX");
+			parent.setPrefix(prefix);
+			Node grandParent = node.getParentNode();
+			
+			
+			node = grandParent.removeChild(node);
+			parent.appendChild(node);
+			grandParent.appendChild(parent);
+			
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/al/id").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./AL1.1" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/al/label").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./AL1.3/CE.2" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/al/severity").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./AL1.4" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node)(Node) xPath.compile("/hdps/al/diagnosticDate").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element child = doc.createElementNS(namespace, "value");
+			child.setPrefix(prefix);
+			child.setAttribute("path","./AL1.6" );
+			node.appendChild(child);
+			}
+		
+		xPath = XPathFactory.newInstance().newXPath();
+		node = (Node) xPath.compile("/hdps/al").evaluate(doc, XPathConstants.NODE);
+		if(node!=null){
+			Element parent = doc.createElementNS(namespace, "list");
+			parent.setAttribute("path", "/"+root+"/AL1");
+			parent.setPrefix(prefix);
+			Node grandParent = node.getParentNode();
+			
+			
+			node = grandParent.removeChild(node);
+			parent.appendChild(node);
+			grandParent.appendChild(parent);
+			
+			}
+		Transformer tf = TransformerFactory.newInstance().newTransformer();
+		tf.setOutputProperty(OutputKeys.INDENT, "yes");
+		tf.setOutputProperty(OutputKeys.METHOD, "xml");
+		tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+		DOMSource domSource = new DOMSource(doc);
+		StreamResult sr = new StreamResult(mappingFile);
+		tf.transform(domSource, sr);
+
+		
+		
+		
+		MapperProjectHandler.getActiveProjectHandler().importMappingFile(mappingFile);
+}
+	private static void createMapping2(String mappingSource, String mappingdestination, String mappingVersion,
+			List<String> xmlFiles, String xmlRoot) throws IOException, XmlException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError{
+
+		MappingBean mapping1 = new MappingBean();
+		mapping1.setMappingDestination(mappingdestination);
+		mapping1.setMappingVersion(mappingVersion);
+		mapping1.setMappingSource(mappingSource);
+		
+		
+		MapperProjectHandler.getActiveProjectHandler().createMapping(mapping1);
+		
+		
+		MapperProjectHandler.getActiveProjectHandler().importDestinationXSDFromXML(xmlFiles,xmlRoot, null);
+		MapperProjectHandler.getActiveProjectHandler().importSourceXSD("xsd2_3/"+mappingSource+".xsd",mappingSource,"urn:hl7-org:v2xml", "xsd2_3/segments.xsd","xsd2_3/fields.xsd", "xsd2_3/datatypes.xsd");
+
+}
 	
 	private static String transform(String name, 
 			String source, 

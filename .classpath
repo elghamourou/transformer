@@ -17,7 +17,7 @@
 	<classpathentry kind="lib" path="lib/xml-resolver-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/jlibs-core-2.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/jlibs-visitor-2.2.1.jar"/>
-	<classpathentry kind="lib" path="lib/jlibs-swing-2.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/jlibs-swing-2.2.1.jar" sourcepath="C:/Users/pc/.m2/repository/in/jlibs/jlibs-swing/2.2.1/jlibs-swing-2.2.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/org-netbeans-swing-outline-RELEASE65.jar"/>
 	<classpathentry kind="lib" path="lib/commons-io-2.5.jar" sourcepath="3rdPartySources/commons-io-2.5-src.zip"/>
 	<classpathentry kind="lib" path="lib/ini4j-0.5.4.jar" sourcepath="3rdPartySources/ini4j-0.5.4-sources.jar"/>

@@ -256,7 +256,7 @@ public class MappingHandler {
 
 	}
 
-	public void loadSourceXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException {
+	public void loadSourceXSDFromXml(List<String> xmlFiles, String root, String NameSpace) throws XmlException, IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 
 		List<File> inputFiles = new ArrayList<File>();
 		for (String fileName : xmlFiles) {
@@ -275,7 +275,7 @@ public class MappingHandler {
 		generateDestinationTreeRepr(root, NameSpace);
 	}
 
-	public void loadSourceXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException {
+	public void loadSourceXSDFromJson(List<String> jsonFiles, String root, String NameSpace) throws JSONException, IOException, XmlException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 		generateXSDFromJson(jsonFiles, mappingSourceXSD, root);
 		generateSourceTreeRepr(root, NameSpace);
 	}
@@ -285,7 +285,7 @@ public class MappingHandler {
 		generateDestinationTreeRepr(root, NameSpace);
 	}
 
-	public void loadSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws IOException, TransformerException {
+	public void loadSourceXSD(String xsdFile, String root, String NameSpace, String... xsdFileDeps) throws IOException, TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, TransformerFactoryConfigurationError {
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
 		FileUtils.copyFile(new File(xsdFile), new File(rootFolderPath.resolve(mappingSourceXSD).toString()));
@@ -320,7 +320,8 @@ public class MappingHandler {
 		generateDestinationTreeRepr(root, NameSpace);
 	}
 	
-	private void generateSourceTreeRepr(String root, String NameSpace) throws FileNotFoundException, TransformerException{
+	private void generateSourceTreeRepr(String root, String nameSpace) throws TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerFactoryConfigurationError{
+		
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
 		File sourceTreeRepsFile = new File(rootFolderPath.resolve(mappingSourceTreeRepr).toString());
@@ -334,9 +335,13 @@ public class MappingHandler {
 		xsInstance.generateDefaultAttributes =  Boolean.FALSE;
 		xsInstance.generateDefaultElementValues =  Boolean.FALSE;
 		
+		
+		
+		
+		
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		
-		QName rootElement = new QName(NameSpace, root );//"urn:hl7-org:v2xml","ADT_A01"
+		QName rootElement = new QName(nameSpace, root );//"urn:hl7-org:v2xml","ADT_A01"
 		XMLDocument sampleXml = new XMLDocument(new StreamResult(os), true, 4, null);
 		xsInstance.generate(xsModel, rootElement, sampleXml);
 		
@@ -354,11 +359,13 @@ public class MappingHandler {
         //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transformer.transform(text, new StreamResult(sourceTreeRepsFile));
 		
-		
+        if("urn:hl7-org:v2xml".equals(nameSpace)){
+        	preloadingXML(sourceTreeRepsFile, root, "2.3");
+		}
 		
 	}
 	
-	private void generateDestinationTreeRepr(String root, String NameSpace) throws TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerFactoryConfigurationError{
+	private void generateDestinationTreeRepr(String root, String nameSpace) throws TransformerException, XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerFactoryConfigurationError{
 		Path folderPath = Paths.get(this.mappingFolderPath);
 		Path rootFolderPath = Paths.get(this.rootFolder);
 		destinationTreeRepsFile = new File(rootFolderPath.resolve(mappingDestinationTreeRepr).toString());
@@ -374,7 +381,7 @@ public class MappingHandler {
 		
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		
-		QName rootElement = new QName(NameSpace, root);//"urn:hl7-org:v2xml","ADT_A01"
+		QName rootElement = new QName(nameSpace, root);//"urn:hl7-org:v2xml","ADT_A01"
 		XMLDocument sampleXml = new XMLDocument(new StreamResult(os), true, 4, null);
 		xsInstance.generate(xsModel, rootElement, sampleXml);
 	
@@ -391,7 +398,9 @@ public class MappingHandler {
         //transformer3.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transformer.transform(text, new StreamResult(destinationTreeRepsFile));
         
-        preloadingXML(destinationTreeRepsFile, root, "2.3");
+        if("urn:hl7-org:v2xml".equals(nameSpace)){
+        	preloadingXML(destinationTreeRepsFile, root, "2.3");
+		}
 	
 		
 	}
