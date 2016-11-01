@@ -1,15 +1,24 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="dst" type="dstType"/>
-  <xs:complexType name="dataDstType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="dstname"/>
-      <xs:element type="xs:string" name="dstdesc"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="dstType">
-    <xs:sequence>
-      <xs:element type="dataDstType" name="dataDst"/>
-      <xs:element type="xs:string" name="dstcnt"/>
-    </xs:sequence>
-  </xs:complexType>
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="dst">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataDst">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dstname">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="dstdesc">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dstcnt">
+					<xs:complexType/>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

@@ -1,7 +1,0 @@
-Adv Testing Example profile - ADT_A01.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example profile - ADT_A01.mwb
-Adv Testing Example profile - ORM_O01.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example profile - ORM_O01.mwb
-Adv Testing Example profile - ADT_A02.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example profile - ADT_A02.mwb
-Adv Testing Example profile - ADT_A08.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example profile - ADT_A08.mwb
-Adv Testing Example Profile - ORU_R01.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example Profile - ORU_R01.mwb
-Adv Testing Example profile - ADT_A03.mwb=C:\Program Files\Messaging Workbench\projects\examples\Adv Testing Example profile - ADT_A03.mwb
-AppACK Enh.jpg=C:\Program Files\Messaging Workbench\Projects\Examples\AppACK Enh.jpg

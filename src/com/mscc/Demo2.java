@@ -176,7 +176,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 		String root = "ADT_A01";
 		
 		XPath xPath = XPathFactory.newInstance().newXPath();
-		Node node = (Node)(Node) xPath.compile("/hdps/uid").evaluate(doc, XPathConstants.NODE);
+		Node node = (Node) xPath.compile("/hdps/uid").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -185,7 +185,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/id").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/id").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -194,7 +194,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/code").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/code").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -203,7 +203,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/lastName").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/lastName").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -212,7 +212,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/firstName").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/firstName").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -221,7 +221,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/birthDate").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/birthDate").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -230,7 +230,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/gender").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/gender").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -239,7 +239,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -248,7 +248,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/address").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -257,7 +257,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/homePhone").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/homePhone").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -266,7 +266,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/maritalStatus").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/maritalStatus").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -275,7 +275,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/pid/deceasedDate").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/pid/deceasedDate").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -284,7 +284,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/obx/id").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/obx/id").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -293,7 +293,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/obx/resultUid").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/obx/resultUid").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -302,7 +302,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/obx/valueReference").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/obx/valueReference").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -311,7 +311,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/obx/unitLabel").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/obx/unitLabel").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -320,7 +320,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/obx/examDate").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/obx/examDate").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -344,7 +344,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/al/id").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/al/id").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -353,7 +353,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/al/label").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/al/label").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -362,7 +362,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/al/severity").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/al/severity").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -371,7 +371,7 @@ private static void createMappingFile2(String mappingFileName) throws IOExceptio
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/hdps/al/diagnosticDate").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/hdps/al/diagnosticDate").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -474,7 +474,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 		String root = "ADT_A01";
 		
 		XPath xPath = XPathFactory.newInstance().newXPath();
-		Node node = (Node)(Node) xPath.compile("/"+root+"/MSH/MSH.3/HD.1").evaluate(doc, XPathConstants.NODE);
+		Node node = (Node) xPath.compile("/"+root+"/MSH/MSH.3/HD.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -483,7 +483,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -492,7 +492,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.3/CX.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.3/CX.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -501,7 +501,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.5/XPN.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.5/XPN.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -510,7 +510,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.5/XPN.2").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.5/XPN.2").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -519,7 +519,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.7/TS.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.7/TS.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -528,7 +528,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.8").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.8").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -537,7 +537,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.11/XAD.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.11/XAD.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -546,7 +546,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.11/XAD.3").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.11/XAD.3").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -555,7 +555,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.13/XTN.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.13/XTN.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -564,7 +564,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.16").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.16").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -573,7 +573,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/PID/PID.29/TS.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/PID/PID.29/TS.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -582,7 +582,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/OBX/OBX.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -591,7 +591,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/OBX/OBX.3/CE.2").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.3/CE.2").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -600,7 +600,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/OBX/OBX.5").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.5").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -609,7 +609,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/OBX/OBX.6/CE.2").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.6/CE.2").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -618,7 +618,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/OBX/OBX.14/TS.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/OBX/OBX.14/TS.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -642,7 +642,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/AL1/AL1.1").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/AL1/AL1.1").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -651,7 +651,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/AL1/AL1.3/CE.2").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/AL1/AL1.3/CE.2").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -660,7 +660,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/AL1/AL1.4").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/AL1/AL1.4").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
@@ -669,7 +669,7 @@ private static void testMapping2(String mapping_file_name, String dataSource) th
 			}
 		
 		xPath = XPathFactory.newInstance().newXPath();
-		node = (Node)(Node) xPath.compile("/"+root+"/AL1/AL1.6").evaluate(doc, XPathConstants.NODE);
+		node = (Node) xPath.compile("/"+root+"/AL1/AL1.6").evaluate(doc, XPathConstants.NODE);
 		if(node!=null){
 			Element child = doc.createElementNS(namespace, "value");
 			child.setPrefix(prefix);
